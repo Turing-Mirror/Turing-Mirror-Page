@@ -113,7 +113,12 @@ const PRODUCT_LINK_LABELS = {
 
 const PRODUCTS = [
   {
-    name: "RVC Fabric",
+    name: {
+      sc: "RVC Fabric",
+      tc: "RVC Fabric",
+      en: "RVC Fabric",
+      ja: "RVC Fabric"
+    },
     description: {
       sc: "高性能实时 AI 变声桌面客户端",
       tc: "高效能即時 AI 變聲桌面客戶端",
@@ -126,7 +131,12 @@ const PRODUCTS = [
     ]
   },
   {
-    name: "喵言喵",
+    name: {
+      sc: "喵言喵",
+      tc: "喵言喵",
+      en: "MoeText",
+      ja: "MoeText"
+    },
     description: {
       sc: "聊天文本自动美化工具",
       tc: "聊天文本自動美化工具",
@@ -139,7 +149,12 @@ const PRODUCTS = [
     ]
   },
   {
-    name: "图灵镜 UI (TRM UI)",
+    name: {
+      sc: "图灵镜 UI (TRM UI)",
+      tc: "圖靈鏡 UI (TRM UI)",
+      en: "Turing Mirror UI (TRM UI)",
+      ja: "チューリングミラー UI (TRM UI)"
+    },
     description: {
       sc: "图灵镜桌面产品的 UI/UX 模板",
       tc: "圖靈鏡桌面產品的 UI/UX 模板",
@@ -149,7 +164,12 @@ const PRODUCTS = [
     links: [{ href: "https://github.com/Turing-Mirror/TRM-UI", label: "github" }]
   },
   {
-    name: "测试镜 (Mirror-Test)",
+    name: {
+      sc: "测试镜 (Mirror-Test)",
+      tc: "測試鏡 (Mirror-Test)",
+      en: "Mirror-Test",
+      ja: "Mirror-Test"
+    },
     description: {
       sc: "Meme 趣味测试",
       tc: "Meme 趣味測試",
