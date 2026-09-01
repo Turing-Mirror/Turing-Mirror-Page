@@ -20,6 +20,7 @@ const COPY = {
     languageLabel: "语言",
     productsLabel: "产品",
     channelsLabel: "频道",
+    promotionsLabel: "推广",
     contactLabel: "合作 / 商务",
     communityLabel: "社区 QQ 群",
     communityValue: "群号 " + QQ_GROUP_ID,
@@ -40,6 +41,7 @@ const COPY = {
     languageLabel: "語言",
     productsLabel: "產品",
     channelsLabel: "頻道",
+    promotionsLabel: "推廣",
     contactLabel: "合作 / 商務",
     communityLabel: "社群 QQ 群",
     communityValue: "群號 " + QQ_GROUP_ID,
@@ -60,6 +62,7 @@ const COPY = {
     languageLabel: "Language",
     productsLabel: "Products",
     channelsLabel: "Channels",
+    promotionsLabel: "Promotion",
     contactLabel: "Partnership / Business",
     communityLabel: "QQ Community",
     communityValue: "Group " + QQ_GROUP_ID,
@@ -80,6 +83,7 @@ const COPY = {
     languageLabel: "言語",
     productsLabel: "プロダクト",
     channelsLabel: "チャンネル",
+    promotionsLabel: "プロモーション",
     contactLabel: "コラボ / ビジネス",
     communityLabel: "QQ コミュニティ",
     communityValue: "グループ " + QQ_GROUP_ID,
@@ -226,6 +230,23 @@ const CHANNELS = [
   }
 ];
 
+const PROMOTIONS = [
+  {
+    name: {
+      sc: "雨云",
+      tc: "雨雲",
+      en: "Rainyun",
+      ja: "Rainyun"
+    },
+    description: {
+      sc: "首月五折 · 性价比云服务器 / 游戏云 / 面板服",
+      tc: "首月五折 · 性價比雲伺服器 / 遊戲雲 / 面板服",
+      en: "50% off the first month · value cloud servers / game cloud / panel hosting",
+      ja: "初月半額 · 高コスパのクラウドサーバー / ゲームクラウド / パネルホスティング"
+    },
+    href: "https://www.rainyun.com/m1rror_?s=RVC-Fabric"
+  }
+];
 const dom = {
   langSelect: document.getElementById("lang-select"),
   langLabel: document.getElementById("lang-label"),
@@ -235,6 +256,8 @@ const dom = {
   productGrid: document.getElementById("product-grid"),
   channelsLabel: document.getElementById("channels-label"),
   channelGrid: document.getElementById("channel-grid"),
+  promotionsLabel: document.getElementById("promotions-label"),
+  promotionGrid: document.getElementById("promotion-grid"),
   contactLabel: document.getElementById("contact-label"),
   contactCopy: document.getElementById("contact-copy"),
   contactCopyValue: document.getElementById("contact-copy-value"),
@@ -407,6 +430,44 @@ function buildChannels() {
   dom.channelGrid.replaceChildren(fragment);
 }
 
+function buildPromotions() {
+  const copy = getCopy();
+  const fragment = document.createDocumentFragment();
+
+  for (const promotion of PROMOTIONS) {
+    const item = document.createElement("li");
+    const card = document.createElement("article");
+    card.className = "product-card promotion-card";
+
+    const nameNode = document.createElement("h3");
+    nameNode.className = "product-name";
+    nameNode.textContent = localized(promotion.name);
+
+    const descriptionNode = document.createElement("p");
+    descriptionNode.className = "product-description";
+    descriptionNode.textContent = localized(promotion.description);
+
+    const actions = document.createElement("div");
+    actions.className = "product-actions";
+
+    const link = document.createElement("a");
+    link.className = "product-link";
+    link.href = promotion.href;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = localized(PRODUCT_LINK_LABELS.visit);
+    link.setAttribute(
+      "aria-label",
+      localized(promotion.name) + " - " + localized(PRODUCT_LINK_LABELS.visit) + ". " + copy.openNewTab + "."
+    );
+    actions.append(link);
+    card.append(nameNode, descriptionNode, actions);
+    item.append(card);
+    fragment.append(item);
+  }
+
+  dom.promotionGrid.replaceChildren(fragment);
+}
 function setLocale(locale) {
   currentLocale = isSupportedLocale(locale) ? locale : "sc";
 
@@ -430,6 +491,8 @@ function setLocale(locale) {
   dom.productGrid.setAttribute("aria-label", copy.productsLabel);
   dom.channelsLabel.textContent = copy.channelsLabel;
   dom.channelGrid.setAttribute("aria-label", copy.channelsLabel);
+  dom.promotionsLabel.textContent = copy.promotionsLabel;
+  dom.promotionGrid.setAttribute("aria-label", copy.promotionsLabel);
   dom.contactLabel.textContent = copy.contactLabel;
   dom.contactCopyValue.textContent = copy.contactValue;
   dom.contactCopy.setAttribute("aria-label", `${copy.contactValue}. ${copy.copyHint}.`);
@@ -451,6 +514,7 @@ function setLocale(locale) {
 
   buildProducts();
   buildChannels();
+  buildPromotions();
 }
 
 async function copyText(text) {

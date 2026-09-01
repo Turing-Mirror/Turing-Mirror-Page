@@ -519,3 +519,11 @@ body.is-ready .reveal {
     transform: none;
   }
 }
+
+.promotion-grid {
+  grid-template-columns: minmax(min(100%, 260px), 1fr);
+}
+
+.promotion-card {
+  min-height: 132px;
+}
