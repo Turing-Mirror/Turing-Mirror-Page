@@ -2,6 +2,7 @@ const CANONICAL_HOST = "www.turingmirror.com";
 const APEX_HOST = "turingmirror.com";
 const LOCALE_STORAGE_KEY = "turingmirror:locale";
 const WECHAT_ID = "_UshioNoa";
+const QQ_GROUP_ID = "1077458748";
 const TAGLINE = "Touching the setsuna, reaching the future.";
 
 const LOCALES = [
@@ -17,11 +18,19 @@ const COPY = {
     pageTitle: "图灵镜 Turing Mirror",
     metaDescription: `图灵镜 Turing Mirror。${TAGLINE}`,
     languageLabel: "语言",
+    productsLabel: "产品",
     channelsLabel: "频道",
     contactLabel: "合作 / 商务",
+    communityLabel: "社区 QQ 群",
+    communityValue: "群号 " + QQ_GROUP_ID,
     contactValue: `微信号 ${WECHAT_ID}`,
     copyHint: "点击复制",
     copyDone: "已复制",
+    communityCopyHint: "点击复制并展示二维码",
+    communityCopyDone: "已复制，二维码已展示",
+    communityQrShown: "二维码已展示",
+    communityQrAlt: "图灵镜社区 QQ 群二维码",
+    communityQrHelp: "使用 QQ 扫码加入社区",
     openNewTab: "在新标签页打开"
   },
   tc: {
@@ -29,11 +38,19 @@ const COPY = {
     pageTitle: "圖靈鏡 Turing Mirror",
     metaDescription: `圖靈鏡 Turing Mirror。${TAGLINE}`,
     languageLabel: "語言",
+    productsLabel: "產品",
     channelsLabel: "頻道",
     contactLabel: "合作 / 商務",
+    communityLabel: "社群 QQ 群",
+    communityValue: "群號 " + QQ_GROUP_ID,
     contactValue: `微信號 ${WECHAT_ID}`,
     copyHint: "點擊複製",
     copyDone: "已複製",
+    communityCopyHint: "點擊複製並展示 QR 碼",
+    communityCopyDone: "已複製，QR 碼已展示",
+    communityQrShown: "QR 碼已展示",
+    communityQrAlt: "圖靈鏡社群 QQ 群 QR 碼",
+    communityQrHelp: "使用 QQ 掃描加入社群",
     openNewTab: "於新分頁開啟"
   },
   en: {
@@ -41,11 +58,19 @@ const COPY = {
     pageTitle: "Turing Mirror",
     metaDescription: `Turing Mirror. ${TAGLINE}`,
     languageLabel: "Language",
+    productsLabel: "Products",
     channelsLabel: "Channels",
     contactLabel: "Partnership / Business",
+    communityLabel: "QQ Community",
+    communityValue: "Group " + QQ_GROUP_ID,
     contactValue: `WeChat ${WECHAT_ID}`,
     copyHint: "Click to copy",
     copyDone: "Copied",
+    communityCopyHint: "Copy the group number and show the QR code",
+    communityCopyDone: "Copied, QR code shown",
+    communityQrShown: "QR code shown",
+    communityQrAlt: "Turing Mirror QQ community group QR code",
+    communityQrHelp: "Scan with QQ to join the community",
     openNewTab: "Open in a new tab"
   },
   ja: {
@@ -53,14 +78,90 @@ const COPY = {
     pageTitle: "チューリングミラー Turing Mirror",
     metaDescription: `チューリングミラー Turing Mirror。${TAGLINE}`,
     languageLabel: "言語",
+    productsLabel: "プロダクト",
     channelsLabel: "チャンネル",
     contactLabel: "コラボ / ビジネス",
+    communityLabel: "QQ コミュニティ",
+    communityValue: "グループ " + QQ_GROUP_ID,
     contactValue: `WeChat ${WECHAT_ID}`,
     copyHint: "クリックでコピー",
     copyDone: "コピーしました",
+    communityCopyHint: "グループ番号をコピーして QR コードを表示",
+    communityCopyDone: "コピーしました。QR コードを表示しました",
+    communityQrShown: "QR コードを表示しました",
+    communityQrAlt: "チューリングミラー QQ コミュニティの QR コード",
+    communityQrHelp: "QQ でスキャンしてコミュニティに参加",
     openNewTab: "新しいタブで開く"
   }
 };
+
+const PRODUCT_LINK_LABELS = {
+  github: "GitHub",
+  download: {
+    sc: "下载",
+    tc: "下載",
+    en: "Download",
+    ja: "ダウンロード"
+  },
+  visit: {
+    sc: "前往",
+    tc: "前往",
+    en: "Visit",
+    ja: "アクセス"
+  }
+};
+
+const PRODUCTS = [
+  {
+    name: "RVC Fabric",
+    description: {
+      sc: "高性能实时 AI 变声桌面客户端",
+      tc: "高效能即時 AI 變聲桌面客戶端",
+      en: "High-performance real-time AI voice changer desktop client",
+      ja: "高性能リアルタイム AI ボイスチェンジャーのデスクトップクライアント"
+    },
+    links: [
+      { href: "https://github.com/Turing-Mirror/RVC-Fabric", label: "github" },
+      { href: "https://cdn.turingmirror.com/d/rvc-fabric-setup", label: "download" }
+    ]
+  },
+  {
+    name: "喵言喵",
+    description: {
+      sc: "聊天文本自动美化工具",
+      tc: "聊天文本自動美化工具",
+      en: "Automatic chat-text beautifier",
+      ja: "チャットテキスト自動美化ツール"
+    },
+    links: [
+      { href: "https://github.com/Turing-Mirror/MoeText", label: "github" },
+      { href: "https://cdn.turingmirror.com/d/moetype", label: "download" }
+    ]
+  },
+  {
+    name: "图灵镜 UI (TRM UI)",
+    description: {
+      sc: "图灵镜桌面产品的 UI/UX 模板",
+      tc: "圖靈鏡桌面產品的 UI/UX 模板",
+      en: "UI/UX template for Turing Mirror desktop products",
+      ja: "チューリングミラーのデスクトップ製品向け UI/UX テンプレート"
+    },
+    links: [{ href: "https://github.com/Turing-Mirror/TRM-UI", label: "github" }]
+  },
+  {
+    name: "测试镜 (Mirror-Test)",
+    description: {
+      sc: "Meme 趣味测试",
+      tc: "Meme 趣味測試",
+      en: "Meme-style fun tests",
+      ja: "Meme 系のおもしろテスト"
+    },
+    links: [
+      { href: "https://github.com/Turing-Mirror/Mirror-Test", label: "github" },
+      { href: "https://test.turingmirror.com/", label: "visit" }
+    ]
+  }
+];
 
 const CHANNELS = [
   {
@@ -110,12 +211,21 @@ const dom = {
   langLabel: document.getElementById("lang-label"),
   siteName: document.getElementById("site-name"),
   siteNameMirror: document.getElementById("site-name-mirror"),
+  productsLabel: document.getElementById("products-label"),
+  productGrid: document.getElementById("product-grid"),
   channelsLabel: document.getElementById("channels-label"),
   channelGrid: document.getElementById("channel-grid"),
   contactLabel: document.getElementById("contact-label"),
   contactCopy: document.getElementById("contact-copy"),
   contactCopyValue: document.getElementById("contact-copy-value"),
   contactCopyHint: document.getElementById("contact-copy-hint"),
+  communityLabel: document.getElementById("community-label"),
+  communityCopy: document.getElementById("community-copy"),
+  communityCopyValue: document.getElementById("community-copy-value"),
+  communityCopyHint: document.getElementById("community-copy-hint"),
+  communityQr: document.getElementById("community-qr"),
+  communityQrImage: document.getElementById("community-qr-image"),
+  communityQrHelp: document.getElementById("community-qr-help"),
   pageDescription: document.querySelector('meta[name="description"]'),
   ogTitle: document.querySelector('meta[property="og:title"]'),
   ogDescription: document.querySelector('meta[property="og:description"]'),
@@ -124,7 +234,8 @@ const dom = {
 };
 
 let currentLocale = "sc";
-let copyFeedbackTimer = 0;
+let contactCopyFeedbackTimer = 0;
+let communityCopyFeedbackTimer = 0;
 
 function isSupportedLocale(locale) {
   return LOCALES.some((item) => item.code === locale);
@@ -192,6 +303,49 @@ function buildLanguageSelect() {
   });
 }
 
+function buildProducts() {
+  const copy = getCopy();
+  const fragment = document.createDocumentFragment();
+
+  for (const product of PRODUCTS) {
+    const item = document.createElement("li");
+    const card = document.createElement("article");
+    card.className = "product-card";
+
+    const nameNode = document.createElement("h3");
+    nameNode.className = "product-name";
+    nameNode.textContent = localized(product.name);
+
+    const descriptionNode = document.createElement("p");
+    descriptionNode.className = "product-description";
+    descriptionNode.textContent = localized(product.description);
+
+    const actions = document.createElement("div");
+    actions.className = "product-actions";
+
+    for (const productLink of product.links) {
+      const label = localized(PRODUCT_LINK_LABELS[productLink.label]);
+      const link = document.createElement("a");
+      link.className = "product-link";
+      link.href = productLink.href;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = label;
+      link.setAttribute(
+        "aria-label",
+        localized(product.name) + " - " + label + ". " + copy.openNewTab + "."
+      );
+      actions.append(link);
+    }
+
+    card.append(nameNode, descriptionNode, actions);
+    item.append(card);
+    fragment.append(item);
+  }
+
+  dom.productGrid.replaceChildren(fragment);
+}
+
 function buildChannels() {
   const copy = getCopy();
   const fragment = document.createDocumentFragment();
@@ -243,25 +397,39 @@ function setLocale(locale) {
   document.title = copy.pageTitle;
   dom.pageDescription.setAttribute("content", copy.metaDescription);
   dom.ogTitle.setAttribute("content", copy.pageTitle);
-  dom.ogDescription.setAttribute("content", TAGLINE);
+  dom.ogDescription.setAttribute("content", copy.metaDescription);
   dom.twitterTitle.setAttribute("content", copy.pageTitle);
-  dom.twitterDescription.setAttribute("content", TAGLINE);
+  dom.twitterDescription.setAttribute("content", copy.metaDescription);
 
   dom.langLabel.textContent = copy.languageLabel;
   dom.langSelect.setAttribute("aria-label", copy.languageLabel);
   dom.langSelect.value = currentLocale;
   dom.siteName.textContent = copy.siteName;
   dom.siteNameMirror.textContent = copy.siteName;
+  dom.productsLabel.textContent = copy.productsLabel;
+  dom.productGrid.setAttribute("aria-label", copy.productsLabel);
   dom.channelsLabel.textContent = copy.channelsLabel;
   dom.channelGrid.setAttribute("aria-label", copy.channelsLabel);
   dom.contactLabel.textContent = copy.contactLabel;
   dom.contactCopyValue.textContent = copy.contactValue;
   dom.contactCopy.setAttribute("aria-label", `${copy.contactValue}. ${copy.copyHint}.`);
+  dom.communityLabel.textContent = copy.communityLabel;
+  dom.communityCopyValue.textContent = copy.communityValue;
+  dom.communityCopy.setAttribute(
+    "aria-label",
+    copy.communityValue + ". " + copy.communityCopyHint + "."
+  );
+  dom.communityQrImage.alt = copy.communityQrAlt;
+  dom.communityQrHelp.textContent = copy.communityQrHelp;
 
-  if (!copyFeedbackTimer) {
+  if (!contactCopyFeedbackTimer) {
     dom.contactCopyHint.textContent = copy.copyHint;
   }
+  if (!communityCopyFeedbackTimer) {
+    dom.communityCopyHint.textContent = copy.communityCopyHint;
+  }
 
+  buildProducts();
   buildChannels();
 }
 
@@ -300,17 +468,34 @@ function bindContactCopy() {
 
     const copy = getCopy();
     dom.contactCopyHint.textContent = copy.copyDone;
-    window.clearTimeout(copyFeedbackTimer);
-    copyFeedbackTimer = window.setTimeout(() => {
-      copyFeedbackTimer = 0;
+    window.clearTimeout(contactCopyFeedbackTimer);
+    contactCopyFeedbackTimer = window.setTimeout(() => {
+      contactCopyFeedbackTimer = 0;
       dom.contactCopyHint.textContent = getCopy().copyHint;
     }, 1800);
+  });
+}
+
+function bindCommunityCopy() {
+  dom.communityCopy.addEventListener("click", async () => {
+    dom.communityQr.hidden = false;
+    dom.communityCopy.setAttribute("aria-expanded", "true");
+
+    const copied = await copyText(QQ_GROUP_ID);
+    const copy = getCopy();
+    dom.communityCopyHint.textContent = copied ? copy.communityCopyDone : copy.communityQrShown;
+    window.clearTimeout(communityCopyFeedbackTimer);
+    communityCopyFeedbackTimer = window.setTimeout(() => {
+      communityCopyFeedbackTimer = 0;
+      dom.communityCopyHint.textContent = getCopy().communityCopyHint;
+    }, 2200);
   });
 }
 
 function init() {
   buildLanguageSelect();
   bindContactCopy();
+  bindCommunityCopy();
   setLocale(readStoredLocale() || detectLocale());
   document.body.classList.add("is-ready");
 }

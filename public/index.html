@@ -55,17 +55,43 @@
           Touching the setsuna, reaching the future.
         </p>
 
-        <div class="hero-rule" aria-hidden="true"></div>
+        <h2 class="section-label reveal" id="products-label" style="--reveal-delay: 300ms">Products</h2>
+        <ul class="product-grid" id="product-grid"></ul>
 
-        <h2 class="section-label reveal" id="channels-label" style="--reveal-delay: 300ms">Channels</h2>
+        <h2 class="section-label reveal" id="channels-label" style="--reveal-delay: 440ms">Channels</h2>
         <ul class="channel-grid" id="channel-grid"></ul>
 
-        <div class="contact reveal" style="--reveal-delay: 560ms">
+        <div class="contact reveal" style="--reveal-delay: 680ms">
           <span class="contact-label" id="contact-label">合作 / 商务</span>
           <button class="contact-copy" type="button" id="contact-copy">
             <span id="contact-copy-value">微信号 _UshioNoa</span>
             <span class="contact-copy-hint" id="contact-copy-hint">点击复制</span>
           </button>
+        </div>
+
+        <div class="community reveal" style="--reveal-delay: 780ms">
+          <span class="contact-label" id="community-label">社区 QQ 群</span>
+          <button
+            class="contact-copy community-copy"
+            type="button"
+            id="community-copy"
+            aria-controls="community-qr"
+            aria-expanded="false"
+          >
+            <span id="community-copy-value">群号 1077458748</span>
+            <span class="contact-copy-hint" id="community-copy-hint">点击复制并展示二维码</span>
+          </button>
+          <div class="community-qr" id="community-qr" hidden>
+            <img
+              id="community-qr-image"
+              src="/assets/qq_group.jpg"
+              alt="图灵镜社区 QQ 群二维码"
+              width="220"
+              height="220"
+              loading="lazy"
+            >
+            <p id="community-qr-help">使用 QQ 扫码加入社区</p>
+          </div>
         </div>
       </main>
     </div>

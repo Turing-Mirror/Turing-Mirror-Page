@@ -5,11 +5,11 @@
   "description": "Static homepage for www.turingmirror.com deployed with Cloudflare Pages.",
   "type": "module",
   "scripts": {
-    "dev": "WRANGLER_LOG_PATH=.wrangler/logs wrangler pages dev public --ip 127.0.0.1 --port 4174",
+    "dev": "wrangler pages dev public --ip 127.0.0.1 --port 4174",
     "check": "node --check public/site.js",
-    "deploy": "WRANGLER_LOG_PATH=.wrangler/logs wrangler pages deploy public --project-name turing-mirror-page"
+    "deploy": "wrangler pages deploy public --project-name turing-mirror-page"
   },
   "devDependencies": {
-    "wrangler": "^4"
+    "wrangler": "4.127.1"
   }
 }
