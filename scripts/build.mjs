@@ -25,7 +25,6 @@ async function emit(path, html) {
 }
 
 function sitemap() {
-  const today = new Date().toISOString().slice(0, 10);
   const groups = [(loc) => homePath(loc), ...PRODUCTS.map((product) => (loc) => productPath(loc, product))];
   const urls = groups.flatMap((pathFor) =>
     LOCALES.map((loc) => {
@@ -35,7 +34,6 @@ function sitemap() {
       alternates.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${absolute(pathFor(LOCALES[0]))}"/>`);
       return `  <url>
     <loc>${absolute(pathFor(loc))}</loc>
-    <lastmod>${today}</lastmod>
 ${alternates.join("\n")}
   </url>`;
     })

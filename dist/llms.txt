@@ -1,0 +1,76 @@
+# Turing Mirror (图灵镜)
+
+> Turing Mirror: RVC Fabric real-time AI voice changer, MoeText chat-text beautifier, Mirror-Test fun quizzes and the TRM UI design template. Tagline: "Touching the setsuna, reaching the future."
+
+Turing Mirror (Chinese: 图灵镜, Traditional: 圖靈鏡, Japanese: チューリングミラー) is the team behind the products below. All products are free. The site is available in Simplified Chinese (https://www.turingmirror.com/), Traditional Chinese, English (https://www.turingmirror.com/en/) and Japanese.
+
+## Products
+
+### RVC Fabric
+
+A real-time AI voice changer for Windows that works out of the box: no Python or PyTorch to set up, no Gradio pages to click through in a browser. Install it and start talking. Built for gaming, voice chat, live streaming and audio production, and deeply customized from RVC WebUI.
+
+- Platform: Windows · Desktop
+- Windows 10 / 11 · Automatically adapts to NVIDIA (incl. RTX 50 series), AMD and Intel GPUs
+- Page: https://www.turingmirror.com/en/products/rvc-fabric/ (简体中文: https://www.turingmirror.com/products/rvc-fabric/)
+- Links: Download for Windows: https://cdn.turingmirror.com/d/rvc-fabric-setup; GitHub: https://github.com/Turing-Mirror/RVC-Fabric; CNB mirror (China): https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases
+- Real-time conversion: Low-latency inference, seamless voice switching mid-session, and one-click bypass to your original voice.
+- DSP effect chain: Built-in noise gate, compressor and 5-band parametric EQ, with presets and fine-tuning.
+- Voices & presets: A grid voice library with .index bindings; save, import and share parameter presets.
+- Community voice store: Official and third-party sources, with multi-threaded, resumable downloads.
+- Audio toolbox: Separate vocals from accompaniment, turn text into speech in any voice, and train your own voice in one click.
+- Automatic acceleration: Detects NVIDIA CUDA or AMD / Intel DirectML and downloads the matching runtime for you.
+
+### MoeText / 喵言喵
+
+Built on Android's accessibility service, MoeText rewrites what you type in QQ and Discord using rules you define: swap words, add sentence endings and kaomoji, and switch between styles like catgirl or classical Chinese in one tap.
+
+- Platform: Android
+- Requires Android 6.0 or later · Allow installs from unknown sources when installing
+- Page: https://www.turingmirror.com/en/products/moetext/ (简体中文: https://www.turingmirror.com/products/moetext/)
+- Links: Download APK: https://cdn.turingmirror.com/d/moetype; GitHub: https://github.com/Turing-Mirror/MoeText
+- Style packs: Four built-in styles (catgirl, classical Chinese, emoji riddles and oracle) switch in one tap. Import and export your own as JSON.
+- Rule-chain engine: Combine quick swaps, custom replacements, sentence endings, fixed suffixes and random kaomoji.
+- Two modes: Rewrite after a pause or as you type, and send messages the way you always do.
+- Stays out of your way: Continuous editing, cursor mapping and write-back retries keep the suffix at the end as you keep typing.
+- Material 3 design: Follows system dark mode, with a live preview built in.
+- No data collection: Network access is only used to check for updates. Nothing is collected or uploaded.
+
+### Mirror-Test / 测试镜
+
+Interactive quizzes that run right in your browser. From anime and GalGames to girls' bands, answer a few questions and find out which type you are. Results are just for fun and are not a real personality assessment.
+
+- Platform: Web
+- Nothing to install. Works in mobile and desktop browsers.
+- Page: https://www.turingmirror.com/en/products/mirror-test/ (简体中文: https://www.turingmirror.com/products/mirror-test/)
+- Links: Start a quiz: https://test.turingmirror.com/; GitHub: https://github.com/Turing-Mirror/Mirror-Test
+- Summer 2026 anime personality test: Find the summer 2026 anime that matches you best.
+- GalGame destined-route test: Which destined route would you end up on?
+- Band-TI girls' band character test: 20 questions drawn from a pool of 100, covering 67 characters, 8 series and 14 bands.
+
+### Turing Mirror UI / 图灵镜 UI / TRM UI
+
+Every Turing Mirror desktop app starts from the same interface: the same design tokens, components and motion, with improvements flowing back here instead of drifting apart in each product. It includes a React component library, a sidebar app shell, 8-language i18n and a ready-to-run Tauri shell, with no product code.
+
+- Platform: Developers · Design template
+- Run npm install && npm run dev to preview the component gallery. No Rust needed.
+- Page: https://www.turingmirror.com/en/products/trm-ui/ (简体中文: https://www.turingmirror.com/products/trm-ui/)
+- Links: View on GitHub: https://github.com/Turing-Mirror/TRM-UI
+- Tokens & themes: Colors, spacing, radii and motion defined in one place, with light, dark and system themes.
+- Component library: Buttons, form controls, segmented controls, menus, modals, drawers, calendars, notices and more, all interactive.
+- Sidebar app shell: Title bar, sidebar and directional page transitions, ready for a new product.
+- 8-language i18n: Bundled at build time and switched instantly, with three validation checks; the UI and shell share one set of locale files.
+- Tauri desktop shell: Frameless window, tray, autostart, logging and atomic config writes, ready to open a window.
+- A restrained style: Few borders, restrained color, and motion on both enter and exit; hovered cards press in rather than float up.
+
+## Channels
+
+- Bilibili: https://space.bilibili.com/3546871148579062 (UID 3546871148579062)
+- Douyin: https://v.douyin.com/6NxXcrKK9cc (Douyin ID TuringMirror)
+- Xiaohongshu: https://www.xiaohongshu.com/user/profile/65f56bf1000000000b00e094 (Xiaohongshu ID TuringMirror)
+- GitHub: https://github.com/Turing-Mirror
+
+## Contact
+
+- Business: WeChat _UshioNoa
+- Community: QQ group 1077458748

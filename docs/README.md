@@ -16,13 +16,13 @@ public/         原样复制到 dist/ 的静态资源
   assets/       QQ 群二维码、产品截图（assets/products/<slug>/）
   _headers      安全响应头与缓存策略
   favicon.svg / robots.txt
-dist/           构建产物（不入库）
+dist/           构建产物（入库，Cloudflare 直接发布此目录）
 wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 ```
 
 ## 内容维护
 
-所有文案和链接都在 `src/content.mjs`，改完运行 `npm run build`：
+所有文案和链接都在 `src/content.mjs`。改完运行 `npm run build`，并把 `dist/` 的变化一起提交（改 `public/` 下的样式、脚本、图片也一样）：
 
 - `UI`：四种语言的界面文案。
 - `PRODUCTS`：每个产品一项，`slug` 决定网址 `/products/<slug>/`。字段包括卡片简介 `summary`、详情页的 `lead` / `intro` / `actions`（下载、仓库等按钮）/ `features` / `steps` / `faq` / `notice` / `screenshots`，以及结构化数据用的 `schema`。`steps`、`faq`、`screenshots` 可以留空数组，对应板块不会出现。
@@ -67,4 +67,6 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 npm run deploy
 ```
 
-对应 Cloudflare Pages 项目 `turing-mirror-page`，上传 `dist/`。如果改为在 Cloudflare 上连 Git 自动构建，构建命令填 `npm run build`，输出目录填 `dist`。
+Cloudflare Pages 项目 `turing-mirror-page` 连接 `main` 分支自动部署，发布目录由 `wrangler.jsonc` 的 `pages_build_output_dir`（`./dist`）决定。`dist/` 已入库，所以不设构建命令也能发布；建议在 Cloudflare 后台把构建命令设为 `npm run build`，这样即使忘记提交 `dist/` 也会在部署时重新生成。
+
+手动部署：`npm run deploy`。
