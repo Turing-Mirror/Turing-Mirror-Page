@@ -65,9 +65,9 @@ ${product.features.map((feature) => `- ${t(feature.title, en)}: ${t(feature.body
 
   return `# Turing Mirror (图灵镜)
 
-> ${UI.en.homeDescription} Tagline: "${TAGLINE}"
+> ${TAGLINE}
 
-Turing Mirror (Chinese: 图灵镜, Traditional: 圖靈鏡, Japanese: チューリングミラー) is the team behind the products below. All products are free. The site is available in Simplified Chinese (${absolute(homePath(sc))}), Traditional Chinese, English (${absolute(homePath(en))}) and Japanese.
+Turing Mirror (Chinese: 图灵镜, Traditional: 圖靈鏡, Japanese: チューリングミラー) — official website. All products below are free. The site is available in Simplified Chinese (${absolute(homePath(sc))}), Traditional Chinese, English (${absolute(homePath(en))}) and Japanese.
 
 ## Products
 
