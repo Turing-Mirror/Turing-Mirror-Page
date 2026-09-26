@@ -1,305 +1,30 @@
-const CANONICAL_HOST = "www.turingmirror.com";
-const APEX_HOST = "turingmirror.com";
+// 页面交互：滚动入场、语言菜单、复制与二维码、截图大图、卡片光斑与标题镜面。
+// 文案全部由构建渲染进 HTML（data-* 属性），这里不维护语言数据。
+
 const LOCALE_STORAGE_KEY = "turingmirror:locale";
-const WECHAT_ID = "_UshioNoa";
-const QQ_GROUP_ID = "1077458748";
-const TAGLINE = "Touching the setsuna, reaching the future.";
-
-const LOCALES = [
-  { code: "sc", label: "简体中文", htmlLang: "zh-Hans", match: ["zh-hans", "zh-cn", "zh-sg", "zh"] },
-  { code: "tc", label: "繁體中文", htmlLang: "zh-Hant", match: ["zh-hant", "zh-tw", "zh-hk", "zh-mo"] },
-  { code: "en", label: "English", htmlLang: "en", match: ["en"] },
-  { code: "ja", label: "日本語", htmlLang: "ja", match: ["ja"] }
-];
-
-const COPY = {
-  sc: {
-    siteName: "图灵镜",
-    pageTitle: "图灵镜 Turing Mirror",
-    metaDescription: `图灵镜 Turing Mirror。${TAGLINE}`,
-    languageLabel: "语言",
-    productsLabel: "产品",
-    channelsLabel: "频道",
-    promotionsLabel: "推广",
-    contactLabel: "合作 / 商务",
-    communityLabel: "社区 QQ 群",
-    communityValue: "群号 " + QQ_GROUP_ID,
-    contactValue: `微信号 ${WECHAT_ID}`,
-    copyHint: "点击复制",
-    copyDone: "已复制",
-    communityCopyHint: "点击复制并展示二维码",
-    communityCopyDone: "已复制，二维码已展示",
-    communityQrShown: "二维码已展示",
-    communityQrAlt: "图灵镜社区 QQ 群二维码",
-    communityQrHelp: "使用 QQ 扫码加入社区",
-    openNewTab: "在新标签页打开"
-  },
-  tc: {
-    siteName: "圖靈鏡",
-    pageTitle: "圖靈鏡 Turing Mirror",
-    metaDescription: `圖靈鏡 Turing Mirror。${TAGLINE}`,
-    languageLabel: "語言",
-    productsLabel: "產品",
-    channelsLabel: "頻道",
-    promotionsLabel: "推廣",
-    contactLabel: "合作 / 商務",
-    communityLabel: "社群 QQ 群",
-    communityValue: "群號 " + QQ_GROUP_ID,
-    contactValue: `微信號 ${WECHAT_ID}`,
-    copyHint: "點擊複製",
-    copyDone: "已複製",
-    communityCopyHint: "點擊複製並展示 QR 碼",
-    communityCopyDone: "已複製，QR 碼已展示",
-    communityQrShown: "QR 碼已展示",
-    communityQrAlt: "圖靈鏡社群 QQ 群 QR 碼",
-    communityQrHelp: "使用 QQ 掃描加入社群",
-    openNewTab: "於新分頁開啟"
-  },
-  en: {
-    siteName: "Turing Mirror",
-    pageTitle: "Turing Mirror",
-    metaDescription: `Turing Mirror. ${TAGLINE}`,
-    languageLabel: "Language",
-    productsLabel: "Products",
-    channelsLabel: "Channels",
-    promotionsLabel: "Promotion",
-    contactLabel: "Partnership / Business",
-    communityLabel: "QQ Community",
-    communityValue: "Group " + QQ_GROUP_ID,
-    contactValue: `WeChat ${WECHAT_ID}`,
-    copyHint: "Click to copy",
-    copyDone: "Copied",
-    communityCopyHint: "Copy the group number and show the QR code",
-    communityCopyDone: "Copied, QR code shown",
-    communityQrShown: "QR code shown",
-    communityQrAlt: "Turing Mirror QQ community group QR code",
-    communityQrHelp: "Scan with QQ to join the community",
-    openNewTab: "Open in a new tab"
-  },
-  ja: {
-    siteName: "チューリングミラー",
-    pageTitle: "チューリングミラー Turing Mirror",
-    metaDescription: `チューリングミラー Turing Mirror。${TAGLINE}`,
-    languageLabel: "言語",
-    productsLabel: "プロダクト",
-    channelsLabel: "チャンネル",
-    promotionsLabel: "プロモーション",
-    contactLabel: "コラボ / ビジネス",
-    communityLabel: "QQ コミュニティ",
-    communityValue: "グループ " + QQ_GROUP_ID,
-    contactValue: `WeChat ${WECHAT_ID}`,
-    copyHint: "クリックでコピー",
-    copyDone: "コピーしました",
-    communityCopyHint: "グループ番号をコピーして QR コードを表示",
-    communityCopyDone: "コピーしました。QR コードを表示しました",
-    communityQrShown: "QR コードを表示しました",
-    communityQrAlt: "チューリングミラー QQ コミュニティの QR コード",
-    communityQrHelp: "QQ でスキャンしてコミュニティに参加",
-    openNewTab: "新しいタブで開く"
-  }
+const LOCALE_MATCH = {
+  sc: ["zh-hans", "zh-cn", "zh-sg", "zh"],
+  tc: ["zh-hant", "zh-tw", "zh-hk", "zh-mo"],
+  en: ["en"],
+  ja: ["ja"]
+};
+const HREFLANG = { sc: "zh-Hans", tc: "zh-Hant", en: "en", ja: "ja" };
+// 语言提示用目标语言本身书写，让看不懂当前页的人也能认出来。
+const LANG_HINT = {
+  sc: "切换到简体中文",
+  tc: "切換至繁體中文",
+  en: "View in English",
+  ja: "日本語で表示"
 };
 
-const PRODUCT_LINK_LABELS = {
-  github: "GitHub",
-  download: {
-    sc: "下载",
-    tc: "下載",
-    en: "Download",
-    ja: "ダウンロード"
-  },
-  visit: {
-    sc: "前往",
-    tc: "前往",
-    en: "Visit",
-    ja: "アクセス"
-  }
-};
-
-const PRODUCTS = [
-  {
-    name: {
-      sc: "RVC Fabric",
-      tc: "RVC Fabric",
-      en: "RVC Fabric",
-      ja: "RVC Fabric"
-    },
-    description: {
-      sc: "高性能实时 AI 变声桌面客户端",
-      tc: "高效能即時 AI 變聲桌面客戶端",
-      en: "High-performance real-time AI voice changer desktop client",
-      ja: "高性能リアルタイム AI ボイスチェンジャーのデスクトップクライアント"
-    },
-    links: [
-      { href: "https://github.com/Turing-Mirror/RVC-Fabric", label: "github" },
-      { href: "https://cdn.turingmirror.com/d/rvc-fabric-setup", label: "download" }
-    ]
-  },
-  {
-    name: {
-      sc: "喵言喵",
-      tc: "喵言喵",
-      en: "MoeText",
-      ja: "MoeText"
-    },
-    description: {
-      sc: "聊天文本自动美化工具",
-      tc: "聊天文本自動美化工具",
-      en: "Automatic chat-text beautifier",
-      ja: "チャットテキスト自動美化ツール"
-    },
-    links: [
-      { href: "https://github.com/Turing-Mirror/MoeText", label: "github" },
-      { href: "https://cdn.turingmirror.com/d/moetype", label: "download" }
-    ]
-  },
-  {
-    name: {
-      sc: "图灵镜 UI (TRM UI)",
-      tc: "圖靈鏡 UI (TRM UI)",
-      en: "Turing Mirror UI (TRM UI)",
-      ja: "チューリングミラー UI (TRM UI)"
-    },
-    description: {
-      sc: "图灵镜桌面产品的 UI/UX 模板",
-      tc: "圖靈鏡桌面產品的 UI/UX 模板",
-      en: "UI/UX template for Turing Mirror desktop products",
-      ja: "チューリングミラーのデスクトップ製品向け UI/UX テンプレート"
-    },
-    links: [{ href: "https://github.com/Turing-Mirror/TRM-UI", label: "github" }]
-  },
-  {
-    name: {
-      sc: "测试镜 (Mirror-Test)",
-      tc: "測試鏡 (Mirror-Test)",
-      en: "Mirror-Test",
-      ja: "Mirror-Test"
-    },
-    description: {
-      sc: "Meme 趣味测试",
-      tc: "Meme 趣味測試",
-      en: "Meme-style fun tests",
-      ja: "Meme 系のおもしろテスト"
-    },
-    links: [
-      { href: "https://github.com/Turing-Mirror/Mirror-Test", label: "github" },
-      { href: "https://test.turingmirror.com/", label: "visit" }
-    ]
-  }
-];
-
-const CHANNELS = [
-  {
-    href: "https://space.bilibili.com/3546871148579062",
-    name: {
-      sc: "哔哩哔哩",
-      tc: "嗶哩嗶哩",
-      en: "Bilibili",
-      ja: "ビリビリ"
-    },
-    id: "UID 3546871148579062"
-  },
-  {
-    href: "https://v.douyin.com/6NxXcrKK9cc",
-    name: {
-      sc: "抖音",
-      tc: "抖音",
-      en: "Douyin",
-      ja: "抖音（Douyin）"
-    },
-    id: {
-      sc: "抖音号 TuringMirror",
-      tc: "抖音號 TuringMirror",
-      en: "Douyin ID TuringMirror",
-      ja: "抖音 ID TuringMirror"
-    }
-  },
-  {
-    href: "https://www.xiaohongshu.com/user/profile/65f56bf1000000000b00e094",
-    name: {
-      sc: "小红书",
-      tc: "小紅書",
-      en: "Xiaohongshu",
-      ja: "小紅書（RED）"
-    },
-    id: {
-      sc: "小红书号 TuringMirror",
-      tc: "小紅書號 TuringMirror",
-      en: "Xiaohongshu ID TuringMirror",
-      ja: "小紅書 ID TuringMirror"
-    }
-  }
-];
-
-const PROMOTIONS = [
-  {
-    name: {
-      sc: "雨云",
-      tc: "雨雲",
-      en: "Rainyun",
-      ja: "Rainyun"
-    },
-    description: {
-      sc: "首月五折 · 性价比云服务器 / 游戏云 / 面板服",
-      tc: "首月五折 · 性價比雲伺服器 / 遊戲雲 / 面板服",
-      en: "50% off the first month · value cloud servers / game cloud / panel hosting",
-      ja: "初月半額 · 高コスパのクラウドサーバー / ゲームクラウド / パネルホスティング"
-    },
-    href: "https://www.rainyun.com/m1rror_?s=RVC-Fabric"
-  }
-];
-const dom = {
-  langSelect: document.getElementById("lang-select"),
-  langLabel: document.getElementById("lang-label"),
-  siteName: document.getElementById("site-name"),
-  siteNameMirror: document.getElementById("site-name-mirror"),
-  productsLabel: document.getElementById("products-label"),
-  productGrid: document.getElementById("product-grid"),
-  channelsLabel: document.getElementById("channels-label"),
-  channelGrid: document.getElementById("channel-grid"),
-  promotionsLabel: document.getElementById("promotions-label"),
-  promotionGrid: document.getElementById("promotion-grid"),
-  contactLabel: document.getElementById("contact-label"),
-  contactCopy: document.getElementById("contact-copy"),
-  contactCopyValue: document.getElementById("contact-copy-value"),
-  contactCopyHint: document.getElementById("contact-copy-hint"),
-  communityLabel: document.getElementById("community-label"),
-  communityCopy: document.getElementById("community-copy"),
-  communityCopyValue: document.getElementById("community-copy-value"),
-  communityCopyHint: document.getElementById("community-copy-hint"),
-  communityQr: document.getElementById("community-qr"),
-  communityQrImage: document.getElementById("community-qr-image"),
-  communityQrHelp: document.getElementById("community-qr-help"),
-  pageDescription: document.querySelector('meta[name="description"]'),
-  ogTitle: document.querySelector('meta[property="og:title"]'),
-  ogDescription: document.querySelector('meta[property="og:description"]'),
-  twitterTitle: document.querySelector('meta[name="twitter:title"]'),
-  twitterDescription: document.querySelector('meta[name="twitter:description"]')
-};
-
-let currentLocale = "sc";
-let contactCopyFeedbackTimer = 0;
-let communityCopyFeedbackTimer = 0;
-
-function isSupportedLocale(locale) {
-  return LOCALES.some((item) => item.code === locale);
-}
-
-function getCopy(locale = currentLocale) {
-  return COPY[locale] || COPY.sc;
-}
-
-function localized(value, locale = currentLocale) {
-  if (typeof value === "string") {
-    return value;
-  }
-
-  return value[locale] || value.sc;
-}
+const root = document.documentElement;
+const pageLocale = root.dataset.locale || "sc";
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 
 function readStoredLocale() {
   try {
-    const stored = window.localStorage.getItem(LOCALE_STORAGE_KEY);
-    return isSupportedLocale(stored) ? stored : "";
+    return window.localStorage.getItem(LOCALE_STORAGE_KEY) || "";
   } catch {
     return "";
   }
@@ -312,210 +37,78 @@ function persistLocale(locale) {
 }
 
 function detectLocale() {
-  const preferred = Array.isArray(navigator.languages) && navigator.languages.length
-    ? navigator.languages
-    : [navigator.language || ""];
-
+  const preferred = navigator.languages?.length ? navigator.languages : [navigator.language || ""];
   for (const tag of preferred) {
     const normalized = String(tag).toLowerCase();
-
-    for (const locale of LOCALES) {
-      if (locale.match.some((prefix) => normalized === prefix || normalized.startsWith(`${prefix}-`))) {
-        return locale.code;
+    for (const [code, prefixes] of Object.entries(LOCALE_MATCH)) {
+      if (prefixes.some((prefix) => normalized === prefix || normalized.startsWith(`${prefix}-`))) {
+        return code;
       }
     }
   }
-
-  return "sc";
+  return "";
 }
 
-function buildLanguageSelect() {
-  const fragment = document.createDocumentFragment();
+// ---------- scroll reveal ----------
 
-  for (const locale of LOCALES) {
-    const option = document.createElement("option");
-    option.value = locale.code;
-    option.textContent = locale.label;
-    fragment.append(option);
+function initReveal() {
+  const targets = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    targets.forEach((node) => node.classList.add("is-in"));
+    return;
   }
-
-  dom.langSelect.append(fragment);
-  dom.langSelect.addEventListener("change", (event) => {
-    setLocale(event.target.value);
-    persistLocale(currentLocale);
-  });
-}
-
-function buildProducts() {
-  const copy = getCopy();
-  const fragment = document.createDocumentFragment();
-
-  for (const product of PRODUCTS) {
-    const item = document.createElement("li");
-    const card = document.createElement("article");
-    card.className = "product-card";
-
-    const nameNode = document.createElement("h3");
-    nameNode.className = "product-name";
-    nameNode.textContent = localized(product.name);
-
-    const descriptionNode = document.createElement("p");
-    descriptionNode.className = "product-description";
-    descriptionNode.textContent = localized(product.description);
-
-    const actions = document.createElement("div");
-    actions.className = "product-actions";
-
-    for (const productLink of product.links) {
-      const label = localized(PRODUCT_LINK_LABELS[productLink.label]);
-      const link = document.createElement("a");
-      link.className = "product-link";
-      link.href = productLink.href;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.textContent = label;
-      link.setAttribute(
-        "aria-label",
-        localized(product.name) + " - " + label + ". " + copy.openNewTab + "."
-      );
-      actions.append(link);
-    }
-
-    card.append(nameNode, descriptionNode, actions);
-    item.append(card);
-    fragment.append(item);
-  }
-
-  dom.productGrid.replaceChildren(fragment);
-}
-
-function buildChannels() {
-  const copy = getCopy();
-  const fragment = document.createDocumentFragment();
-
-  for (const channel of CHANNELS) {
-    const name = localized(channel.name);
-    const id = localized(channel.id);
-
-    const item = document.createElement("li");
-    const link = document.createElement("a");
-    link.className = "channel-card";
-    link.href = channel.href;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.setAttribute("aria-label", `${name} @${copy.siteName} - ${id}. ${copy.openNewTab}.`);
-
-    const arrow = document.createElement("span");
-    arrow.className = "channel-arrow";
-    arrow.setAttribute("aria-hidden", "true");
-    arrow.textContent = "↗";
-
-    const nameNode = document.createElement("span");
-    nameNode.className = "channel-name";
-    nameNode.textContent = name;
-
-    const handleNode = document.createElement("span");
-    handleNode.className = "channel-handle";
-    handleNode.textContent = `@${copy.siteName}`;
-
-    const idNode = document.createElement("span");
-    idNode.className = "channel-id";
-    idNode.textContent = id;
-
-    link.append(arrow, nameNode, handleNode, idNode);
-    item.append(link);
-    fragment.append(item);
-  }
-
-  dom.channelGrid.replaceChildren(fragment);
-}
-
-function buildPromotions() {
-  const copy = getCopy();
-  const fragment = document.createDocumentFragment();
-
-  for (const promotion of PROMOTIONS) {
-    const item = document.createElement("li");
-    const card = document.createElement("article");
-    card.className = "product-card promotion-card";
-
-    const nameNode = document.createElement("h3");
-    nameNode.className = "product-name";
-    nameNode.textContent = localized(promotion.name);
-
-    const descriptionNode = document.createElement("p");
-    descriptionNode.className = "product-description";
-    descriptionNode.textContent = localized(promotion.description);
-
-    const actions = document.createElement("div");
-    actions.className = "product-actions";
-
-    const link = document.createElement("a");
-    link.className = "product-link";
-    link.href = promotion.href;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = localized(PRODUCT_LINK_LABELS.visit);
-    link.setAttribute(
-      "aria-label",
-      localized(promotion.name) + " - " + localized(PRODUCT_LINK_LABELS.visit) + ". " + copy.openNewTab + "."
-    );
-    actions.append(link);
-    card.append(nameNode, descriptionNode, actions);
-    item.append(card);
-    fragment.append(item);
-  }
-
-  dom.promotionGrid.replaceChildren(fragment);
-}
-function setLocale(locale) {
-  currentLocale = isSupportedLocale(locale) ? locale : "sc";
-
-  const localeConfig = LOCALES.find((item) => item.code === currentLocale);
-  const copy = getCopy();
-
-  document.documentElement.lang = localeConfig.htmlLang;
-  document.title = copy.pageTitle;
-  dom.pageDescription.setAttribute("content", copy.metaDescription);
-  dom.ogTitle.setAttribute("content", copy.pageTitle);
-  dom.ogDescription.setAttribute("content", copy.metaDescription);
-  dom.twitterTitle.setAttribute("content", copy.pageTitle);
-  dom.twitterDescription.setAttribute("content", copy.metaDescription);
-
-  dom.langLabel.textContent = copy.languageLabel;
-  dom.langSelect.setAttribute("aria-label", copy.languageLabel);
-  dom.langSelect.value = currentLocale;
-  dom.siteName.textContent = copy.siteName;
-  dom.siteNameMirror.textContent = copy.siteName;
-  dom.productsLabel.textContent = copy.productsLabel;
-  dom.productGrid.setAttribute("aria-label", copy.productsLabel);
-  dom.channelsLabel.textContent = copy.channelsLabel;
-  dom.channelGrid.setAttribute("aria-label", copy.channelsLabel);
-  dom.promotionsLabel.textContent = copy.promotionsLabel;
-  dom.promotionGrid.setAttribute("aria-label", copy.promotionsLabel);
-  dom.contactLabel.textContent = copy.contactLabel;
-  dom.contactCopyValue.textContent = copy.contactValue;
-  dom.contactCopy.setAttribute("aria-label", `${copy.contactValue}. ${copy.copyHint}.`);
-  dom.communityLabel.textContent = copy.communityLabel;
-  dom.communityCopyValue.textContent = copy.communityValue;
-  dom.communityCopy.setAttribute(
-    "aria-label",
-    copy.communityValue + ". " + copy.communityCopyHint + "."
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          observer.unobserve(entry.target);
+        }
+      }
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.01 }
   );
-  dom.communityQrImage.alt = copy.communityQrAlt;
-  dom.communityQrHelp.textContent = copy.communityQrHelp;
-
-  if (!contactCopyFeedbackTimer) {
-    dom.contactCopyHint.textContent = copy.copyHint;
-  }
-  if (!communityCopyFeedbackTimer) {
-    dom.communityCopyHint.textContent = copy.communityCopyHint;
-  }
-
-  buildProducts();
-  buildChannels();
-  buildPromotions();
+  targets.forEach((node) => observer.observe(node));
 }
+
+// ---------- language menu ----------
+
+function initLanguageMenu() {
+  const menu = document.querySelector(".lang-menu");
+  if (!menu) return;
+
+  menu.addEventListener("click", (event) => {
+    const link = event.target.closest("a[data-locale]");
+    if (link) persistLocale(link.dataset.locale);
+  });
+  document.addEventListener("click", (event) => {
+    if (menu.open && !menu.contains(event.target)) menu.open = false;
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menu.open) {
+      menu.open = false;
+      menu.querySelector("summary").focus();
+    }
+  });
+
+  // 首次访问且浏览器语言与当前页不同：只给出提示，不自动跳转（避免搜索引擎被重定向）。
+  if (readStoredLocale()) return;
+  const detected = detectLocale();
+  if (!detected || detected === pageLocale) return;
+  const alternate = document.querySelector(`link[rel="alternate"][hreflang="${HREFLANG[detected]}"]`);
+  if (!alternate) return;
+
+  const hint = document.createElement("a");
+  hint.className = "lang-hint";
+  hint.href = new URL(alternate.href).pathname;
+  hint.lang = HREFLANG[detected];
+  hint.hreflang = HREFLANG[detected];
+  hint.textContent = LANG_HINT[detected];
+  hint.addEventListener("click", () => persistLocale(detected));
+  menu.before(hint);
+}
+
+// ---------- copy chips & QR ----------
 
 async function copyText(text) {
   try {
@@ -542,54 +135,130 @@ async function copyText(text) {
   }
 }
 
-function bindContactCopy() {
-  dom.contactCopy.addEventListener("click", async () => {
-    const copied = await copyText(WECHAT_ID);
+function flashHint(chip, text, duration) {
+  const hint = chip.querySelector(".copy-hint");
+  hint.textContent = text;
+  chip.classList.remove("is-done");
+  void chip.offsetWidth; // 重启动画
+  chip.classList.add("is-done");
+  window.clearTimeout(chip._resetTimer);
+  chip._resetTimer = window.setTimeout(() => {
+    chip.classList.remove("is-done");
+    hint.textContent = chip.dataset.hint;
+  }, duration);
+}
 
-    if (!copied) {
-      return;
-    }
+function initCopyChips() {
+  for (const chip of document.querySelectorAll(".copy-chip")) {
+    chip.addEventListener("click", async () => {
+      const panel = chip.dataset.reveal ? document.getElementById(chip.dataset.reveal) : null;
+      if (panel) {
+        panel.classList.add("is-open");
+        chip.setAttribute("aria-expanded", "true");
+      }
 
-    const copy = getCopy();
-    dom.contactCopyHint.textContent = copy.copyDone;
-    window.clearTimeout(contactCopyFeedbackTimer);
-    contactCopyFeedbackTimer = window.setTimeout(() => {
-      contactCopyFeedbackTimer = 0;
-      dom.contactCopyHint.textContent = getCopy().copyHint;
-    }, 1800);
+      const copied = await copyText(chip.dataset.copy);
+      if (copied) {
+        flashHint(chip, chip.dataset.done, panel ? 2200 : 1800);
+      } else if (chip.dataset.fallback) {
+        flashHint(chip, chip.dataset.fallback, 2200);
+      }
+    });
+  }
+}
+
+// ---------- screenshot lightbox ----------
+
+function initLightbox() {
+  const gallery = document.querySelector(".shots");
+  if (!gallery || typeof HTMLDialogElement !== "function") return;
+
+  const dialog = document.createElement("dialog");
+  dialog.className = "lightbox";
+  const image = document.createElement("img");
+  const close = document.createElement("button");
+  close.type = "button";
+  close.className = "lightbox-close";
+  close.setAttribute("aria-label", gallery.dataset.closeLabel || "Close");
+  close.textContent = "×";
+  dialog.append(image, close);
+  document.body.append(dialog);
+
+  const shut = () => {
+    if (!dialog.open || dialog.classList.contains("is-closing")) return;
+    dialog.classList.add("is-closing");
+    const done = () => {
+      dialog.classList.remove("is-closing");
+      dialog.close();
+    };
+    if (reduceMotion.matches) done();
+    else dialog.addEventListener("animationend", done, { once: true });
+  };
+
+  gallery.addEventListener("click", (event) => {
+    const link = event.target.closest("a[data-lightbox]");
+    if (!link) return;
+    event.preventDefault();
+    const source = link.querySelector("img");
+    image.src = link.href;
+    image.alt = source.alt;
+    dialog.showModal();
+  });
+  close.addEventListener("click", shut);
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog || event.target === image) shut();
+  });
+  dialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    shut();
   });
 }
 
-function bindCommunityCopy() {
-  dom.communityCopy.addEventListener("click", async () => {
-    dom.communityQr.hidden = false;
-    dom.communityCopy.setAttribute("aria-expanded", "true");
+// ---------- pointer effects ----------
 
-    const copied = await copyText(QQ_GROUP_ID);
-    const copy = getCopy();
-    dom.communityCopyHint.textContent = copied ? copy.communityCopyDone : copy.communityQrShown;
-    window.clearTimeout(communityCopyFeedbackTimer);
-    communityCopyFeedbackTimer = window.setTimeout(() => {
-      communityCopyFeedbackTimer = 0;
-      dom.communityCopyHint.textContent = getCopy().communityCopyHint;
-    }, 2200);
-  });
+function initCardGlow() {
+  document.addEventListener(
+    "pointermove",
+    (event) => {
+      if (!finePointer.matches) return;
+      const card = event.target.closest?.(".p-card, .channel-card");
+      if (!card) return;
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty("--mx", `${event.clientX - rect.left}px`);
+      card.style.setProperty("--my", `${event.clientY - rect.top}px`);
+    },
+    { passive: true }
+  );
 }
 
-function init() {
-  buildLanguageSelect();
-  bindContactCopy();
-  bindCommunityCopy();
-  setLocale(readStoredLocale() || detectLocale());
-  document.body.classList.add("is-ready");
+// 鼠标左右移动时，倒影随之轻微倾斜，像一面有深度的镜子。
+function initMirrorTilt() {
+  const stack = document.querySelector("[data-mirror]");
+  if (!stack) return;
+  let frame = 0;
+  let target = 0;
+  let current = 0;
+
+  const step = () => {
+    current += (target - current) * 0.08;
+    stack.style.setProperty("--tilt", `${current.toFixed(3)}deg`);
+    frame = Math.abs(target - current) > 0.01 ? window.requestAnimationFrame(step) : 0;
+  };
+
+  window.addEventListener(
+    "pointermove",
+    (event) => {
+      if (!finePointer.matches || reduceMotion.matches) return;
+      target = ((event.clientX / window.innerWidth) - 0.5) * -14;
+      if (!frame) frame = window.requestAnimationFrame(step);
+    },
+    { passive: true }
+  );
 }
 
-if (window.location.hostname === APEX_HOST) {
-  const target = new URL(window.location.href);
-  target.protocol = "https:";
-  target.hostname = CANONICAL_HOST;
-  target.port = "";
-  window.location.replace(target.toString());
-} else {
-  init();
-}
+initReveal();
+initLanguageMenu();
+initCopyChips();
+initLightbox();
+initCardGlow();
+initMirrorTilt();

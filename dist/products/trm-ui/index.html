@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-Hans" data-locale="sc">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>图灵镜 UI：图灵镜桌面产品的 UI/UX 模板 | 图灵镜 Turing Mirror</title>
+    <meta name="description" content="图灵镜桌面产品共用的 UI/UX 模板：设计令牌、组件库、八语言 i18n 与 Tauri 壳。 npm install &amp;&amp; npm run dev 即可预览组件画廊，无需安装 Rust">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1c1b18" media="(prefers-color-scheme: dark)">
+    <link rel="canonical" href="https://www.turingmirror.com/products/trm-ui/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/trm-ui/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/trm-ui/">
+    <link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/trm-ui/">
+    <link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/products/trm-ui/">
+    <link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/products/trm-ui/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/site.css?v=221772726b">
+    <script src="/boot.js?v=95a2ee6377"></script>
+    <script src="/site.js?v=f194b73d35" defer></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.turingmirror.com/#organization",
+      "name": "Turing Mirror",
+      "alternateName": [
+        "图灵镜",
+        "圖靈鏡",
+        "チューリングミラー"
+      ],
+      "url": "https://www.turingmirror.com/",
+      "logo": "https://www.turingmirror.com/favicon.svg",
+      "slogan": "Touching the setsuna, reaching the future.",
+      "description": "图灵镜 Turing Mirror 官网：RVC Fabric 实时 AI 变声客户端、喵言喵聊天文本美化工具、测试镜趣味测试与 TRM UI 设计模板。",
+      "sameAs": [
+        "https://space.bilibili.com/3546871148579062",
+        "https://v.douyin.com/6NxXcrKK9cc",
+        "https://www.xiaohongshu.com/user/profile/65f56bf1000000000b00e094",
+        "https://github.com/Turing-Mirror"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.turingmirror.com/products/trm-ui/#software",
+      "name": "图灵镜 UI",
+      "alternateName": [
+        "TRM UI",
+        "Turing Mirror UI"
+      ],
+      "description": "每个图灵镜桌面产品都从同一套界面起步：同样的设计令牌、组件与动效，改进也回到这里，而不是散落在各个产品里。模板包含 React 组件库、侧栏式应用外壳、八语言 i18n，以及一个能直接开窗的 Tauri 壳，不包含任何产品代码。",
+      "url": "https://www.turingmirror.com/products/trm-ui/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Windows",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "设计令牌与三态主题",
+        "组件库",
+        "侧栏式应用外壳",
+        "八语言 i18n",
+        "Tauri 桌面壳",
+        "克制的设计取向"
+      ],
+      "publisher": {
+        "@id": "https://www.turingmirror.com/#organization"
+      },
+      "inLanguage": "zh-Hans",
+      "sameAs": [
+        "https://github.com/Turing-Mirror/TRM-UI"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.turingmirror.com/products/trm-ui/#webpage",
+      "url": "https://www.turingmirror.com/products/trm-ui/",
+      "name": "图灵镜 UI",
+      "inLanguage": "zh-Hans",
+      "isPartOf": {
+        "@id": "https://www.turingmirror.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://www.turingmirror.com/products/trm-ui/#software"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "图灵镜",
+          "item": "https://www.turingmirror.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "图灵镜 UI",
+          "item": "https://www.turingmirror.com/products/trm-ui/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body class="page-product">
+    <a class="skip-link" href="#main">跳到正文</a>
+    <div class="shell">
+      <header class="topbar">
+        <a class="back" href="/"><span class="back-arrow" aria-hidden="true">←</span> <span class="back-label">图灵镜</span></a>
+        <div class="topbar-end">
+        <details class="lang-menu">
+          <summary aria-label="语言: 简体中文">
+            <span>简体中文</span>
+          </summary>
+          <ul class="lang-list">
+            <li><a href="/products/trm-ui/" hreflang="zh-Hans" lang="zh-Hans" data-locale="sc" aria-current="true">简体中文</a></li>
+            <li><a href="/zh-hant/products/trm-ui/" hreflang="zh-Hant" lang="zh-Hant" data-locale="tc">繁體中文</a></li>
+            <li><a href="/en/products/trm-ui/" hreflang="en" lang="en" data-locale="en">English</a></li>
+            <li><a href="/ja/products/trm-ui/" hreflang="ja" lang="ja" data-locale="ja">日本語</a></li>
+          </ul>
+        </details>
+        </div>
+      </header>
+
+      <main class="pd" id="main">
+        <header class="pd-head">
+          <p class="pd-meta reveal">React + Tauri · 设计模板</p>
+          <h1 class="pd-title"><span class="pd-title-main" style="view-transition-name: product-trm-ui">图灵镜 UI</span> <small>TRM UI</small></h1>
+          <p class="pd-lead reveal" style="--reveal-delay: 70ms">图灵镜桌面产品的 UI/UX 模板</p>
+          <p class="pd-intro reveal" style="--reveal-delay: 140ms">每个图灵镜桌面产品都从同一套界面起步：同样的设计令牌、组件与动效，改进也回到这里，而不是散落在各个产品里。模板包含 React 组件库、侧栏式应用外壳、八语言 i18n，以及一个能直接开窗的 Tauri 壳，不包含任何产品代码。</p>
+          <div class="pd-actions reveal" style="--reveal-delay: 210ms">
+            <a class="btn btn-primary" href="https://github.com/Turing-Mirror/TRM-UI" target="_blank" rel="noopener noreferrer">在 GitHub 查看 <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（在新标签页打开）</span></a>
+          </div>
+          <p class="pd-note reveal" style="--reveal-delay: 280ms">npm install &amp;&amp; npm run dev 即可预览组件画廊，无需安装 Rust</p>
+        </header>
+
+        <section aria-labelledby="features-label">
+          <h2 class="pd-h2 reveal" id="features-label">核心特性</h2>
+          <ul class="features">
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>设计令牌与三态主题</h3><p>颜色、间距、圆角与动效集中定义，浅色 / 深色 / 跟随系统三态切换。</p></li>
+            <li class="reveal" style="--reveal-delay: 70ms"><h3>组件库</h3><p>按钮、表单控件、分段控件、菜单、弹窗、抽屉、日历、通知等，每一个都能直接操作。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>侧栏式应用外壳</h3><p>标题栏、侧栏与方向性换页，新产品直接套用。</p></li>
+            <li class="reveal" style="--reveal-delay: 70ms"><h3>八语言 i18n</h3><p>构建时打包、同步切换，附带三道校验脚本；界面与壳共用语言包。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>Tauri 桌面壳</h3><p>无边框窗口、托盘、开机自启、日志与配置的原子写入，开箱即可开窗。</p></li>
+            <li class="reveal" style="--reveal-delay: 70ms"><h3>克制的设计取向</h3><p>少框少线、颜色克制，出现和消失都有过程；指到的卡片向内收，不向上浮。</p></li>
+          </ul>
+        </section>
+        <section aria-labelledby="steps-label">
+          <h2 class="pd-h2 reveal" id="steps-label">快速开始</h2>
+          <ol class="steps">
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>预览组件</h3><p>npm install &amp;&amp; npm run dev，打开 http://localhost:1410 查看组件画廊。</p></li>
+            <li class="reveal" style="--reveal-delay: 70ms"><h3>连壳运行</h3><p>安装 Rust 后运行 npm run tauri:dev，得到一个真实的桌面窗口。</p></li>
+            <li class="reveal" style="--reveal-delay: 140ms"><h3>带进你的项目</h3><p>src/trm/ 是模板本体，可以整个复制走。</p></li>
+          </ol>
+        </section>
+        <section aria-labelledby="others-label">
+          <h2 class="pd-h2 reveal" id="others-label">其他产品</h2>
+          <ul class="others">
+            <li class="reveal" style="--reveal-delay: 0ms"><a href="/products/rvc-fabric/"><span class="others-name">RVC Fabric</span><span class="others-desc">高性能实时 AI 变声桌面客户端</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
+            <li class="reveal" style="--reveal-delay: 70ms"><a href="/products/moetext/"><span class="others-name">喵言喵 <small>MoeText</small></span><span class="others-desc">聊天文本自动美化工具</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
+            <li class="reveal" style="--reveal-delay: 140ms"><a href="/products/mirror-test/"><span class="others-name">测试镜 <small>Mirror-Test</small></span><span class="others-desc">Meme 趣味测试合集</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>© 2026 图灵镜 Turing Mirror</span>
+        <nav aria-label="频道">
+          <a href="https://github.com/Turing-Mirror" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only">（在新标签页打开）</span></a>
+          <a href="https://space.bilibili.com/3546871148579062" target="_blank" rel="noopener noreferrer">哔哩哔哩<span class="sr-only">（在新标签页打开）</span></a>
+          <a href="https://v.douyin.com/6NxXcrKK9cc" target="_blank" rel="noopener noreferrer">抖音<span class="sr-only">（在新标签页打开）</span></a>
+          <a href="https://www.xiaohongshu.com/user/profile/65f56bf1000000000b00e094" target="_blank" rel="noopener noreferrer">小红书<span class="sr-only">（在新标签页打开）</span></a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

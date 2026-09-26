@@ -12,5 +12,14 @@
 /site.js
   Cache-Control: public, max-age=0, must-revalidate
 
+/boot.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=604800
+
 /favicon.svg
   Cache-Control: public, max-age=86400
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
