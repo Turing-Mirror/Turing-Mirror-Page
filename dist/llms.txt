@@ -1,8 +1,8 @@
 # Turing Mirror (图灵镜)
 
-> Turing Mirror: RVC Fabric real-time AI voice changer, MoeText chat-text beautifier, Mirror-Test fun quizzes and the TRM UI design template. Tagline: "Touching the setsuna, reaching the future."
+> Touching the setsuna, reaching the future.
 
-Turing Mirror (Chinese: 图灵镜, Traditional: 圖靈鏡, Japanese: チューリングミラー) is the team behind the products below. All products are free. The site is available in Simplified Chinese (https://www.turingmirror.com/), Traditional Chinese, English (https://www.turingmirror.com/en/) and Japanese.
+Turing Mirror (Chinese: 图灵镜, Traditional: 圖靈鏡, Japanese: チューリングミラー) — official website. All products below are free. The site is available in Simplified Chinese (https://www.turingmirror.com/), Traditional Chinese, English (https://www.turingmirror.com/en/) and Japanese.
 
 ## Products
 

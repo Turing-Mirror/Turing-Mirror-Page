@@ -428,20 +428,11 @@ button {
   line-height: 1.5;
 }
 
-.hero-intro {
-  max-width: 54ch;
-  margin: 12px 0 0;
-  color: var(--tm-ink-muted);
-  font-size: 0.95rem;
-}
 
 .js .hero-tagline {
   animation: tm-rise var(--tm-slow) var(--tm-settle) 420ms both;
 }
 
-.js .hero-intro {
-  animation: tm-rise var(--tm-slow) var(--tm-settle) 540ms both;
-}
 
 .section-label {
   margin: 36px 0 14px;
@@ -1411,7 +1402,6 @@ button {
 .vt-nav .hero-char,
 .vt-nav .hero-mirror,
 .vt-nav .hero-tagline,
-.vt-nav .hero-intro,
 .vt-nav .pd-title-main {
   animation: none !important;
   opacity: 1;

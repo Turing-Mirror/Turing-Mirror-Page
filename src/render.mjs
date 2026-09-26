@@ -43,7 +43,7 @@ function jsonLd(data) {
   return JSON.stringify(data, null, 2).replace(/</g, "\\u003c");
 }
 
-function organization(loc) {
+function organization() {
   return {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
@@ -52,7 +52,6 @@ function organization(loc) {
     url: `${SITE_URL}/`,
     logo: `${SITE_URL}/favicon.svg`,
     slogan: TAGLINE,
-    description: UI[loc.code].homeDescription,
     sameAs: [...CHANNELS.map((channel) => channel.href), GITHUB_ORG]
   };
 }
@@ -198,7 +197,7 @@ export function renderHome(loc, assets) {
   const title = heroTitle(ui.siteName);
 
   const graph = [
-    organization(loc),
+    organization(),
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
@@ -246,7 +245,6 @@ export function renderHome(loc, assets) {
             <span class="hero-mirror${title.long ? " is-long" : ""}" aria-hidden="true"><span class="hero-mirror-inner">${esc(ui.siteName)}</span></span>
           </div>
           <p class="hero-tagline" lang="en">${esc(TAGLINE)}</p>
-          <p class="hero-intro">${esc(ui.heroIntro)}</p>
         </section>
 
         <section aria-labelledby="products-label">
@@ -441,7 +439,7 @@ function productSchema(loc, product) {
 
   const ui = UI[loc.code];
   const graph = [
-    organization(loc),
+    organization(),
     app,
     {
       "@type": "WebPage",

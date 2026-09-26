@@ -21,9 +21,7 @@ export const UI = {
     siteName: "图灵镜",
     siteTitle: "图灵镜 Turing Mirror",
     brandShort: "图灵镜",
-    homeDescription:
-      "图灵镜 Turing Mirror 官网：RVC Fabric 实时 AI 变声客户端、喵言喵聊天文本美化工具、测试镜趣味测试与 TRM UI 设计模板。",
-    heroIntro: "图灵镜开发实时 AI 变声客户端 RVC Fabric、聊天美化工具喵言喵等软件，并在哔哩哔哩、抖音、小红书分享作品。",
+    homeDescription: `图灵镜 Turing Mirror。${TAGLINE}`,
     titleSep: "：",
     languageLabel: "语言",
     productsLabel: "产品",
@@ -60,9 +58,7 @@ export const UI = {
     siteName: "圖靈鏡",
     siteTitle: "圖靈鏡 Turing Mirror",
     brandShort: "圖靈鏡",
-    homeDescription:
-      "圖靈鏡 Turing Mirror 官網：RVC Fabric 即時 AI 變聲客戶端、喵言喵聊天文本美化工具、測試鏡趣味測試與 TRM UI 設計模板。",
-    heroIntro: "圖靈鏡開發即時 AI 變聲客戶端 RVC Fabric、聊天美化工具喵言喵等軟體，並在嗶哩嗶哩、抖音、小紅書分享作品。",
+    homeDescription: `圖靈鏡 Turing Mirror。${TAGLINE}`,
     titleSep: "：",
     languageLabel: "語言",
     productsLabel: "產品",
@@ -99,10 +95,7 @@ export const UI = {
     siteName: "Turing Mirror",
     siteTitle: "Turing Mirror",
     brandShort: "Turing Mirror",
-    homeDescription:
-      "Turing Mirror: RVC Fabric real-time AI voice changer, MoeText chat-text beautifier, Mirror-Test fun quizzes and the TRM UI design template.",
-    heroIntro:
-      "Turing Mirror builds RVC Fabric, a real-time AI voice changer, MoeText, a chat-text beautifier, and more — and shares its work on Bilibili, Douyin and Xiaohongshu.",
+    homeDescription: `Turing Mirror. ${TAGLINE}`,
     titleSep: ": ",
     languageLabel: "Language",
     productsLabel: "Products",
@@ -139,10 +132,7 @@ export const UI = {
     siteName: "チューリングミラー",
     siteTitle: "チューリングミラー Turing Mirror",
     brandShort: "チューリングミラー",
-    homeDescription:
-      "チューリングミラー（Turing Mirror）公式サイト。リアルタイム AI ボイスチェンジャー RVC Fabric、チャット文章美化ツール MoeText、おもしろ診断 Mirror-Test、UI テンプレート TRM UI。",
-    heroIntro:
-      "チューリングミラーは、リアルタイム AI ボイスチェンジャー RVC Fabric やチャット文章美化ツール MoeText などを開発し、ビリビリ・抖音・小紅書で作品を発信しています。",
+    homeDescription: `チューリングミラー Turing Mirror。${TAGLINE}`,
     titleSep: "：",
     languageLabel: "言語",
     productsLabel: "プロダクト",
