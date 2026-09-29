@@ -848,6 +848,11 @@ export const CHANNELS = [
       en: "Xiaohongshu ID TuringMirror",
       ja: "小紅書 ID TuringMirror"
     }
+  },
+  {
+    href: "https://www.youtube.com/@TuringMirror",
+    name: { sc: "YouTube", tc: "YouTube", en: "YouTube", ja: "YouTube" },
+    id: "@TuringMirror"
   }
 ];
 

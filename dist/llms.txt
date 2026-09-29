@@ -68,6 +68,7 @@ Every Turing Mirror desktop app starts from the same interface: the same design 
 - Bilibili: https://space.bilibili.com/3546871148579062 (UID 3546871148579062)
 - Douyin: https://v.douyin.com/6NxXcrKK9cc (Douyin ID TuringMirror)
 - Xiaohongshu: https://www.xiaohongshu.com/user/profile/65f56bf1000000000b00e094 (Xiaohongshu ID TuringMirror)
+- YouTube: https://www.youtube.com/@TuringMirror (@TuringMirror)
 - GitHub: https://github.com/Turing-Mirror
 
 ## Contact
