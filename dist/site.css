@@ -458,8 +458,21 @@ button {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* 4 个频道：窄屏 1 列，中屏 2×2，宽屏 1×4，避免出现落单的卡片。 */
 .channel-grid {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 560px) {
+  .channel-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .channel-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .p-card,
