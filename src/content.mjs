@@ -858,7 +858,7 @@ export const CHANNELS = [
 
 export const PROMOTIONS = [
   {
-    href: "https://www.rainyun.com/m1rror_?s=RVC-Fabric",
+    href: "https://www.rainyun.com/m1rror_?s=trm-site",
     name: { sc: "雨云", tc: "雨雲", en: "Rainyun", ja: "Rainyun" },
     description: {
       sc: "首月五折 · 性价比云服务器 / 游戏云 / 面板服",
