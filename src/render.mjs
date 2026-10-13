@@ -78,7 +78,9 @@ function head({ loc, path, title, description, alternatesFor, assets, graph }) {
     <link rel="canonical" href="${absolute(path)}">
 ${alternates}
     <link rel="alternate" hreflang="x-default" href="${absolute(alternatesFor(fallback))}">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
+    <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="512x512">
+    <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any">
     <link rel="stylesheet" href="${assets.css}">
     <script src="${assets.boot}"></script>
     <script src="${assets.js}" defer></script>
@@ -145,12 +147,30 @@ ${footer(loc)}
 
 // ---------- home ----------
 
-function heroTitle(name) {
-  const chars = Array.from(name);
-  const spans = chars
-    .map((ch, i) => (ch === " " ? " " : `<span class="hero-char" style="--i: ${i}">${esc(ch)}</span>`))
-    .join("");
-  return { spans, long: chars.length > 6 };
+function heroLogo(name) {
+  const viewBox = "-107 -113 370 281";
+  return `            <h1 class="hero-title" aria-label="${esc(name)}">
+              <span class="sr-only" id="site-name">${esc(name)}</span>
+              <svg class="hero-logo" xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" width="370" height="281" aria-hidden="true" focusable="false">
+                <defs>
+                  <clipPath id="tm-logo-base-clip">
+                    <rect x="-300" y="15" width="700" height="150"/>
+                  </clipPath>
+                </defs>
+                <g id="tm-logo-mark" fill="none" stroke="currentColor" stroke-width="40">
+                  <path class="hero-logo-stroke" pathLength="1" d="M-84.57 -30.78 A90 90 0 0 1 77.94 -45 A90 90 0 0 0 240.45 -59.22"/>
+                  <g clip-path="url(#tm-logo-base-clip)" stroke-linejoin="miter" stroke-miterlimit="10">
+                    <path class="hero-logo-stroke" pathLength="1" style="--tm-logo-segment: 1" d="M-84.57 220 V35 L126.7 147.34"/>
+                    <path class="hero-logo-stroke" pathLength="1" style="--tm-logo-segment: 2" d="M240.45 0 V220"/>
+                  </g>
+                </g>
+              </svg>
+            </h1>
+            <span class="hero-mirror" aria-hidden="true">
+              <svg class="hero-logo hero-mirror-inner" viewBox="${viewBox}" width="370" height="281" focusable="false">
+                <use href="#tm-logo-mark"/>
+              </svg>
+            </span>`;
 }
 
 function productCard(loc, product, i) {
@@ -194,7 +214,6 @@ export function renderHome(loc, assets) {
   const ui = UI[loc.code];
   const alternatesFor = (other) => homePath(other);
   const path = homePath(loc);
-  const title = heroTitle(ui.siteName);
 
   const graph = [
     organization(),
@@ -241,8 +260,7 @@ export function renderHome(loc, assets) {
   const main = `      <main class="home" id="main">
         <section class="hero" aria-label="${esc(ui.siteTitle)}">
           <div class="hero-title-stack" data-mirror>
-            <h1 class="hero-title${title.long ? " is-long" : ""}" aria-label="${esc(ui.siteName)}"><span aria-hidden="true">${title.spans}</span></h1>
-            <span class="hero-mirror${title.long ? " is-long" : ""}" aria-hidden="true"><span class="hero-mirror-inner">${esc(ui.siteName)}</span></span>
+${heroLogo(ui.siteName)}
           </div>
           <p class="hero-tagline" lang="en">${esc(TAGLINE)}</p>
         </section>

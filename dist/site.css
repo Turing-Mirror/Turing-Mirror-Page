@@ -29,6 +29,12 @@
   --tm-ease: cubic-bezier(0.2, 0, 0, 1);
   --tm-settle: cubic-bezier(0.22, 1, 0.36, 1);
 
+  --tm-logo-ink: #c9ced1;
+  --tm-logo-duration: 1200ms;
+  --tm-logo-delay: 40ms;
+  --tm-logo-stagger: 300ms;
+  --tm-logo-ease: ease-in-out;
+
   color-scheme: light;
   interpolate-size: allow-keywords;
 }
@@ -342,10 +348,6 @@ button {
   --title-size: clamp(3.1rem, 11vw, 6.4rem);
 }
 
-.hero-title-stack:has(.is-long) {
-  --title-size: clamp(2.2rem, 8.4vw, 5rem);
-}
-
 .hero-title,
 .hero-mirror-inner {
   font-family: var(--tm-serif);
@@ -359,24 +361,26 @@ button {
   margin: 0;
 }
 
-.hero-char {
-  display: inline-block;
+.hero-logo {
+  display: block;
+  width: auto;
+  height: 1.04em;
+  color: var(--tm-logo-ink);
 }
 
-.js .hero-char {
-  animation: tm-char 1100ms var(--tm-settle) calc(80ms + var(--i) * 90ms) both;
+.hero-logo-stroke {
+  stroke-dasharray: 1;
+  animation: tm-logo-draw var(--tm-logo-duration) var(--tm-logo-ease) both;
+  animation-delay: calc(var(--tm-logo-delay) + var(--tm-logo-stagger) * var(--tm-logo-segment, 0));
 }
 
-@keyframes tm-char {
+@keyframes tm-logo-draw {
   from {
-    opacity: 0;
-    transform: translate3d(0, 0.32em, 0) scale(0.97);
-    filter: blur(12px);
+    stroke-dashoffset: 1;
   }
+
   to {
-    opacity: 1;
-    transform: none;
-    filter: blur(0);
+    stroke-dashoffset: 0;
   }
 }
 
@@ -402,6 +406,10 @@ button {
   white-space: nowrap;
   transform-origin: 50% 0;
   transform: skewX(var(--tilt, 0deg)) translateY(100%) scaleY(-1);
+}
+
+.hero-mirror-inner.hero-logo {
+  color: var(--tm-logo-ink);
 }
 
 .js .hero-mirror {
@@ -1395,6 +1403,10 @@ button {
 /* ---------- motion preferences ---------- */
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-logo-stroke {
+    animation: none;
+  }
+
   @view-transition {
     navigation: none;
   }
@@ -1412,7 +1424,7 @@ button {
 
 /* 通过 View Transition 进入页面时，由形变动画负责过渡，入场动画不再重复播放。 */
 .vt-nav .reveal,
-.vt-nav .hero-char,
+.vt-nav .hero-logo-stroke,
 .vt-nav .hero-mirror,
 .vt-nav .hero-tagline,
 .vt-nav .pd-title-main {

@@ -15,7 +15,7 @@ public/         原样复制到 dist/ 的静态资源
   404.html      错误页
   assets/       QQ 群二维码、产品截图（assets/products/<slug>/）
   _headers      安全响应头与缓存策略
-  favicon.svg / robots.txt
+  favicon.svg / favicon.png / favicon.ico / robots.txt
 dist/           构建产物（入库，Cloudflare 直接发布此目录）
 wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 ```
@@ -29,6 +29,14 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 - `CHANNELS`、`PROMOTIONS`、`WECHAT_ID`、`QQ_GROUP_ID`、`TAGLINE`（标语，不翻译）。
 
 新增产品：在 `PRODUCTS` 追加一项，截图放到 `public/assets/products/<slug>/`。首页卡片、详情页、sitemap 与 llms.txt 会自动生成。
+
+## 品牌素材
+
+标签图标采用工作区 `docs/logo/` 中的 SVG、PNG 与 ICO 文件，发布副本位于 `public/`。图标链接使用简单版本参数，更新素材时同步递增。
+
+四种语言首页复用 `src/render.mjs` 的 `heroLogo` 模板，以 LOGO 替代可见标题文字，保留对应语言的网站名称供读屏使用，并复用图形显示镜面倒影。
+
+绘制动画的颜色、时长、延迟、分段间隔与缓动集中在 `site.css` 的 `--tm-logo-*` 变量中。系统启用减少动态效果时，LOGO 直接静态显示。
 
 ## 语言与网址
 
@@ -53,7 +61,7 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 ## 动画
 
 - 页面切换：跨页 View Transitions（Chrome / Edge / Safari 18.2+），首页卡片上的产品名会形变为详情页标题。不支持的浏览器正常跳转。
-- 首页标题逐字浮现，倒影随后「浮出水面」，并随鼠标轻微倾斜。
+- 首页 LOGO 按上方曲线、下方折线、右侧竖线的顺序逐线绘制，只播放一次，完成后保持静止。倒影随后「浮出水面」，并随鼠标轻微倾斜。
 - 内容滚动入场、卡片跟随指针的柔光、二维码展开、问答折叠、截图大图。
 - 系统开启「减少动态效果」时关闭所有动画与页面过渡。
 
