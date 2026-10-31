@@ -187,16 +187,16 @@ export const PRODUCTS = [
       ja: "高性能リアルタイム AI ボイスチェンジャー。インストールするだけで、ゲーム・通話・配信にすぐ使えます。"
     },
     lead: {
-      sc: "高性能实时 AI 变声桌面客户端",
-      tc: "高效能即時 AI 變聲桌面客戶端",
-      en: "Real-time AI voice changer for Windows",
-      ja: "高性能リアルタイム AI ボイスチェンジャー"
+      sc: "Windows 实时 AI 语音转换与模型训练工作台",
+      tc: "Windows 即時 AI 語音轉換與模型訓練工作台",
+      en: "Real-time AI voice conversion and model training workbench for Windows",
+      ja: "Windows 向けリアルタイム AI 音声変換・モデル学習ワークベンチ"
     },
     intro: {
-      sc: "面向 Windows 的实时 AI 变声软件，开箱即用：不需要自己装 Python、PyTorch，也不用打开浏览器操作 Gradio，装好就能变声。适合游戏开黑、语音连麦、直播互动和音频制作。基于 RVC WebUI 深度定制。",
-      tc: "面向 Windows 的即時 AI 變聲軟體，開箱即用：不需要自行安裝 Python、PyTorch，也不必開啟瀏覽器操作 Gradio，裝好就能變聲。適合遊戲開黑、語音連麥、直播互動與音訊製作。基於 RVC WebUI 深度客製。",
-      en: "A real-time AI voice changer for Windows that works out of the box: no Python or PyTorch to set up, no Gradio pages to click through in a browser. Install it and start talking. Built for gaming, voice chat, live streaming and audio production, and deeply customized from RVC WebUI.",
-      ja: "Windows 向けのリアルタイム AI ボイスチェンジャー。Python や PyTorch の導入も、ブラウザで Gradio を操作する必要もなく、インストールすればすぐに使えます。ゲーム、ボイスチャット、配信、音声制作に。RVC WebUI をベースに大幅にカスタマイズしています。"
+      sc: "将 RVC 繁琐的命令行与网页脚本整合为开箱即用的原生桌面软件。涵盖实时变声、离线转换、人声分离、音频切分、特征提取、模型训练与模型融合等完整功能；安装包仅约 9 MB，首次启动时将根据本机显卡自动配置匹配的运行环境。",
+      tc: "將 RVC 繁瑣的命令列與網頁指令碼整合為開箱即用的原生桌面軟體。涵蓋即時變聲、離線轉換、人聲分離、音訊切分、特徵提取、模型訓練與模型融合等完整功能；安裝包僅約 9 MB，首次啟動時將根據本機顯示卡自動配置匹配的執行環境。",
+      en: "Consolidates RVC's command-line tools and web scripts into a streamlined native desktop application. Real-time voice conversion, offline processing, vocal separation, dataset slicing, pitch extraction, model training, index building, and model merging are unified in a 9 MB installer that automatically configures the matching runtime for your GPU on first launch.",
+      ja: "従来はコマンドラインやブラウザ、複数のスクリプトに分かれていた RVC を、導入後すぐに使えるネイティブデスクトップアプリケーションとして統合しました。リアルタイム声質変換、オフライン変換、ボーカル分離、データセット分割、ピッチ抽出、モデル学習、インデックス構築、モデルマージを約 9 MB のインストーラーにまとめ、初回起動時に GPU に適した実行環境を自動構成します。"
     },
     schema: {
       applicationCategory: "MultimediaApplication",
@@ -248,10 +248,10 @@ export const PRODUCTS = [
       {
         title: { sc: "实时变声", tc: "即時變聲", en: "Real-time conversion", ja: "リアルタイム変換" },
         body: {
-          sc: "低延迟推理，变声中可无缝切换音色，一键切换变声与原声。",
-          tc: "低延遲推論，變聲中可無縫切換音色，一鍵切換變聲與原聲。",
-          en: "Low-latency inference, seamless voice switching mid-session, and one-click bypass to your original voice.",
-          ja: "低遅延の推論。変換中もボイスをシームレスに切り替え、原音バイパスもワンクリック。"
+          sc: "低延迟推理，变声中可无缝切换音色，一键切换变声与原声。 端到端延迟低至 80 ms 以内，支持 ASIO 专业声卡通道选择与独立监听路由",
+          tc: "低延遲推論，變聲中可無縫切換音色，一鍵切換變聲與原聲。 端到端延遲低至 80 ms 以內，支援 ASIO 專業音效卡通道選擇與獨立監聽路由",
+          en: "Low-latency inference, seamless voice switching mid-session, and one-click bypass to your original voice. End-to-end latency under 80 ms, with ASIO channel selection and independent monitoring routing",
+          ja: "低遅延の推論。変換中もボイスをシームレスに切り替え、原音バイパスもワンクリック。 エンドツーエンド遅延 80 ms 以内を実現し、ASIO オーディオインターフェースのチャンネル選択と独立したモニタリングルーティングに対応"
         }
       },
       {
@@ -284,10 +284,10 @@ export const PRODUCTS = [
       {
         title: { sc: "音频工具箱", tc: "音訊工具箱", en: "Audio toolbox", ja: "オーディオツールボックス" },
         body: {
-          sc: "人声分离提取干声与伴奏，文本转语音并换成目标音色，一键训练专属音色。",
-          tc: "人聲分離擷取乾聲與伴奏，文字轉語音並換成目標音色，一鍵訓練專屬音色。",
-          en: "Separate vocals from accompaniment, turn text into speech in any voice, and train your own voice in one click.",
-          ja: "ボーカル分離、テキスト読み上げ＋ボイス変換、ワンクリックで自分専用ボイスの学習。"
+          sc: "人声分离提取干声与伴奏，文本转语音并换成目标音色，一键训练专属音色。 提供从音频切分、RMVPE 音高提取到模型训练与索引导出的可视化向导，支持训练中断后恢复进度",
+          tc: "人聲分離擷取乾聲與伴奏，文字轉語音並換成目標音色，一鍵訓練專屬音色。 提供從音訊切分、RMVPE 音高提取到模型訓練與索引匯出的視覺化精靈，支援訓練中斷後恢復進度",
+          en: "Separate vocals from accompaniment, turn text into speech in any voice, and train your own voice in one click. Guided visual workflow covering audio slicing, RMVPE pitch extraction, model training, and index export, with checkpoint resume support",
+          ja: "ボーカル分離、テキスト読み上げ＋ボイス変換、ワンクリックで自分専用ボイスの学習。 音声分割、RMVPE ピッチ抽出からモデル学習、インデックス書き出しまでを一貫して案内するビジュアルウィザードを搭載し、中断後の再開にも対応"
         }
       },
       {
@@ -322,10 +322,10 @@ export const PRODUCTS = [
       {
         title: { sc: "接入游戏 / 语音", tc: "接入遊戲 / 語音", en: "Route your audio", ja: "ゲーム・通話につなぐ" },
         body: {
-          sc: "软件输出选 CABLE Input，游戏、QQ 或 Discord 的麦克风选 CABLE Output。",
-          tc: "軟體輸出選 CABLE Input，遊戲、QQ 或 Discord 的麥克風選 CABLE Output。",
-          en: "Set RVC Fabric's output to CABLE Input, and the microphone in your game, QQ or Discord to CABLE Output.",
-          ja: "RVC Fabric の出力を CABLE Input に、ゲームや QQ・Discord のマイクを CABLE Output に設定します。"
+          sc: "软件输出选 CABLE Input，游戏、QQ 或 Discord 的麦克风选 CABLE Output。 支持一键配置 VB-Cable 虚拟声卡与实时音频滑块，免去繁琐的音频路由设置",
+          tc: "軟體輸出選 CABLE Input，遊戲、QQ 或 Discord 的麥克風選 CABLE Output。 支援一鍵配置 VB-Cable 虛擬音效卡與即時音訊滑桿，免去繁瑣的音訊路由設定",
+          en: "Set RVC Fabric's output to CABLE Input, and the microphone in your game, QQ or Discord to CABLE Output. One-click VB-Cable virtual audio routing and live audio sliders for straightforward routing setup",
+          ja: "RVC Fabric の出力を CABLE Input に、ゲームや QQ・Discord のマイクを CABLE Output に設定します。 VB-Cable 仮想オーディオデバイスの一括設定とリアルタイム音量スライダーを備え、煩雑なルーティング設定を簡略化"
         }
       }
     ],
@@ -794,10 +794,10 @@ export const PRODUCTS = [
       {
         title: { sc: "预览组件", tc: "預覽元件", en: "Preview", ja: "プレビュー" },
         body: {
-          sc: "npm install && npm run dev，打开 http://localhost:1410 查看组件画廊。",
-          tc: "npm install && npm run dev，開啟 http://localhost:1410 檢視元件畫廊。",
-          en: "Run npm install && npm run dev and open http://localhost:1410 to browse the gallery.",
-          ja: "npm install && npm run dev を実行し、http://localhost:1410 でギャラリーを表示します。"
+          sc: "npm install && npm run dev，打开 http://localhost:1410 查看组件画廊。 内置组件画廊，支持在本地直接交互预览所有组件、状态与动效",
+          tc: "npm install && npm run dev，開啟 http://localhost:1410 檢視元件畫廊。 內建元件畫廊，支援在本機直接互動預覽所有元件、狀態與動效",
+          en: "Run npm install && npm run dev and open http://localhost:1410 to browse the gallery. Built-in component gallery for interactive local preview of all components, states, and motion tokens",
+          ja: "npm install && npm run dev を実行し、http://localhost:1410 でギャラリーを表示します。 コンポーネントギャラリーを内蔵し、全コンポーネント・状態・モーションをローカル環境で直接プレビュー可能"
         }
       },
       {

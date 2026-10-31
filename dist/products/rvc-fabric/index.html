@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>RVC Fabric：高性能实时 AI 变声桌面客户端 | 图灵镜 Turing Mirror</title>
+    <title>RVC Fabric：Windows 实时 AI 语音转换与模型训练工作台 | 图灵镜 Turing Mirror</title>
     <meta name="description" content="高性能实时 AI 变声桌面客户端。开箱即用，游戏开黑、连麦、直播一个软件搞定。 支持 Windows 10 / 11 · NVIDIA（含 RTX 50 系列）/ AMD / Intel 显卡自动适配">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="format-detection" content="telephone=no">
@@ -49,7 +49,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://www.turingmirror.com/products/rvc-fabric/#software",
       "name": "RVC Fabric",
-      "description": "面向 Windows 的实时 AI 变声软件，开箱即用：不需要自己装 Python、PyTorch，也不用打开浏览器操作 Gradio，装好就能变声。适合游戏开黑、语音连麦、直播互动和音频制作。基于 RVC WebUI 深度定制。",
+      "description": "将 RVC 繁琐的命令行与网页脚本整合为开箱即用的原生桌面软件。涵盖实时变声、离线转换、人声分离、音频切分、特征提取、模型训练与模型融合等完整功能；安装包仅约 9 MB，首次启动时将根据本机显卡自动配置匹配的运行环境。",
       "url": "https://www.turingmirror.com/products/rvc-fabric/",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Windows 10, Windows 11",
@@ -179,8 +179,8 @@
         <header class="pd-head">
           <p class="pd-meta reveal">Windows 桌面端 · MIT 开源</p>
           <h1 class="pd-title"><span class="pd-title-main" style="view-transition-name: product-rvc-fabric">RVC Fabric</span></h1>
-          <p class="pd-lead reveal" style="--reveal-delay: 70ms">高性能实时 AI 变声桌面客户端</p>
-          <p class="pd-intro reveal" style="--reveal-delay: 140ms">面向 Windows 的实时 AI 变声软件，开箱即用：不需要自己装 Python、PyTorch，也不用打开浏览器操作 Gradio，装好就能变声。适合游戏开黑、语音连麦、直播互动和音频制作。基于 RVC WebUI 深度定制。</p>
+          <p class="pd-lead reveal" style="--reveal-delay: 70ms">Windows 实时 AI 语音转换与模型训练工作台</p>
+          <p class="pd-intro reveal" style="--reveal-delay: 140ms">将 RVC 繁琐的命令行与网页脚本整合为开箱即用的原生桌面软件。涵盖实时变声、离线转换、人声分离、音频切分、特征提取、模型训练与模型融合等完整功能；安装包仅约 9 MB，首次启动时将根据本机显卡自动配置匹配的运行环境。</p>
           <div class="pd-actions reveal" style="--reveal-delay: 210ms">
             <a class="btn btn-primary" href="https://cdn.turingmirror.com/d/rvc-fabric-setup">下载 Windows 版 <small>.exe</small></a>
             <a class="btn" href="https://github.com/Turing-Mirror/RVC-Fabric" target="_blank" rel="noopener noreferrer">GitHub 仓库 <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（在新标签页打开）</span></a>
@@ -203,11 +203,11 @@
         <section aria-labelledby="features-label">
           <h2 class="pd-h2 reveal" id="features-label">核心特性</h2>
           <ul class="features">
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>实时变声</h3><p>低延迟推理，变声中可无缝切换音色，一键切换变声与原声。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>实时变声</h3><p>低延迟推理，变声中可无缝切换音色，一键切换变声与原声。 端到端延迟低至 80 ms 以内，支持 ASIO 专业声卡通道选择与独立监听路由</p></li>
             <li class="reveal" style="--reveal-delay: 70ms"><h3>DSP 效果链</h3><p>内置噪声门、压缩器与 5 段参数均衡器，支持预设套用与精细调音。</p></li>
             <li class="reveal" style="--reveal-delay: 0ms"><h3>音色与预设管理</h3><p>网格化音色库，绑定 .index 特征库；参数预设可保存、导入、导出分享。</p></li>
             <li class="reveal" style="--reveal-delay: 70ms"><h3>社区音色广场</h3><p>图灵镜官方源 + 第三方开放源，多线程并发下载、断点续传。</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>音频工具箱</h3><p>人声分离提取干声与伴奏，文本转语音并换成目标音色，一键训练专属音色。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>音频工具箱</h3><p>人声分离提取干声与伴奏，文本转语音并换成目标音色，一键训练专属音色。 提供从音频切分、RMVPE 音高提取到模型训练与索引导出的可视化向导，支持训练中断后恢复进度</p></li>
             <li class="reveal" style="--reveal-delay: 70ms"><h3>自动硬件加速</h3><p>自动识别 NVIDIA CUDA 与 AMD / Intel DirectML，并下载对应的计算运行时。</p></li>
           </ul>
         </section>
@@ -216,7 +216,7 @@
           <ol class="steps">
             <li class="reveal" style="--reveal-delay: 0ms"><h3>下载安装</h3><p>运行 RVC_Fabric_Setup.exe，建议安装到纯英文路径。</p></li>
             <li class="reveal" style="--reveal-delay: 70ms"><h3>跟随引导</h3><p>首次启动会自动识别硬件、补全运行时并安装虚拟声卡。</p></li>
-            <li class="reveal" style="--reveal-delay: 140ms"><h3>接入游戏 / 语音</h3><p>软件输出选 CABLE Input，游戏、QQ 或 Discord 的麦克风选 CABLE Output。</p></li>
+            <li class="reveal" style="--reveal-delay: 140ms"><h3>接入游戏 / 语音</h3><p>软件输出选 CABLE Input，游戏、QQ 或 Discord 的麦克风选 CABLE Output。 支持一键配置 VB-Cable 虚拟声卡与实时音频滑块，免去繁琐的音频路由设置</p></li>
           </ol>
         </section>
         <section aria-labelledby="faq-label">

@@ -8,17 +8,17 @@ Turing Mirror (Chinese: 图灵镜, Traditional: 圖靈鏡, Japanese: チュー�
 
 ### RVC Fabric
 
-A real-time AI voice changer for Windows that works out of the box: no Python or PyTorch to set up, no Gradio pages to click through in a browser. Install it and start talking. Built for gaming, voice chat, live streaming and audio production, and deeply customized from RVC WebUI.
+Consolidates RVC's command-line tools and web scripts into a streamlined native desktop application. Real-time voice conversion, offline processing, vocal separation, dataset slicing, pitch extraction, model training, index building, and model merging are unified in a 9 MB installer that automatically configures the matching runtime for your GPU on first launch.
 
 - Platform: Windows · Desktop
 - Windows 10 / 11 · Automatically adapts to NVIDIA (incl. RTX 50 series), AMD and Intel GPUs
 - Page: https://www.turingmirror.com/en/products/rvc-fabric/ (简体中文: https://www.turingmirror.com/products/rvc-fabric/)
 - Links: Download for Windows: https://cdn.turingmirror.com/d/rvc-fabric-setup; GitHub: https://github.com/Turing-Mirror/RVC-Fabric; CNB mirror (China): https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases
-- Real-time conversion: Low-latency inference, seamless voice switching mid-session, and one-click bypass to your original voice.
+- Real-time conversion: Low-latency inference, seamless voice switching mid-session, and one-click bypass to your original voice. End-to-end latency under 80 ms, with ASIO channel selection and independent monitoring routing
 - DSP effect chain: Built-in noise gate, compressor and 5-band parametric EQ, with presets and fine-tuning.
 - Voices & presets: A grid voice library with .index bindings; save, import and share parameter presets.
 - Community voice store: Official and third-party sources, with multi-threaded, resumable downloads.
-- Audio toolbox: Separate vocals from accompaniment, turn text into speech in any voice, and train your own voice in one click.
+- Audio toolbox: Separate vocals from accompaniment, turn text into speech in any voice, and train your own voice in one click. Guided visual workflow covering audio slicing, RMVPE pitch extraction, model training, and index export, with checkpoint resume support
 - Automatic acceleration: Detects NVIDIA CUDA or AMD / Intel DirectML and downloads the matching runtime for you.
 
 ### MoeText / 喵言喵
