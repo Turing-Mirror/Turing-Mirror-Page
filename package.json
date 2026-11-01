@@ -20,6 +20,6 @@
   "dependencies": {
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "trm-ui": "git+https://github.com/Turing-Mirror/TRM-UI.git#8689c8c2833e147d0665c3560e3b5057aba26a50"
+    "trm-ui": "git+https://github.com/Turing-Mirror/TRM-UI.git#5eaf13a5feb8d03002731b3b6874165aa03b9939"
   }
 }

@@ -1,4 +1,4 @@
-/* Generated from TRM UI 8689c8c2833e147d0665c3560e3b5057aba26a50. MIT. Refresh with npm run sync:trm-ui. */
+/* Generated from TRM UI 5eaf13a5feb8d03002731b3b6874165aa03b9939. MIT. Refresh with npm run sync:trm-ui. */
 @keyframes push-move-in {
   from { transform: translate3d(calc(var(--push, 1) * 32px), 0, 0); }
   to { transform: none; }
