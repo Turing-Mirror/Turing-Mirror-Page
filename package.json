@@ -8,9 +8,18 @@
     "build": "node scripts/build.mjs",
     "dev": "npm run build && wrangler pages dev dist --ip 127.0.0.1 --port 4174",
     "check": "node --check public/site.js && node --check public/boot.js && node scripts/build.mjs",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name turing-mirror-page"
+    "deploy": "npm run build && wrangler pages deploy dist --project-name turing-mirror-page",
+    "sync:trm-ui": "node scripts/sync-trm-ui.mjs"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "esbuild": "0.28.1",
+    "tailwindcss": "4.3.3",
     "wrangler": "4.127.1"
+  },
+  "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "trm-ui": "git+https://github.com/Turing-Mirror/TRM-UI.git#e20acd76bd74f576da82917bee738f3bae4553aa"
   }
 }

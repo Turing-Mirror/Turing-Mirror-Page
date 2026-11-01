@@ -1,0 +1,51 @@
+/* Generated from TRM UI e20acd76bd74f576da82917bee738f3bae4553aa. MIT. Refresh with npm run sync:trm-ui. */
+@keyframes push-move-in {
+  from { transform: translate3d(calc(var(--push, 1) * 32px), 0, 0); }
+  to { transform: none; }
+}
+@keyframes push-move-out {
+  from { transform: none; }
+  to { transform: translate3d(calc(var(--push, 1) * -14px), 0, 0) scale(0.99); }
+}
+@keyframes push-fade-in {
+  0%, 25% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes push-fade-out {
+  0% { opacity: 1; }
+  40%, 100% { opacity: 0; }
+}
+.push-in, .push-in-b { animation: push-move-in var(--flow-ms) var(--ease-nav) both, push-fade-in var(--flow-ms) linear both; }
+.push-in-b { animation-name: push-move-in, push-fade-in; }
+.push-out { animation: push-move-out var(--flow-ms) var(--ease-nav) both, push-fade-out var(--flow-ms) linear both; }
+/* 推移期间左右的位移裁在内容区以内，上下不裁 */
+.push-stage { overflow-x: clip; overflow-clip-margin: 8px; }
+/* 推进来的新内容里，各项不再一项项重新浮现 */
+.flow-quiet .rise { animation: none; }
+
+/* 伸缩：高度过渡。 */
+.morph { transition: height var(--flow-ms) var(--ease-nav); }
+.morph[data-morphing] { overflow-clip-margin: 8px; }
+
+/* 标题栏里的页标题（TitleSlot.tsx）：换页时旧标题淡出、新标题浮上来；
+   同一页里换了标题（列表进详情）时新标题从右边轻轻滑入。 */
+@keyframes title-in {
+  from { opacity: 0; transform: translate3d(0, 5px, 0); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes title-out {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: translate3d(0, -4px, 0); visibility: hidden; }
+}
+@keyframes title-swap {
+  from { opacity: 0; transform: translate3d(10px, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+.title-in { animation: title-in 0.42s var(--spring-settle) 0.05s both; }
+.title-out { animation: title-out 0.16s var(--ease-out-quick) both; }
+.title-swap { animation: title-swap 0.4s var(--spring-settle) both; }
+
+/* 选中项的指示：底色或下划线滑到新位置（motion.tsx 的 useSlider）。 */
+.slider { position: absolute; left: 0; top: 0; pointer-events: none; }
+.slider[data-armed] { transition: transform var(--flow-ms) var(--ease-nav), width var(--flow-ms) var(--ease-nav), height var(--flow-ms) var(--ease-nav); }
+

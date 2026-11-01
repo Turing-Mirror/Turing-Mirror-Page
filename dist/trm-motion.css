@@ -1,0 +1,1 @@
+:root { --tm-flow: 420ms; --tm-stagger: 38ms; --tm-slow: 620ms; --tm-settle: cubic-bezier(0.32, 0.72, 0, 1); }

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>チューリングミラー UI：デスクトップ製品のための UI/UX テンプレート | チューリングミラー Turing Mirror</title>
-    <meta name="description" content="チューリングミラーのデスクトップ製品に共通の UI/UX テンプレート。デザイントークン、コンポーネント、8 言語 i18n、Tauri シェル。 npm install &amp;&amp; npm run dev でコンポーネントギャラリーをプレビュー。Rust は不要です。">
+    <title>チューリングミラー UI：共通コンポーネントとデザインシステム | チューリングミラー Turing Mirror</title>
+    <meta name="description" content="チューリングミラーのデスクトップアプリで共有するコンポーネントとデザインシステムです。操作例、8 言語、任意で利用できる Tauri シェルを備えています。 ギャラリーはブラウザで動作します。Tauri のデスクトップシェルを実行する場合は Rust が必要です。">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
@@ -18,9 +18,10 @@
     <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
     <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="512x512">
     <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any">
-    <link rel="stylesheet" href="/site.css?v=3ce43dbde1">
+    <link rel="stylesheet" href="/site.css?v=8958e4296d">
+    <link rel="stylesheet" href="/trm-motion.css?v=0a84a929b9">
     <script src="/boot.js?v=95a2ee6377"></script>
-    <script src="/site.js?v=f194b73d35" defer></script>
+    <script src="/site.js?v=6496917b35" defer></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,10 +55,10 @@
         "图灵镜 UI",
         "Turing Mirror UI"
       ],
-      "description": "チューリングミラーのデスクトップ製品はすべて同じ UI から始まります。同じデザイントークン、コンポーネント、モーションを共有し、改善もここに集約します。React コンポーネントライブラリ、サイドバー型アプリシェル、8 言語 i18n、すぐに起動できる Tauri シェルを含み、製品コードは含みません。",
+      "description": "TRM UI はチューリングミラーのデスクトップアプリに共通のコンポーネント、配色、操作規則を提供します。ギャラリーでは実際の動作と、操作、文章、モーションの使い方を確認できます。検証済みのパッケージを導入し、既存の言語設定やテーマに接続できます。",
       "url": "https://www.turingmirror.com/ja/products/trm-ui/",
       "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Windows",
+      "operatingSystem": "Web browser; optional Windows desktop shell",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -65,17 +66,16 @@
         "priceCurrency": "USD"
       },
       "featureList": [
-        "トークンとテーマ",
-        "コンポーネント",
-        "サイドバー型シェル",
-        "8 言語 i18n",
-        "Tauri シェル",
-        "控えめなデザイン"
+        "共通コンポーネント",
+        "操作できるデザインガイド",
+        "連続した操作の変化",
+        "8 言語とテーマ設定"
       ],
       "publisher": {
         "@id": "https://www.turingmirror.com/#organization"
       },
       "inLanguage": "ja",
+      "license": "https://opensource.org/license/mit",
       "sameAs": [
         "https://github.com/Turing-Mirror/TRM-UI"
       ]
@@ -136,41 +136,44 @@
 
       <main class="pd" id="main">
         <header class="pd-head">
-          <p class="pd-meta reveal">React + Tauri · デザインテンプレート</p>
+          <p class="pd-meta reveal">React プロジェクト向け</p>
           <h1 class="pd-title"><span class="pd-title-main" style="view-transition-name: product-trm-ui">チューリングミラー UI</span> <small>TRM UI</small></h1>
-          <p class="pd-lead reveal" style="--reveal-delay: 70ms">デスクトップ製品のための UI/UX テンプレート</p>
-          <p class="pd-intro reveal" style="--reveal-delay: 140ms">チューリングミラーのデスクトップ製品はすべて同じ UI から始まります。同じデザイントークン、コンポーネント、モーションを共有し、改善もここに集約します。React コンポーネントライブラリ、サイドバー型アプリシェル、8 言語 i18n、すぐに起動できる Tauri シェルを含み、製品コードは含みません。</p>
-          <div class="pd-actions reveal" style="--reveal-delay: 210ms">
-            <a class="btn btn-primary" href="https://github.com/Turing-Mirror/TRM-UI" target="_blank" rel="noopener noreferrer">GitHub で見る <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開く）</span></a>
+          <p class="pd-lead reveal" style="--reveal-delay: 38ms">共通コンポーネントとデザインシステム</p>
+          <p class="pd-intro reveal" style="--reveal-delay: 76ms">TRM UI はチューリングミラーのデスクトップアプリに共通のコンポーネント、配色、操作規則を提供します。ギャラリーでは実際の動作と、操作、文章、モーションの使い方を確認できます。検証済みのパッケージを導入し、既存の言語設定やテーマに接続できます。</p>
+          <div class="pd-actions reveal" style="--reveal-delay: 114ms">
+            <a class="btn btn-primary" href="https://github.com/Turing-Mirror/TRM-UI" target="_blank" rel="noopener noreferrer">プロジェクトを見る <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開く）</span></a>
+            <a class="btn" href="https://github.com/Turing-Mirror/TRM-UI/blob/e20acd76bd74f576da82917bee738f3bae4553aa/docs/components-v1.md" target="_blank" rel="noopener noreferrer">導入手順を読む <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開く）</span></a>
           </div>
-          <p class="pd-note reveal" style="--reveal-delay: 280ms">npm install &amp;&amp; npm run dev でコンポーネントギャラリーをプレビュー。Rust は不要です。</p>
+          <p class="pd-note reveal" style="--reveal-delay: 152ms">ギャラリーはブラウザで動作します。Tauri のデスクトップシェルを実行する場合は Rust が必要です。</p>
         </header>
 
+        <section aria-labelledby="demo-label">
+          <h2 class="pd-h2" id="demo-label">操作例</h2>
+          <iframe class="trm-demo" src="/demos/trm-ui/ja/" title="操作例" loading="lazy" height="640"></iframe>
+        </section>
         <section aria-labelledby="features-label">
           <h2 class="pd-h2 reveal" id="features-label">主な機能</h2>
           <ul class="features">
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>トークンとテーマ</h3><p>色・余白・角丸・モーションを一元管理し、ライト / ダーク / システム連動の 3 テーマに対応。</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>コンポーネント</h3><p>ボタン、フォーム、セグメント、メニュー、モーダル、ドロワー、カレンダー、通知など。すべて実際に操作できます。</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>サイドバー型シェル</h3><p>タイトルバー、サイドバー、方向のあるページ遷移をそのまま新製品に。</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>8 言語 i18n</h3><p>ビルド時にバンドルして即時切り替え。3 段階の検証スクリプト付きで、UI とシェルで言語ファイルを共有します。</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>Tauri シェル</h3><p>フレームレスウィンドウ、トレイ、自動起動、ログ、設定のアトミック書き込みを備え、すぐにウィンドウを開けます。</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>控えめなデザイン</h3><p>枠線は少なく、色は控えめ。表示も非表示もアニメーションし、ホバーしたカードは浮かずに沈みます。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>共通コンポーネント</h3><p>ボタン、フォーム、メニュー、ヒント、ダイアログを共通パッケージで管理し、依存バージョンの更新で改善を取り込みます。</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>操作できるデザインガイド</h3><p>操作、文章、組版、配色、モーションの例に加え、変更されたデザインとその理由を確認できます。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>連続した操作の変化</h3><p>セグメントはドラッグに対応します。リストを絞り込んでも既存の項目を保ち、内容の切り替えに合わせてパネルの高さが変化します。</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>8 言語とテーマ設定</h3><p>共通の画面文言は 8 言語に対応します。製品の翻訳に接続し、共通の配色変数や独自のテーマを使用できます。</p></li>
           </ul>
         </section>
         <section aria-labelledby="steps-label">
           <h2 class="pd-h2 reveal" id="steps-label">はじめかた</h2>
           <ol class="steps">
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>プレビュー</h3><p>npm install &amp;&amp; npm run dev を実行し、http://localhost:1410 でギャラリーを表示します。 コンポーネントギャラリーを内蔵し、全コンポーネント・状態・モーションをローカル環境で直接プレビュー可能</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>シェルごと起動</h3><p>Rust を導入して npm run tauri:dev を実行すると、実際のデスクトップウィンドウが開きます。</p></li>
-            <li class="reveal" style="--reveal-delay: 140ms"><h3>プロジェクトに組み込む</h3><p>テンプレート本体は src/trm/ です。フォルダごとコピーして使えます。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>ギャラリーを確認する</h3><p>プロジェクトを取得し、npm install と npm run dev を実行して、ブラウザでプレビューを開きます。</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>パッケージを導入する</h3><p>導入手順に従って trm-ui のコミットを固定し、必要なコンポーネントとスタイルを読み込み、言語設定に接続します。</p></li>
+            <li class="reveal" style="--reveal-delay: 76ms"><h3>確認して更新する</h3><p>パッケージを更新したら製品のビルドと操作を確認し、確認が完了してから製品を更新します。</p></li>
           </ol>
         </section>
         <section aria-labelledby="others-label">
           <h2 class="pd-h2 reveal" id="others-label">ほかのプロダクト</h2>
           <ul class="others">
             <li class="reveal" style="--reveal-delay: 0ms"><a href="/ja/products/rvc-fabric/"><span class="others-name">RVC Fabric</span><span class="others-desc">Windows 向けリアルタイム AI 音声変換・モデル学習ワークベンチ</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><a href="/ja/products/moetext/"><span class="others-name">MoeText <small>喵言喵</small></span><span class="others-desc">チャット文章の自動美化ツール</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
-            <li class="reveal" style="--reveal-delay: 140ms"><a href="/ja/products/mirror-test/"><span class="others-name">Mirror-Test</span><span class="others-desc">Meme 系おもしろ診断集</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><a href="/ja/products/moetext/"><span class="others-name">MoeText <small>喵言喵</small></span><span class="others-desc">チャット文章の自動美化ツール</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
+            <li class="reveal" style="--reveal-delay: 76ms"><a href="/ja/products/mirror-test/"><span class="others-name">Mirror-Test</span><span class="others-desc">Meme 系おもしろ診断集</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
           </ul>
         </section>
       </main>

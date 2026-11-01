@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>圖靈鏡 UI：圖靈鏡桌面產品的 UI/UX 模板 | 圖靈鏡 Turing Mirror</title>
-    <meta name="description" content="圖靈鏡桌面產品共用的 UI/UX 模板：設計權杖、元件庫、八語言 i18n 與 Tauri 殼。 npm install &amp;&amp; npm run dev 即可預覽元件畫廊，無需安裝 Rust">
+    <title>圖靈鏡 UI：共用元件庫與設計系統 | 圖靈鏡 Turing Mirror</title>
+    <meta name="description" content="圖靈鏡桌面應用程式共用的元件庫與設計系統，提供互動範例、八種語言和可選的 Tauri 桌面殼。 元件畫廊可在瀏覽器中執行。執行 Tauri 桌面殼時需要安裝 Rust。">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
@@ -18,9 +18,10 @@
     <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
     <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="512x512">
     <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any">
-    <link rel="stylesheet" href="/site.css?v=3ce43dbde1">
+    <link rel="stylesheet" href="/site.css?v=8958e4296d">
+    <link rel="stylesheet" href="/trm-motion.css?v=0a84a929b9">
     <script src="/boot.js?v=95a2ee6377"></script>
-    <script src="/site.js?v=f194b73d35" defer></script>
+    <script src="/site.js?v=6496917b35" defer></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,10 +55,10 @@
         "图灵镜 UI",
         "Turing Mirror UI"
       ],
-      "description": "每個圖靈鏡桌面產品都從同一套介面起步：同樣的設計權杖、元件與動效，改進也回到這裡，而不是散落在各個產品裡。模板包含 React 元件庫、側欄式應用外殼、八語言 i18n，以及一個能直接開窗的 Tauri 殼，不包含任何產品程式碼。",
+      "description": "TRM UI 為圖靈鏡桌面應用程式提供一致的元件、配色與互動規則。元件畫廊展示實際效果，並提供互動、文案和動效的使用說明。專案透過元件套件引用經過驗證的版本，既有的語言與佈景設定可以繼續使用。",
       "url": "https://www.turingmirror.com/zh-hant/products/trm-ui/",
       "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Windows",
+      "operatingSystem": "Web browser; optional Windows desktop shell",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -65,17 +66,16 @@
         "priceCurrency": "USD"
       },
       "featureList": [
-        "設計權杖與三態主題",
-        "元件庫",
-        "側欄式應用外殼",
-        "八語言 i18n",
-        "Tauri 桌面殼",
-        "克制的設計取向"
+        "共用元件",
+        "可操作的設計規範",
+        "連續的互動變化",
+        "八種語言與佈景設定"
       ],
       "publisher": {
         "@id": "https://www.turingmirror.com/#organization"
       },
       "inLanguage": "zh-Hant",
+      "license": "https://opensource.org/license/mit",
       "sameAs": [
         "https://github.com/Turing-Mirror/TRM-UI"
       ]
@@ -136,41 +136,44 @@
 
       <main class="pd" id="main">
         <header class="pd-head">
-          <p class="pd-meta reveal">React + Tauri · 設計模板</p>
+          <p class="pd-meta reveal">適用於 React 專案</p>
           <h1 class="pd-title"><span class="pd-title-main" style="view-transition-name: product-trm-ui">圖靈鏡 UI</span> <small>TRM UI</small></h1>
-          <p class="pd-lead reveal" style="--reveal-delay: 70ms">圖靈鏡桌面產品的 UI/UX 模板</p>
-          <p class="pd-intro reveal" style="--reveal-delay: 140ms">每個圖靈鏡桌面產品都從同一套介面起步：同樣的設計權杖、元件與動效，改進也回到這裡，而不是散落在各個產品裡。模板包含 React 元件庫、側欄式應用外殼、八語言 i18n，以及一個能直接開窗的 Tauri 殼，不包含任何產品程式碼。</p>
-          <div class="pd-actions reveal" style="--reveal-delay: 210ms">
-            <a class="btn btn-primary" href="https://github.com/Turing-Mirror/TRM-UI" target="_blank" rel="noopener noreferrer">在 GitHub 檢視 <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（於新分頁開啟）</span></a>
+          <p class="pd-lead reveal" style="--reveal-delay: 38ms">共用元件庫與設計系統</p>
+          <p class="pd-intro reveal" style="--reveal-delay: 76ms">TRM UI 為圖靈鏡桌面應用程式提供一致的元件、配色與互動規則。元件畫廊展示實際效果，並提供互動、文案和動效的使用說明。專案透過元件套件引用經過驗證的版本，既有的語言與佈景設定可以繼續使用。</p>
+          <div class="pd-actions reveal" style="--reveal-delay: 114ms">
+            <a class="btn btn-primary" href="https://github.com/Turing-Mirror/TRM-UI" target="_blank" rel="noopener noreferrer">檢視專案 <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（於新分頁開啟）</span></a>
+            <a class="btn" href="https://github.com/Turing-Mirror/TRM-UI/blob/e20acd76bd74f576da82917bee738f3bae4553aa/docs/components-v1.md" target="_blank" rel="noopener noreferrer">閱讀接入說明 <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（於新分頁開啟）</span></a>
           </div>
-          <p class="pd-note reveal" style="--reveal-delay: 280ms">npm install &amp;&amp; npm run dev 即可預覽元件畫廊，無需安裝 Rust</p>
+          <p class="pd-note reveal" style="--reveal-delay: 152ms">元件畫廊可在瀏覽器中執行。執行 Tauri 桌面殼時需要安裝 Rust。</p>
         </header>
 
+        <section aria-labelledby="demo-label">
+          <h2 class="pd-h2" id="demo-label">互動範例</h2>
+          <iframe class="trm-demo" src="/demos/trm-ui/tc/" title="互動範例" loading="lazy" height="640"></iframe>
+        </section>
         <section aria-labelledby="features-label">
           <h2 class="pd-h2 reveal" id="features-label">核心特色</h2>
           <ul class="features">
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>設計權杖與三態主題</h3><p>顏色、間距、圓角與動效集中定義，淺色 / 深色 / 跟隨系統三態切換。</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>元件庫</h3><p>按鈕、表單控制項、分段控制項、選單、彈窗、抽屜、日曆、通知等，每一個都能直接操作。</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>側欄式應用外殼</h3><p>標題列、側欄與方向性換頁，新產品直接套用。</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>八語言 i18n</h3><p>建置時打包、同步切換，附帶三道校驗腳本；介面與殼共用語言包。</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>Tauri 桌面殼</h3><p>無邊框視窗、系統匣、開機自啟、日誌與設定的原子寫入，開箱即可開窗。</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>克制的設計取向</h3><p>少框少線、顏色克制，出現與消失都有過程；指到的卡片向內收，不向上浮。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>共用元件</h3><p>按鈕、表單、選單、提示和彈出視窗由元件套件統一維護，產品透過相依版本取得改進。</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>可操作的設計規範</h3><p>畫廊提供互動、文案、排版、配色與動效範例，並記錄已被替換的設計及原因。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>連續的互動變化</h3><p>分段控制項支援拖曳。清單篩選保留既有項目，內容切換時面板高度連續變化。</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>八種語言與佈景設定</h3><p>通用介面提供八種語言。產品可連接既有翻譯，並使用共用配色變數或保留自己的佈景。</p></li>
           </ul>
         </section>
         <section aria-labelledby="steps-label">
           <h2 class="pd-h2 reveal" id="steps-label">快速開始</h2>
           <ol class="steps">
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>預覽元件</h3><p>npm install &amp;&amp; npm run dev，開啟 http://localhost:1410 檢視元件畫廊。 內建元件畫廊，支援在本機直接互動預覽所有元件、狀態與動效</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>連殼執行</h3><p>安裝 Rust 後執行 npm run tauri:dev，得到一個真實的桌面視窗。</p></li>
-            <li class="reveal" style="--reveal-delay: 140ms"><h3>帶進你的專案</h3><p>src/trm/ 是模板本體，可以整個複製帶走。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>預覽畫廊</h3><p>取得專案後執行 npm install 和 npm run dev，在瀏覽器中開啟本機預覽網址。</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>安裝元件套件</h3><p>依接入說明安裝固定提交的 trm-ui，匯入所需元件與樣式，並連接專案的語言設定。</p></li>
+            <li class="reveal" style="--reveal-delay: 76ms"><h3>驗證並升級</h3><p>升級元件套件後，檢查產品建置和實際互動。確認通過後，再發佈產品更新。</p></li>
           </ol>
         </section>
         <section aria-labelledby="others-label">
           <h2 class="pd-h2 reveal" id="others-label">其他產品</h2>
           <ul class="others">
             <li class="reveal" style="--reveal-delay: 0ms"><a href="/zh-hant/products/rvc-fabric/"><span class="others-name">RVC Fabric</span><span class="others-desc">Windows 即時 AI 語音轉換與模型訓練工作台</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><a href="/zh-hant/products/moetext/"><span class="others-name">喵言喵 <small>MoeText</small></span><span class="others-desc">聊天文本自動美化工具</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
-            <li class="reveal" style="--reveal-delay: 140ms"><a href="/zh-hant/products/mirror-test/"><span class="others-name">測試鏡 <small>Mirror-Test</small></span><span class="others-desc">Meme 趣味測試合集</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><a href="/zh-hant/products/moetext/"><span class="others-name">喵言喵 <small>MoeText</small></span><span class="others-desc">聊天文本自動美化工具</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
+            <li class="reveal" style="--reveal-delay: 76ms"><a href="/zh-hant/products/mirror-test/"><span class="others-name">測試鏡 <small>Mirror-Test</small></span><span class="others-desc">Meme 趣味測試合集</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
           </ul>
         </section>
       </main>

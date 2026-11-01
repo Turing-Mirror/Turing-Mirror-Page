@@ -1,3 +1,6 @@
+import { buildDemo } from "./build-demo.mjs";
+import { trmUiReference } from "../src/trm-ui.mjs";
+
 // 生成 dist/：复制 public/ 中的静态资源，再为每种语言渲染首页与产品页，
 // 并生成 sitemap.xml 与 llms.txt。用法：node scripts/build.mjs
 import { createHash } from "node:crypto";
@@ -16,6 +19,11 @@ async function versioned(file) {
   const content = await readFile(join(publicDir, file));
   const hash = createHash("sha256").update(content).digest("hex").slice(0, 10);
   return `/${file}?v=${hash}`;
+}
+
+async function versionedMotion() {
+  const hash = createHash("sha256").update(await readFile(join(outDir, "trm-motion.css"))).digest("hex").slice(0, 10);
+  return `/trm-motion.css?v=${hash}`;
 }
 
 async function emit(path, html) {
@@ -95,6 +103,9 @@ async function build() {
     boot: await versioned("boot.js")
   };
 
+  await buildDemo(LOCALES);
+  await writeFile(join(outDir, "trm-motion.css"), `:root { --tm-flow: ${trmUiReference.duration}ms; --tm-stagger: ${trmUiReference.stagger}ms; --tm-slow: ${trmUiReference.entrance}ms; --tm-settle: ${trmUiReference.easing}; }\n`);
+  assets.motion = await versionedMotion();
   let pages = 0;
   for (const loc of LOCALES) {
     await emit(homePath(loc), renderHome(loc, assets));

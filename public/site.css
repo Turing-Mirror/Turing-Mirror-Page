@@ -27,7 +27,10 @@
   --tm-normal: 260ms;
   --tm-slow: 640ms;
   --tm-ease: cubic-bezier(0.2, 0, 0, 1);
-  --tm-settle: cubic-bezier(0.22, 1, 0.36, 1);
+  --tm-settle: cubic-bezier(0.32, 0.72, 0, 1);
+  --tm-flow: 420ms;
+  --tm-exit: 180ms;
+  --tm-stagger: 38ms;
 
   --tm-logo-ink: #c9ced1;
   --tm-logo-duration: 1200ms;
@@ -725,8 +728,8 @@ button {
   margin-top: 0;
   opacity: 0;
   visibility: hidden;
-  transition: grid-template-rows 520ms var(--tm-settle), margin-top 520ms var(--tm-settle),
-    opacity 360ms var(--tm-ease), visibility 0s linear 520ms;
+  transition: grid-template-rows var(--tm-flow) var(--tm-settle), margin-top var(--tm-flow) var(--tm-settle),
+    opacity 360ms var(--tm-ease), visibility 0s linear var(--tm-flow);
 }
 
 .js .qr-panel.is-open {
@@ -1153,7 +1156,7 @@ button {
 .faq-item::details-content {
   block-size: 0;
   overflow: clip;
-  transition: block-size 420ms var(--tm-settle), content-visibility 420ms allow-discrete;
+  transition: block-size var(--tm-flow) var(--tm-settle), content-visibility var(--tm-flow) allow-discrete;
 }
 
 .faq-item[open]::details-content {
@@ -1253,11 +1256,11 @@ button {
 }
 
 .lightbox.is-closing {
-  animation: tm-zoom-out 200ms var(--tm-ease) forwards;
+  animation: tm-zoom-out var(--tm-exit) var(--tm-ease) forwards;
 }
 
 .lightbox.is-closing::backdrop {
-  animation: tm-fade-out 200ms var(--tm-ease) forwards;
+  animation: tm-fade-out var(--tm-exit) var(--tm-ease) forwards;
 }
 
 .lightbox img {
@@ -1439,3 +1442,9 @@ button {
     display: none;
   }
 }
+
+/* Product examples use the existing spacing and surfaces. */
+.trm-demo { display: block; width: 100%; border: 0; border-radius: var(--tm-r); color-scheme: light; }
+.qr-close { display: none; min-height: var(--tm-touch-target); margin: 12px auto 0; padding: 0 16px; border: 0; border-radius: var(--tm-r-sm); background: var(--tm-surface); color: var(--tm-ink); font: inherit; cursor: pointer; }
+.js .qr-close { display: block; }
+.qr-close:focus-visible { outline: 2px solid var(--tm-ink); outline-offset: 2px; }

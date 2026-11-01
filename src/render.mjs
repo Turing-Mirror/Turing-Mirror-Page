@@ -1,3 +1,5 @@
+import { demoCopy, trmUiReference } from "./trm-ui.mjs";
+
 // 页面模板：把 content.mjs 的数据渲染成完整的静态 HTML。
 import {
   SITE_URL,
@@ -28,7 +30,7 @@ export const homePath = (loc) => loc.path;
 export const productPath = (loc, product) => `${loc.path}products/${product.slug}/`;
 export const absolute = (path) => SITE_URL + path;
 
-const STAGGER = 70;
+const STAGGER = trmUiReference.stagger;
 const delay = (i, base = 0) => `--reveal-delay: ${base + i * STAGGER}ms`;
 
 function externalAttrs(ui) {
@@ -82,6 +84,7 @@ ${alternates}
     <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="512x512">
     <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any">
     <link rel="stylesheet" href="${assets.css}">
+    <link rel="stylesheet" href="${assets.motion}">
     <script src="${assets.boot}"></script>
     <script src="${assets.js}" defer></script>
     <script type="application/ld+json">
@@ -299,6 +302,7 @@ ${CHANNELS.map((channel, i) => channelCard(loc, channel, i)).join("\n")}
                 <div class="qr-inner">
                   <img src="/assets/qq_group.jpg" alt="${esc(ui.communityQrAlt)}" width="220" height="220" loading="lazy" decoding="async">
                   <p>${esc(ui.communityQrHelp)}</p>
+                  <button class="qr-close" type="button" data-close-qr>${esc(ui.close)}</button>
                 </div>
               </div>
             </dd>
@@ -337,6 +341,15 @@ function screenshots(loc, product) {
   return `
         <section class="shots${product.screenshots.length === 1 ? " is-single" : ""}" aria-label="${esc(ui.screenshotsLabel)}" data-close-label="${esc(ui.close)}">
 ${shots}
+        </section>`;
+}
+
+function interactiveDemo(loc, product) {
+  if (!product.demo) return "";
+  return `
+        <section aria-labelledby="demo-label">
+          <h2 class="pd-h2" id="demo-label">${esc(t(demoCopy.heading, loc))}</h2>
+          <iframe class="trm-demo" src="/demos/trm-ui/${loc.code}/" title="${esc(t(demoCopy.heading, loc))}" loading="lazy" height="640"></iframe>
         </section>`;
 }
 
@@ -521,7 +534,7 @@ ${product.actions.map((action) => actionButton(loc, action)).join("\n")}
           </div>
           <p class="pd-note reveal" style="${delay(4)}">${esc(t(product.note, loc))}</p>
         </header>
-${screenshots(loc, product)}${features(loc, product)}${steps(loc, product)}${faq(loc, product)}${notice(loc, product)}${others(loc, product)}
+${screenshots(loc, product)}${interactiveDemo(loc, product)}${features(loc, product)}${steps(loc, product)}${faq(loc, product)}${notice(loc, product)}${others(loc, product)}
       </main>`;
 
   return page({ loc, headHtml, alternatesFor, topStart: back, main, bodyClass: "page-product" });

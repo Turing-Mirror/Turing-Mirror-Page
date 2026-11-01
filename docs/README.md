@@ -78,3 +78,18 @@ npm run deploy
 Cloudflare Pages 项目 `turing-mirror-page` 连接 `main` 分支自动部署，发布目录由 `wrangler.jsonc` 的 `pages_build_output_dir`（`./dist`）决定。`dist/` 已入库，所以不设构建命令也能发布；建议在 Cloudflare 后台把构建命令设为 `npm run build`，这样即使忘记提交 `dist/` 也会在部署时重新生成。
 
 手动部署：`npm run deploy`。
+
+## TRM UI 产品页与示例
+
+TRM UI 的介绍、接入步骤与示例文案位于 `src/trm-ui.mjs`。四种语言共用同一份结构。修改文案前阅读 TRM UI 仓库的 `src/pages/textRules.ts`，按用户正在进行的操作组织说明。
+
+交互示例使用 `package.json` 中固定提交的 `trm-ui`，由 `src/demo/main.jsx` 引用真实组件。构建时生成独立页面与脚本、样式，只在 TRM UI 产品页通过 iframe 加载。首页及其他产品页继续使用静态 HTML。示例样式在 iframe 内生效。
+
+`src/trm-ui-reference.json` 与 `src/demo/trm-motion.css` 是从 TRM UI 生成的参考数据，包含来源提交、四语言动效名称、文案规则与动效参数。不要直接编辑这些生成文件。更新组件版本时，在干净的 TRM UI 检出中选定提交，更新官网依赖，然后运行：
+
+```sh
+npm run sync:trm-ui -- ../TRM-UI
+npm run check
+```
+
+同步脚本读取 TRM UI 的规则数据及共享实现，不维护另一套规范。正常构建只读取已提交的参考数据和已安装的固定版本依赖，不需要相邻仓库或远端服务。`dist/` 包含生成的四语言示例、固定版本的组件包许可与官网动效参数。

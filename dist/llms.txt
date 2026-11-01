@@ -50,18 +50,16 @@ Interactive quizzes that run right in your browser. From anime and GalGames to g
 
 ### Turing Mirror UI / 图灵镜 UI / TRM UI
 
-Every Turing Mirror desktop app starts from the same interface: the same design tokens, components and motion, with improvements flowing back here instead of drifting apart in each product. It includes a React component library, a sidebar app shell, 8-language i18n and a ready-to-run Tauri shell, with no product code.
+TRM UI provides consistent components, colors and interaction rules for Turing Mirror desktop apps. The gallery demonstrates the components and explains interaction, writing and motion. Projects use a verified package version and can retain their existing language and theme settings.
 
-- Platform: Developers · Design template
-- Run npm install && npm run dev to preview the component gallery. No Rust needed.
+- Platform: Shared components for developers
+- The gallery runs in a browser. Running the Tauri desktop shell requires Rust.
 - Page: https://www.turingmirror.com/en/products/trm-ui/ (简体中文: https://www.turingmirror.com/products/trm-ui/)
-- Links: View on GitHub: https://github.com/Turing-Mirror/TRM-UI
-- Tokens & themes: Colors, spacing, radii and motion defined in one place, with light, dark and system themes.
-- Component library: Buttons, form controls, segmented controls, menus, modals, drawers, calendars, notices and more, all interactive.
-- Sidebar app shell: Title bar, sidebar and directional page transitions, ready for a new product.
-- 8-language i18n: Bundled at build time and switched instantly, with three validation checks; the UI and shell share one set of locale files.
-- Tauri desktop shell: Frameless window, tray, autostart, logging and atomic config writes, ready to open a window.
-- A restrained style: Few borders, restrained color, and motion on both enter and exit; hovered cards press in rather than float up.
+- Links: View project: https://github.com/Turing-Mirror/TRM-UI; Read integration guide: https://github.com/Turing-Mirror/TRM-UI/blob/e20acd76bd74f576da82917bee738f3bae4553aa/docs/components-v1.md
+- Shared components: Buttons, forms, menus, tooltips and dialogs are maintained in one package. Products receive improvements by updating their dependency.
+- Interactive design guidance: The gallery covers interaction, writing, typography, color and motion, and records replaced designs and the reasons for each change.
+- Continuous interaction: Segmented controls support dragging. Filtered lists retain existing items, and panels resize continuously as content changes.
+- Eight languages and theme settings: Common interface text is available in eight languages. Products can connect their translations and use shared color variables or their own theme.
 
 ## Channels
 

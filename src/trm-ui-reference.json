@@ -1,0 +1,279 @@
+{
+  "revision": "e20acd76bd74f576da82917bee738f3bae4553aa",
+  "repository": "https://github.com/Turing-Mirror/TRM-UI",
+  "easing": "cubic-bezier(0.32, 0.72, 0, 1)",
+  "duration": 420,
+  "stagger": 38,
+  "entrance": 620,
+  "terms": {
+    "push": {
+      "name": {
+        "sc": "推移",
+        "tc": "推移",
+        "en": "Push",
+        "ja": "プッシュ"
+      },
+      "description": {
+        "sc": "用于切换分栏、翻页与切换步骤。旧内容向来处后退并淡出，新内容从前进方向推入，两层使用相同的曲线与时长。向后翻时新内容从右侧进入，向前翻时从左侧进入。",
+        "tc": "用於切換分欄、翻頁與切換步驟。舊內容向來處後退並淡出，新內容從前進方向推入，兩層使用相同的曲線與時長。向後翻時新內容從右側進入，向前翻時從左側進入。",
+        "en": "Used for tab, page and step changes. The old content moves back towards where it came from and fades out, while the new content pushes in from the direction of travel; both layers use the same curve and duration. Moving forward, new content enters from the right; moving back, from the left.",
+        "ja": "タブ、ページ、手順の切り替えに使います。古い内容は来た方向へ下がりながら消え、新しい内容は進む方向から押し込まれます。二層は同じ曲線と時間で動きます。先へ進むと右から、戻ると左から入ります。"
+      }
+    },
+    "stretch": {
+      "name": {
+        "sc": "伸缩",
+        "tc": "伸縮",
+        "en": "Stretch",
+        "ja": "伸縮"
+      },
+      "description": {
+        "sc": "内容增减时，内容区底板保持不变，高度平滑过渡，下方内容随之移动。推移与流动列表均在伸缩之内运行。",
+        "tc": "內容增減時，內容區底板保持不變，高度平滑過渡，下方內容隨之移動。推移與流動列表均在伸縮之內執行。",
+        "en": "When content grows or shrinks, the content panel stays and its height changes smoothly; the content below moves with it. Push and flow list both run inside a stretch.",
+        "ja": "内容が増減するとき、内容エリアの下地はそのままで高さが滑らかに変わり、下の内容も一緒に動きます。プッシュとフローリストはどちらも伸縮の中で動きます。"
+      }
+    },
+    "flow": {
+      "name": {
+        "sc": "流动列表",
+        "tc": "流動列表",
+        "en": "Flow list",
+        "ja": "フローリスト"
+      },
+      "description": {
+        "sc": "同一列表切换筛选、排序或展开更多时，保留的条目移至新位置，移除的条目原地收起，新增的条目展开显示。适用于前后多数条目不变的列表，例如评论与文件。",
+        "tc": "同一列表切換篩選、排序或展開更多時，保留的條目移至新位置，移除的條目原地收起，新增的條目展開顯示。適用於前後多數條目不變的列表，例如評論與檔案。",
+        "en": "When the same list is filtered, re-sorted or expanded, remaining items move to their new positions, removed items collapse in place and new items expand. Suited to lists where most items stay, such as comments and files.",
+        "ja": "同じ一覧で絞り込み、並べ替え、さらに表示を行うと、残る項目は新しい位置へ移り、外れた項目はその場で縮み、新しい項目は広がって現れます。コメントやファイルなど、前後で大半の項目が変わらない一覧に向いています。"
+      }
+    },
+    "roll": {
+      "name": {
+        "sc": "滚字",
+        "tc": "滾字",
+        "en": "Roll",
+        "ja": "ロール"
+      },
+      "description": {
+        "sc": "同一位置的文字变化时（如当前项名称、标题与计数），旧文字向下移出，新文字从上方移入，外框保持不动。",
+        "tc": "同一位置的文字變化時（如當前項名稱、標題與計數），舊文字向下移出，新文字從上方移入，外框保持不動。",
+        "en": "When the text in one place changes (such as the current item's name, a title or a count), the old text moves out downwards and the new text moves in from above; the frame stays still.",
+        "ja": "同じ場所の文字が変わるとき（現在の項目名、見出し、件数など）、古い文字は下へ抜け、新しい文字は上から入ります。枠は動きません。"
+      }
+    },
+    "curtain": {
+      "name": {
+        "sc": "拉幕",
+        "tc": "拉幕",
+        "en": "Curtain",
+        "ja": "幕開き"
+      },
+      "description": {
+        "sc": "区域首次出现时自上而下展开，关闭时自下而上收起。区域内的后续变化使用滚字或推移。",
+        "tc": "區域首次出現時自上而下展開，關閉時自下而上收起。區域內的後續變化使用滾字或推移。",
+        "en": "An area opens from top to bottom when it first appears and closes from bottom to top. Later changes inside it use roll or push.",
+        "ja": "領域は初めて表示されるとき上から下へ開き、閉じるときは下から上へ戻ります。その後の中身の変化にはロールかプッシュを使います。"
+      }
+    },
+    "collapse": {
+      "name": {
+        "sc": "折叠",
+        "tc": "摺疊",
+        "en": "Collapse",
+        "ja": "折りたたみ"
+      },
+      "description": {
+        "sc": "用于可展开的行、回复框与说明段落。展开时高度从零过渡到内容高度，收起时反向过渡，内容同时淡入或淡出。收起结束后再移除元素。",
+        "tc": "用於可展開的行、回覆框與說明段落。展開時高度從零過渡到內容高度，收起時反向過渡，內容同時淡入或淡出。收起結束後再移除元素。",
+        "en": "Used for expandable rows, reply boxes and description sections. Expanding animates the height from zero to the content height and collapsing reverses it, while the content fades in or out. The element is removed only after collapsing ends.",
+        "ja": "展開できる行、返信欄、説明の段落に使います。展開では高さがゼロから内容の高さへ、折りたたみでは逆に変わり、内容も同時にフェードします。折りたたみが終わってから要素を取り除きます。"
+      }
+    },
+    "glass": {
+      "name": {
+        "sc": "液态玻璃滑块",
+        "tc": "液態玻璃滑塊",
+        "en": "Liquid glass thumb",
+        "ja": "リキッドガラスのつまみ"
+      },
+      "description": {
+        "sc": "分段控件的滑块，可点击也可拖动。滑块位置由弹簧计算，中途改变方向时从当前位置继续移动。松开时根据速度决定停在哪一项。快速拖向两端时，滑块压扁后回弹。滑块下方的文字放大显示。点击时滑块移到目标后切换，拖动时松开即切换。",
+        "tc": "分段控制元件的滑塊，可點選也可拖動。滑塊位置由彈簧計算，中途改變方向時從當前位置繼續移動。鬆開時根據速度決定停在哪一項。快速拖向兩端時，滑塊壓扁後回彈。滑塊下方的文字放大顯示。點選時滑塊移到目標後切換，拖動時鬆開即切換。",
+        "en": "The thumb of a segment control, which can be clicked or dragged. A spring computes its position, so a change of direction continues from where it is. On release, its speed decides which option it stops on. Dragged quickly to either end, it squashes and springs back. The text under the thumb is magnified. A click switches once the thumb reaches the target; a drag switches on release.",
+        "ja": "セグメントコントロールのつまみで、クリックでもドラッグでも操作できます。位置はばねで計算するため、途中で向きを変えても今の位置から動き続けます。離したときの速さで止まる項目を決めます。端まで素早く動かすと、つまみがつぶれてから戻ります。つまみの下の文字は拡大して表示します。クリックではつまみが目標に着いた時点で、ドラッグでは離した時点で切り替わります。"
+      }
+    },
+    "flip": {
+      "name": {
+        "sc": "换位（FLIP）",
+        "tc": "換位（FLIP）",
+        "en": "Reposition (FLIP)",
+        "ja": "位置の移動（FLIP）"
+      },
+      "description": {
+        "sc": "元素位置或尺寸变化时，先记录起点，再测量终点，然后从起点平滑过渡到终点。流动列表中的条目与页码均以此方式移动。",
+        "tc": "元素位置或尺寸變化時，先記錄起點，再測量終點，然後從起點平滑過渡到終點。流動列表中的條目與頁碼均以此方式移動。",
+        "en": "When an element changes position or size, its start is recorded, its end is measured, and it then moves smoothly from start to end. Items in a flow list and page numbers move this way.",
+        "ja": "要素の位置や大きさが変わるとき、まず始点を記録し、終点を測ってから、始点から終点へ滑らかに移します。フローリストの項目とページ番号はこの方法で動きます。"
+      }
+    },
+    "stagger": {
+      "name": {
+        "sc": "依次浮现",
+        "tc": "依次浮現",
+        "en": "Staggered rise",
+        "ja": "順に浮かぶ"
+      },
+      "description": {
+        "sc": "一组卡片或条目首次出现时逐项浮现。之后切换筛选或翻页时不再重复。",
+        "tc": "一組卡片或條目首次出現時逐項浮現。之後切換篩選或翻頁時不再重複。",
+        "en": "A group of cards or items rises one by one when it first appears. It is not repeated on later filter or page changes.",
+        "ja": "カードや項目のまとまりが初めて表示されるとき、一つずつ浮かび上がります。その後の絞り込みやページ切り替えでは繰り返しません。"
+      }
+    }
+  },
+  "copyRules": [
+    {
+      "id": "core",
+      "title": {
+        "sc": "核心原则",
+        "tc": "核心原則",
+        "en": "Core principles",
+        "ja": "基本原則"
+      },
+      "list": [
+        {
+          "sc": "正式书面语：界面标签、设置说明、悬停提示、状态栏、报错弹窗与帮助文档统一使用完整、平实的现代书面语。只说明事实、参数作用与操作结果，不抒情，不使用俏皮话、黑话与比喻，不写防御性的免责说明。",
+          "tc": "正式書面語：介面標籤、設定說明、懸停提示、狀態列、報錯彈窗與幫助文件統一使用完整、平實的現代書面語。只說明事實、引數作用與操作結果，不抒情，不使用俏皮話、黑話與比喻，不寫防禦性的免責說明。",
+          "en": "Formal written language: labels, setting descriptions, tooltips, status bars, error dialogs and help documents all use complete, plain modern written language. State facts, what a parameter does and what an action results in. No emotive phrasing, quips, jargon or metaphors, and no defensive disclaimers.",
+          "ja": "正式な書き言葉：ラベル、設定の説明、ヒント、ステータスバー、エラーダイアログ、ヘルプ文書は、すべて完全で平易な現代の書き言葉で書きます。事実、パラメーターの働き、操作の結果だけを述べます。感情的な表現、軽口、隠語、比喩、防御的な免責の文は書きません。"
+        },
+        {
+          "sc": "不暴露内部实现：面向用户的界面只说明概念与功能，不出现内部进程名、脚本文件名、代码枚举前缀或研发用语（如 worker、render、落地、热更、写死）。",
+          "tc": "不暴露內部實現：面向使用者的介面只說明概念與功能，不出現內部程序名、指令碼檔名、程式碼列舉字首或研發用語（如 worker、render、落地、熱更、寫死）。",
+          "en": "Do not expose internals: the user-facing interface describes concepts and features only, without internal process names, script file names, code enum prefixes or developer slang (such as worker, render, hot update, hard-coded).",
+          "ja": "内部の実装を見せない：利用者向けの画面では概念と機能だけを説明し、内部のプロセス名、スクリプトのファイル名、コードの列挙型の接頭辞、開発者の俗語（worker、render、ホットアップデート、ハードコードなど）を出しません。"
+        },
+        {
+          "sc": "需要亲切处保持亲切：里程碑致谢、求关注弹窗、彩蛋文字与新手引导使用自然、真诚的语气，不写成公文通知。",
+          "tc": "需要親切處保持親切：里程碑致謝、求關注彈窗、彩蛋文字與新手引導使用自然、真誠的語氣，不寫成公文通知。",
+          "en": "Stay warm where warmth is intended: milestone thanks, follow requests, easter eggs and first-time guidance keep a natural, sincere tone and are not written as official notices.",
+          "ja": "親しみが求められる所では親しみを保つ：節目のお礼、フォローのお願い、隠し要素の文、初心者向けの案内は自然で誠実な口調にし、公文書のような通知にしません。"
+        },
+        {
+          "sc": "测试数据不进语言包：正式语言包（i18n/locales/*.json）只收录实际使用的界面文字，单元测试的假数据保留在测试文件中。",
+          "tc": "測試資料不進語言包：正式語言包（i18n/locales/*.json）只收錄實際使用的介面文字，單元測試的假資料保留在測試檔案中。",
+          "en": "Keep test data out of the language packs: the language packs (i18n/locales/*.json) hold only interface text that is actually used; unit test placeholder data stays in the test files.",
+          "ja": "テスト用データを言語パックに入れない：言語パック（i18n/locales/*.json）には実際に使う画面の文字だけを収め、単体テストの仮データはテストファイルの中に置きます。"
+        },
+        {
+          "sc": "翻译使用领域术语：算法、协议与命令保留原名，其余使用软件领域通行的母语词汇，不脱离上下文逐字直译。",
+          "tc": "翻譯使用領域術語：演算法、協議與命令保留原名，其餘使用軟體領域通行的母語詞彙，不脫離上下文逐字直譯。",
+          "en": "Translate with domain terms: algorithms, protocols and commands keep their original names; everything else uses the established native terms of the software field, never word-for-word translation out of context.",
+          "ja": "翻訳では分野の用語を使う：アルゴリズム、プロトコル、コマンドは元の名前のままにし、それ以外はソフトウェア分野で定着した母語の用語を使います。文脈を無視した逐語訳はしません。"
+        }
+      ]
+    },
+    {
+      "id": "joiners",
+      "title": {
+        "sc": "不用分割线、分隔点和破折号拼凑内容",
+        "tc": "不用分隔線、分隔點和破折號拼湊內容",
+        "en": "Do not string content together with lines, dots or dashes",
+        "ja": "区切り線、中黒、ダッシュで内容をつながない"
+      },
+      "list": []
+    },
+    {
+      "id": "plain",
+      "title": {
+        "sc": "用用户听得懂的话",
+        "tc": "用使用者聽得懂的話",
+        "en": "Use words the user understands",
+        "ja": "利用者に伝わる言葉を使う"
+      },
+      "list": []
+    },
+    {
+      "id": "once",
+      "title": {
+        "sc": "同一句话只出现一处",
+        "tc": "同一句話只出現一處",
+        "en": "Say each thing in one place only",
+        "ja": "同じ内容は一か所だけに書く"
+      },
+      "list": []
+    },
+    {
+      "id": "marketing",
+      "title": {
+        "sc": "营销口号与破折号句式",
+        "tc": "營銷口號與破折號句式",
+        "en": "Marketing slogans and dash-joined sentences",
+        "ja": "宣伝文句とダッシュでつないだ文"
+      },
+      "list": []
+    },
+    {
+      "id": "metaphor",
+      "title": {
+        "sc": "比喻与网络用语",
+        "tc": "比喻與網路用語",
+        "en": "Metaphors and internet slang",
+        "ja": "比喩とネットスラング"
+      },
+      "list": []
+    },
+    {
+      "id": "casual",
+      "title": {
+        "sc": "口语与不完整的句子",
+        "tc": "口語與不完整的句子",
+        "en": "Casual speech and incomplete sentences",
+        "ja": "話し言葉と不完全な文"
+      },
+      "list": []
+    },
+    {
+      "id": "defensive",
+      "title": {
+        "sc": "防御性说明与说教",
+        "tc": "防禦性說明與說教",
+        "en": "Defensive explanations and lecturing",
+        "ja": "防御的な説明と説教"
+      },
+      "list": []
+    },
+    {
+      "id": "jargon",
+      "title": {
+        "sc": "开发用语与中英混用",
+        "tc": "開發用語與中英混用",
+        "en": "Developer jargon and mixed languages",
+        "ja": "開発用語と言語の混在"
+      },
+      "list": []
+    },
+    {
+      "id": "warmth",
+      "title": {
+        "sc": "需要亲切处写成公文",
+        "tc": "需要親切處寫成公文",
+        "en": "Official tone where warmth is intended",
+        "ja": "親しみが必要な所を公文書調にする"
+      },
+      "list": []
+    },
+    {
+      "id": "translation",
+      "title": {
+        "sc": "多语言直译错误",
+        "tc": "多語言直譯錯誤",
+        "en": "Literal translation errors",
+        "ja": "直訳による誤り"
+      },
+      "list": []
+    }
+  ]
+}

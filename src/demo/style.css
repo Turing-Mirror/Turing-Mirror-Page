@@ -1,0 +1,13 @@
+@import "tailwindcss" source(none);
+@import "trm-ui/styles.css";
+@import "./trm-motion.css";
+@source "./main.jsx";
+@source "../../node_modules/trm-ui/lib/index.js";
+/* The embedded preview keeps TRM UI's canvas and component styles. Only its layout adapts to a document. */
+html, body, #root { height: auto; overflow: visible; }
+html { background: var(--bg); color-scheme: light; }
+.demo-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; padding: 26px 30px 30px; }
+.demo-layout > section { margin-top: 0; min-width: 0; }
+.demo-wide { grid-column: 1 / -1; }
+@media (max-width: 680px) { .demo-layout { grid-template-columns: minmax(0, 1fr); padding: 20px 16px 26px; gap: 26px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; } }

@@ -77,16 +77,35 @@ function initLanguageMenu() {
   const menu = document.querySelector(".lang-menu");
   if (!menu) return;
 
+  let closing;
+  const closeMenu = async () => {
+    if (!menu.open || closing) return;
+    if (reduceMotion.matches) { menu.open = false; return; }
+    const animation = menu.querySelector(".lang-list").animate(
+      [{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(-4px) scale(0.98)" }],
+      { duration: parseFloat(getComputedStyle(root).getPropertyValue("--tm-exit")), easing: getComputedStyle(root).getPropertyValue("--tm-settle").trim() }
+    );
+    closing = animation;
+    await animation.finished.catch(() => {});
+    if (closing !== animation) return;
+    menu.open = false;
+    closing = null;
+  };
   menu.addEventListener("click", (event) => {
+    if (event.target.closest("summary") && menu.open) {
+      event.preventDefault();
+      if (closing) { const animation = closing; closing = null; animation.cancel(); }
+      else closeMenu();
+    }
     const link = event.target.closest("a[data-locale]");
     if (link) persistLocale(link.dataset.locale);
   });
   document.addEventListener("click", (event) => {
-    if (menu.open && !menu.contains(event.target)) menu.open = false;
+    if (menu.open && !menu.contains(event.target)) closeMenu();
   });
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && menu.open) {
-      menu.open = false;
+      closeMenu();
       menu.querySelector("summary").focus();
     }
   });
@@ -149,11 +168,28 @@ function flashHint(chip, text, duration) {
 }
 
 function initCopyChips() {
+  for (const panel of document.querySelectorAll(".qr-panel")) {
+    panel.inert = true;
+    panel.setAttribute("aria-hidden", "true");
+  }
+  for (const close of document.querySelectorAll("[data-close-qr]")) {
+    close.addEventListener("click", () => {
+      const panel = close.closest(".qr-panel");
+      const trigger = document.querySelector(`[data-reveal="${panel.id}"]`);
+      trigger.focus();
+      trigger.setAttribute("aria-expanded", "false");
+      panel.classList.remove("is-open");
+      panel.inert = true;
+      panel.setAttribute("aria-hidden", "true");
+    });
+  }
   for (const chip of document.querySelectorAll(".copy-chip")) {
     chip.addEventListener("click", async () => {
       const panel = chip.dataset.reveal ? document.getElementById(chip.dataset.reveal) : null;
       if (panel) {
         panel.classList.add("is-open");
+        panel.inert = false;
+        panel.setAttribute("aria-hidden", "false");
         chip.setAttribute("aria-expanded", "true");
       }
 
@@ -262,3 +298,12 @@ initCopyChips();
 initLightbox();
 initCardGlow();
 initMirrorTilt();
+
+// Each preview reports its content height so the host page has one scroll container.
+for (const frame of document.querySelectorAll(".trm-demo")) {
+  window.addEventListener("message", event => {
+    if (event.origin === location.origin && event.source === frame.contentWindow && event.data?.type === "trm-demo-size") {
+      frame.style.height = `${event.data.height}px`;
+    }
+  });
+}

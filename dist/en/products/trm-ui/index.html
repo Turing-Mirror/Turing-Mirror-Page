@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Turing Mirror UI: UI/UX template for Turing Mirror desktop apps | Turing Mirror</title>
-    <meta name="description" content="The shared UI/UX template behind Turing Mirror desktop apps: design tokens, components, 8-language i18n and a Tauri shell. Run npm install &amp;&amp; npm run dev to preview the component gallery. No Rust needed.">
+    <title>Turing Mirror UI: Shared components and design system | Turing Mirror</title>
+    <meta name="description" content="Shared components and a design system for Turing Mirror desktop apps, with interactive examples, eight languages and an optional Tauri shell. The gallery runs in a browser. Running the Tauri desktop shell requires Rust.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
@@ -18,9 +18,10 @@
     <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
     <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="512x512">
     <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any">
-    <link rel="stylesheet" href="/site.css?v=3ce43dbde1">
+    <link rel="stylesheet" href="/site.css?v=8958e4296d">
+    <link rel="stylesheet" href="/trm-motion.css?v=0a84a929b9">
     <script src="/boot.js?v=95a2ee6377"></script>
-    <script src="/site.js?v=f194b73d35" defer></script>
+    <script src="/site.js?v=6496917b35" defer></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,10 +54,10 @@
         "TRM UI",
         "图灵镜 UI"
       ],
-      "description": "Every Turing Mirror desktop app starts from the same interface: the same design tokens, components and motion, with improvements flowing back here instead of drifting apart in each product. It includes a React component library, a sidebar app shell, 8-language i18n and a ready-to-run Tauri shell, with no product code.",
+      "description": "TRM UI provides consistent components, colors and interaction rules for Turing Mirror desktop apps. The gallery demonstrates the components and explains interaction, writing and motion. Projects use a verified package version and can retain their existing language and theme settings.",
       "url": "https://www.turingmirror.com/en/products/trm-ui/",
       "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Windows",
+      "operatingSystem": "Web browser; optional Windows desktop shell",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -64,17 +65,16 @@
         "priceCurrency": "USD"
       },
       "featureList": [
-        "Tokens & themes",
-        "Component library",
-        "Sidebar app shell",
-        "8-language i18n",
-        "Tauri desktop shell",
-        "A restrained style"
+        "Shared components",
+        "Interactive design guidance",
+        "Continuous interaction",
+        "Eight languages and theme settings"
       ],
       "publisher": {
         "@id": "https://www.turingmirror.com/#organization"
       },
       "inLanguage": "en",
+      "license": "https://opensource.org/license/mit",
       "sameAs": [
         "https://github.com/Turing-Mirror/TRM-UI"
       ]
@@ -135,41 +135,44 @@
 
       <main class="pd" id="main">
         <header class="pd-head">
-          <p class="pd-meta reveal">React + Tauri · Design template</p>
+          <p class="pd-meta reveal">For React projects</p>
           <h1 class="pd-title"><span class="pd-title-main" style="view-transition-name: product-trm-ui">Turing Mirror UI</span> <small>TRM UI</small></h1>
-          <p class="pd-lead reveal" style="--reveal-delay: 70ms">UI/UX template for Turing Mirror desktop apps</p>
-          <p class="pd-intro reveal" style="--reveal-delay: 140ms">Every Turing Mirror desktop app starts from the same interface: the same design tokens, components and motion, with improvements flowing back here instead of drifting apart in each product. It includes a React component library, a sidebar app shell, 8-language i18n and a ready-to-run Tauri shell, with no product code.</p>
-          <div class="pd-actions reveal" style="--reveal-delay: 210ms">
-            <a class="btn btn-primary" href="https://github.com/Turing-Mirror/TRM-UI" target="_blank" rel="noopener noreferrer">View on GitHub <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（Opens in a new tab）</span></a>
+          <p class="pd-lead reveal" style="--reveal-delay: 38ms">Shared components and design system</p>
+          <p class="pd-intro reveal" style="--reveal-delay: 76ms">TRM UI provides consistent components, colors and interaction rules for Turing Mirror desktop apps. The gallery demonstrates the components and explains interaction, writing and motion. Projects use a verified package version and can retain their existing language and theme settings.</p>
+          <div class="pd-actions reveal" style="--reveal-delay: 114ms">
+            <a class="btn btn-primary" href="https://github.com/Turing-Mirror/TRM-UI" target="_blank" rel="noopener noreferrer">View project <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（Opens in a new tab）</span></a>
+            <a class="btn" href="https://github.com/Turing-Mirror/TRM-UI/blob/e20acd76bd74f576da82917bee738f3bae4553aa/docs/components-v1.md" target="_blank" rel="noopener noreferrer">Read integration guide <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（Opens in a new tab）</span></a>
           </div>
-          <p class="pd-note reveal" style="--reveal-delay: 280ms">Run npm install &amp;&amp; npm run dev to preview the component gallery. No Rust needed.</p>
+          <p class="pd-note reveal" style="--reveal-delay: 152ms">The gallery runs in a browser. Running the Tauri desktop shell requires Rust.</p>
         </header>
 
+        <section aria-labelledby="demo-label">
+          <h2 class="pd-h2" id="demo-label">Interactive examples</h2>
+          <iframe class="trm-demo" src="/demos/trm-ui/en/" title="Interactive examples" loading="lazy" height="640"></iframe>
+        </section>
         <section aria-labelledby="features-label">
           <h2 class="pd-h2 reveal" id="features-label">Features</h2>
           <ul class="features">
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>Tokens &amp; themes</h3><p>Colors, spacing, radii and motion defined in one place, with light, dark and system themes.</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>Component library</h3><p>Buttons, form controls, segmented controls, menus, modals, drawers, calendars, notices and more, all interactive.</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>Sidebar app shell</h3><p>Title bar, sidebar and directional page transitions, ready for a new product.</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>8-language i18n</h3><p>Bundled at build time and switched instantly, with three validation checks; the UI and shell share one set of locale files.</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>Tauri desktop shell</h3><p>Frameless window, tray, autostart, logging and atomic config writes, ready to open a window.</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>A restrained style</h3><p>Few borders, restrained color, and motion on both enter and exit; hovered cards press in rather than float up.</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>Shared components</h3><p>Buttons, forms, menus, tooltips and dialogs are maintained in one package. Products receive improvements by updating their dependency.</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>Interactive design guidance</h3><p>The gallery covers interaction, writing, typography, color and motion, and records replaced designs and the reasons for each change.</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>Continuous interaction</h3><p>Segmented controls support dragging. Filtered lists retain existing items, and panels resize continuously as content changes.</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>Eight languages and theme settings</h3><p>Common interface text is available in eight languages. Products can connect their translations and use shared color variables or their own theme.</p></li>
           </ul>
         </section>
         <section aria-labelledby="steps-label">
           <h2 class="pd-h2 reveal" id="steps-label">Getting started</h2>
           <ol class="steps">
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>Preview</h3><p>Run npm install &amp;&amp; npm run dev and open http://localhost:1410 to browse the gallery. Built-in component gallery for interactive local preview of all components, states, and motion tokens</p></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><h3>Run with the shell</h3><p>With Rust installed, run npm run tauri:dev to get a real desktop window.</p></li>
-            <li class="reveal" style="--reveal-delay: 140ms"><h3>Bring it into your app</h3><p>src/trm/ is the template itself. Copy the whole folder.</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>Preview the gallery</h3><p>Get the project, run npm install and npm run dev, then open the local preview URL in a browser.</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>Install the package</h3><p>Follow the integration guide to install trm-ui at a pinned commit, import the required components and styles, and connect your language settings.</p></li>
+            <li class="reveal" style="--reveal-delay: 76ms"><h3>Verify and update</h3><p>After updating the package, check the product build and interactions before releasing the product update.</p></li>
           </ol>
         </section>
         <section aria-labelledby="others-label">
           <h2 class="pd-h2 reveal" id="others-label">More products</h2>
           <ul class="others">
             <li class="reveal" style="--reveal-delay: 0ms"><a href="/en/products/rvc-fabric/"><span class="others-name">RVC Fabric</span><span class="others-desc">Real-time AI voice conversion and model training workbench for Windows</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
-            <li class="reveal" style="--reveal-delay: 70ms"><a href="/en/products/moetext/"><span class="others-name">MoeText <small>喵言喵</small></span><span class="others-desc">Automatic chat-text beautifier for Android</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
-            <li class="reveal" style="--reveal-delay: 140ms"><a href="/en/products/mirror-test/"><span class="others-name">Mirror-Test</span><span class="others-desc">Meme-style fun quizzes</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><a href="/en/products/moetext/"><span class="others-name">MoeText <small>喵言喵</small></span><span class="others-desc">Automatic chat-text beautifier for Android</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
+            <li class="reveal" style="--reveal-delay: 76ms"><a href="/en/products/mirror-test/"><span class="others-name">Mirror-Test</span><span class="others-desc">Meme-style fun quizzes</span><span class="p-arrow" aria-hidden="true">→</span></a></li>
           </ul>
         </section>
       </main>
