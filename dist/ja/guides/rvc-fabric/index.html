@@ -102,14 +102,14 @@
     <p class="pd-note"><time datetime="2026-11-07">2026-11-07</time></p></header>
     <section id="install">
     <h2 class="pd-h2">インストールと初回利用</h2>
-    <p>公式サイトからインストーラーをダウンロードします。インストール後、GPU に対応する実行環境を設定し、ボイスモデルをダウンロードまたはインポートします。インストーラーの容量は、設定完了後のディスク使用量とは異なります。</p>
+    <p>公式サイトからインストーラーをダウンロードします。インストール後、GPU に対応する実行環境を設定し、ボイスモデルをダウンロードまたはインポートします。</p>
 <p>実行環境、モデル、更新のダウンロードにはインターネット接続が必要です。必要なファイルを用意した後の音声変換はローカルで実行します。サードパーティのボイスモデルを使う前に利用許諾を確認してください。</p>
     
   </section>
 <section id="hardware">
     <h2 class="pd-h2">システムとハードウェア</h2>
     <p>デスクトップ版は Windows 10 と Windows 11 を対象としています。NVIDIA GPU では CUDA、AMD と Intel GPU では DirectML を利用できます。動作性能は GPU、ドライバー、モデルによって異なります。</p>
-<p>ボイス学習とリアルタイム変換では必要なハードウェアが異なります。現在の学習画面は NVIDIA GPU を必要とします。DirectML での変換対応は、同じ学習手順への対応を意味しません。</p>
+<p>現在、ボイスモデルの学習には NVIDIA GPU が必要です。</p>
 <p>リアルタイムの遅延にはモデル推論、音声バッファー、オーディオドライバー、受信側アプリが影響します。設定を変更したら、録音と実際の通話で音質と安定性を確認してください。</p>
     
   </section>
@@ -123,12 +123,12 @@
 <section id="selection">
     <h2 class="pd-h2">RVC ツールの選び方</h2>
     <p>RVC は複数のアプリが利用する音声変換技術です。RVC Fabric は Windows のデスクトップ画面、実行環境の設定、モデル管理、音声ツールをまとめて利用したい方に向けたソフトウェアです。</p>
-<p>RVC Fabric、RVC WebUI、w-okada voice-changer を比較する際は、対象 OS、リアルタイム変換とファイル変換の用途、モデル形式、必要なハードウェアを確認し、同じ音声とモデルでテストしてください。各機能は該当バージョンの文書で確認できます。</p>
+<p>対応 OS、リアルタイム変換とファイル変換の機能、モデル形式、必要なハードウェアを比較して選べます。同じ音声とモデルを使うと、音質を比較しやすくなります。</p>
     <ul><li><a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI">RVC WebUI 公式リポジトリ</a></li><li><a href="https://github.com/w-okada/voice-changer">w-okada voice-changer 公式リポジトリ</a></li></ul>
   </section>
 <section id="neptune">
     <h2 class="pd-h2">Neptune ブランチ</h2>
-    <p>2026 年 11 月 7 日時点で、Neptune ブランチにはスマートフォンのペアリング、ローカル API、MCP インターフェースがあります。スマートフォンで音声を収録し、デスクトップで変換します。ダウンロードしたビルドに含まれる機能は、そのバージョンのリリースノートで確認してください。</p>
+    <p>2026 年 11 月 7 日時点で、開発ブランチ Neptune にはスマートフォンのペアリング、ローカル API、MCP インターフェースがあります。スマートフォンで音声を収録し、デスクトップで変換します。公開済みの各バージョンの機能はリリースノートに記載しています。</p>
     <ul><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/mobile-v1.md">スマートフォンのペアリング説明</a></li><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/api-v1.md">ローカル API と MCP の説明</a></li></ul>
   </section></main>
 

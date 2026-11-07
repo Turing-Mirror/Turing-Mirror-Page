@@ -66,10 +66,10 @@ export const rvcFabricProduct = {
     {
       "href": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases",
       "label": {
-        "sc": "CNB 国内镜像",
-        "tc": "CNB 國內鏡像",
-        "en": "CNB mirror (China)",
-        "ja": "CNB ミラー（中国国内）"
+        "sc": "CNB 下载",
+        "tc": "CNB 下載",
+        "en": "Download from CNB",
+        "ja": "CNB からダウンロード"
       },
       "external": true
     }
@@ -156,10 +156,10 @@ export const rvcFabricProduct = {
     },
     {
       "title": {
-        "sc": "DSP 效果链",
-        "tc": "DSP 效果鏈",
-        "en": "DSP effect chain",
-        "ja": "DSP エフェクトチェーン"
+        "sc": "音频效果",
+        "tc": "音訊效果",
+        "en": "Audio effects",
+        "ja": "音声エフェクト"
       },
       "body": {
         "sc": "内置噪声门、压缩器与 5 段参数均衡器，支持预设套用与精细调音。",
@@ -328,17 +328,17 @@ export const rvcFabricProduct = {
     }
   ],
   "notice": {
-    "sc": "请勿将本软件用于伪造身份、欺诈或其他违法用途。使用他人声音进行训练或转换前，请取得原权利人授权，并遵守当地法律法规。",
-    "tc": "請勿將本軟體用於偽造身分、詐騙或其他違法用途。使用他人聲音進行訓練或轉換前，請取得原權利人授權，並遵守當地法律法規。",
-    "en": "Do not use this software to impersonate others, commit fraud or for any other unlawful purpose. Get permission from the rights holder before training on or converting someone else's voice, and follow local laws.",
-    "ja": "なりすまし、詐欺、その他の違法な目的に使用しないでください。他人の声で学習・変換する場合は権利者の許諾を得て、現地の法令を遵守してください。"
+    "sc": "使用他人声音进行训练或转换前，请取得声音权利人的授权。",
+    "tc": "使用他人聲音進行訓練或轉換前，請取得聲音權利人的授權。",
+    "en": "Obtain the rights holder’s permission before training on or converting someone else’s voice.",
+    "ja": "他人の声を学習や変換に使う前に、権利者の許諾を得てください。"
   },
   "guide": "rvc-fabric",
   "screenshotsNote": {
-    "sc": "以下为仓库保存的历史界面截图，记录于 2026 年 8 月。当前版本的界面可能有所不同。",
-    "tc": "以下為儲存庫保存的歷史介面截圖，記錄於 2026 年 8 月。目前版本的介面可能有所不同。",
-    "en": "These archived interface screenshots were recorded in the repository in August 2026. The current interface may differ.",
-    "ja": "以下は 2026 年 8 月にリポジトリに記録された過去の画面です。現在のバージョンとは表示が異なる場合があります。"
+    "sc": "以下截图记录于 2026 年 8 月。",
+    "tc": "以下截圖記錄於 2026 年 8 月。",
+    "en": "These screenshots were recorded in August 2026.",
+    "ja": "以下は 2026 年 8 月に記録された画面です。"
   },
   "screenshotGallery": {
     "title": {

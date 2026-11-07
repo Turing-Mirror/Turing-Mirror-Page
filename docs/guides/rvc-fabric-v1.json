@@ -25,10 +25,10 @@
       },
       "paragraphs": [
         {
-          "sc": "从官网下载安装程序。安装桌面软件后，按照引导配置与显卡对应的运行环境，并下载或导入音色模型。安装程序大小不代表完成配置后的磁盘占用。",
-          "tc": "從官網下載安裝程式。安裝桌面軟體後，依照引導設定與顯示卡對應的執行環境，並下載或匯入音色模型。安裝程式大小不代表完成設定後的磁碟用量。",
-          "en": "Download the installer from the official website. After installation, configure the runtime for your GPU and download or import a voice model. The installer size does not represent the disk space required after setup.",
-          "ja": "公式サイトからインストーラーをダウンロードします。インストール後、GPU に対応する実行環境を設定し、ボイスモデルをダウンロードまたはインポートします。インストーラーの容量は、設定完了後のディスク使用量とは異なります。"
+          "sc": "从官网下载安装程序。安装后，按照引导配置与显卡对应的运行环境，并下载或导入音色模型。",
+          "tc": "從官網下載安裝程式。安裝後，依照引導設定與顯示卡對應的執行環境，並下載或匯入音色模型。",
+          "en": "Download the installer from the official website. After installation, configure the runtime for your GPU and download or import a voice model.",
+          "ja": "公式サイトからインストーラーをダウンロードします。インストール後、GPU に対応する実行環境を設定し、ボイスモデルをダウンロードまたはインポートします。"
         },
         {
           "sc": "下载运行环境、模型和更新时需要联网。准备好所需文件后，语音转换在本机执行。使用第三方音色前，请确认其使用许可。",
@@ -55,10 +55,10 @@
           "ja": "デスクトップ版は Windows 10 と Windows 11 を対象としています。NVIDIA GPU では CUDA、AMD と Intel GPU では DirectML を利用できます。動作性能は GPU、ドライバー、モデルによって異なります。"
         },
         {
-          "sc": "音色训练与实时变声的硬件要求不同。当前训练界面要求使用 NVIDIA 显卡；支持 DirectML 实时变声不代表支持同样的训练流程。",
-          "tc": "音色訓練與即時變聲的硬體要求不同。目前的訓練介面要求使用 NVIDIA 顯示卡；支援 DirectML 即時變聲不代表支援相同的訓練流程。",
-          "en": "Voice training and real-time conversion have different hardware requirements. The current training interface requires an NVIDIA GPU. DirectML support for conversion does not imply support for the same training workflow.",
-          "ja": "ボイス学習とリアルタイム変換では必要なハードウェアが異なります。現在の学習画面は NVIDIA GPU を必要とします。DirectML での変換対応は、同じ学習手順への対応を意味しません。"
+          "sc": "当前音色模型训练需要 NVIDIA 显卡。",
+          "tc": "目前的音色模型訓練需要 NVIDIA 顯示卡。",
+          "en": "Voice model training currently requires an NVIDIA GPU.",
+          "ja": "現在、ボイスモデルの学習には NVIDIA GPU が必要です。"
         },
         {
           "sc": "实时延迟同时受到模型推理、音频缓冲区、声卡驱动和目标软件影响。调整参数后应通过录音与实际通话检查声音质量和稳定性。",
@@ -134,10 +134,10 @@
           "ja": "RVC は複数のアプリが利用する音声変換技術です。RVC Fabric は Windows のデスクトップ画面、実行環境の設定、モデル管理、音声ツールをまとめて利用したい方に向けたソフトウェアです。"
         },
         {
-          "sc": "比较 RVC Fabric、RVC WebUI 和 w-okada voice-changer 时，应先确认目标系统、需要的实时或文件转换功能、模型格式及硬件要求，再使用相同音频和模型进行测试。各项目的功能以其对应版本文档为准。",
-          "tc": "比較 RVC Fabric、RVC WebUI 和 w-okada voice-changer 時，應先確認目標系統、所需的即時或檔案轉換功能、模型格式及硬體要求，再使用相同音訊和模型進行測試。各專案的功能以其對應版本文件為準。",
-          "en": "When comparing RVC Fabric, RVC WebUI and w-okada voice-changer, first check the operating system, live or file conversion needs, model formats and hardware requirements. Then test with the same audio and model. Consult the documentation for each specific version.",
-          "ja": "RVC Fabric、RVC WebUI、w-okada voice-changer を比較する際は、対象 OS、リアルタイム変換とファイル変換の用途、モデル形式、必要なハードウェアを確認し、同じ音声とモデルでテストしてください。各機能は該当バージョンの文書で確認できます。"
+          "sc": "选择软件时，可比较操作系统、实时变声与文件转换功能、模型格式和硬件要求。使用相同音频与模型试听，便于比较声音效果。",
+          "tc": "選擇軟體時，可比較作業系統、即時變聲與檔案轉換功能、模型格式和硬體要求。使用相同音訊與模型試聽，便於比較聲音效果。",
+          "en": "Compare the supported operating systems, real-time and file conversion features, model formats and hardware requirements. Use the same audio and model to compare sound quality.",
+          "ja": "対応 OS、リアルタイム変換とファイル変換の機能、モデル形式、必要なハードウェアを比較して選べます。同じ音声とモデルを使うと、音質を比較しやすくなります。"
         }
       ],
       "links": [
@@ -171,10 +171,10 @@
       },
       "paragraphs": [
         {
-          "sc": "截至 2026 年 11 月 7 日，海王星分支包含手机配对、本地 API 和 MCP 接口。手机配对由手机采集音频，桌面端执行语音转换；这些分支功能是否包含在下载版本中，应以该版本的发布说明为准。",
-          "tc": "截至 2026 年 11 月 7 日，海王星分支包含手機配對、本機 API 和 MCP 介面。手機配對由手機擷取音訊，桌面端執行語音轉換；這些分支功能是否包含於下載版本，應以該版本的發行說明為準。",
-          "en": "As of November 7, 2026, the Neptune branch includes mobile pairing, a local API and an MCP interface. Mobile pairing captures audio on the phone and performs voice conversion on the desktop. Check the release notes to determine whether a downloaded build includes these branch features.",
-          "ja": "2026 年 11 月 7 日時点で、Neptune ブランチにはスマートフォンのペアリング、ローカル API、MCP インターフェースがあります。スマートフォンで音声を収録し、デスクトップで変換します。ダウンロードしたビルドに含まれる機能は、そのバージョンのリリースノートで確認してください。"
+          "sc": "截至 2026 年 11 月 7 日，Neptune 海王星开发分支包含手机配对、本地 API 和 MCP 接口。手机采集音频后，由桌面端执行语音转换。已发布版本的功能见对应发布说明。",
+          "tc": "截至 2026 年 11 月 7 日，Neptune 海王星開發分支包含手機配對、本機 API 和 MCP 介面。手機擷取音訊後，由桌面端執行語音轉換。已發行版本的功能見對應發行說明。",
+          "en": "As of November 7, 2026, the Neptune development branch includes mobile pairing, a local API and an MCP interface. The phone captures audio and the desktop converts the voice. Release notes describe the features in each published version.",
+          "ja": "2026 年 11 月 7 日時点で、開発ブランチ Neptune にはスマートフォンのペアリング、ローカル API、MCP インターフェースがあります。スマートフォンで音声を収録し、デスクトップで変換します。公開済みの各バージョンの機能はリリースノートに記載しています。"
         }
       ],
       "links": [

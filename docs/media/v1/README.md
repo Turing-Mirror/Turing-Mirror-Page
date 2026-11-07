@@ -1,15 +1,11 @@
 # RVC Fabric 介绍与截图材料
 
-`rvc-fabric-zh-CN.md` 是用于国内内容平台的完整介绍正文，可供 CSDN、知乎和哔哩哔哩专栏编辑使用。它包含产品用途、三张官方截图、安装步骤与官方入口。文件已准备完成，尚未发布到这些平台。
+`rvc-fabric-zh-CN.md` 提供产品用途、官方截图、安装步骤和下载入口，可用于 CSDN、知乎、哔哩哔哩专栏或软件目录。文章已准备，尚未对外发布。
 
-编辑器支持 Markdown 时，可导入正文。需要上传图片时，使用材料包内 `images/` 的三张 PNG 原图，并保留相邻图注。图片记录于 2026 年 8 月，不应标为最新版本界面。
-
-正文也可作为软件目录站点更新介绍与配图的材料。各平台的发布和站点编辑联系另行进行。本材料未代为发送给站点编辑。
+支持 Markdown 的编辑器可直接导入正文。需要上传图片时，使用材料包 `images/` 中的三张 PNG，并保留图注。截图记录于 2026 年 8 月。
 
 ## 来源
 
-产品功能依据 RVC Fabric 的 Neptune 分支与官网使用指南。分支功能与已发布版本分开描述。文案遵循 TRM UI `c17c7c3` 中的 `src/pages/textRules.ts`。
+产品功能依据 RVC Fabric 的 Neptune 分支与官网使用指南。文案依据 TRM UI `c17c7c3` 的 `src/pages/textRules.ts`。
 
-三张原图来自 RVC Fabric 提交 `dd0de24aba1382177b953911b26afd8e277c025b` 的 `assets/screenshots/`。材料包使用含产品名的文件名，图片内容未修改。来源、图注与哈希见 `screenshots.json`。
-
-官网页面与截图、CNB 页面与截图、平台文章分别核对。某一入口发布成功不代表 AI 已经选用了正确图片。
+原图来自 RVC Fabric 提交 `dd0de24aba1382177b953911b26afd8e277c025b` 的 `assets/screenshots/`。材料包使用含产品名的文件名，图片内容与原图一致。来源、图注和哈希见 `screenshots.json`。

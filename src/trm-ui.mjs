@@ -31,13 +31,13 @@ export const trmUiProduct = {
   pageMeta: l('适用于 React 项目', '適用於 React 專案', 'For React projects', 'React プロジェクト向け'),
   summary: l('图灵镜桌面应用共用的组件库与设计系统，提供交互示例、八种语言和可选的 Tauri 桌面壳。', '圖靈鏡桌面應用程式共用的元件庫與設計系統，提供互動範例、八種語言和可選的 Tauri 桌面殼。', 'Shared components and a design system for Turing Mirror desktop apps, with interactive examples, eight languages and an optional Tauri shell.', 'チューリングミラーのデスクトップアプリで共有するコンポーネントとデザインシステムです。操作例、8 言語、任意で利用できる Tauri シェルを備えています。'),
   lead: l('共享组件库与设计系统', '共用元件庫與設計系統', 'Shared components and design system', '共通コンポーネントとデザインシステム'),
-  intro: l('TRM UI 为图灵镜桌面应用提供统一的组件、配色与交互约定。组件画廊展示实际效果，并提供交互、文案和动效的使用说明。项目通过组件包引用经过验证的版本，已有的语言与主题设置可以继续使用。', 'TRM UI 為圖靈鏡桌面應用程式提供一致的元件、配色與互動規則。元件畫廊展示實際效果，並提供互動、文案和動效的使用說明。專案透過元件套件引用經過驗證的版本，既有的語言與佈景設定可以繼續使用。', 'TRM UI provides consistent components, colors and interaction rules for Turing Mirror desktop apps. The gallery demonstrates the components and explains interaction, writing and motion. Projects use a verified package version and can retain their existing language and theme settings.', 'TRM UI はチューリングミラーのデスクトップアプリに共通のコンポーネント、配色、操作規則を提供します。ギャラリーでは実際の動作と、操作、文章、モーションの使い方を確認できます。検証済みのパッケージを導入し、既存の言語設定やテーマに接続できます。'),
+  intro: l('TRM UI 为图灵镜桌面应用提供统一的组件、配色与交互约定。组件画廊展示实际效果，并提供交互、文案和动效的使用说明。组件包可接入项目已有的语言与主题设置。', 'TRM UI 為圖靈鏡桌面應用程式提供一致的元件、配色與互動規則。元件畫廊展示實際效果，並提供互動、文案和動效的使用說明。元件套件可接入專案既有的語言與佈景設定。', 'TRM UI provides consistent components, colors and interaction rules for Turing Mirror desktop apps. The gallery demonstrates the components and explains interaction, writing and motion. The component package connects to the project’s existing language and theme settings.', 'TRM UI はチューリングミラーのデスクトップアプリに共通のコンポーネント、配色、操作規則を提供します。ギャラリーでは実際の動作と、操作、文章、モーションの使い方を確認できます。パッケージを既存の言語設定やテーマに接続できます。'),
   schema: { applicationCategory: 'DeveloperApplication', operatingSystem: 'Web browser; optional Windows desktop shell', license: 'https://opensource.org/license/mit' },
   actions: [
     { href: 'https://github.com/Turing-Mirror/TRM-UI', primary: true, external: true, label: l('查看项目', '檢視專案', 'View project', 'プロジェクトを見る') },
     { href: 'https://github.com/Turing-Mirror/TRM-UI/blob/' + reference.revision + '/docs/components-v1.md', external: true, label: l('阅读接入说明', '閱讀接入說明', 'Read integration guide', '導入手順を読む') }
   ],
-  note: l('组件画廊可在浏览器中运行。运行 Tauri 桌面壳时需要安装 Rust。', '元件畫廊可在瀏覽器中執行。執行 Tauri 桌面殼時需要安裝 Rust。', 'The gallery runs in a browser. Running the Tauri desktop shell requires Rust.', 'ギャラリーはブラウザで動作します。Tauri のデスクトップシェルを実行する場合は Rust が必要です。'),
+  note: l('组件画廊可在浏览器中运行。构建 Tauri 桌面应用时需要安装 Rust。', '元件畫廊可在瀏覽器中執行。建置 Tauri 桌面應用程式時需要安裝 Rust。', 'The gallery runs in a browser. Building the Tauri desktop application requires Rust.', 'ギャラリーはブラウザで動作します。Tauri のデスクトップアプリをビルドする場合は Rust が必要です。'),
   screenshots: [], demo: true,
   features: [
     feature(l('共享组件', '共用元件', 'Shared components', '共通コンポーネント'), l('按钮、表单、菜单、提示和弹窗由组件包统一维护，产品通过依赖版本接收改进。', '按鈕、表單、選單、提示和彈出視窗由元件套件統一維護，產品透過相依版本取得改進。', 'Buttons, forms, menus, tooltips and dialogs are maintained in one package. Products receive improvements by updating their dependency.', 'ボタン、フォーム、メニュー、ヒント、ダイアログを共通パッケージで管理し、依存バージョンの更新で改善を取り込みます。')),

@@ -102,14 +102,14 @@
     <p class="pd-note"><time datetime="2026-11-07">2026-11-07</time></p></header>
     <section id="install">
     <h2 class="pd-h2">安装与首次使用</h2>
-    <p>从官网下载安装程序。安装桌面软件后，按照引导配置与显卡对应的运行环境，并下载或导入音色模型。安装程序大小不代表完成配置后的磁盘占用。</p>
+    <p>从官网下载安装程序。安装后，按照引导配置与显卡对应的运行环境，并下载或导入音色模型。</p>
 <p>下载运行环境、模型和更新时需要联网。准备好所需文件后，语音转换在本机执行。使用第三方音色前，请确认其使用许可。</p>
     
   </section>
 <section id="hardware">
     <h2 class="pd-h2">系统与硬件</h2>
     <p>桌面端面向 Windows 10 和 Windows 11。NVIDIA 显卡使用 CUDA，AMD 和 Intel 显卡可使用 DirectML。不同显卡、驱动和模型的运行表现存在差异。</p>
-<p>音色训练与实时变声的硬件要求不同。当前训练界面要求使用 NVIDIA 显卡；支持 DirectML 实时变声不代表支持同样的训练流程。</p>
+<p>当前音色模型训练需要 NVIDIA 显卡。</p>
 <p>实时延迟同时受到模型推理、音频缓冲区、声卡驱动和目标软件影响。调整参数后应通过录音与实际通话检查声音质量和稳定性。</p>
     
   </section>
@@ -123,12 +123,12 @@
 <section id="selection">
     <h2 class="pd-h2">如何选择 RVC 工具</h2>
     <p>RVC 是语音转换技术名称，多款软件使用这一技术。RVC Fabric 提供 Windows 桌面界面、运行环境配置、模型管理与音频工具，适合需要集中管理这些功能的用户。</p>
-<p>比较 RVC Fabric、RVC WebUI 和 w-okada voice-changer 时，应先确认目标系统、需要的实时或文件转换功能、模型格式及硬件要求，再使用相同音频和模型进行测试。各项目的功能以其对应版本文档为准。</p>
+<p>选择软件时，可比较操作系统、实时变声与文件转换功能、模型格式和硬件要求。使用相同音频与模型试听，便于比较声音效果。</p>
     <ul><li><a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI">RVC WebUI 官方仓库</a></li><li><a href="https://github.com/w-okada/voice-changer">w-okada voice-changer 官方仓库</a></li></ul>
   </section>
 <section id="neptune">
     <h2 class="pd-h2">海王星分支</h2>
-    <p>截至 2026 年 11 月 7 日，海王星分支包含手机配对、本地 API 和 MCP 接口。手机配对由手机采集音频，桌面端执行语音转换；这些分支功能是否包含在下载版本中，应以该版本的发布说明为准。</p>
+    <p>截至 2026 年 11 月 7 日，Neptune 海王星开发分支包含手机配对、本地 API 和 MCP 接口。手机采集音频后，由桌面端执行语音转换。已发布版本的功能见对应发布说明。</p>
     <ul><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/mobile-v1.md">手机配对说明</a></li><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/api-v1.md">本地 API 与 MCP 说明</a></li></ul>
   </section></main>
 

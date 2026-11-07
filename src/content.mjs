@@ -200,7 +200,7 @@ export const PRODUCTS = [
       sc: "基于 Android 无障碍服务，按你定义的规则自动改写 QQ 和 Discord 聊天输入框中的文字：把「我」换成「本喵」，在句尾加上后缀和颜文字，一键切换猫娘、文言等风格。",
       tc: "基於 Android 無障礙服務，依你定義的規則自動改寫 QQ 與 Discord 聊天輸入框中的文字：把「我」換成「本喵」，在句尾加上後綴與顏文字，一鍵切換貓娘、文言等風格。",
       en: "Built on Android's accessibility service, MoeText rewrites what you type in QQ and Discord using rules you define: swap words, add sentence endings and kaomoji, and switch between styles like catgirl or classical Chinese in one tap.",
-      ja: "Android のユーザー補助サービスを利用し、QQ と Discord の入力欄の文章を自分で決めたルールで自動的に書き換えます。語句の置き換え、語尾や顔文字の追加、猫耳娘・漢文調などのスタイル切り替えもワンタップ。"
+      ja: "Android のユーザー補助サービスを利用し、QQ と Discord の入力欄の文章を自分で決めたルールで自動的に書き換えます。語句の置き換え、語尾や顔文字の追加、猫耳娘や漢文調などのスタイルの切り替えに対応しています。"
     },
     schema: {
       applicationCategory: "UtilitiesApplication",
@@ -218,10 +218,10 @@ export const PRODUCTS = [
       { href: "https://github.com/Turing-Mirror/MoeText", label: GITHUB_LABEL, external: true }
     ],
     note: {
-      sc: "需要 Android 6.0 及以上 · 安装时需允许安装未知来源应用",
-      tc: "需要 Android 6.0 以上 · 安裝時需允許安裝未知來源應用",
-      en: "Requires Android 6.0 or later · Allow installs from unknown sources when installing",
-      ja: "Android 6.0 以降 · インストール時に提供元不明のアプリを許可してください"
+      sc: "需要 Android 6.0 及以上版本。安装时需允许安装未知来源应用。",
+      tc: "需要 Android 6.0 以上版本。安裝時需允許安裝未知來源應用。",
+      en: "Requires Android 6.0 or later. Allow installation from unknown sources when prompted.",
+      ja: "Android 6.0 以降に対応しています。インストール時に提供元不明のアプリを許可してください。"
     },
     screenshots: [],
     features: [
@@ -231,16 +231,16 @@ export const PRODUCTS = [
           sc: "内置「猫娘」「文言」「emoji 谜语」「神谕」四款，一键切换；支持导入、导出自定义风格。",
           tc: "內建「貓娘」「文言」「emoji 謎語」「神諭」四款，一鍵切換；支援匯入、匯出自訂風格。",
           en: "Four built-in styles (catgirl, classical Chinese, emoji riddles and oracle) switch in one tap. Import and export your own as JSON.",
-          ja: "猫耳娘・漢文調・絵文字なぞなぞ・神託の 4 種を内蔵し、ワンタップで切り替え。自作スタイルの入出力にも対応。"
+          ja: "猫耳娘、漢文調、絵文字なぞなぞ、神託の 4 種を切り替えて使えます。自作スタイルのインポートとエクスポートにも対応しています。"
         }
       },
       {
-        title: { sc: "规则链引擎", tc: "規則鏈引擎", en: "Rule-chain engine", ja: "ルールチェーン" },
+        title: { sc: "文本替换规则", tc: "文字替換規則", en: "Text replacement rules", ja: "文章の置換ルール" },
         body: {
-          sc: "快捷替换、自定义替换对、句尾后缀、固定尾缀、随机颜文字，自由组合。",
-          tc: "快捷替換、自訂替換對、句尾後綴、固定尾綴、隨機顏文字，自由組合。",
+          sc: "可组合使用快捷替换、自定义替换对、句尾后缀、固定尾缀和随机颜文字。",
+          tc: "可組合使用快捷替換、自訂替換對、句尾後綴、固定尾綴和隨機顏文字。",
           en: "Combine quick swaps, custom replacements, sentence endings, fixed suffixes and random kaomoji.",
-          ja: "クイック置換、カスタム置換、語尾、固定サフィックス、ランダム顔文字を自由に組み合わせ。"
+          ja: "クイック置換、カスタム置換、語尾、固定サフィックス、ランダム顔文字を組み合わせて使えます。"
         }
       },
       {
@@ -249,16 +249,16 @@ export const PRODUCTS = [
           sc: "停顿处理或实时处理，沿用聊天应用原有的发送方式。",
           tc: "停頓處理或即時處理，沿用聊天應用原有的傳送方式。",
           en: "Rewrite after a pause or as you type, and send messages the way you always do.",
-          ja: "入力が止まったときに処理するか、リアルタイムで処理するかを選べます。送信方法はいつもどおり。"
+          ja: "入力が止まったときに処理するか、リアルタイムで処理するかを選べます。メッセージはチャットアプリから送信します。"
         }
       },
       {
-        title: { sc: "不打断输入", tc: "不打斷輸入", en: "Stays out of your way", ja: "入力を邪魔しない" },
+        title: { sc: "连续编辑", tc: "連續編輯", en: "Continuous editing", ja: "続けて入力" },
         body: {
-          sc: "连续编辑、光标位置映射与写回重试，继续打字时后缀会自动跟到句尾。",
-          tc: "連續編輯、游標位置對應與寫回重試，繼續打字時後綴會自動跟到句尾。",
-          en: "Continuous editing, cursor mapping and write-back retries keep the suffix at the end as you keep typing.",
-          ja: "連続編集、カーソル位置の追従、書き戻しの再試行で、入力を続けても語尾は文末に付いてきます。"
+          sc: "继续编辑文字时，后缀会自动移到句尾。",
+          tc: "繼續編輯文字時，後綴會自動移到句尾。",
+          en: "The suffix stays at the end of the sentence as you continue editing.",
+          ja: "入力を続けると、語尾は自動的に文末へ移動します。"
         }
       },
       {
@@ -267,16 +267,16 @@ export const PRODUCTS = [
           sc: "跟随系统深色模式，内置实时预览。",
           tc: "跟隨系統深色模式，內建即時預覽。",
           en: "Follows system dark mode, with a live preview built in.",
-          ja: "システムのダークモードに追従し、リアルタイムプレビューを内蔵。"
+          ja: "システムのダークモードに対応し、リアルタイムプレビューを備えています。"
         }
       },
       {
-        title: { sc: "不收集数据", tc: "不收集資料", en: "No data collection", ja: "データ収集なし" },
+        title: { sc: "本机处理", tc: "本機處理", en: "Local processing", ja: "ローカル処理" },
         body: {
-          sc: "网络权限仅用于检查更新，不收集、不上传任何数据。",
-          tc: "網路權限僅用於檢查更新，不收集、不上傳任何資料。",
-          en: "Network access is only used to check for updates. Nothing is collected or uploaded.",
-          ja: "ネットワークは更新確認にのみ使用し、データの収集・送信は一切行いません。"
+          sc: "聊天文本在本机处理。",
+          tc: "聊天文字在本機處理。",
+          en: "Chat text is processed on your device.",
+          ja: "チャットの文章は端末内で処理します。"
         }
       }
     ],
@@ -322,10 +322,10 @@ export const PRODUCTS = [
       {
         q: { sc: "需要哪些权限？", tc: "需要哪些權限？", en: "What permissions does it need?", ja: "必要な権限は？" },
         a: {
-          sc: "无障碍服务：用于读取并写回聊天输入框；网络：仅用于检查更新。应用不收集、不上传任何数据。",
-          tc: "無障礙服務：用於讀取並寫回聊天輸入框；網路：僅用於檢查更新。應用不收集、不上傳任何資料。",
-          en: "The accessibility service, to read and rewrite the chat input box, and network access, only to check for updates. The app collects and uploads nothing.",
-          ja: "入力欄の読み取りと書き戻しのためのユーザー補助と、更新確認のためだけのネットワーク権限です。データの収集・送信は行いません。"
+          sc: "无障碍服务用于读取和修改聊天输入框中的文字，网络权限用于检查更新。",
+          tc: "無障礙服務用於讀取和修改聊天輸入框中的文字，網路權限用於檢查更新。",
+          en: "The accessibility service reads and edits text in the chat input box. Network access is used to check for updates.",
+          ja: "ユーザー補助でチャット入力欄の文章を読み取り、書き換えます。ネットワーク権限は更新の確認に使います。"
         }
       },
       {
@@ -339,10 +339,10 @@ export const PRODUCTS = [
       }
     ],
     notice: {
-      sc: "本工具会自动改写你发出的消息，可能违反腾讯 QQ 用户协议，存在账号被限制功能或封禁的风险，请自行评估。喵言喵与腾讯官方没有任何关联。",
-      tc: "本工具會自動改寫你送出的訊息，可能違反騰訊 QQ 使用者協議，有帳號被限制功能或封禁的風險，請自行評估。喵言喵與騰訊官方沒有任何關聯。",
-      en: "MoeText automatically rewrites the messages you send, which may violate Tencent QQ's terms of service and put your account at risk of restriction or suspension. Use it at your own discretion. MoeText is not affiliated with Tencent.",
-      ja: "送信するメッセージを自動で書き換えるため、Tencent QQ の利用規約に違反し、アカウントが制限・凍結される可能性があります。ご自身の判断でご利用ください。MoeText は Tencent とは一切関係ありません。"
+      sc: "本工具会自动改写你发出的消息，可能违反腾讯 QQ 用户协议，存在账号被限制功能或封禁的风险。喵言喵与腾讯官方没有任何关联。",
+      tc: "本工具會自動改寫你送出的訊息，可能違反騰訊 QQ 使用者協議，有帳號被限制功能或封禁的風險。喵言喵與騰訊官方沒有任何關聯。",
+      en: "MoeText automatically rewrites the messages you send, which may violate Tencent QQ's terms of service and put your account at risk of restriction or suspension. MoeText is not affiliated with Tencent.",
+      ja: "送信するメッセージを自動で書き換えるため、Tencent QQ の利用規約に違反し、アカウントが制限・凍結される可能性があります。MoeText は Tencent とは一切関係ありません。"
     }
   },
   {
@@ -369,10 +369,10 @@ export const PRODUCTS = [
       ja: "Meme 系おもしろ診断集"
     },
     intro: {
-      sc: "在浏览器里打开就能玩的互动测试站。从动画、GalGame 到少女乐队，答几道题，看看你是哪一型。测试结果仅供娱乐，不代表真实人格判断。",
-      tc: "在瀏覽器裡打開就能玩的互動測試站。從動畫、GalGame 到少女樂團，答幾道題，看看你是哪一型。測試結果僅供娛樂，不代表真實人格判斷。",
-      en: "Interactive quizzes that run right in your browser. From anime and GalGames to girls' bands, answer a few questions and find out which type you are. Results are just for fun and are not a real personality assessment.",
-      ja: "ブラウザですぐ遊べるインタラクティブ診断サイト。アニメやギャルゲーからガールズバンドまで、いくつかの質問に答えてあなたのタイプを診断します。結果はお楽しみ用で、実際の性格判定ではありません。"
+      sc: "测试镜提供动画、GalGame 和少女乐队主题的互动测试，可在浏览器中作答。",
+      tc: "測試鏡提供動畫、GalGame 和少女樂團主題的互動測試，可在瀏覽器中作答。",
+      en: "Mirror-Test offers browser-based quizzes about anime, GalGames and girls’ bands.",
+      ja: "Mirror-Test では、アニメ、ギャルゲー、ガールズバンドを題材にした診断をブラウザで楽しめます。"
     },
     schema: {
       applicationCategory: "GameApplication",
@@ -457,10 +457,10 @@ export const PRODUCTS = [
       {
         q: { sc: "测试结果准吗？", tc: "測試結果準嗎？", en: "Are the results accurate?", ja: "結果は当たりますか？" },
         a: {
-          sc: "测试结果仅供娱乐，不代表真实人格判断。",
-          tc: "測試結果僅供娛樂，不代表真實人格判斷。",
-          en: "They are just for fun and are not a real personality assessment.",
-          ja: "結果はお楽しみ用で、実際の性格判定ではありません。"
+          sc: "这些测试以动画、游戏和乐队角色为主题，供娱乐使用。",
+          tc: "這些測試以動畫、遊戲和樂團角色為主題，供娛樂使用。",
+          en: "These quizzes are for entertainment and use themes from anime, games and band characters.",
+          ja: "アニメ、ゲーム、バンドのキャラクターを題材にした娯楽用の診断です。"
         }
       }
     ]
@@ -506,10 +506,10 @@ export const PROMOTIONS = [
     href: "https://www.rainyun.com/m1rror_?s=trm-site",
     name: { sc: "雨云", tc: "雨雲", en: "Rainyun", ja: "Rainyun" },
     description: {
-      sc: "首月五折 · 性价比云服务器 / 游戏云 / 面板服",
-      tc: "首月五折 · 性價比雲伺服器 / 遊戲雲 / 面板服",
-      en: "50% off the first month · Value cloud servers, game hosting and panel servers",
-      ja: "初月半額 · 高コスパのクラウドサーバー / ゲームクラウド / パネルサーバー"
+      sc: "提供云服务器、游戏云与面板服，首月五折。",
+      tc: "提供雲端伺服器、遊戲雲與面板服，首月五折。",
+      en: "Cloud servers, game hosting and panel servers with 50% off the first month.",
+      ja: "クラウドサーバー、ゲームホスティング、管理パネル付きサーバーを初月半額で提供します。"
     }
   }
 ];
