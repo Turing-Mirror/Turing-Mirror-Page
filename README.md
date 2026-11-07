@@ -51,3 +51,7 @@ npm run deploy
 - [文案审计交接书](docs/seo/v1/gemini-handoff.md)列出审计范围、规则与材料。
 
 修改文案前，请阅读 [TRM UI 文案守则](https://github.com/Turing-Mirror/TRM-UI/blob/main/src/pages/textRules.ts)。修改页面内容或静态资源后，重新构建并提交对应的 `dist/` 文件。
+
+## 许可证
+
+原创代码与文档采用 [MIT 许可证](LICENSE)。Logo、产品截图和社区二维码等素材的使用方式见[品牌素材使用说明](docs/brand-assets.md)。第三方代码适用各自的许可证。

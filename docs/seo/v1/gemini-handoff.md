@@ -4,7 +4,7 @@
 
 ## 文案依据
 
-使用 `rules/textRules.ts`，对应 TRM UI 最新提交 `c17c7c3`。既有语言审校记录位于 `rules/TRM-UI-Style-Guide.md` 和 `rules/Turing-Mirror-Page.md`。
+使用 `rules/textRules.ts`，对应 TRM UI 提交 `f326946`，于 2026 年 11 月 7 日同步。既有语言审校记录位于 `rules/TRM-UI-Style-Guide.md` 和 `rules/Turing-Mirror-Page.md`。
 
 重点检查以下要求：
 
@@ -18,6 +18,7 @@
 | 材料 | 位置 |
 | --- | --- |
 | 官网四语言文案、使用指南和截图说明 | `copy/website/`。 |
+| 官网仓库说明与品牌素材使用说明 | `copy/website/README.md`、`copy/website/docs/README.md` 和 `copy/website/docs/brand-assets.md`。 |
 | RVC Fabric 八语言 README | `copy/readmes/`。 |
 | CNB 首页和维护说明 | `copy/cnb/`。 |
 | 国内平台文章与素材说明 | `copy/media/`。 |
@@ -25,6 +26,8 @@
 | 发布与检索记录 | `evidence/`。 |
 
 本轮已检查官网产品说明、八语言 README、CNB 文档、平台文章及交接材料，修改了重复提醒、防御性措辞、内部术语和不完整的句子。请复核修改后的全文及各语言之间的对应关系。
+
+官网代码采用标准 MIT 许可证，许可文本位于 `copy/website/LICENSE`。品牌素材的使用范围另行说明。请审阅相关说明的表述，保留 MIT 许可证原文。
 
 ## 产品事实
 

@@ -2,6 +2,7 @@
   "name": "turing-mirror-page",
   "private": true,
   "version": "0.1.0",
+  "license": "MIT",
   "description": "Static homepage for www.turingmirror.com deployed with Cloudflare Pages.",
   "type": "module",
   "scripts": {

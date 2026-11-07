@@ -36,6 +36,8 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 
 ## 品牌素材
 
+素材范围和使用方式见[品牌素材使用说明](brand-assets.md)。
+
 标签图标采用工作区 `docs/logo/` 中的 SVG、PNG 与 ICO 文件，发布副本位于 `public/`。图标链接使用简单版本参数，更新素材时同步递增。
 
 四种语言首页复用 `src/render.mjs` 的 `heroLogo` 模板，以 LOGO 替代可见标题文字，保留对应语言的网站名称供读屏使用，并复用图形显示镜面倒影。
