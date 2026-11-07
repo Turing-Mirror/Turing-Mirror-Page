@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-07T03:56:19.793920+00:00",
+  "responses": [
+    {
+      "url": "https://www.turingmirror.com/products/rvc-fabric/screenshots/",
+      "status": 200,
+      "figureCount": 3,
+      "metadata": "passed"
+    },
+    {
+      "url": "https://www.turingmirror.com/en/products/rvc-fabric/screenshots/",
+      "status": 200,
+      "figureCount": 3,
+      "metadata": "passed"
+    },
+    {
+      "url": "https://www.turingmirror.com/zh-hant/products/rvc-fabric/screenshots/",
+      "status": 200,
+      "figureCount": 3,
+      "metadata": "passed"
+    },
+    {
+      "url": "https://www.turingmirror.com/ja/products/rvc-fabric/screenshots/",
+      "status": 200,
+      "figureCount": 3,
+      "metadata": "passed"
+    }
+  ]
+}

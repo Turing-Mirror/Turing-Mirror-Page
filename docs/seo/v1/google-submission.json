@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-07",
+  "property": "sc-domain:turingmirror.com",
+  "sitemap": {
+    "url": "https://www.turingmirror.com/sitemap.xml",
+    "status": "Successfully processed",
+    "discoveredPages": 28
+  },
+  "inspections": [
+    {
+      "url": "https://www.turingmirror.com/products/rvc-fabric/",
+      "initialStatus": "Indexed",
+      "lastCrawlDisplayed": "2026-11-03 20:15:58",
+      "agent": "Googlebot smartphone",
+      "crawlAllowed": true,
+      "crawl": "Successful",
+      "indexingAllowed": true,
+      "requestStatus": "Added to priority crawl queue"
+    },
+    {
+      "url": "https://www.turingmirror.com/products/rvc-fabric/screenshots/",
+      "initialStatus": "Discovered - currently not indexed",
+      "sitemapDiscovered": true,
+      "requestStatus": "Added to priority crawl queue"
+    },
+    {
+      "url": "https://www.turingmirror.com/en/products/rvc-fabric/screenshots/",
+      "initialStatus": "Discovered - currently not indexed",
+      "sitemapDiscovered": true,
+      "requestStatus": "Added to priority crawl queue"
+    }
+  ],
+  "note": "Observed in Search Console UI. Submission is not proof of completed crawling or image indexing."
+}

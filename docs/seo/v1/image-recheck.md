@@ -26,6 +26,6 @@
 
 旧索引仍被独立网页搜索使用，这是本次可观察到的事实。分享对话同时证实了文字资料与配图所属项目不一致。仅以索引更新延迟解释该次回答并不充分；更新索引后仍需重新检验图片是否正确归属。
 
-下一项外部验证是通过 Google Search Console 和 Bing Webmaster 检查产品页及截图的抓取与索引状态，并提交现有 sitemap。尚未取得并验证对应控制台权限，本记录不声称已经完成提交。站点地图地址为 `https://www.turingmirror.com/sitemap.xml`。
+后续已通过 Google Search Console 提交 `https://www.turingmirror.com/sitemap.xml`，Google 已发现 28 页并接受三项优先抓取申请；另已通过 Bing IndexNow 提交 16 个更新地址。详见 `image-followup.md`。这些后续提交不改变本节所记录的配图错误。
 
 参考：[Google 图片检索说明](https://developers.google.com/search/docs/appearance/google-images)。图片可读取与图片被检索采用是不同的验证结果，元数据不能保证特定服务选用图片。

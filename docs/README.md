@@ -101,4 +101,8 @@ npm run check
 
 产品截图由 `screenshots` 字段统一维护。第一张作为 Open Graph、Twitter 和软件结构化数据的代表图片；图片地址同时写入 sitemap。截图说明必须与画面相符；不能将旧图标为最新版本。现有 RVC Fabric 截图保留原地址，并注明历史来源。
 
+设置 `screenshotGallery` 后，构建器生成产品的四语言 `/products/{slug}/screenshots/` 页面。截图的 `id`、`caption` 与 `source` 分别提供页内地址、可见说明和仓库来源。
+
+发布完成后，可以用 `npm run submit:indexnow -- /更新的页面/` 通知 Bing 等参与搜索引擎。验证文件位于 `public/indexnow-key.txt`。仅提交新增或修改的地址；回执不代表已收录。Google Search Console 的提交和索引检查需单独完成。
+
 `docs/seo/v1/` 保存功能证据、检索基线、验证记录和 Gemini 文案审计交接书。公开下载版与 Neptune 分支功能分别说明，不因分支代码存在而宣称已发布。

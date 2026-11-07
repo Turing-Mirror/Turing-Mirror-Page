@@ -60,7 +60,7 @@
 
 后续观察使用固定问题，记录日期、服务、是否开启联网、结果及引用地址，例如“推荐几款 Windows RVC 实时变声器”“RVC Fabric 是什么”“RVC Fabric 界面截图”。分别统计是否提及产品、是否引用官网、是否使用正确截图，不把一次结果当作长期结论。本次图片搜索曾出现其他 RVC 项目图片，尚未进行多家 AI 的受控对照测试。
 
-Google Search Console 与 Bing Webmaster 的站点所有权、sitemap 提交和索引状态未在本次验证。不得将生成 sitemap 写成已向搜索平台提交。`llms.txt` 是补充入口，不是 AI 收录或推荐保证。
+初次发布时尚未完成搜索平台提交。后续已通过 Google Search Console 提交 sitemap，Google 成功发现 28 页，并接受三项优先抓取申请；Bing IndexNow 已收到 16 个更新地址并返回 202。详细记录见 `image-followup.md`、`google-submission.json` 和 `indexnow-result.json`。`llms.txt` 是补充入口，不是 AI 收录或推荐保证。
 
 ## 参考
 

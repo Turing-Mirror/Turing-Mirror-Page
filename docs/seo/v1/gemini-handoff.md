@@ -42,7 +42,7 @@ RVC Fabric 的最新功能依据是 Neptune，不是默认分支 tm-release。�
 
 Cloudflare 的域名限定规则已部署，带正常应用标识的读取检查通过。默认 Python 标识仍可能触发 Pages 平台层 1010。这项技术限制不应转写为产品宣传，也不能描述成所有抓取问题都已消除。
 
-CNB 未修改。本次没有向 Google 或 Bing 提交 sitemap，也没有验证索引收录或多家 AI 推荐效果。
+CNB 未修改。后续已向 Google 提交 sitemap，Google 已发现 28 页并接受三项优先抓取申请；Bing IndexNow 返回 202。新截图页及图片的最终收录、多家 AI 的正确配图效果仍未验证。初次发布的 `release.json` 保留当时状态，以后续提交记录补充。
 
 ## 请按以下格式输出
 

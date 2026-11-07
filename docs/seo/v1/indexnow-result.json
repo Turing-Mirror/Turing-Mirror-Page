@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-07T03:56:17.108Z",
+  "endpoint": "https://www.bing.com/indexnow",
+  "status": 202,
+  "result": "received; key validation pending",
+  "urlList": [
+    "https://www.turingmirror.com/",
+    "https://www.turingmirror.com/en/",
+    "https://www.turingmirror.com/zh-hant/",
+    "https://www.turingmirror.com/ja/",
+    "https://www.turingmirror.com/products/rvc-fabric/",
+    "https://www.turingmirror.com/en/products/rvc-fabric/",
+    "https://www.turingmirror.com/zh-hant/products/rvc-fabric/",
+    "https://www.turingmirror.com/ja/products/rvc-fabric/",
+    "https://www.turingmirror.com/guides/rvc-fabric/",
+    "https://www.turingmirror.com/en/guides/rvc-fabric/",
+    "https://www.turingmirror.com/zh-hant/guides/rvc-fabric/",
+    "https://www.turingmirror.com/ja/guides/rvc-fabric/",
+    "https://www.turingmirror.com/products/rvc-fabric/screenshots/",
+    "https://www.turingmirror.com/en/products/rvc-fabric/screenshots/",
+    "https://www.turingmirror.com/zh-hant/products/rvc-fabric/screenshots/",
+    "https://www.turingmirror.com/ja/products/rvc-fabric/screenshots/"
+  ],
+  "response": ""
+}
