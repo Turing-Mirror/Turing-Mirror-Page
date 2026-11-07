@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-07",
+  "websiteContentCommit": "853b9e00c5075980def8c09390cb79821107182f",
+  "websiteBranch": "main",
+  "rvcNeptuneCommit": "902837f6968852e830658445eded738ee89e5c2a",
+  "rvcDefaultCommit": "3bf3635a2b0e1e857f7263e0b513673d8ab0f22a",
+  "rvcDefaultBranch": "tm-release",
+  "copyRulesCommit": "8161ac18ef8c557a0caa16f05df148a61fc55dd3",
+  "deploymentUrl": "https://155d7134.turing-mirror-page.pages.dev",
+  "productionUrl": "https://www.turingmirror.com/",
+  "cloudflareRule": {
+    "name": "public-site-crawling-v1",
+    "id": "3d2759ed8960472dba35c28bf452e608",
+    "expression": "(http.host eq \"www.turingmirror.com\" and http.request.method in {\"GET\" \"HEAD\"})",
+    "setting": {
+      "browser_check": false
+    },
+    "verified": "Active in dashboard"
+  },
+  "checks": [
+    "npm run check",
+    "npm run check:seo",
+    "git diff --check",
+    "14 production URLs return 200 for identified audit client",
+    "3 production screenshots match repository files",
+    "README changes on default branch contain only 8 documentation files"
+  ],
+  "limitations": [
+    "Default Python urllib user agent can still receive Pages platform error 1010.",
+    "Search indexing and AI recommendation or image selection results remain unverified.",
+    "New guide could not be read by the web research tool immediately after deployment; browser and direct HTTP access passed.",
+    "Windows runtime behavior and performance were not tested.",
+    "Search Console and Bing sitemap submission not performed."
+  ]
+}

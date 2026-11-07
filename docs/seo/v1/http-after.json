@@ -1,0 +1,102 @@
+{
+  "checkedAt": "2026-11-07T03:41:08.937075+00:00",
+  "userAgent": "TuringMirrorAudit/1.0 (+https://www.turingmirror.com/)",
+  "responses": [
+    {
+      "path": "/products/rvc-fabric/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 21494,
+      "metadata": "passed"
+    },
+    {
+      "path": "/guides/rvc-fabric/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 10278,
+      "metadata": "passed"
+    },
+    {
+      "path": "/zh-hant/products/rvc-fabric/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 21680,
+      "metadata": "passed"
+    },
+    {
+      "path": "/zh-hant/guides/rvc-fabric/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 10365,
+      "metadata": "passed"
+    },
+    {
+      "path": "/en/products/rvc-fabric/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 22181,
+      "metadata": "passed"
+    },
+    {
+      "path": "/en/guides/rvc-fabric/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 10485,
+      "metadata": "passed"
+    },
+    {
+      "path": "/ja/products/rvc-fabric/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 24531,
+      "metadata": "passed"
+    },
+    {
+      "path": "/ja/guides/rvc-fabric/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 11670,
+      "metadata": "passed"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 74
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "bytes": 16403,
+      "urlCount": 24
+    },
+    {
+      "path": "/llms.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 6772
+    },
+    {
+      "path": "/assets/products/rvc-fabric/home.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 79236,
+      "matchesSource": true
+    },
+    {
+      "path": "/assets/products/rvc-fabric/settings.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 90822,
+      "matchesSource": true
+    },
+    {
+      "path": "/assets/products/rvc-fabric/misc.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 73367,
+      "matchesSource": true
+    }
+  ]
+}
