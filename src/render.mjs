@@ -355,7 +355,7 @@ function screenshots(loc, product) {
   return `
         <section class="shots${product.screenshots.length === 1 ? " is-single" : ""}" aria-label="${esc(ui.screenshotsLabel)}" data-close-label="${esc(ui.close)}">
 ${shots}
-        </section>${product.screenshotsNote ? `<p class="pd-note">${esc(t(product.screenshotsNote, loc))}</p>` : ""}`;
+        </section>`;
 }
 
 function interactiveDemo(loc, product) {
@@ -553,8 +553,6 @@ export function renderProduct(loc, product, assets) {
           <p class="pd-intro reveal" style="${delay(2)}">${esc(t(product.intro, loc))}</p>
           <div class="pd-actions reveal" style="${delay(3)}">
 ${product.actions.map((action) => actionButton(loc, action)).join("\n")}
-${product.guide ? actionButton(loc, { href: guidePath(loc, { slug: product.guide }), label: guideLabel }) : ""}
-${product.screenshotGallery ? actionButton(loc, { href: screenshotPath(loc, product), label: UI[loc.code].screenshotsLabel }) : ""}
           </div>
           <p class="pd-note reveal" style="${delay(4)}">${esc(t(product.note, loc))}</p>
         </header>
@@ -562,66 +560,4 @@ ${screenshots(loc, product)}${interactiveDemo(loc, product)}${features(loc, prod
       </main>`;
 
   return page({ loc, headHtml, alternatesFor, topStart: back, main, bodyClass: "page-product" });
-}
-
-export const guidePath = (loc, guide) => `${loc.path}guides/${guide.slug}/`;
-const guideLabel = { sc: "使用指南", tc: "使用指南", en: "User guide", ja: "利用ガイド" };
-export function renderGuide(loc, guide, assets) {
-  const product = PRODUCTS.find((p) => p.slug === guide.product);
-  const path = guidePath(loc, guide);
-  const alternatesFor = (other) => guidePath(other, guide);
-  const title = t(guide.title, loc);
-  const graph = [organization(), {
-    "@type": "TechArticle", "@id": `${absolute(path)}#article`, url: absolute(path),
-    headline: title, description: t(guide.summary, loc), inLanguage: loc.htmlLang,
-    dateModified: guide.date, author: { "@id": `${SITE_URL}/#organization` },
-    about: { "@id": `${absolute(productPath(loc, product))}#software` }
-  }];
-  const headHtml = head({ loc, path, title: `${title} | ${UI[loc.code].siteTitle}`,
-    description: t(guide.summary, loc), alternatesFor, assets, graph, image: product.screenshots[0] });
-  const sections = guide.sections.map((section) => `<section id="${esc(section.id)}">
-    <h2 class="pd-h2">${esc(t(section.title, loc))}</h2>
-    ${section.paragraphs.map((p) => `<p>${esc(t(p, loc))}</p>`).join("\n")}${section.links.length ? `\n    <ul>${section.links.map((link) => `<li><a href="${esc(link.href)}">${esc(t(link.label, loc))}</a></li>`).join("")}</ul>` : ""}
-  </section>`).join("\n");
-  const back = `<a class="back" href="${productPath(loc, product)}">← ${esc(t(product.name, loc))}</a>`;
-  const main = `<main class="pd guide" id="main"><header class="pd-head">
-    <h1 class="pd-h2">${esc(title)}</h1><p class="pd-intro">${esc(t(guide.summary, loc))}</p>
-    <p class="pd-note"><time datetime="${guide.date}">${guide.date}</time></p></header>
-    ${sections}</main>`;
-  return page({ loc, headHtml, alternatesFor, topStart: back, main, bodyClass: "page-product" });
-}
-
-export const screenshotPath = (loc, product) => productPath(loc, product) + "screenshots/";
-export function renderScreenshots(loc, product, assets) {
-  const path = screenshotPath(loc, product);
-  const alternatesFor = other => screenshotPath(other, product);
-  const title = t(product.screenshotGallery.title, loc);
-  const description = t(product.screenshotGallery.description, loc);
-  const images = product.screenshots.map(shot => ({
-    "@type": "ImageObject", "@id": absolute(shot.src) + "#image",
-    name: t(shot.alt, loc), caption: t(shot.caption, loc),
-    description: t(shot.alt, loc),
-    contentUrl: absolute(shot.src), url: absolute(path) + "#" + shot.id,
-    width: shot.width, height: shot.height, encodingFormat: "image/png",
-    isBasedOn: shot.source, creator: { "@id": SITE_URL + "/#organization" },
-    about: { "@id": absolute(productPath(loc, product)) + "#software" }
-  }));
-  const graph = [organization(), ...images, {
-    "@type": "CollectionPage", "@id": absolute(path) + "#webpage", url: absolute(path),
-    name: title, description, inLanguage: loc.htmlLang,
-    about: { "@id": absolute(productPath(loc, product)) + "#software" },
-    primaryImageOfPage: { "@id": images[0]["@id"] },
-    mainEntity: { "@type": "ItemList", itemListElement: images.map((img, i) => ({
-      "@type": "ListItem", position: i + 1, item: { "@id": img["@id"] }
-    })) }
-  }];
-  const headHtml = head({ loc, path, title, description, alternatesFor, assets, graph, image: product.screenshots[0] });
-  const figures = product.screenshots.map((shot, i) => `<section id="${shot.id}">
-    <figure class="screenshot-record">
-      <a href="${shot.src}"><img src="${shot.src}" alt="${esc(t(shot.alt, loc))}" width="${shot.width}" height="${shot.height}"${i ? ' loading="lazy"' : ''}></a>
-      <figcaption>${esc(t(shot.caption, loc))}</figcaption>
-    </figure>
-  </section>`).join("\n");
-  const main = `<main class="pd guide" id="main"><header class="pd-head"><h1 class="pd-h2">${esc(title)}</h1><p class="pd-intro">${esc(description)}</p></header>${figures}</main>`;
-  return page({ loc, headHtml, alternatesFor, topStart: `<a class="back" href="${productPath(loc, product)}">← ${esc(t(product.name, loc))}</a>`, main, bodyClass: "page-product" });
 }

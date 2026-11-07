@@ -9,13 +9,11 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { SITE_URL, TAGLINE, WECHAT_ID, QQ_GROUP_ID, GITHUB_ORG, LOCALES, UI, PRODUCTS, CHANNELS } from "../src/content.mjs";
-import { absolute, homePath, productPath, renderHome, renderProduct, renderGuide, guidePath, renderScreenshots, screenshotPath, t, esc } from "../src/render.mjs";
+import { absolute, homePath, productPath, renderHome, renderProduct, t, esc } from "../src/render.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
 const outDir = join(root, "dist");
-const galleries = PRODUCTS.filter(p => p.screenshotGallery);
-const guides = [JSON.parse(await readFile(join(root, "docs/guides/rvc-fabric-v1.json"), "utf8"))];
 
 async function versioned(file) {
   const content = await readFile(join(publicDir, file));
@@ -35,7 +33,7 @@ async function emit(path, html) {
 }
 
 function sitemap() {
-  const groups = [(loc) => homePath(loc), ...PRODUCTS.map((product) => (loc) => productPath(loc, product)), ...guides.map((guide) => (loc) => guidePath(loc, guide)), ...galleries.map(product => loc => screenshotPath(loc, product))];
+  const groups = [(loc) => homePath(loc), ...PRODUCTS.map((product) => (loc) => productPath(loc, product))];
   const urls = groups.flatMap((pathFor) =>
     LOCALES.map((loc) => {
       const alternates = LOCALES.map(
@@ -44,7 +42,7 @@ function sitemap() {
       alternates.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${absolute(pathFor(LOCALES[0]))}"/>`);
       return `  <url>
     <loc>${esc(absolute(pathFor(loc)))}</loc>
-${(PRODUCTS.find((p) => (productPath(loc, p) === pathFor(loc) || (p.screenshotGallery && screenshotPath(loc, p) === pathFor(loc))))?.screenshots ?? []).map((shot) => `    <image:image><image:loc>${esc(absolute(shot.src))}</image:loc></image:image>`).join("\n")}
+${(PRODUCTS.find((p) => productPath(loc, p) === pathFor(loc))?.screenshots ?? []).map((shot) => `    <image:image><image:loc>${esc(absolute(shot.src))}</image:loc></image:image>`).join("\n")}
 ${alternates.join("\n")}
   </url>`;
     })
@@ -71,8 +69,6 @@ ${t(product.intro, en)}
 - ${t(product.note, en)}
 - Page: ${absolute(productPath(en, product))} (简体中文: ${absolute(productPath(sc, product))})
 - Links: ${links}
-${product.screenshotGallery ? `- Official screenshot page: ${absolute(screenshotPath(en, product))}` : ""}
-${product.screenshotsNote ? `- Screenshot record: ${t(product.screenshotsNote, en)}` : ""}
 ${product.screenshots.map((shot) => `- Official screenshot: ${absolute(shot.src)} (${t(shot.alt, en)})`).join("\n")}
 ${product.features.map((feature) => `- ${t(feature.title, en)}: ${t(feature.body, en)}`).join("\n")}`;
   }).join("\n\n");
@@ -86,10 +82,6 @@ Turing Mirror (Chinese: 图灵镜, Traditional: 圖靈鏡, Japanese: チュー�
 ## Products
 
 ${products}
-
-## Guides
-
-${guides.map((guide) => `- ${t(guide.title, en)}: ${absolute(guidePath(en, guide))}`).join("\n")}
 
 ## Channels
 
@@ -120,8 +112,6 @@ async function build() {
   for (const loc of LOCALES) {
     await emit(homePath(loc), renderHome(loc, assets));
     pages += 1;
-    for (const product of galleries) { await emit(screenshotPath(loc, product), renderScreenshots(loc, product, assets)); pages += 1; }
-    for (const guide of guides) { await emit(guidePath(loc, guide), renderGuide(loc, guide, assets)); pages += 1; }
     for (const product of PRODUCTS) {
       await emit(productPath(loc, product), renderProduct(loc, product, assets));
       pages += 1;

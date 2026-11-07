@@ -1448,12 +1448,3 @@ button {
 .qr-close { display: none; min-height: var(--tm-touch-target); margin: 12px auto 0; padding: 0 16px; border: 0; border-radius: var(--tm-r-sm); background: var(--tm-surface); color: var(--tm-ink); font: inherit; cursor: pointer; }
 .js .qr-close { display: block; }
 .qr-close:focus-visible { outline: 2px solid var(--tm-ink); outline-offset: 2px; }
-
-/* User documentation uses the product page typography and spacing. */
-.guide section { margin-block: 2.5rem; }
-.guide section p, .guide section li { line-height: 1.8; max-width: 78ch; }
-.guide section p + p { margin-top: 1rem; }
-
-.screenshot-record { margin: 1rem 0; }
-.screenshot-record img { display: block; width: 100%; height: auto; border-radius: var(--radius, 12px); }
-.screenshot-record figcaption { margin-top: 1rem; line-height: 1.8; }

@@ -8,10 +8,9 @@ src/
   rvc-fabric.mjs RVC Fabric 产品资料、截图与文案
   trm-ui.mjs    TRM UI 产品与交互示例文案
   demo/         TRM UI 交互示例
-  render.mjs    首页、产品页、指南、截图页与结构化数据模板
+  render.mjs    首页、产品页与结构化数据模板
 scripts/
   build.mjs     生成 dist/：复制 public/，渲染所有页面，生成 sitemap.xml 与 llms.txt
-docs/guides/    四语言使用指南的数据源
 public/         复制到 dist/ 的静态资源
   site.css      设计规范、样式与动画（warm paper / ink 配色）
   site.js       交互：滚动入场、语言菜单、复制与二维码、截图大图、指针光效
@@ -19,6 +18,7 @@ public/         复制到 dist/ 的静态资源
   404.html      错误页
   assets/       QQ 群二维码、产品截图（assets/products/<slug>/）
   _headers      安全响应头与缓存策略
+  _redirects    已移除页面的跳转规则
   favicon.svg / favicon.png / favicon.ico / robots.txt
 dist/           构建产物（入库，Cloudflare 直接发布此目录）
 wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
@@ -59,9 +59,9 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 
 ## 搜索入口与元数据
 
-- 产品介绍、指南和截图直接输出到 HTML。TRM UI 交互示例使用 React，页面交互通过 JavaScript 执行。
+- 产品介绍、操作步骤和截图直接输出到 HTML。TRM UI 交互示例使用 React，页面交互通过 JavaScript 执行。
 - 结构化数据（JSON-LD）：首页为 Organization / WebSite / 产品列表；产品页为 SoftwareApplication、BreadcrumbList，有问答时附 FAQPage。
-- `sitemap.xml` 包含各语言页面、语言互链和产品截图地址。`/llms.txt` 提供产品、指南与截图入口。
+- `sitemap.xml` 包含各语言页面、语言互链和产品截图地址。`/llms.txt` 提供产品页与截图原图地址。
 - 推广链接带 `rel="sponsored"`。
 
 ## 动画
@@ -99,14 +99,10 @@ npm run check:seo
 
 同步脚本读取 TRM UI 的规则数据及共享实现。日常构建使用已提交的参考数据和已安装的固定版本依赖。`dist/` 包含生成的四语言示例、固定版本的组件包许可与官网动效参数。
 
-## 产品使用文档与图片
+## 产品说明与图片
 
-`docs/guides/rvc-fabric-v1.json` 是四语言使用指南的数据源。构建时生成 `/guides/rvc-fabric/` 及对应语言路径，产品页和 sitemap 提供入口。文案按 TRM UI 最新 `src/pages/textRules.ts` 审阅；历史对照表需结合当前功能核对。
-
-产品截图由 `screenshots` 字段统一维护。第一张作为 Open Graph、Twitter 和软件结构化数据的代表图片；图片地址同时写入 sitemap。图注简要标明画面名称，来源写入图片结构化数据，截图记录保存在 `docs/seo/v1/`。
-
-设置 `screenshotGallery` 后，构建器生成产品的四语言 `/products/{slug}/screenshots/` 页面。截图的 `id`、`caption` 与 `source` 分别提供页内地址、可见说明和仓库来源。
+产品页集中提供功能、操作步骤和截图。截图来源写入图片结构化数据，原图地址同时写入 sitemap。原指南和截图页通过 `_redirects` 跳转到对应语言的产品页。
 
 发布完成后，可以用 `npm run submit:indexnow -- /更新的页面/` 通知 Bing 等参与搜索引擎。验证文件位于 `public/indexnow-key.txt`。提交新增或修改的地址后，将回执记入发布记录。页面收录状态在搜索平台查看。Google Search Console 单独提交 sitemap 并查看索引状态。
 
-`docs/seo/v1/` 保存功能证据、检索基线、验证记录和 Gemini 文案审计交接书。开发功能依据 Neptune 分支，已发布功能依据对应版本的发布说明。
+`docs/seo/v1/` 保存功能证据、检索基线、验证记录和 Gemini 文案审计交接书。用户介绍依据发布版本；Beta 分支的实现记录用于维护核对。

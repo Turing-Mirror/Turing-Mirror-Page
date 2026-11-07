@@ -1,6 +1,6 @@
 # 图灵镜官网
 
-本仓库提供[图灵镜官网](https://www.turingmirror.com/)的源代码。网站介绍图灵镜的产品，提供下载、使用指南、官方截图和社区入口。
+本仓库提供[图灵镜官网](https://www.turingmirror.com/)的源代码。网站介绍图灵镜的产品，提供下载、功能说明、产品截图和社区入口。
 
 ## 产品
 
@@ -10,8 +10,6 @@
 | [喵言喵 MoeText](https://www.turingmirror.com/products/moetext/) | 按自定义规则改写 QQ 和 Discord 聊天输入框中的文字。 |
 | [测试镜](https://www.turingmirror.com/products/mirror-test/) | 动画、GalGame 和少女乐队主题的互动测试。 |
 | [TRM UI](https://www.turingmirror.com/products/trm-ui/) | 图灵镜应用共用的组件库与设计系统。 |
-
-RVC Fabric 提供[使用指南](https://www.turingmirror.com/guides/rvc-fabric/)和[官方截图](https://www.turingmirror.com/products/rvc-fabric/screenshots/)。
 
 网站支持[简体中文](https://www.turingmirror.com/)、[繁體中文](https://www.turingmirror.com/zh-hant/)、[English](https://www.turingmirror.com/en/)和[日本語](https://www.turingmirror.com/ja/)。
 

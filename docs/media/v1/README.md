@@ -6,6 +6,6 @@
 
 ## 来源
 
-产品功能依据 RVC Fabric 的 Neptune 分支与官网使用指南。文案依据 TRM UI `a761ffc` 的 `src/pages/textRules.ts`。
+产品说明依据已发布版本与产品页。文案依据 TRM UI `ea9d7fc` 的 `src/pages/textRules.ts`。
 
 原图来自 RVC Fabric 提交 `dd0de24aba1382177b953911b26afd8e277c025b` 的 `assets/screenshots/`。材料包使用含产品名的文件名，图片内容与原图一致。来源、图注和哈希见 `screenshots.json`。

@@ -14,8 +14,6 @@ RVC Fabric is a free, open-source Windows application developed by Turing Mirror
 - Supports Windows 10 and Windows 11. Download the required runtime and models before first use.
 - Page: https://www.turingmirror.com/en/products/rvc-fabric/ (简体中文: https://www.turingmirror.com/products/rvc-fabric/)
 - Links: Download for Windows: https://cdn.turingmirror.com/d/rvc-fabric-setup; GitHub: https://github.com/Turing-Mirror/RVC-Fabric; Download from CNB: https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases
-- Official screenshot page: https://www.turingmirror.com/en/products/rvc-fabric/screenshots/
-
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/home.png (RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.)
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/settings.png (RVC Fabric settings screen.)
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/misc.png (RVC Fabric additional tools screen.)
@@ -36,8 +34,6 @@ Built on Android's accessibility service, MoeText rewrites what you type in QQ a
 - Page: https://www.turingmirror.com/en/products/moetext/ (简体中文: https://www.turingmirror.com/products/moetext/)
 - Links: Download APK: https://cdn.turingmirror.com/d/moetype; GitHub: https://github.com/Turing-Mirror/MoeText
 
-
-
 - Style packs: Four built-in styles (catgirl, classical Chinese, emoji riddles and oracle) switch in one tap. Import and export your own as JSON.
 - Text replacement rules: Combine quick swaps, custom replacements, sentence endings, fixed suffixes and random kaomoji.
 - Two modes: Rewrite after a pause or as you type, and send messages the way you always do.
@@ -54,8 +50,6 @@ Mirror-Test offers browser-based quizzes about anime, GalGames and girls’ band
 - Page: https://www.turingmirror.com/en/products/mirror-test/ (简体中文: https://www.turingmirror.com/products/mirror-test/)
 - Links: Start a quiz: https://test.turingmirror.com/; GitHub: https://github.com/Turing-Mirror/Mirror-Test
 
-
-
 - Summer 2026 anime personality test: Find the summer 2026 anime that matches you best.
 - GalGame destined-route test: Which destined route would you end up on?
 - Band-TI girls' band character test: 20 questions drawn from a pool of 100, covering 67 characters, 8 series and 14 bands.
@@ -69,16 +63,10 @@ TRM UI provides consistent components, colors and interaction rules for Turing M
 - Page: https://www.turingmirror.com/en/products/trm-ui/ (简体中文: https://www.turingmirror.com/products/trm-ui/)
 - Links: View project: https://github.com/Turing-Mirror/TRM-UI; Read integration guide: https://github.com/Turing-Mirror/TRM-UI/blob/5eaf13a5feb8d03002731b3b6874165aa03b9939/docs/components-v1.md
 
-
-
 - Shared components: Buttons, forms, menus, tooltips and dialogs are maintained in one package. Products receive improvements by updating their dependency.
 - Interactive design guidance: The gallery covers interaction, writing, typography, color and motion, and records replaced designs and the reasons for each change.
 - Continuous interaction: Segmented controls support dragging. Filtered lists retain existing items, and panels resize continuously as content changes.
 - Eight languages and theme settings: Common interface text is available in eight languages. Products can connect their translations and use shared color variables or their own theme.
-
-## Guides
-
-- RVC Fabric user guide: https://www.turingmirror.com/en/guides/rvc-fabric/
 
 ## Channels
 

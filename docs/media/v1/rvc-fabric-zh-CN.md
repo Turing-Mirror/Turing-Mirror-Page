@@ -19,8 +19,8 @@ RVC Fabric 是图灵镜开发的免费开源 Windows 软件，可在 QQ、Discor
 3. 打开「音频」，导入音乐或音效，双击条目即可播放到语音。需要边放歌边变声时，选择音色模型并开启变声，两路声音会混合输出。
 4. 将本地监听设备设为耳机，按需开启音乐监听。可为常用片段设置全局快捷键，在游戏中控制播放、暂停和停止。
 
-## 下载与开发
+## 下载
 
-[下载 Windows 版](https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/setup/RVC_Fabric_Setup.exe) · [产品官网](https://www.turingmirror.com/products/rvc-fabric/) · [使用指南](https://www.turingmirror.com/guides/rvc-fabric/) · [源代码](https://github.com/Turing-Mirror/RVC-Fabric)
+[下载 Windows 版](https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/setup/RVC_Fabric_Setup.exe) · [产品官网](https://www.turingmirror.com/products/rvc-fabric/) · [源代码](https://github.com/Turing-Mirror/RVC-Fabric)
 
-桌面端支持 Windows 10 和 Windows 11，实时语音转换支持 NVIDIA CUDA 与 AMD、Intel 显卡的 DirectML 加速。Neptune 海王星开发分支还提供手机配对、本地 API 和 MCP 接口，手机采集的音频由桌面端转换。
+桌面端支持 Windows 10 和 Windows 11，实时语音转换支持 NVIDIA CUDA 与 AMD、Intel 显卡的 DirectML 加速。

@@ -290,10 +290,10 @@ export const rvcFabricProduct = {
         "ja": "音楽再生と音声変換を同時に使う"
       },
       "body": {
-        "sc": "打开「音频」，导入音乐或音效，双击条目即可播放到语音。需要边放歌边变声时，选择音色模型并开启变声，两路声音会混合输出。",
-        "tc": "開啟「音訊」，匯入音樂或音效，按兩下項目即可播放到語音。需要邊播放音樂邊變聲時，選擇音色模型並開啟變聲，兩路聲音會混合輸出。",
-        "en": "Open the audio library, import music or sound effects, and double-click an entry to play it into voice chat. To change your voice while playing music, select a voice model and start conversion. Both signals are mixed into the same output.",
-        "ja": "音声ライブラリに音楽や効果音をインポートし、項目をダブルクリックしてボイスチャットへ再生します。音楽を流しながら変声するには、ボイスモデルを選択して変換を開始します。両方の音声が同じ出力にミックスされます。"
+        "sc": "打开「音频」，导入音乐或音效，双击条目即可播放到语音。需要边放歌边变声时，选择音色模型并开启变声，两路声音会混合输出。 本地监听设备选择耳机，可为常用音频设置全局快捷键。",
+        "tc": "開啟「音訊」，匯入音樂或音效，按兩下項目即可播放到語音。需要邊播放音樂邊變聲時，選擇音色模型並開啟變聲，兩路聲音會混合輸出。 本機監聽裝置選擇耳機，可為常用音訊設定全域快捷鍵。",
+        "en": "Open the audio library, import music or sound effects, and double-click an entry to play it into voice chat. To change your voice while playing music, select a voice model and start conversion. Both signals are mixed into the same output. Select headphones for local monitoring and assign global hotkeys to frequently used audio clips.",
+        "ja": "音声ライブラリに音楽や効果音をインポートし、項目をダブルクリックしてボイスチャットへ再生します。音楽を流しながら変声するには、ボイスモデルを選択して変換を開始します。両方の音声が同じ出力にミックスされます。 ローカルモニタリングにはヘッドホンを選び、よく使う音声にグローバルショートカットを設定できます。"
       }
     }
   ],
@@ -360,20 +360,5 @@ export const rvcFabricProduct = {
     "tc": "使用他人聲音進行訓練或轉換前，請取得聲音權利人的授權。",
     "en": "Obtain the rights holder’s permission before training on or converting someone else’s voice.",
     "ja": "他人の声を学習や変換に使う前に、権利者の許諾を得てください。"
-  },
-  "guide": "rvc-fabric",
-  "screenshotGallery": {
-    "title": {
-      "sc": "RVC Fabric 截图",
-      "tc": "RVC Fabric 截圖",
-      "en": "RVC Fabric screenshots",
-      "ja": "RVC Fabric スクリーンショット"
-    },
-    "description": {
-      "sc": "RVC Fabric 的主界面、音频设置与其他功能。",
-      "tc": "RVC Fabric 的主介面、音訊設定與其他功能。",
-      "en": "The RVC Fabric home screen, audio settings and additional tools.",
-      "ja": "RVC Fabric のホーム画面、音声設定、その他の機能を紹介します。"
-    }
   }
 };
