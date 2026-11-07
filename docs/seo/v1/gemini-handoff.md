@@ -2,6 +2,8 @@
 
 请审计本次图灵镜官网与 RVC Fabric README 调整，先报告问题，不直接改写代码或发布内容。审计日期为 2026 年 11 月 7 日。提交与部署信息见随附 `release.json`。
 
+后续图片检索复查见 `evidence/image-recheck.md`（仓库内为同目录的 `image-recheck.md`）。用户仍遇到 GPT 配图错误，本次独立图片查询也没有返回官方截图。请勿将网站改动完成写成问题已经解决。
+
 ## 阅读顺序
 
 1. 阅读材料包中的 `rules/textRules.ts`。它来自 TRM UI `8161ac1`，是此次首要文案依据。
