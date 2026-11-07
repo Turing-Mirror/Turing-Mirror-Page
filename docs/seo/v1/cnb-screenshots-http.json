@@ -1,0 +1,23 @@
+[
+  {
+    "file": "rvc-fabric-home-2026-08.png",
+    "url": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/screenshots/rvc-fabric-home-2026-08.png",
+    "status": 200,
+    "content_type": "image/png",
+    "sha256_matches": true
+  },
+  {
+    "file": "rvc-fabric-settings-2026-08.png",
+    "url": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/screenshots/rvc-fabric-settings-2026-08.png",
+    "status": 200,
+    "content_type": "image/png",
+    "sha256_matches": true
+  },
+  {
+    "file": "rvc-fabric-misc-2026-08.png",
+    "url": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/screenshots/rvc-fabric-misc-2026-08.png",
+    "status": 200,
+    "content_type": "image/png",
+    "sha256_matches": true
+  }
+]

@@ -8,9 +8,11 @@
 
 后续已新增四语言官方截图页，并接入 IndexNow 主动通知。新增文案位于 `src/rvc-fabric.mjs` 的 `screenshotGallery`、各截图的 `caption`，以及 `src/render.mjs` 的 `imageLinks`。本轮另行核对最新 TRM UI `c17c7c3`，文案规则文件未变。详细执行记录见 `evidence/image-followup.md`。
 
+本轮继续补充 CNB 仓库首页及国内平台介绍正文。请同时审计 `copy/cnb/README.md` 与 `copy/media/rvc-fabric-zh-CN.md`，重点核对截图年代、图注、硬件要求及开发分支与已发布版本的区别。原 CNB 维护说明迁入 `docs/maintainer-v1.md`，历史维护文字不作为本次新写文案。
+
 ## 阅读顺序
 
-1. 阅读材料包中的 `rules/textRules.ts`。它来自 TRM UI `8161ac1`，是此次首要文案依据。
+1. 阅读材料包中的 `rules/textRules.ts`。本轮核对的 TRM UI 提交为 `c17c7c3`，该规则文件与 `8161ac1` 一致，是此次首要文案依据。
 2. 阅读 `rules/TRM-UI-Style-Guide.md` 和 `rules/Turing-Mirror-Page.md`。它们是既有语言约定与官网审校记录。若与最新规则存在差异，请明确列出，不自行合并成新的规范。
 3. 阅读 `evidence/README.md`、发布记录和截图哈希，理解已核实事实及未完成验证。
 4. 阅读 `copy/website/`、`copy/readmes/` 和 `changes/`。源文件用于提出修改位置，差异文件用于区分本次变更与历史内容。
@@ -42,7 +44,7 @@ RVC Fabric 的最新功能依据是 Neptune，不是默认分支 tm-release。�
 
 Cloudflare 的域名限定规则已部署，带正常应用标识的读取检查通过。默认 Python 标识仍可能触发 Pages 平台层 1010。这项技术限制不应转写为产品宣传，也不能描述成所有抓取问题都已消除。
 
-CNB 未修改。后续已向 Google 提交 sitemap，Google 已发现 28 页并接受三项优先抓取申请；Bing IndexNow 返回 202。新截图页及图片的最终收录、多家 AI 的正确配图效果仍未验证。初次发布的 `release.json` 保留当时状态，以后续提交记录补充。
+CNB 首页的新文案与截图入口已在本地提交 `952653c`，推送因当前发布凭据缺少 `repo-code:rw` 权限而未完成。三张截图已经上传到 CNB，公开地址可读取且哈希与原图一致。国内平台介绍正文已准备，尚未发布到 CSDN、知乎或哔哩哔哩专栏。后续已向 Google 提交 sitemap，Google 已发现 28 页并接受三项优先抓取申请；Bing IndexNow 返回 202。新截图页及图片的最终收录、多家 AI 的正确配图效果仍未验证。初次发布的 `release.json` 保留当时状态，以后续提交记录补充。
 
 ## 请按以下格式输出
 

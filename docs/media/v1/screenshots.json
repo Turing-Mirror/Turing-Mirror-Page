@@ -1,0 +1,26 @@
+[
+  {
+    "file": "rvc-fabric-home-2026-08.png",
+    "recorded": "2026-08",
+    "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24aba1382177b953911b26afd8e277c025b/assets/screenshots/home.png",
+    "sha256": "ce9ef402538020ea5a26eb7b4775aaf326764eb7cb19bac22f02e0402ee8f2f3",
+    "url": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/screenshots/rvc-fabric-home-2026-08.png",
+    "caption": "主界面展示最近使用的音色和音频工具入口，底部提供变声开关、音高和共鸣调节。"
+  },
+  {
+    "file": "rvc-fabric-settings-2026-08.png",
+    "recorded": "2026-08",
+    "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24aba1382177b953911b26afd8e277c025b/assets/screenshots/settings.png",
+    "sha256": "84d7e8522094be92c39e3e831d156f574bc249bb65aa2b432aedb6caa2648721",
+    "url": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/screenshots/rvc-fabric-settings-2026-08.png",
+    "caption": "设备与音频设置页展示设备类型、麦克风输入、输入增益、输出设备和监听选项。"
+  },
+  {
+    "file": "rvc-fabric-misc-2026-08.png",
+    "recorded": "2026-08",
+    "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24aba1382177b953911b26afd8e277c025b/assets/screenshots/misc.png",
+    "sha256": "48712b103b26d7947ffac6c570db1a2c6baf5261f2e32b5101a16759f3e8815c",
+    "url": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/screenshots/rvc-fabric-misc-2026-08.png",
+    "caption": "其他功能页展示软件版本、目录、运行环境、显卡与引擎状态。该截图中的版本号为 1.4.2。"
+  }
+]
