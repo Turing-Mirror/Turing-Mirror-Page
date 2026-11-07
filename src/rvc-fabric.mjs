@@ -18,22 +18,22 @@ export const rvcFabricProduct = {
     "ja": "ソースコードは MIT ライセンスで公開しています。"
   },
   "summary": {
-    "sc": "基于 RVC 的 Windows 实时语音转换软件，支持音色管理、音频处理与模型训练。",
-    "tc": "以 RVC 為基礎的 Windows 即時語音轉換軟體，支援音色管理、音訊處理與模型訓練。",
-    "en": "RVC-based real-time voice conversion software for Windows, with voice management, audio processing and model training.",
-    "ja": "RVC を使用する Windows 向けリアルタイム音声変換ソフトウェアです。ボイス管理、音声処理、モデル学習に対応しています。"
+    "sc": "在语音聊天和游戏中实时变声、播放音乐与音效，支持音频库、全局快捷键和模型训练。",
+    "tc": "在語音聊天和遊戲中即時變聲、播放音樂與音效，支援音訊庫、全域快捷鍵和模型訓練。",
+    "en": "Change your voice and play music or sound effects in voice chat and games, with a soundboard, global hotkeys and model training.",
+    "ja": "通話やゲーム内で声を変え、音楽や効果音を再生できます。音声ライブラリ、グローバルショートカット、モデル学習に対応しています。"
   },
   "lead": {
-    "sc": "Windows 实时 AI 语音转换与模型训练工作台",
-    "tc": "Windows 即時 AI 語音轉換與模型訓練工作台",
-    "en": "Real-time AI voice conversion and model training workbench for Windows",
-    "ja": "Windows 向けリアルタイム AI 音声変換・モデル学習ワークベンチ"
+    "sc": "Windows 实时变声与语音音效播放软件",
+    "tc": "Windows 即時變聲與語音音效播放軟體",
+    "en": "Real-time voice changer and soundboard for Windows",
+    "ja": "Windows 向けリアルタイムボイスチェンジャー・サウンドボード"
   },
   "intro": {
-    "sc": "RVC Fabric 是图灵镜开发的免费开源桌面软件，面向实时通话、直播互动与音频制作。支持实时变声、文件语音转换、人声分离与音色模型训练，并提供运行环境配置和模型管理。",
-    "tc": "RVC Fabric 是圖靈鏡開發的免費開源桌面軟體，適用於即時通話、直播互動與音訊製作。支援即時變聲、音訊檔案轉換、人聲分離與音色模型訓練，並提供執行環境設定和模型管理。",
-    "en": "RVC Fabric is a free, open-source desktop application developed by Turing Mirror for voice calls, live streaming and audio production. It supports real-time voice changing, audio file conversion, vocal separation and voice model training, with runtime setup and model management.",
-    "ja": "RVC Fabric は Turing Mirror が開発する無料のオープンソースデスクトップアプリです。通話、配信、音声制作に向けて、リアルタイム音声変換、音声ファイルの変換、ボーカル分離、ボイスモデルの学習、実行環境の設定とモデル管理を提供します。"
+    "sc": "RVC Fabric 是图灵镜开发的免费开源 Windows 软件，可在 QQ、Discord 和游戏语音中实时变声、播放音乐和音效，也可在直播中混合人声与伴奏。内置音频库支持片段管理与快捷键播放，并提供音色模型管理、人声分离和模型训练。",
+    "tc": "RVC Fabric 是圖靈鏡開發的免費開源 Windows 軟體，可在 QQ、Discord 和遊戲語音中即時變聲、播放音樂和音效，也可在直播中混合人聲與伴奏。內建音訊庫支援片段管理與快捷鍵播放，並提供音色模型管理、人聲分離和模型訓練。",
+    "en": "RVC Fabric is a free, open-source Windows application developed by Turing Mirror. Change your voice and play music or sound effects in QQ, Discord and in-game voice chat, or mix your voice with backing tracks during a live stream. Its soundboard supports audio clips and hotkeys, alongside voice model management, vocal separation and model training.",
+    "ja": "RVC Fabric は Turing Mirror が開発する無料のオープンソース Windows アプリです。QQ、Discord、ゲーム内のボイスチャットで声を変えたり、音楽や効果音を流したりでき、配信では声と伴奏をミックスできます。音声ライブラリでのクリップ管理とショートカット再生に加え、ボイスモデル管理、ボーカル分離、モデル学習にも対応しています。"
   },
   "schema": {
     "applicationCategory": "MultimediaApplication",
@@ -93,10 +93,10 @@ export const rvcFabricProduct = {
       },
       "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png",
       "caption": {
-        "sc": "主界面展示最近使用的音色和音频工具入口，底部提供变声开关、音高和共鸣调节。",
-        "tc": "主介面顯示最近使用的音色和音訊工具入口，底部提供變聲開關、音高和共鳴調整。",
-        "en": "The home screen shows recent voices and audio tools. The bottom controls provide voice conversion, pitch and resonance settings.",
-        "ja": "ホーム画面には最近使用したボイスと音声ツールが表示されます。下部では音声変換の切り替え、ピッチ、共鳴を調整できます。"
+        "sc": "主界面",
+        "tc": "主介面",
+        "en": "Home screen",
+        "ja": "ホーム画面"
       },
       "id": "home"
     },
@@ -112,10 +112,10 @@ export const rvcFabricProduct = {
       },
       "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/settings.png",
       "caption": {
-        "sc": "设备与音频设置页展示设备类型、麦克风输入、输入增益、输出设备和监听选项。",
-        "tc": "裝置與音訊設定頁顯示裝置類型、麥克風輸入、輸入增益、輸出裝置和監聽選項。",
-        "en": "The audio settings screen shows the device type, microphone input, input gain, output device and monitoring option.",
-        "ja": "音声設定画面にはデバイスの種類、マイク入力、入力ゲイン、出力デバイス、モニタリング設定が表示されます。"
+        "sc": "设备与音频设置",
+        "tc": "裝置與音訊設定",
+        "en": "Audio device settings",
+        "ja": "音声デバイス設定"
       },
       "id": "settings"
     },
@@ -131,10 +131,10 @@ export const rvcFabricProduct = {
       },
       "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/misc.png",
       "caption": {
-        "sc": "其他功能页展示软件版本、目录、运行环境、显卡与引擎状态。该截图中的版本号为 1.4.2。",
-        "tc": "其他功能頁顯示軟體版本、目錄、執行環境、顯示卡與引擎狀態。此截圖中的版本號為 1.4.2。",
-        "en": "The other features screen shows the application version, directories, runtime, GPU and engine status. The version displayed in this screenshot is 1.4.2.",
-        "ja": "その他の機能画面にはアプリのバージョン、ディレクトリ、実行環境、GPU、エンジンの状態が表示されます。この画像に表示されたバージョンは 1.4.2 です。"
+        "sc": "其他功能",
+        "tc": "其他功能",
+        "en": "Additional tools",
+        "ja": "その他の機能"
       },
       "id": "misc"
     }
@@ -152,6 +152,20 @@ export const rvcFabricProduct = {
         "tc": "將麥克風輸入轉換為所選音色，支援切換原聲、ASIO 通道選擇和獨立監聽。實際延遲取決於硬體、模型與音訊設定。",
         "en": "Converts microphone input to the selected voice, with original-voice bypass, ASIO channel selection and independent monitoring. Latency depends on hardware, the model and audio settings.",
         "ja": "マイク入力を選択したボイスに変換します。原音への切り替え、ASIO チャンネル選択、独立したモニタリングに対応しています。遅延はハードウェア、モデル、音声設定によって異なります。"
+      }
+    },
+    {
+      "title": {
+        "sc": "语音与游戏内放歌",
+        "tc": "語音與遊戲內播放音樂",
+        "en": "Soundboard for voice chat and games",
+        "ja": "通話やゲーム内での音楽再生"
+      },
+      "body": {
+        "sc": "音频库可将音乐、音效或选定片段播放到语音，与变声后的麦克风声音同时输出，支持叠加、循环、独立音量和全局快捷键。",
+        "tc": "音訊庫可將音樂、音效或選定片段播放到語音，與變聲後的麥克風聲音同時輸出，支援疊加、循環、獨立音量和全域快捷鍵。",
+        "en": "Play music, sound effects or selected clips into voice chat alongside your converted microphone audio, with overlapping playback, looping, separate volume control and global hotkeys.",
+        "ja": "音楽、効果音、選択したクリップを変換後のマイク音声とともにボイスチャットへ出力できます。重ねて再生、ループ、個別の音量調整、グローバルショートカットに対応しています。"
       }
     },
     {
@@ -256,16 +270,30 @@ export const rvcFabricProduct = {
     },
     {
       "title": {
-        "sc": "连接语音软件",
-        "tc": "連接語音軟體",
-        "en": "Connect a voice application",
-        "ja": "通話アプリに接続する"
+        "sc": "连接语音软件与游戏",
+        "tc": "連接語音軟體與遊戲",
+        "en": "Connect voice chat and games",
+        "ja": "通話アプリやゲームに接続"
       },
       "body": {
-        "sc": "将软件输出设为 CABLE Input，并将 QQ、Discord 或直播软件的输入设为 CABLE Output。",
-        "tc": "將軟體輸出設為 CABLE Input，並將 QQ、Discord 或直播軟體的輸入設為 CABLE Output。",
-        "en": "Set the application output to CABLE Input and the input in QQ, Discord or your streaming application to CABLE Output.",
-        "ja": "本アプリの出力を CABLE Input に、QQ、Discord、配信アプリの入力を CABLE Output に設定します。"
+        "sc": "在「设备与音频」中选择实际麦克风，将输出设为 CABLE Input；在 QQ、Discord 或游戏的语音设置中，将麦克风设为 CABLE Output。",
+        "tc": "在「裝置與音訊」中選擇實際麥克風，將輸出設為 CABLE Input；在 QQ、Discord 或遊戲的語音設定中，將麥克風設為 CABLE Output。",
+        "en": "In the audio device settings, select your physical microphone and set the output to CABLE Input. Set the microphone in QQ, Discord or your game to CABLE Output.",
+        "ja": "音声デバイス設定で実際のマイクを選択し、出力を CABLE Input にします。QQ、Discord、ゲームの音声設定では、マイクを CABLE Output にします。"
+      }
+    },
+    {
+      "title": {
+        "sc": "播放音乐与同时变声",
+        "tc": "播放音樂與同時變聲",
+        "en": "Play music while changing your voice",
+        "ja": "音楽再生と音声変換を同時に使う"
+      },
+      "body": {
+        "sc": "打开「音频」，导入音乐或音效，双击条目即可播放到语音。需要边放歌边变声时，选择音色模型并开启变声，两路声音会混合输出。",
+        "tc": "開啟「音訊」，匯入音樂或音效，按兩下項目即可播放到語音。需要邊播放音樂邊變聲時，選擇音色模型並開啟變聲，兩路聲音會混合輸出。",
+        "en": "Open the audio library, import music or sound effects, and double-click an entry to play it into voice chat. To change your voice while playing music, select a voice model and start conversion. Both signals are mixed into the same output.",
+        "ja": "音声ライブラリに音楽や効果音をインポートし、項目をダブルクリックしてボイスチャットへ再生します。音楽を流しながら変声するには、ボイスモデルを選択して変換を開始します。両方の音声が同じ出力にミックスされます。"
       }
     }
   ],
@@ -334,24 +362,18 @@ export const rvcFabricProduct = {
     "ja": "他人の声を学習や変換に使う前に、権利者の許諾を得てください。"
   },
   "guide": "rvc-fabric",
-  "screenshotsNote": {
-    "sc": "以下截图记录于 2026 年 8 月。",
-    "tc": "以下截圖記錄於 2026 年 8 月。",
-    "en": "These screenshots were recorded in August 2026.",
-    "ja": "以下は 2026 年 8 月に記録された画面です。"
-  },
   "screenshotGallery": {
     "title": {
-      "sc": "RVC Fabric 官方截图",
-      "tc": "RVC Fabric 官方截圖",
-      "en": "RVC Fabric official screenshots",
-      "ja": "RVC Fabric 公式スクリーンショット"
+      "sc": "RVC Fabric 截图",
+      "tc": "RVC Fabric 截圖",
+      "en": "RVC Fabric screenshots",
+      "ja": "RVC Fabric スクリーンショット"
     },
     "description": {
-      "sc": "图灵镜提供的 RVC Fabric 桌面软件截图，展示主界面、设备与音频设置及运行状态。",
-      "tc": "圖靈鏡提供的 RVC Fabric 桌面軟體截圖，展示主介面、裝置與音訊設定及執行狀態。",
-      "en": "Screenshots of the RVC Fabric desktop application provided by Turing Mirror, showing the home screen, audio device settings and runtime status.",
-      "ja": "Turing Mirror が公開する RVC Fabric デスクトップアプリのスクリーンショットです。ホーム画面、音声デバイスの設定、動作状態を紹介します。"
+      "sc": "RVC Fabric 的主界面、音频设置与其他功能。",
+      "tc": "RVC Fabric 的主介面、音訊設定與其他功能。",
+      "en": "The RVC Fabric home screen, audio settings and additional tools.",
+      "ja": "RVC Fabric のホーム画面、音声設定、その他の機能を紹介します。"
     }
   }
 };

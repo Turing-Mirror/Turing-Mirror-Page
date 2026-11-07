@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>RVC Fabric user guide | Turing Mirror</title>
-    <meta name="description" content="Learn about RVC real-time voice changer setup, hardware support, audio routing and Neptune branch features.">
+    <meta name="description" content="Set up RVC Fabric to play music and sound effects while changing your voice in chat and games.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Turing Mirror">
     <meta property="og:title" content="RVC Fabric user guide | Turing Mirror">
-    <meta property="og:description" content="Learn about RVC real-time voice changer setup, hardware support, audio routing and Neptune branch features.">
+    <meta property="og:description" content="Set up RVC Fabric to play music and sound effects while changing your voice in chat and games.">
     <meta property="og:url" content="https://www.turingmirror.com/en/guides/rvc-fabric/">
     <meta property="og:image" content="https://www.turingmirror.com/assets/products/rvc-fabric/home.png">
     <meta property="og:image:alt" content="RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.">
@@ -63,7 +63,7 @@
       "@id": "https://www.turingmirror.com/en/guides/rvc-fabric/#article",
       "url": "https://www.turingmirror.com/en/guides/rvc-fabric/",
       "headline": "RVC Fabric user guide",
-      "description": "Learn about RVC real-time voice changer setup, hardware support, audio routing and Neptune branch features.",
+      "description": "Set up RVC Fabric to play music and sound effects while changing your voice in chat and games.",
       "inLanguage": "en",
       "dateModified": "2026-11-07",
       "author": {
@@ -98,37 +98,33 @@
       </header>
 
 <main class="pd guide" id="main"><header class="pd-head">
-    <h1 class="pd-h2">RVC Fabric user guide</h1><p class="pd-intro">Learn about RVC real-time voice changer setup, hardware support, audio routing and Neptune branch features.</p>
+    <h1 class="pd-h2">RVC Fabric user guide</h1><p class="pd-intro">Set up RVC Fabric to play music and sound effects while changing your voice in chat and games.</p>
     <p class="pd-note"><time datetime="2026-11-07">2026-11-07</time></p></header>
     <section id="install">
     <h2 class="pd-h2">Installation and first use</h2>
-    <p>Download the installer from the official website. After installation, configure the runtime for your GPU and download or import a voice model.</p>
-<p>An internet connection is needed to download runtimes, models and updates. Once the required files are available, voice conversion runs locally. Check the license before using a third-party voice model.</p>
-    
+    <p>Download the installer from the official website. After installation, configure the runtime for your GPU and download or import a voice model. An internet connection is needed to download runtimes, models and updates. Once the required files are available, voice conversion runs locally. Check the license before using a third-party voice model.</p>
   </section>
 <section id="hardware">
     <h2 class="pd-h2">System and hardware</h2>
-    <p>The desktop application targets Windows 10 and Windows 11. NVIDIA GPUs use CUDA; AMD and Intel GPUs can use DirectML. Performance varies with the GPU, driver and model.</p>
-<p>Voice model training currently requires an NVIDIA GPU.</p>
-<p>Real-time latency depends on model inference, audio buffers, audio drivers and the receiving application. Check sound quality and stability through recording and an actual call after changing settings.</p>
-    
+    <p>The desktop application targets Windows 10 and Windows 11. NVIDIA GPUs use CUDA; AMD and Intel GPUs can use DirectML. Performance varies with the GPU, driver and model. Voice model training currently requires an NVIDIA GPU. Real-time latency depends on model inference, audio buffers, audio drivers and the receiving application. Check sound quality and stability through recording and an actual call after changing settings.</p>
   </section>
 <section id="routing">
-    <h2 class="pd-h2">Connect QQ, Discord and OBS</h2>
-    <p>After installing VB-Cable and restarting the computer, select your physical microphone as the input in RVC Fabric and CABLE Input as the output. Select a voice model and start conversion.</p>
-<p>In QQ or Discord voice settings, select CABLE Output as the microphone or input device. In OBS, add an Audio Input Capture source and select CABLE Output.</p>
-<p>Keep your headphones as the Windows default playback device. For local monitoring, select headphones so that monitored audio is not fed back into the input. Check the level meter, then record a short sample.</p>
+    <h2 class="pd-h2">Connect voice chat, games and streams</h2>
+    <p>In the audio device settings, select your physical microphone and set the output to CABLE Input. Set the microphone in QQ, Discord or your game to CABLE Output. In OBS, add an Audio Input Capture source and select CABLE Output. Use headphones for Windows playback and local monitoring.</p>
     <ul><li><a href="https://vb-audio.com/Cable/">VB-Cable documentation</a></li><li><a href="https://obsproject.com/kb/sources-guide">OBS sources guide</a></li></ul>
+  </section>
+<section id="soundboard">
+    <h2 class="pd-h2">Music, sound effects and voice changing</h2>
+    <p>Open the audio library, import music or sound effects, and double-click an entry to play it into voice chat. To change your voice while playing music, select a voice model and start conversion. Both signals are mixed into the same output. Select headphones for local monitoring and enable music monitoring as needed. Assign global hotkeys to frequently used clips to play, pause and stop them while in a game.</p>
   </section>
 <section id="selection">
     <h2 class="pd-h2">Choosing an RVC tool</h2>
-    <p>RVC is a voice conversion technology used by multiple applications. RVC Fabric provides a Windows desktop interface, runtime setup, model management and audio tools for users who need these functions in one application.</p>
-<p>Compare the supported operating systems, real-time and file conversion features, model formats and hardware requirements. Use the same audio and model to compare sound quality.</p>
+    <p>RVC is a voice conversion technology used by multiple applications. RVC Fabric provides a Windows desktop interface, runtime setup, model management and audio tools for users who need these functions in one application. Compare the supported operating systems, real-time and file conversion features, model formats and hardware requirements. Use the same audio and model to compare sound quality.</p>
     <ul><li><a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI">RVC WebUI repository</a></li><li><a href="https://github.com/w-okada/voice-changer">w-okada voice-changer repository</a></li></ul>
   </section>
 <section id="neptune">
     <h2 class="pd-h2">Neptune branch</h2>
-    <p>As of November 7, 2026, the Neptune development branch includes mobile pairing, a local API and an MCP interface. The phone captures audio and the desktop converts the voice. Release notes describe the features in each published version.</p>
+    <p>The Neptune development branch also provides mobile pairing, a local API and an MCP interface. Audio captured on the phone is converted on the desktop.</p>
     <ul><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/mobile-v1.md">Mobile pairing guide</a></li><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/api-v1.md">Local API and MCP guide</a></li></ul>
   </section></main>
 

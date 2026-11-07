@@ -9,10 +9,10 @@
     "ja": "RVC Fabric 利用ガイド"
   },
   "summary": {
-    "sc": "了解 RVC 实时变声的安装要求、硬件支持、音频连接方式和海王星分支功能。",
-    "tc": "了解 RVC 即時變聲的安裝要求、硬體支援、音訊連接方式和海王星分支功能。",
-    "en": "Learn about RVC real-time voice changer setup, hardware support, audio routing and Neptune branch features.",
-    "ja": "RVC リアルタイム音声変換の導入条件、対応ハードウェア、音声接続、Neptune ブランチの機能を説明します。"
+    "sc": "安装 RVC Fabric，在语音聊天和游戏中播放音乐、音效并同时变声。",
+    "tc": "安裝 RVC Fabric，在語音聊天和遊戲中播放音樂、音效並同時變聲。",
+    "en": "Set up RVC Fabric to play music and sound effects while changing your voice in chat and games.",
+    "ja": "RVC Fabric を導入し、通話やゲーム内で音楽や効果音を再生しながら声を変える手順を説明します。"
   },
   "sections": [
     {
@@ -25,16 +25,10 @@
       },
       "paragraphs": [
         {
-          "sc": "从官网下载安装程序。安装后，按照引导配置与显卡对应的运行环境，并下载或导入音色模型。",
-          "tc": "從官網下載安裝程式。安裝後，依照引導設定與顯示卡對應的執行環境，並下載或匯入音色模型。",
-          "en": "Download the installer from the official website. After installation, configure the runtime for your GPU and download or import a voice model.",
-          "ja": "公式サイトからインストーラーをダウンロードします。インストール後、GPU に対応する実行環境を設定し、ボイスモデルをダウンロードまたはインポートします。"
-        },
-        {
-          "sc": "下载运行环境、模型和更新时需要联网。准备好所需文件后，语音转换在本机执行。使用第三方音色前，请确认其使用许可。",
-          "tc": "下載執行環境、模型和更新時需要連線。準備好所需檔案後，語音轉換在本機執行。使用第三方音色前，請確認其使用授權。",
-          "en": "An internet connection is needed to download runtimes, models and updates. Once the required files are available, voice conversion runs locally. Check the license before using a third-party voice model.",
-          "ja": "実行環境、モデル、更新のダウンロードにはインターネット接続が必要です。必要なファイルを用意した後の音声変換はローカルで実行します。サードパーティのボイスモデルを使う前に利用許諾を確認してください。"
+          "sc": "从官网下载安装程序。安装后，按照引导配置与显卡对应的运行环境，并下载或导入音色模型。 下载运行环境、模型和更新时需要联网。准备好所需文件后，语音转换在本机执行。使用第三方音色前，请确认其使用许可。",
+          "tc": "從官網下載安裝程式。安裝後，依照引導設定與顯示卡對應的執行環境，並下載或匯入音色模型。 下載執行環境、模型和更新時需要連線。準備好所需檔案後，語音轉換在本機執行。使用第三方音色前，請確認其使用授權。",
+          "en": "Download the installer from the official website. After installation, configure the runtime for your GPU and download or import a voice model. An internet connection is needed to download runtimes, models and updates. Once the required files are available, voice conversion runs locally. Check the license before using a third-party voice model.",
+          "ja": "公式サイトからインストーラーをダウンロードします。インストール後、GPU に対応する実行環境を設定し、ボイスモデルをダウンロードまたはインポートします。 実行環境、モデル、更新のダウンロードにはインターネット接続が必要です。必要なファイルを用意した後の音声変換はローカルで実行します。サードパーティのボイスモデルを使う前に利用許諾を確認してください。"
         }
       ],
       "links": []
@@ -49,22 +43,10 @@
       },
       "paragraphs": [
         {
-          "sc": "桌面端面向 Windows 10 和 Windows 11。NVIDIA 显卡使用 CUDA，AMD 和 Intel 显卡可使用 DirectML。不同显卡、驱动和模型的运行表现存在差异。",
-          "tc": "桌面端適用於 Windows 10 和 Windows 11。NVIDIA 顯示卡使用 CUDA，AMD 和 Intel 顯示卡可使用 DirectML。不同顯示卡、驅動程式和模型的執行表現有所差異。",
-          "en": "The desktop application targets Windows 10 and Windows 11. NVIDIA GPUs use CUDA; AMD and Intel GPUs can use DirectML. Performance varies with the GPU, driver and model.",
-          "ja": "デスクトップ版は Windows 10 と Windows 11 を対象としています。NVIDIA GPU では CUDA、AMD と Intel GPU では DirectML を利用できます。動作性能は GPU、ドライバー、モデルによって異なります。"
-        },
-        {
-          "sc": "当前音色模型训练需要 NVIDIA 显卡。",
-          "tc": "目前的音色模型訓練需要 NVIDIA 顯示卡。",
-          "en": "Voice model training currently requires an NVIDIA GPU.",
-          "ja": "現在、ボイスモデルの学習には NVIDIA GPU が必要です。"
-        },
-        {
-          "sc": "实时延迟同时受到模型推理、音频缓冲区、声卡驱动和目标软件影响。调整参数后应通过录音与实际通话检查声音质量和稳定性。",
-          "tc": "即時延遲同時受到模型推論、音訊緩衝區、音效卡驅動程式和目標軟體影響。調整參數後應透過錄音與實際通話檢查聲音品質和穩定性。",
-          "en": "Real-time latency depends on model inference, audio buffers, audio drivers and the receiving application. Check sound quality and stability through recording and an actual call after changing settings.",
-          "ja": "リアルタイムの遅延にはモデル推論、音声バッファー、オーディオドライバー、受信側アプリが影響します。設定を変更したら、録音と実際の通話で音質と安定性を確認してください。"
+          "sc": "桌面端面向 Windows 10 和 Windows 11。NVIDIA 显卡使用 CUDA，AMD 和 Intel 显卡可使用 DirectML。不同显卡、驱动和模型的运行表现存在差异。 当前音色模型训练需要 NVIDIA 显卡。 实时延迟同时受到模型推理、音频缓冲区、声卡驱动和目标软件影响。调整参数后应通过录音与实际通话检查声音质量和稳定性。",
+          "tc": "桌面端適用於 Windows 10 和 Windows 11。NVIDIA 顯示卡使用 CUDA，AMD 和 Intel 顯示卡可使用 DirectML。不同顯示卡、驅動程式和模型的執行表現有所差異。 目前的音色模型訓練需要 NVIDIA 顯示卡。 即時延遲同時受到模型推論、音訊緩衝區、音效卡驅動程式和目標軟體影響。調整參數後應透過錄音與實際通話檢查聲音品質和穩定性。",
+          "en": "The desktop application targets Windows 10 and Windows 11. NVIDIA GPUs use CUDA; AMD and Intel GPUs can use DirectML. Performance varies with the GPU, driver and model. Voice model training currently requires an NVIDIA GPU. Real-time latency depends on model inference, audio buffers, audio drivers and the receiving application. Check sound quality and stability through recording and an actual call after changing settings.",
+          "ja": "デスクトップ版は Windows 10 と Windows 11 を対象としています。NVIDIA GPU では CUDA、AMD と Intel GPU では DirectML を利用できます。動作性能は GPU、ドライバー、モデルによって異なります。 現在、ボイスモデルの学習には NVIDIA GPU が必要です。 リアルタイムの遅延にはモデル推論、音声バッファー、オーディオドライバー、受信側アプリが影響します。設定を変更したら、録音と実際の通話で音質と安定性を確認してください。"
         }
       ],
       "links": []
@@ -72,29 +54,17 @@
     {
       "id": "routing",
       "title": {
-        "sc": "接入 QQ、Discord 和 OBS",
-        "tc": "連接 QQ、Discord 和 OBS",
-        "en": "Connect QQ, Discord and OBS",
-        "ja": "QQ、Discord、OBS に接続する"
+        "sc": "接入语音聊天、游戏和直播",
+        "tc": "連接語音聊天、遊戲和直播",
+        "en": "Connect voice chat, games and streams",
+        "ja": "通話、ゲーム、配信への接続"
       },
       "paragraphs": [
         {
-          "sc": "安装 VB-Cable 并重启电脑后，在 RVC Fabric 中将输入设备设为实际麦克风，将输出设备设为 CABLE Input。选择音色模型并开启变声。",
-          "tc": "安裝 VB-Cable 並重新啟動電腦後，在 RVC Fabric 中將輸入裝置設為實際麥克風，將輸出裝置設為 CABLE Input。選擇音色模型並開啟變聲。",
-          "en": "After installing VB-Cable and restarting the computer, select your physical microphone as the input in RVC Fabric and CABLE Input as the output. Select a voice model and start conversion.",
-          "ja": "VB-Cable をインストールしてコンピューターを再起動したら、RVC Fabric の入力に実際のマイク、出力に CABLE Input を指定します。ボイスモデルを選択して変換を開始します。"
-        },
-        {
-          "sc": "在 QQ 或 Discord 的语音设置中，将麦克风或输入设备设为 CABLE Output。在 OBS 中添加音频输入采集来源，并选择 CABLE Output。",
-          "tc": "在 QQ 或 Discord 的語音設定中，將麥克風或輸入裝置設為 CABLE Output。在 OBS 中新增音訊輸入擷取來源，並選擇 CABLE Output。",
-          "en": "In QQ or Discord voice settings, select CABLE Output as the microphone or input device. In OBS, add an Audio Input Capture source and select CABLE Output.",
-          "ja": "QQ または Discord の音声設定で、マイクまたは入力デバイスに CABLE Output を指定します。OBS では音声入力キャプチャのソースを追加し、CABLE Output を選択します。"
-        },
-        {
-          "sc": "将 Windows 默认播放设备保留为耳机。需要本地试听时，将监听设备设为耳机，避免把监听声音再次送入输入设备。先检查音量指示，再录制一段音频确认。",
-          "tc": "將 Windows 預設播放裝置保留為耳機。需要本機試聽時，將監聽裝置設為耳機，避免把監聽聲音再次送入輸入裝置。先檢查音量指示，再錄製一段音訊確認。",
-          "en": "Keep your headphones as the Windows default playback device. For local monitoring, select headphones so that monitored audio is not fed back into the input. Check the level meter, then record a short sample.",
-          "ja": "Windows の既定の再生デバイスはヘッドホンのままにします。モニタリングにもヘッドホンを指定し、音声が入力へ戻らないようにします。音量メーターを確認してから短い音声を録音してください。"
+          "sc": "在「设备与音频」中选择实际麦克风，将输出设为 CABLE Input；在 QQ、Discord 或游戏的语音设置中，将麦克风设为 CABLE Output。 在 OBS 中添加音频输入采集来源，选择 CABLE Output。Windows 默认播放设备与本地监听设备使用耳机。",
+          "tc": "在「裝置與音訊」中選擇實際麥克風，將輸出設為 CABLE Input；在 QQ、Discord 或遊戲的語音設定中，將麥克風設為 CABLE Output。 在 OBS 中新增音訊輸入擷取來源，選擇 CABLE Output。Windows 預設播放裝置與本機監聽裝置使用耳機。",
+          "en": "In the audio device settings, select your physical microphone and set the output to CABLE Input. Set the microphone in QQ, Discord or your game to CABLE Output. In OBS, add an Audio Input Capture source and select CABLE Output. Use headphones for Windows playback and local monitoring.",
+          "ja": "音声デバイス設定で実際のマイクを選択し、出力を CABLE Input にします。QQ、Discord、ゲームの音声設定では、マイクを CABLE Output にします。 OBS では音声入力キャプチャを追加し、CABLE Output を選びます。Windows の再生とローカルモニタリングにはヘッドホンを使います。"
         }
       ],
       "links": [
@@ -119,6 +89,24 @@
       ]
     },
     {
+      "id": "soundboard",
+      "title": {
+        "sc": "放歌、音效与同时变声",
+        "tc": "播放音樂、音效與同時變聲",
+        "en": "Music, sound effects and voice changing",
+        "ja": "音楽・効果音の再生と音声変換"
+      },
+      "paragraphs": [
+        {
+          "sc": "打开「音频」，导入音乐或音效，双击条目即可播放到语音。需要边放歌边变声时，选择音色模型并开启变声，两路声音会混合输出。 将本地监听设备设为耳机，按需开启音乐监听。可为常用片段设置全局快捷键，在游戏中控制播放、暂停和停止。",
+          "tc": "開啟「音訊」，匯入音樂或音效，按兩下項目即可播放到語音。需要邊播放音樂邊變聲時，選擇音色模型並開啟變聲，兩路聲音會混合輸出。 將本機監聽裝置設為耳機，視需要開啟音樂監聽。可為常用片段設定全域快捷鍵，在遊戲中控制播放、暫停和停止。",
+          "en": "Open the audio library, import music or sound effects, and double-click an entry to play it into voice chat. To change your voice while playing music, select a voice model and start conversion. Both signals are mixed into the same output. Select headphones for local monitoring and enable music monitoring as needed. Assign global hotkeys to frequently used clips to play, pause and stop them while in a game.",
+          "ja": "音声ライブラリに音楽や効果音をインポートし、項目をダブルクリックしてボイスチャットへ再生します。音楽を流しながら変声するには、ボイスモデルを選択して変換を開始します。両方の音声が同じ出力にミックスされます。 ローカルモニタリングにはヘッドホンを選び、必要に応じて音楽のモニタリングを有効にします。よく使うクリップにグローバルショートカットを割り当てると、ゲーム中に再生、一時停止、停止を操作できます。"
+        }
+      ],
+      "links": []
+    },
+    {
       "id": "selection",
       "title": {
         "sc": "如何选择 RVC 工具",
@@ -128,16 +116,10 @@
       },
       "paragraphs": [
         {
-          "sc": "RVC 是语音转换技术名称，多款软件使用这一技术。RVC Fabric 提供 Windows 桌面界面、运行环境配置、模型管理与音频工具，适合需要集中管理这些功能的用户。",
-          "tc": "RVC 是語音轉換技術名稱，多款軟體使用這項技術。RVC Fabric 提供 Windows 桌面介面、執行環境設定、模型管理與音訊工具，適合需要集中管理這些功能的使用者。",
-          "en": "RVC is a voice conversion technology used by multiple applications. RVC Fabric provides a Windows desktop interface, runtime setup, model management and audio tools for users who need these functions in one application.",
-          "ja": "RVC は複数のアプリが利用する音声変換技術です。RVC Fabric は Windows のデスクトップ画面、実行環境の設定、モデル管理、音声ツールをまとめて利用したい方に向けたソフトウェアです。"
-        },
-        {
-          "sc": "选择软件时，可比较操作系统、实时变声与文件转换功能、模型格式和硬件要求。使用相同音频与模型试听，便于比较声音效果。",
-          "tc": "選擇軟體時，可比較作業系統、即時變聲與檔案轉換功能、模型格式和硬體要求。使用相同音訊與模型試聽，便於比較聲音效果。",
-          "en": "Compare the supported operating systems, real-time and file conversion features, model formats and hardware requirements. Use the same audio and model to compare sound quality.",
-          "ja": "対応 OS、リアルタイム変換とファイル変換の機能、モデル形式、必要なハードウェアを比較して選べます。同じ音声とモデルを使うと、音質を比較しやすくなります。"
+          "sc": "RVC 是语音转换技术名称，多款软件使用这一技术。RVC Fabric 提供 Windows 桌面界面、运行环境配置、模型管理与音频工具，适合需要集中管理这些功能的用户。 选择软件时，可比较操作系统、实时变声与文件转换功能、模型格式和硬件要求。使用相同音频与模型试听，便于比较声音效果。",
+          "tc": "RVC 是語音轉換技術名稱，多款軟體使用這項技術。RVC Fabric 提供 Windows 桌面介面、執行環境設定、模型管理與音訊工具，適合需要集中管理這些功能的使用者。 選擇軟體時，可比較作業系統、即時變聲與檔案轉換功能、模型格式和硬體要求。使用相同音訊與模型試聽，便於比較聲音效果。",
+          "en": "RVC is a voice conversion technology used by multiple applications. RVC Fabric provides a Windows desktop interface, runtime setup, model management and audio tools for users who need these functions in one application. Compare the supported operating systems, real-time and file conversion features, model formats and hardware requirements. Use the same audio and model to compare sound quality.",
+          "ja": "RVC は複数のアプリが利用する音声変換技術です。RVC Fabric は Windows のデスクトップ画面、実行環境の設定、モデル管理、音声ツールをまとめて利用したい方に向けたソフトウェアです。 対応 OS、リアルタイム変換とファイル変換の機能、モデル形式、必要なハードウェアを比較して選べます。同じ音声とモデルを使うと、音質を比較しやすくなります。"
         }
       ],
       "links": [
@@ -171,10 +153,10 @@
       },
       "paragraphs": [
         {
-          "sc": "截至 2026 年 11 月 7 日，Neptune 海王星开发分支包含手机配对、本地 API 和 MCP 接口。手机采集音频后，由桌面端执行语音转换。已发布版本的功能见对应发布说明。",
-          "tc": "截至 2026 年 11 月 7 日，Neptune 海王星開發分支包含手機配對、本機 API 和 MCP 介面。手機擷取音訊後，由桌面端執行語音轉換。已發行版本的功能見對應發行說明。",
-          "en": "As of November 7, 2026, the Neptune development branch includes mobile pairing, a local API and an MCP interface. The phone captures audio and the desktop converts the voice. Release notes describe the features in each published version.",
-          "ja": "2026 年 11 月 7 日時点で、開発ブランチ Neptune にはスマートフォンのペアリング、ローカル API、MCP インターフェースがあります。スマートフォンで音声を収録し、デスクトップで変換します。公開済みの各バージョンの機能はリリースノートに記載しています。"
+          "sc": "Neptune 海王星开发分支还提供手机配对、本地 API 和 MCP 接口，手机采集的音频由桌面端转换。",
+          "tc": "Neptune 海王星開發分支另提供手機配對、本機 API 和 MCP 介面，手機擷取的音訊由桌面端轉換。",
+          "en": "The Neptune development branch also provides mobile pairing, a local API and an MCP interface. Audio captured on the phone is converted on the desktop.",
+          "ja": "開発ブランチ Neptune はスマートフォンとのペアリング、ローカル API、MCP インターフェースも提供します。スマートフォンで収録した音声はデスクトップで変換します。"
         }
       ],
       "links": [

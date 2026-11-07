@@ -6,7 +6,7 @@
 
 | 产品 | 用途 |
 | --- | --- |
-| [RVC Fabric](https://www.turingmirror.com/products/rvc-fabric/) | Windows 实时语音转换与模型训练软件。 |
+| [RVC Fabric](https://www.turingmirror.com/products/rvc-fabric/) | 可在语音聊天和游戏中变声、播放音乐与音效的 Windows 软件。 |
 | [喵言喵 MoeText](https://www.turingmirror.com/products/moetext/) | 按自定义规则改写 QQ 和 Discord 聊天输入框中的文字。 |
 | [测试镜](https://www.turingmirror.com/products/mirror-test/) | 动画、GalGame 和少女乐队主题的互动测试。 |
 | [TRM UI](https://www.turingmirror.com/products/trm-ui/) | 图灵镜应用共用的组件库与设计系统。 |

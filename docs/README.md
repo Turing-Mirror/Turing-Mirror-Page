@@ -103,7 +103,7 @@ npm run check:seo
 
 `docs/guides/rvc-fabric-v1.json` 是四语言使用指南的数据源。构建时生成 `/guides/rvc-fabric/` 及对应语言路径，产品页和 sitemap 提供入口。文案按 TRM UI 最新 `src/pages/textRules.ts` 审阅；历史对照表需结合当前功能核对。
 
-产品截图由 `screenshots` 字段统一维护。第一张作为 Open Graph、Twitter 和软件结构化数据的代表图片；图片地址同时写入 sitemap。图注说明画面内容、记录日期与来源。现有 RVC Fabric 截图记录于 2026 年 8 月。
+产品截图由 `screenshots` 字段统一维护。第一张作为 Open Graph、Twitter 和软件结构化数据的代表图片；图片地址同时写入 sitemap。图注简要标明画面名称，来源写入图片结构化数据，截图记录保存在 `docs/seo/v1/`。
 
 设置 `screenshotGallery` 后，构建器生成产品的四语言 `/products/{slug}/screenshots/` 页面。截图的 `id`、`caption` 与 `source` 分别提供页内地址、可见说明和仓库来源。
 

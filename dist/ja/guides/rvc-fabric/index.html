@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>RVC Fabric 利用ガイド | チューリングミラー Turing Mirror</title>
-    <meta name="description" content="RVC リアルタイム音声変換の導入条件、対応ハードウェア、音声接続、Neptune ブランチの機能を説明します。">
+    <meta name="description" content="RVC Fabric を導入し、通話やゲーム内で音楽や効果音を再生しながら声を変える手順を説明します。">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="チューリングミラー Turing Mirror">
     <meta property="og:title" content="RVC Fabric 利用ガイド | チューリングミラー Turing Mirror">
-    <meta property="og:description" content="RVC リアルタイム音声変換の導入条件、対応ハードウェア、音声接続、Neptune ブランチの機能を説明します。">
+    <meta property="og:description" content="RVC Fabric を導入し、通話やゲーム内で音楽や効果音を再生しながら声を変える手順を説明します。">
     <meta property="og:url" content="https://www.turingmirror.com/ja/guides/rvc-fabric/">
     <meta property="og:image" content="https://www.turingmirror.com/assets/products/rvc-fabric/home.png">
     <meta property="og:image:alt" content="RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。">
@@ -63,7 +63,7 @@
       "@id": "https://www.turingmirror.com/ja/guides/rvc-fabric/#article",
       "url": "https://www.turingmirror.com/ja/guides/rvc-fabric/",
       "headline": "RVC Fabric 利用ガイド",
-      "description": "RVC リアルタイム音声変換の導入条件、対応ハードウェア、音声接続、Neptune ブランチの機能を説明します。",
+      "description": "RVC Fabric を導入し、通話やゲーム内で音楽や効果音を再生しながら声を変える手順を説明します。",
       "inLanguage": "ja",
       "dateModified": "2026-11-07",
       "author": {
@@ -98,37 +98,33 @@
       </header>
 
 <main class="pd guide" id="main"><header class="pd-head">
-    <h1 class="pd-h2">RVC Fabric 利用ガイド</h1><p class="pd-intro">RVC リアルタイム音声変換の導入条件、対応ハードウェア、音声接続、Neptune ブランチの機能を説明します。</p>
+    <h1 class="pd-h2">RVC Fabric 利用ガイド</h1><p class="pd-intro">RVC Fabric を導入し、通話やゲーム内で音楽や効果音を再生しながら声を変える手順を説明します。</p>
     <p class="pd-note"><time datetime="2026-11-07">2026-11-07</time></p></header>
     <section id="install">
     <h2 class="pd-h2">インストールと初回利用</h2>
-    <p>公式サイトからインストーラーをダウンロードします。インストール後、GPU に対応する実行環境を設定し、ボイスモデルをダウンロードまたはインポートします。</p>
-<p>実行環境、モデル、更新のダウンロードにはインターネット接続が必要です。必要なファイルを用意した後の音声変換はローカルで実行します。サードパーティのボイスモデルを使う前に利用許諾を確認してください。</p>
-    
+    <p>公式サイトからインストーラーをダウンロードします。インストール後、GPU に対応する実行環境を設定し、ボイスモデルをダウンロードまたはインポートします。 実行環境、モデル、更新のダウンロードにはインターネット接続が必要です。必要なファイルを用意した後の音声変換はローカルで実行します。サードパーティのボイスモデルを使う前に利用許諾を確認してください。</p>
   </section>
 <section id="hardware">
     <h2 class="pd-h2">システムとハードウェア</h2>
-    <p>デスクトップ版は Windows 10 と Windows 11 を対象としています。NVIDIA GPU では CUDA、AMD と Intel GPU では DirectML を利用できます。動作性能は GPU、ドライバー、モデルによって異なります。</p>
-<p>現在、ボイスモデルの学習には NVIDIA GPU が必要です。</p>
-<p>リアルタイムの遅延にはモデル推論、音声バッファー、オーディオドライバー、受信側アプリが影響します。設定を変更したら、録音と実際の通話で音質と安定性を確認してください。</p>
-    
+    <p>デスクトップ版は Windows 10 と Windows 11 を対象としています。NVIDIA GPU では CUDA、AMD と Intel GPU では DirectML を利用できます。動作性能は GPU、ドライバー、モデルによって異なります。 現在、ボイスモデルの学習には NVIDIA GPU が必要です。 リアルタイムの遅延にはモデル推論、音声バッファー、オーディオドライバー、受信側アプリが影響します。設定を変更したら、録音と実際の通話で音質と安定性を確認してください。</p>
   </section>
 <section id="routing">
-    <h2 class="pd-h2">QQ、Discord、OBS に接続する</h2>
-    <p>VB-Cable をインストールしてコンピューターを再起動したら、RVC Fabric の入力に実際のマイク、出力に CABLE Input を指定します。ボイスモデルを選択して変換を開始します。</p>
-<p>QQ または Discord の音声設定で、マイクまたは入力デバイスに CABLE Output を指定します。OBS では音声入力キャプチャのソースを追加し、CABLE Output を選択します。</p>
-<p>Windows の既定の再生デバイスはヘッドホンのままにします。モニタリングにもヘッドホンを指定し、音声が入力へ戻らないようにします。音量メーターを確認してから短い音声を録音してください。</p>
+    <h2 class="pd-h2">通話、ゲーム、配信への接続</h2>
+    <p>音声デバイス設定で実際のマイクを選択し、出力を CABLE Input にします。QQ、Discord、ゲームの音声設定では、マイクを CABLE Output にします。 OBS では音声入力キャプチャを追加し、CABLE Output を選びます。Windows の再生とローカルモニタリングにはヘッドホンを使います。</p>
     <ul><li><a href="https://vb-audio.com/Cable/">VB-Cable 公式説明</a></li><li><a href="https://obsproject.com/kb/sources-guide">OBS ソースガイド</a></li></ul>
+  </section>
+<section id="soundboard">
+    <h2 class="pd-h2">音楽・効果音の再生と音声変換</h2>
+    <p>音声ライブラリに音楽や効果音をインポートし、項目をダブルクリックしてボイスチャットへ再生します。音楽を流しながら変声するには、ボイスモデルを選択して変換を開始します。両方の音声が同じ出力にミックスされます。 ローカルモニタリングにはヘッドホンを選び、必要に応じて音楽のモニタリングを有効にします。よく使うクリップにグローバルショートカットを割り当てると、ゲーム中に再生、一時停止、停止を操作できます。</p>
   </section>
 <section id="selection">
     <h2 class="pd-h2">RVC ツールの選び方</h2>
-    <p>RVC は複数のアプリが利用する音声変換技術です。RVC Fabric は Windows のデスクトップ画面、実行環境の設定、モデル管理、音声ツールをまとめて利用したい方に向けたソフトウェアです。</p>
-<p>対応 OS、リアルタイム変換とファイル変換の機能、モデル形式、必要なハードウェアを比較して選べます。同じ音声とモデルを使うと、音質を比較しやすくなります。</p>
+    <p>RVC は複数のアプリが利用する音声変換技術です。RVC Fabric は Windows のデスクトップ画面、実行環境の設定、モデル管理、音声ツールをまとめて利用したい方に向けたソフトウェアです。 対応 OS、リアルタイム変換とファイル変換の機能、モデル形式、必要なハードウェアを比較して選べます。同じ音声とモデルを使うと、音質を比較しやすくなります。</p>
     <ul><li><a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI">RVC WebUI 公式リポジトリ</a></li><li><a href="https://github.com/w-okada/voice-changer">w-okada voice-changer 公式リポジトリ</a></li></ul>
   </section>
 <section id="neptune">
     <h2 class="pd-h2">Neptune ブランチ</h2>
-    <p>2026 年 11 月 7 日時点で、開発ブランチ Neptune にはスマートフォンのペアリング、ローカル API、MCP インターフェースがあります。スマートフォンで音声を収録し、デスクトップで変換します。公開済みの各バージョンの機能はリリースノートに記載しています。</p>
+    <p>開発ブランチ Neptune はスマートフォンとのペアリング、ローカル API、MCP インターフェースも提供します。スマートフォンで収録した音声はデスクトップで変換します。</p>
     <ul><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/mobile-v1.md">スマートフォンのペアリング説明</a></li><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/api-v1.md">ローカル API と MCP の説明</a></li></ul>
   </section></main>
 

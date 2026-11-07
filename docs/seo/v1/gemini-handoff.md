@@ -4,7 +4,7 @@
 
 ## 文案依据
 
-使用 `rules/textRules.ts`，对应 TRM UI 提交 `f326946`，于 2026 年 11 月 7 日同步。既有语言审校记录位于 `rules/TRM-UI-Style-Guide.md` 和 `rules/Turing-Mirror-Page.md`。
+使用 `rules/textRules.ts`，对应 TRM UI 提交 `a761ffc`，于 2026 年 11 月 7 日同步。既有语言审校记录位于 `rules/TRM-UI-Style-Guide.md` 和 `rules/Turing-Mirror-Page.md`。
 
 重点检查以下要求：
 
@@ -31,11 +31,11 @@
 
 ## 产品事实
 
-RVC Fabric 的定位为 Windows 实时 AI 语音转换与模型训练工作台。开发功能依据 Neptune 分支。该分支包含手机配对、本地 API 和 MCP 接口；手机采集音频，桌面端执行语音转换。已发布版本的功能查阅对应发布说明。
+RVC Fabric 可在语音聊天和游戏中实时变声、播放音乐与音效，音频库支持片段、叠加播放、循环和全局快捷键。开发功能依据 Neptune 分支。该分支包含手机配对、本地 API 和 MCP 接口；手机采集音频，桌面端执行语音转换。已发布版本的功能查阅对应发布说明。
 
 实时变声支持 CUDA 和 DirectML，当前模型训练需要 NVIDIA 显卡。延迟受硬件、模型和音频设置影响。“低于 80 ms”和安装包“约 9 MB”已从本轮产品说明中移除。
 
-三张官方截图记录于 2026 年 8 月，与仓库原图哈希一致。其他功能页截图显示版本 1.4.2。RVC Fabric、RVC WebUI 和 w-okada voice-changer 的图片分别归属于各自项目。
+三张截图与仓库原图哈希一致，拍摄时间与版本见素材记录。RVC Fabric、RVC WebUI 和 w-okada voice-changer 的图片分别归属于各自项目。
 
 ## 发布与检索状态
 
@@ -46,6 +46,8 @@ Google 已发现 28 页并接受三项优先抓取申请。Bing IndexNow 已收�
 GPT 配图错误仍存在：已核实的回答使用了其他软件的界面；最新一条回答列出正确原图地址，却展示 MimicPC 和韩国博客的配图。
 
 官网网页和图片的 HTTP 读取检查通过。默认 Python 客户端仍有 Pages 平台层 1010 响应。详细记录见 `README.md`。
+
+本轮补充了八语言 README 的语音聊天、游戏内放歌与混音说明，合并导航并删除截图日期段落。官网和 CNB 同步采用简短图注；TRM UI 的 `documentStructure` 规则规定用途说明、段落组织与截图文案。
 
 ## 审计输出
 

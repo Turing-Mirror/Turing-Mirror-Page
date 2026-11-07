@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>RVC Fabric 使用指南 | 圖靈鏡 Turing Mirror</title>
-    <meta name="description" content="了解 RVC 即時變聲的安裝要求、硬體支援、音訊連接方式和海王星分支功能。">
+    <meta name="description" content="安裝 RVC Fabric，在語音聊天和遊戲中播放音樂、音效並同時變聲。">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="圖靈鏡 Turing Mirror">
     <meta property="og:title" content="RVC Fabric 使用指南 | 圖靈鏡 Turing Mirror">
-    <meta property="og:description" content="了解 RVC 即時變聲的安裝要求、硬體支援、音訊連接方式和海王星分支功能。">
+    <meta property="og:description" content="安裝 RVC Fabric，在語音聊天和遊戲中播放音樂、音效並同時變聲。">
     <meta property="og:url" content="https://www.turingmirror.com/zh-hant/guides/rvc-fabric/">
     <meta property="og:image" content="https://www.turingmirror.com/assets/products/rvc-fabric/home.png">
     <meta property="og:image:alt" content="RVC Fabric 首頁，顯示音色選擇、音訊工具和即時變聲控制。">
@@ -63,7 +63,7 @@
       "@id": "https://www.turingmirror.com/zh-hant/guides/rvc-fabric/#article",
       "url": "https://www.turingmirror.com/zh-hant/guides/rvc-fabric/",
       "headline": "RVC Fabric 使用指南",
-      "description": "了解 RVC 即時變聲的安裝要求、硬體支援、音訊連接方式和海王星分支功能。",
+      "description": "安裝 RVC Fabric，在語音聊天和遊戲中播放音樂、音效並同時變聲。",
       "inLanguage": "zh-Hant",
       "dateModified": "2026-11-07",
       "author": {
@@ -98,37 +98,33 @@
       </header>
 
 <main class="pd guide" id="main"><header class="pd-head">
-    <h1 class="pd-h2">RVC Fabric 使用指南</h1><p class="pd-intro">了解 RVC 即時變聲的安裝要求、硬體支援、音訊連接方式和海王星分支功能。</p>
+    <h1 class="pd-h2">RVC Fabric 使用指南</h1><p class="pd-intro">安裝 RVC Fabric，在語音聊天和遊戲中播放音樂、音效並同時變聲。</p>
     <p class="pd-note"><time datetime="2026-11-07">2026-11-07</time></p></header>
     <section id="install">
     <h2 class="pd-h2">安裝與首次使用</h2>
-    <p>從官網下載安裝程式。安裝後，依照引導設定與顯示卡對應的執行環境，並下載或匯入音色模型。</p>
-<p>下載執行環境、模型和更新時需要連線。準備好所需檔案後，語音轉換在本機執行。使用第三方音色前，請確認其使用授權。</p>
-    
+    <p>從官網下載安裝程式。安裝後，依照引導設定與顯示卡對應的執行環境，並下載或匯入音色模型。 下載執行環境、模型和更新時需要連線。準備好所需檔案後，語音轉換在本機執行。使用第三方音色前，請確認其使用授權。</p>
   </section>
 <section id="hardware">
     <h2 class="pd-h2">系統與硬體</h2>
-    <p>桌面端適用於 Windows 10 和 Windows 11。NVIDIA 顯示卡使用 CUDA，AMD 和 Intel 顯示卡可使用 DirectML。不同顯示卡、驅動程式和模型的執行表現有所差異。</p>
-<p>目前的音色模型訓練需要 NVIDIA 顯示卡。</p>
-<p>即時延遲同時受到模型推論、音訊緩衝區、音效卡驅動程式和目標軟體影響。調整參數後應透過錄音與實際通話檢查聲音品質和穩定性。</p>
-    
+    <p>桌面端適用於 Windows 10 和 Windows 11。NVIDIA 顯示卡使用 CUDA，AMD 和 Intel 顯示卡可使用 DirectML。不同顯示卡、驅動程式和模型的執行表現有所差異。 目前的音色模型訓練需要 NVIDIA 顯示卡。 即時延遲同時受到模型推論、音訊緩衝區、音效卡驅動程式和目標軟體影響。調整參數後應透過錄音與實際通話檢查聲音品質和穩定性。</p>
   </section>
 <section id="routing">
-    <h2 class="pd-h2">連接 QQ、Discord 和 OBS</h2>
-    <p>安裝 VB-Cable 並重新啟動電腦後，在 RVC Fabric 中將輸入裝置設為實際麥克風，將輸出裝置設為 CABLE Input。選擇音色模型並開啟變聲。</p>
-<p>在 QQ 或 Discord 的語音設定中，將麥克風或輸入裝置設為 CABLE Output。在 OBS 中新增音訊輸入擷取來源，並選擇 CABLE Output。</p>
-<p>將 Windows 預設播放裝置保留為耳機。需要本機試聽時，將監聽裝置設為耳機，避免把監聽聲音再次送入輸入裝置。先檢查音量指示，再錄製一段音訊確認。</p>
+    <h2 class="pd-h2">連接語音聊天、遊戲和直播</h2>
+    <p>在「裝置與音訊」中選擇實際麥克風，將輸出設為 CABLE Input；在 QQ、Discord 或遊戲的語音設定中，將麥克風設為 CABLE Output。 在 OBS 中新增音訊輸入擷取來源，選擇 CABLE Output。Windows 預設播放裝置與本機監聽裝置使用耳機。</p>
     <ul><li><a href="https://vb-audio.com/Cable/">VB-Cable 官方說明</a></li><li><a href="https://obsproject.com/kb/sources-guide">OBS 來源說明</a></li></ul>
+  </section>
+<section id="soundboard">
+    <h2 class="pd-h2">播放音樂、音效與同時變聲</h2>
+    <p>開啟「音訊」，匯入音樂或音效，按兩下項目即可播放到語音。需要邊播放音樂邊變聲時，選擇音色模型並開啟變聲，兩路聲音會混合輸出。 將本機監聽裝置設為耳機，視需要開啟音樂監聽。可為常用片段設定全域快捷鍵，在遊戲中控制播放、暫停和停止。</p>
   </section>
 <section id="selection">
     <h2 class="pd-h2">如何選擇 RVC 工具</h2>
-    <p>RVC 是語音轉換技術名稱，多款軟體使用這項技術。RVC Fabric 提供 Windows 桌面介面、執行環境設定、模型管理與音訊工具，適合需要集中管理這些功能的使用者。</p>
-<p>選擇軟體時，可比較作業系統、即時變聲與檔案轉換功能、模型格式和硬體要求。使用相同音訊與模型試聽，便於比較聲音效果。</p>
+    <p>RVC 是語音轉換技術名稱，多款軟體使用這項技術。RVC Fabric 提供 Windows 桌面介面、執行環境設定、模型管理與音訊工具，適合需要集中管理這些功能的使用者。 選擇軟體時，可比較作業系統、即時變聲與檔案轉換功能、模型格式和硬體要求。使用相同音訊與模型試聽，便於比較聲音效果。</p>
     <ul><li><a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI">RVC WebUI 官方儲存庫</a></li><li><a href="https://github.com/w-okada/voice-changer">w-okada voice-changer 官方儲存庫</a></li></ul>
   </section>
 <section id="neptune">
     <h2 class="pd-h2">海王星分支</h2>
-    <p>截至 2026 年 11 月 7 日，Neptune 海王星開發分支包含手機配對、本機 API 和 MCP 介面。手機擷取音訊後，由桌面端執行語音轉換。已發行版本的功能見對應發行說明。</p>
+    <p>Neptune 海王星開發分支另提供手機配對、本機 API 和 MCP 介面，手機擷取的音訊由桌面端轉換。</p>
     <ul><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/mobile-v1.md">手機配對說明</a></li><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/api-v1.md">本機 API 與 MCP 說明</a></li></ul>
   </section></main>
 

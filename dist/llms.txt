@@ -8,18 +8,19 @@ Turing Mirror (Chinese: 图灵镜, Traditional: 圖靈鏡, Japanese: チュー�
 
 ### RVC Fabric
 
-RVC Fabric is a free, open-source desktop application developed by Turing Mirror for voice calls, live streaming and audio production. It supports real-time voice changing, audio file conversion, vocal separation and voice model training, with runtime setup and model management.
+RVC Fabric is a free, open-source Windows application developed by Turing Mirror. Change your voice and play music or sound effects in QQ, Discord and in-game voice chat, or mix your voice with backing tracks during a live stream. Its soundboard supports audio clips and hotkeys, alongside voice model management, vocal separation and model training.
 
 - Platform: Windows desktop application
 - Supports Windows 10 and Windows 11. Download the required runtime and models before first use.
 - Page: https://www.turingmirror.com/en/products/rvc-fabric/ (简体中文: https://www.turingmirror.com/products/rvc-fabric/)
 - Links: Download for Windows: https://cdn.turingmirror.com/d/rvc-fabric-setup; GitHub: https://github.com/Turing-Mirror/RVC-Fabric; Download from CNB: https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases
 - Official screenshot page: https://www.turingmirror.com/en/products/rvc-fabric/screenshots/
-- Screenshot record: These screenshots were recorded in August 2026.
+
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/home.png (RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.)
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/settings.png (RVC Fabric settings screen.)
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/misc.png (RVC Fabric additional tools screen.)
 - Real-time conversion: Converts microphone input to the selected voice, with original-voice bypass, ASIO channel selection and independent monitoring. Latency depends on hardware, the model and audio settings.
+- Soundboard for voice chat and games: Play music, sound effects or selected clips into voice chat alongside your converted microphone audio, with overlapping playback, looping, separate volume control and global hotkeys.
 - Audio effects: Includes a noise gate, compressor and 5-band parametric EQ, with presets and individual adjustments.
 - Voices & presets: The voice library supports associated .index files and lets you save, import and export parameter presets.
 - Community voice store: Download voice models from Turing Mirror and third-party sources, track progress and resume interrupted downloads.
