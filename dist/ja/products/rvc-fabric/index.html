@@ -4,8 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>RVC Fabric：Windows 向けリアルタイム AI 音声変換・モデル学習ワークベンチ | チューリングミラー Turing Mirror</title>
-    <meta name="description" content="高性能リアルタイム AI ボイスチェンジャー。インストールするだけで、ゲーム・通話・配信にすぐ使えます。 Windows 10 / 11 対応 · NVIDIA（RTX 50 シリーズ含む）/ AMD / Intel GPU を自動判別">
+    <meta name="description" content="RVC を使用する Windows 向けリアルタイム音声変換ソフトウェアです。ボイス管理、音声処理、モデル学習に対応しています。 Windows 10 と Windows 11 に対応しています。初回利用には対応する実行環境とモデルのダウンロードが必要です。">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="チューリングミラー Turing Mirror">
+    <meta property="og:title" content="RVC Fabric：Windows 向けリアルタイム AI 音声変換・モデル学習ワークベンチ | チューリングミラー Turing Mirror">
+    <meta property="og:description" content="RVC を使用する Windows 向けリアルタイム音声変換ソフトウェアです。ボイス管理、音声処理、モデル学習に対応しています。 Windows 10 と Windows 11 に対応しています。初回利用には対応する実行環境とモデルのダウンロードが必要です。">
+    <meta property="og:url" content="https://www.turingmirror.com/ja/products/rvc-fabric/">
+    <meta property="og:image" content="https://www.turingmirror.com/assets/products/rvc-fabric/home.png">
+    <meta property="og:image:alt" content="RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。">
+    <meta property="og:image:width" content="1180">
+    <meta property="og:image:height" content="780">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.turingmirror.com/assets/products/rvc-fabric/home.png">
+    <meta name="twitter:image:alt" content="RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1c1b18" media="(prefers-color-scheme: dark)">
@@ -18,7 +30,7 @@
     <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
     <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="512x512">
     <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any">
-    <link rel="stylesheet" href="/site.css?v=8958e4296d">
+    <link rel="stylesheet" href="/site.css?v=560f052c8f">
     <link rel="stylesheet" href="/trm-motion.css?v=0a84a929b9">
     <script src="/boot.js?v=95a2ee6377"></script>
     <script src="/site.js?v=6496917b35" defer></script>
@@ -50,7 +62,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://www.turingmirror.com/ja/products/rvc-fabric/#software",
       "name": "RVC Fabric",
-      "description": "従来はコマンドラインやブラウザ、複数のスクリプトに分かれていた RVC を、導入後すぐに使えるネイティブデスクトップアプリケーションとして統合しました。リアルタイム声質変換、オフライン変換、ボーカル分離、データセット分割、ピッチ抽出、モデル学習、インデックス構築、モデルマージを約 9 MB のインストーラーにまとめ、初回起動時に GPU に適した実行環境を自動構成します。",
+      "description": "RVC Fabric は Turing Mirror が開発する無料のオープンソースデスクトップアプリです。通話、配信、音声制作に向けて、リアルタイム音声変換、音声ファイルの変換、ボーカル分離、ボイスモデルの学習、実行環境の設定とモデル管理を提供します。",
       "url": "https://www.turingmirror.com/ja/products/rvc-fabric/",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Windows 10, Windows 11",
@@ -78,10 +90,51 @@
         "https://github.com/Turing-Mirror/RVC-Fabric"
       ],
       "screenshot": [
-        "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
-        "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png",
-        "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png"
-      ]
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png#image",
+          "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+          "url": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+          "name": "RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。",
+          "caption": "RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。",
+          "width": 1180,
+          "height": 780,
+          "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png#image",
+          "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png",
+          "url": "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png",
+          "name": "RVC Fabric の設定画面です。",
+          "caption": "RVC Fabric の設定画面です。",
+          "width": 1180,
+          "height": 780,
+          "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/settings.png"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png#image",
+          "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png",
+          "url": "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png",
+          "name": "RVC Fabric のその他の機能の画面です。",
+          "caption": "RVC Fabric のその他の機能の画面です。",
+          "width": 1180,
+          "height": 780,
+          "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/misc.png"
+        }
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png#image",
+        "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "url": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "name": "RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。",
+        "caption": "RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。",
+        "width": 1180,
+        "height": 780,
+        "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png"
+      }
     },
     {
       "@type": "WebPage",
@@ -94,6 +147,17 @@
       },
       "mainEntity": {
         "@id": "https://www.turingmirror.com/ja/products/rvc-fabric/#software"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png#image",
+        "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "url": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "name": "RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。",
+        "caption": "RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。",
+        "width": 1180,
+        "height": 780,
+        "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png"
       }
     },
     {
@@ -131,7 +195,7 @@
           "name": "NVIDIA 以外の GPU でも使えますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "使えます。AMD と Intel の GPU は DirectML でリアルタイム変換を行います。ボイスの学習のみ NVIDIA GPU が必要です。"
+            "text": "AMD と Intel の GPU は DirectML でリアルタイム変換を行えます。現在のボイス学習画面では NVIDIA GPU が必要です。"
           }
         },
         {
@@ -147,7 +211,7 @@
           "name": "RVC WebUI との関係は？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "RVC WebUI をベースに大幅にカスタマイズしたもので、Tauri + Rust + React のデスクトップシェルでリアルタイム変換をすぐ使えるクライアントにしています。上流の学習・推論 WebUI も上級機能として同梱しています。"
+            "text": "RVC Fabric は RVC WebUI を基に、デスクトップ画面、実行環境の設定、モデル管理、音声ツールを提供します。RVC WebUI は音声変換技術の上流プロジェクトです。"
           }
         }
       ]
@@ -178,46 +242,46 @@
 
       <main class="pd" id="main">
         <header class="pd-head">
-          <p class="pd-meta reveal">Windows デスクトップ · MIT ライセンス</p>
+          <p class="pd-meta reveal">ソースコードは MIT ライセンスで公開しています。</p>
           <h1 class="pd-title"><span class="pd-title-main" style="view-transition-name: product-rvc-fabric">RVC Fabric</span></h1>
           <p class="pd-lead reveal" style="--reveal-delay: 38ms">Windows 向けリアルタイム AI 音声変換・モデル学習ワークベンチ</p>
-          <p class="pd-intro reveal" style="--reveal-delay: 76ms">従来はコマンドラインやブラウザ、複数のスクリプトに分かれていた RVC を、導入後すぐに使えるネイティブデスクトップアプリケーションとして統合しました。リアルタイム声質変換、オフライン変換、ボーカル分離、データセット分割、ピッチ抽出、モデル学習、インデックス構築、モデルマージを約 9 MB のインストーラーにまとめ、初回起動時に GPU に適した実行環境を自動構成します。</p>
+          <p class="pd-intro reveal" style="--reveal-delay: 76ms">RVC Fabric は Turing Mirror が開発する無料のオープンソースデスクトップアプリです。通話、配信、音声制作に向けて、リアルタイム音声変換、音声ファイルの変換、ボーカル分離、ボイスモデルの学習、実行環境の設定とモデル管理を提供します。</p>
           <div class="pd-actions reveal" style="--reveal-delay: 114ms">
             <a class="btn btn-primary" href="https://cdn.turingmirror.com/d/rvc-fabric-setup">Windows 版をダウンロード <small>.exe</small></a>
             <a class="btn" href="https://github.com/Turing-Mirror/RVC-Fabric" target="_blank" rel="noopener noreferrer">GitHub <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開く）</span></a>
             <a class="btn" href="https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases" target="_blank" rel="noopener noreferrer">CNB ミラー（中国国内） <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開く）</span></a>
           </div>
-          <p class="pd-note reveal" style="--reveal-delay: 152ms">Windows 10 / 11 対応 · NVIDIA（RTX 50 シリーズ含む）/ AMD / Intel GPU を自動判別</p>
+          <p class="pd-note reveal" style="--reveal-delay: 152ms">Windows 10 と Windows 11 に対応しています。初回利用には対応する実行環境とモデルのダウンロードが必要です。</p>
         </header>
 
         <section class="shots" aria-label="スクリーンショット" data-close-label="閉じる">
-          <a class="shot reveal" style="--reveal-delay: 0ms" href="/assets/products/rvc-fabric/home.png" data-lightbox aria-label="RVC Fabric のホーム画面 - 拡大表示">
-            <img src="/assets/products/rvc-fabric/home.png" alt="RVC Fabric のホーム画面" width="1180" height="780" decoding="async">
+          <a class="shot reveal" style="--reveal-delay: 0ms" href="/assets/products/rvc-fabric/home.png" data-lightbox aria-label="RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。 - 拡大表示">
+            <img src="/assets/products/rvc-fabric/home.png" alt="RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。" width="1180" height="780" decoding="async">
           </a>
-          <a class="shot reveal" style="--reveal-delay: 38ms" href="/assets/products/rvc-fabric/settings.png" data-lightbox aria-label="RVC Fabric の設定画面 - 拡大表示">
-            <img src="/assets/products/rvc-fabric/settings.png" alt="RVC Fabric の設定画面" width="1180" height="780" loading="lazy" decoding="async">
+          <a class="shot reveal" style="--reveal-delay: 38ms" href="/assets/products/rvc-fabric/settings.png" data-lightbox aria-label="RVC Fabric の設定画面です。 - 拡大表示">
+            <img src="/assets/products/rvc-fabric/settings.png" alt="RVC Fabric の設定画面です。" width="1180" height="780" loading="lazy" decoding="async">
           </a>
-          <a class="shot reveal" style="--reveal-delay: 76ms" href="/assets/products/rvc-fabric/misc.png" data-lightbox aria-label="RVC Fabric のその他画面 - 拡大表示">
-            <img src="/assets/products/rvc-fabric/misc.png" alt="RVC Fabric のその他画面" width="1180" height="780" loading="lazy" decoding="async">
+          <a class="shot reveal" style="--reveal-delay: 76ms" href="/assets/products/rvc-fabric/misc.png" data-lightbox aria-label="RVC Fabric のその他の機能の画面です。 - 拡大表示">
+            <img src="/assets/products/rvc-fabric/misc.png" alt="RVC Fabric のその他の機能の画面です。" width="1180" height="780" loading="lazy" decoding="async">
           </a>
-        </section>
+        </section><p class="pd-note">以下は 2026 年 8 月にリポジトリに記録された過去の画面です。現在のバージョンとは表示が異なる場合があります。</p><p class="pd-note"><a href="/ja/guides/rvc-fabric/">RVC Fabric 利用ガイド</a></p>
         <section aria-labelledby="features-label">
           <h2 class="pd-h2 reveal" id="features-label">主な機能</h2>
           <ul class="features">
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>リアルタイム変換</h3><p>低遅延の推論。変換中もボイスをシームレスに切り替え、原音バイパスもワンクリック。 エンドツーエンド遅延 80 ms 以内を実現し、ASIO オーディオインターフェースのチャンネル選択と独立したモニタリングルーティングに対応</p></li>
-            <li class="reveal" style="--reveal-delay: 38ms"><h3>DSP エフェクトチェーン</h3><p>ノイズゲート、コンプレッサー、5 バンドパラメトリック EQ を内蔵。プリセットと細かな調整に対応。</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>ボイスとプリセット</h3><p>グリッド表示のボイスライブラリと .index の紐付け。プリセットは保存・インポート・共有が可能。</p></li>
-            <li class="reveal" style="--reveal-delay: 38ms"><h3>コミュニティボイスストア</h3><p>公式ソースとサードパーティソースに対応。マルチスレッド・レジューム対応のダウンロード。</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>オーディオツールボックス</h3><p>ボーカル分離、テキスト読み上げ＋ボイス変換、ワンクリックで自分専用ボイスの学習。 音声分割、RMVPE ピッチ抽出からモデル学習、インデックス書き出しまでを一貫して案内するビジュアルウィザードを搭載し、中断後の再開にも対応</p></li>
-            <li class="reveal" style="--reveal-delay: 38ms"><h3>自動ハードウェア加速</h3><p>NVIDIA CUDA と AMD / Intel DirectML を自動判別し、対応するランタイムをダウンロード。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>リアルタイム変換</h3><p>マイク入力を選択したボイスに変換します。原音への切り替え、ASIO チャンネル選択、独立したモニタリングに対応しています。遅延はハードウェア、モデル、音声設定によって異なります。</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>DSP エフェクトチェーン</h3><p>ノイズゲート、コンプレッサー、5 バンドパラメトリック EQ を内蔵しています。プリセットと個別の調整に対応しています。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>ボイスとプリセット</h3><p>ボイスライブラリでは .index ファイルを関連付け、パラメータープリセットを保存、インポート、エクスポートできます。</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>コミュニティボイスストア</h3><p>Turing Mirror とサードパーティの配布元からボイスモデルを取得できます。進捗の確認と中断したダウンロードの再開に対応しています。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>オーディオツールボックス</h3><p>ボーカル分離、テキスト読み上げ、ボイス学習ツールを提供します。学習手順には音声分割、ピッチと特徴量の抽出、モデル学習、インデックスの書き出しが含まれます。</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>自動ハードウェア加速</h3><p>NVIDIA CUDA と、AMD および Intel GPU の DirectML アクセラレーションに対応しています。セットアップでハードウェアを検出し、対応する実行環境を設定します。</p></li>
           </ul>
         </section>
         <section aria-labelledby="steps-label">
           <h2 class="pd-h2 reveal" id="steps-label">はじめかた</h2>
           <ol class="steps">
             <li class="reveal" style="--reveal-delay: 0ms"><h3>インストール</h3><p>RVC_Fabric_Setup.exe を実行します。英数字のみのパスへのインストールを推奨します。</p></li>
-            <li class="reveal" style="--reveal-delay: 38ms"><h3>初回セットアップ</h3><p>初回起動時にハードウェアを判別し、ランタイムと仮想オーディオケーブルを自動で導入します。</p></li>
-            <li class="reveal" style="--reveal-delay: 76ms"><h3>ゲーム・通話につなぐ</h3><p>RVC Fabric の出力を CABLE Input に、ゲームや QQ・Discord のマイクを CABLE Output に設定します。 VB-Cable 仮想オーディオデバイスの一括設定とリアルタイム音量スライダーを備え、煩雑なルーティング設定を簡略化</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>初回セットアップ</h3><p>案内に従って実行環境を設定し、ボイスモデルをダウンロードまたはインポートします。他のアプリへ音声を送る場合は VB-Cable をインストールします。インストール後はコンピューターを再起動します。</p></li>
+            <li class="reveal" style="--reveal-delay: 76ms"><h3>通話アプリに接続する</h3><p>本アプリの出力を CABLE Input に、QQ、Discord、配信アプリの入力を CABLE Output に設定します。</p></li>
           </ol>
         </section>
         <section aria-labelledby="faq-label">
@@ -229,7 +293,7 @@
             </details>
             <details class="faq-item">
               <summary>NVIDIA 以外の GPU でも使えますか？</summary>
-              <div class="faq-answer"><p>使えます。AMD と Intel の GPU は DirectML でリアルタイム変換を行います。ボイスの学習のみ NVIDIA GPU が必要です。</p></div>
+              <div class="faq-answer"><p>AMD と Intel の GPU は DirectML でリアルタイム変換を行えます。現在のボイス学習画面では NVIDIA GPU が必要です。</p></div>
             </details>
             <details class="faq-item">
               <summary>ゲームや QQ・Discord の相手に変換後の声を届けるには？</summary>
@@ -237,7 +301,7 @@
             </details>
             <details class="faq-item">
               <summary>RVC WebUI との関係は？</summary>
-              <div class="faq-answer"><p>RVC WebUI をベースに大幅にカスタマイズしたもので、Tauri + Rust + React のデスクトップシェルでリアルタイム変換をすぐ使えるクライアントにしています。上流の学習・推論 WebUI も上級機能として同梱しています。</p></div>
+              <div class="faq-answer"><p>RVC Fabric は RVC WebUI を基に、デスクトップ画面、実行環境の設定、モデル管理、音声ツールを提供します。RVC WebUI は音声変換技術の上流プロジェクトです。</p></div>
             </details>
           </div>
         </section>

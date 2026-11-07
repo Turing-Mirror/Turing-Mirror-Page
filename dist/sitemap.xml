@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.turingmirror.com/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/"/>
@@ -10,6 +11,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/zh-hant/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/"/>
@@ -18,6 +20,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/en/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/"/>
@@ -26,6 +29,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/ja/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/"/>
@@ -34,6 +38,9 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/products/rvc-fabric/</loc>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/home.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/settings.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/misc.png</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/rvc-fabric/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/rvc-fabric/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/rvc-fabric/"/>
@@ -42,6 +49,9 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/zh-hant/products/rvc-fabric/</loc>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/home.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/settings.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/misc.png</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/rvc-fabric/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/rvc-fabric/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/rvc-fabric/"/>
@@ -50,6 +60,9 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/en/products/rvc-fabric/</loc>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/home.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/settings.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/misc.png</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/rvc-fabric/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/rvc-fabric/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/rvc-fabric/"/>
@@ -58,6 +71,9 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/ja/products/rvc-fabric/</loc>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/home.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/settings.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/misc.png</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/rvc-fabric/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/rvc-fabric/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/rvc-fabric/"/>
@@ -66,6 +82,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/products/moetext/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/moetext/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/moetext/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/moetext/"/>
@@ -74,6 +91,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/zh-hant/products/moetext/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/moetext/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/moetext/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/moetext/"/>
@@ -82,6 +100,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/en/products/moetext/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/moetext/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/moetext/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/moetext/"/>
@@ -90,6 +109,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/ja/products/moetext/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/moetext/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/moetext/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/moetext/"/>
@@ -98,6 +118,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/products/mirror-test/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/mirror-test/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/mirror-test/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/mirror-test/"/>
@@ -106,6 +127,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/zh-hant/products/mirror-test/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/mirror-test/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/mirror-test/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/mirror-test/"/>
@@ -114,6 +136,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/en/products/mirror-test/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/mirror-test/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/mirror-test/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/mirror-test/"/>
@@ -122,6 +145,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/ja/products/mirror-test/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/mirror-test/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/mirror-test/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/mirror-test/"/>
@@ -130,6 +154,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/products/trm-ui/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/trm-ui/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/trm-ui/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/trm-ui/"/>
@@ -138,6 +163,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/zh-hant/products/trm-ui/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/trm-ui/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/trm-ui/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/trm-ui/"/>
@@ -146,6 +172,7 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/en/products/trm-ui/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/trm-ui/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/trm-ui/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/trm-ui/"/>
@@ -154,10 +181,47 @@
   </url>
   <url>
     <loc>https://www.turingmirror.com/ja/products/trm-ui/</loc>
+
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/trm-ui/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/trm-ui/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/trm-ui/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/products/trm-ui/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/products/trm-ui/"/>
+  </url>
+  <url>
+    <loc>https://www.turingmirror.com/guides/rvc-fabric/</loc>
+
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/guides/rvc-fabric/"/>
+  </url>
+  <url>
+    <loc>https://www.turingmirror.com/zh-hant/guides/rvc-fabric/</loc>
+
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/guides/rvc-fabric/"/>
+  </url>
+  <url>
+    <loc>https://www.turingmirror.com/en/guides/rvc-fabric/</loc>
+
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/guides/rvc-fabric/"/>
+  </url>
+  <url>
+    <loc>https://www.turingmirror.com/ja/guides/rvc-fabric/</loc>
+
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/guides/rvc-fabric/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/guides/rvc-fabric/"/>
   </url>
 </urlset>

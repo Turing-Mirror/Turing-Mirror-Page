@@ -1,3 +1,4 @@
+import { rvcFabricProduct } from "./rvc-fabric.mjs";
 import { trmUiProduct } from "./trm-ui.mjs";
 
 // 站点内容的唯一数据源。scripts/build.mjs 读取这里，为每种语言生成静态页面。
@@ -23,7 +24,7 @@ export const UI = {
     siteName: "图灵镜",
     siteTitle: "图灵镜 Turing Mirror",
     brandShort: "图灵镜",
-    homeDescription: `图灵镜 Turing Mirror。${TAGLINE}`,
+    homeDescription: "图灵镜开发开源软件，提供 RVC Fabric 实时语音转换、喵言喵聊天文本美化、趣味测试与 TRM UI 组件库。",
     titleSep: "：",
     languageLabel: "语言",
     productsLabel: "产品",
@@ -60,7 +61,7 @@ export const UI = {
     siteName: "圖靈鏡",
     siteTitle: "圖靈鏡 Turing Mirror",
     brandShort: "圖靈鏡",
-    homeDescription: `圖靈鏡 Turing Mirror。${TAGLINE}`,
+    homeDescription: "圖靈鏡開發開源軟體，提供 RVC Fabric 即時語音轉換、喵言喵聊天文字美化、趣味測試與 TRM UI 元件庫。",
     titleSep: "：",
     languageLabel: "語言",
     productsLabel: "產品",
@@ -97,7 +98,7 @@ export const UI = {
     siteName: "Turing Mirror",
     siteTitle: "Turing Mirror",
     brandShort: "Turing Mirror",
-    homeDescription: `Turing Mirror. ${TAGLINE}`,
+    homeDescription: "Turing Mirror develops open-source software: RVC Fabric voice conversion, MoeText chat text formatting, interactive quizzes and the TRM UI component library.",
     titleSep: ": ",
     languageLabel: "Language",
     productsLabel: "Products",
@@ -134,7 +135,7 @@ export const UI = {
     siteName: "チューリングミラー",
     siteTitle: "チューリングミラー Turing Mirror",
     brandShort: "チューリングミラー",
-    homeDescription: `チューリングミラー Turing Mirror。${TAGLINE}`,
+    homeDescription: "Turing Mirror は RVC Fabric の音声変換、MoeText のチャット文章整形、診断サイト、TRM UI コンポーネントライブラリなどのオープンソースソフトウェアを開発しています。",
     titleSep: "：",
     languageLabel: "言語",
     productsLabel: "プロダクト",
@@ -168,239 +169,20 @@ export const UI = {
   }
 };
 
-const GITHUB_LABEL = { sc: "GitHub 仓库", tc: "GitHub 倉庫", en: "GitHub", ja: "GitHub" };
+const GITHUB_LABEL = { sc: "GitHub 仓库", tc: "GitHub 儲存庫", en: "GitHub", ja: "GitHub" };
 
 export const PRODUCTS = [
-  {
-    slug: "rvc-fabric",
-    name: { sc: "RVC Fabric" },
-    altName: "",
-    meta: { sc: "Windows · 桌面端", tc: "Windows · 桌面端", en: "Windows · Desktop", ja: "Windows · デスクトップ" },
-    pageMeta: {
-      sc: "Windows 桌面端 · MIT 开源",
-      tc: "Windows 桌面端 · MIT 開源",
-      en: "Windows desktop · MIT licensed",
-      ja: "Windows デスクトップ · MIT ライセンス"
-    },
-    summary: {
-      sc: "高性能实时 AI 变声桌面客户端。开箱即用，游戏开黑、连麦、直播一个软件搞定。",
-      tc: "高效能即時 AI 變聲桌面客戶端。開箱即用，遊戲開黑、連麥、直播一個軟體搞定。",
-      en: "High-performance real-time AI voice changer for Windows. Works out of the box for gaming, voice chat and streaming.",
-      ja: "高性能リアルタイム AI ボイスチェンジャー。インストールするだけで、ゲーム・通話・配信にすぐ使えます。"
-    },
-    lead: {
-      sc: "Windows 实时 AI 语音转换与模型训练工作台",
-      tc: "Windows 即時 AI 語音轉換與模型訓練工作台",
-      en: "Real-time AI voice conversion and model training workbench for Windows",
-      ja: "Windows 向けリアルタイム AI 音声変換・モデル学習ワークベンチ"
-    },
-    intro: {
-      sc: "将 RVC 繁琐的命令行与网页脚本整合为开箱即用的原生桌面软件。涵盖实时变声、离线转换、人声分离、音频切分、特征提取、模型训练与模型融合等完整功能；安装包仅约 9 MB，首次启动时将根据本机显卡自动配置匹配的运行环境。",
-      tc: "將 RVC 繁瑣的命令列與網頁指令碼整合為開箱即用的原生桌面軟體。涵蓋即時變聲、離線轉換、人聲分離、音訊切分、特徵提取、模型訓練與模型融合等完整功能；安裝包僅約 9 MB，首次啟動時將根據本機顯示卡自動配置匹配的執行環境。",
-      en: "Consolidates RVC's command-line tools and web scripts into a streamlined native desktop application. Real-time voice conversion, offline processing, vocal separation, dataset slicing, pitch extraction, model training, index building, and model merging are unified in a 9 MB installer that automatically configures the matching runtime for your GPU on first launch.",
-      ja: "従来はコマンドラインやブラウザ、複数のスクリプトに分かれていた RVC を、導入後すぐに使えるネイティブデスクトップアプリケーションとして統合しました。リアルタイム声質変換、オフライン変換、ボーカル分離、データセット分割、ピッチ抽出、モデル学習、インデックス構築、モデルマージを約 9 MB のインストーラーにまとめ、初回起動時に GPU に適した実行環境を自動構成します。"
-    },
-    schema: {
-      applicationCategory: "MultimediaApplication",
-      operatingSystem: "Windows 10, Windows 11",
-      license: "https://opensource.org/licenses/MIT",
-      downloadUrl: "https://cdn.turingmirror.com/d/rvc-fabric-setup"
-    },
-    actions: [
-      {
-        href: "https://cdn.turingmirror.com/d/rvc-fabric-setup",
-        primary: true,
-        label: { sc: "下载 Windows 版", tc: "下載 Windows 版", en: "Download for Windows", ja: "Windows 版をダウンロード" },
-        badge: ".exe"
-      },
-      { href: "https://github.com/Turing-Mirror/RVC-Fabric", label: GITHUB_LABEL, external: true },
-      {
-        href: "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases",
-        label: { sc: "CNB 国内镜像", tc: "CNB 國內鏡像", en: "CNB mirror (China)", ja: "CNB ミラー（中国国内）" },
-        external: true
-      }
-    ],
-    note: {
-      sc: "支持 Windows 10 / 11 · NVIDIA（含 RTX 50 系列）/ AMD / Intel 显卡自动适配",
-      tc: "支援 Windows 10 / 11 · NVIDIA（含 RTX 50 系列）/ AMD / Intel 顯示卡自動適配",
-      en: "Windows 10 / 11 · Automatically adapts to NVIDIA (incl. RTX 50 series), AMD and Intel GPUs",
-      ja: "Windows 10 / 11 対応 · NVIDIA（RTX 50 シリーズ含む）/ AMD / Intel GPU を自動判別"
-    },
-    screenshots: [
-      {
-        src: "/assets/products/rvc-fabric/home.png",
-        width: 1180,
-        height: 780,
-        alt: { sc: "RVC Fabric 主界面", tc: "RVC Fabric 主畫面", en: "RVC Fabric home screen", ja: "RVC Fabric のホーム画面" }
-      },
-      {
-        src: "/assets/products/rvc-fabric/settings.png",
-        width: 1180,
-        height: 780,
-        alt: { sc: "RVC Fabric 设置", tc: "RVC Fabric 設定", en: "RVC Fabric settings", ja: "RVC Fabric の設定画面" }
-      },
-      {
-        src: "/assets/products/rvc-fabric/misc.png",
-        width: 1180,
-        height: 780,
-        alt: { sc: "RVC Fabric 其他页", tc: "RVC Fabric 其他頁", en: "RVC Fabric misc page", ja: "RVC Fabric のその他画面" }
-      }
-    ],
-    features: [
-      {
-        title: { sc: "实时变声", tc: "即時變聲", en: "Real-time conversion", ja: "リアルタイム変換" },
-        body: {
-          sc: "低延迟推理，变声中可无缝切换音色，一键切换变声与原声。 端到端延迟低至 80 ms 以内，支持 ASIO 专业声卡通道选择与独立监听路由",
-          tc: "低延遲推論，變聲中可無縫切換音色，一鍵切換變聲與原聲。 端到端延遲低至 80 ms 以內，支援 ASIO 專業音效卡通道選擇與獨立監聽路由",
-          en: "Low-latency inference, seamless voice switching mid-session, and one-click bypass to your original voice. End-to-end latency under 80 ms, with ASIO channel selection and independent monitoring routing",
-          ja: "低遅延の推論。変換中もボイスをシームレスに切り替え、原音バイパスもワンクリック。 エンドツーエンド遅延 80 ms 以内を実現し、ASIO オーディオインターフェースのチャンネル選択と独立したモニタリングルーティングに対応"
-        }
-      },
-      {
-        title: { sc: "DSP 效果链", tc: "DSP 效果鏈", en: "DSP effect chain", ja: "DSP エフェクトチェーン" },
-        body: {
-          sc: "内置噪声门、压缩器与 5 段参数均衡器，支持预设套用与精细调音。",
-          tc: "內建噪聲門、壓縮器與 5 段參數等化器，支援預設套用與精細調音。",
-          en: "Built-in noise gate, compressor and 5-band parametric EQ, with presets and fine-tuning.",
-          ja: "ノイズゲート、コンプレッサー、5 バンドパラメトリック EQ を内蔵。プリセットと細かな調整に対応。"
-        }
-      },
-      {
-        title: { sc: "音色与预设管理", tc: "音色與預設管理", en: "Voices & presets", ja: "ボイスとプリセット" },
-        body: {
-          sc: "网格化音色库，绑定 .index 特征库；参数预设可保存、导入、导出分享。",
-          tc: "網格化音色庫，綁定 .index 特徵庫；參數預設可儲存、匯入、匯出分享。",
-          en: "A grid voice library with .index bindings; save, import and share parameter presets.",
-          ja: "グリッド表示のボイスライブラリと .index の紐付け。プリセットは保存・インポート・共有が可能。"
-        }
-      },
-      {
-        title: { sc: "社区音色广场", tc: "社群音色廣場", en: "Community voice store", ja: "コミュニティボイスストア" },
-        body: {
-          sc: "图灵镜官方源 + 第三方开放源，多线程并发下载、断点续传。",
-          tc: "圖靈鏡官方源 + 第三方開放源，多執行緒並行下載、斷點續傳。",
-          en: "Official and third-party sources, with multi-threaded, resumable downloads.",
-          ja: "公式ソースとサードパーティソースに対応。マルチスレッド・レジューム対応のダウンロード。"
-        }
-      },
-      {
-        title: { sc: "音频工具箱", tc: "音訊工具箱", en: "Audio toolbox", ja: "オーディオツールボックス" },
-        body: {
-          sc: "人声分离提取干声与伴奏，文本转语音并换成目标音色，一键训练专属音色。 提供从音频切分、RMVPE 音高提取到模型训练与索引导出的可视化向导，支持训练中断后恢复进度",
-          tc: "人聲分離擷取乾聲與伴奏，文字轉語音並換成目標音色，一鍵訓練專屬音色。 提供從音訊切分、RMVPE 音高提取到模型訓練與索引匯出的視覺化精靈，支援訓練中斷後恢復進度",
-          en: "Separate vocals from accompaniment, turn text into speech in any voice, and train your own voice in one click. Guided visual workflow covering audio slicing, RMVPE pitch extraction, model training, and index export, with checkpoint resume support",
-          ja: "ボーカル分離、テキスト読み上げ＋ボイス変換、ワンクリックで自分専用ボイスの学習。 音声分割、RMVPE ピッチ抽出からモデル学習、インデックス書き出しまでを一貫して案内するビジュアルウィザードを搭載し、中断後の再開にも対応"
-        }
-      },
-      {
-        title: { sc: "自动硬件加速", tc: "自動硬體加速", en: "Automatic acceleration", ja: "自動ハードウェア加速" },
-        body: {
-          sc: "自动识别 NVIDIA CUDA 与 AMD / Intel DirectML，并下载对应的计算运行时。",
-          tc: "自動識別 NVIDIA CUDA 與 AMD / Intel DirectML，並下載對應的運算執行環境。",
-          en: "Detects NVIDIA CUDA or AMD / Intel DirectML and downloads the matching runtime for you.",
-          ja: "NVIDIA CUDA と AMD / Intel DirectML を自動判別し、対応するランタイムをダウンロード。"
-        }
-      }
-    ],
-    steps: [
-      {
-        title: { sc: "下载安装", tc: "下載安裝", en: "Install", ja: "インストール" },
-        body: {
-          sc: "运行 RVC_Fabric_Setup.exe，建议安装到纯英文路径。",
-          tc: "執行 RVC_Fabric_Setup.exe，建議安裝到純英文路徑。",
-          en: "Run RVC_Fabric_Setup.exe. An install path with only English characters is recommended.",
-          ja: "RVC_Fabric_Setup.exe を実行します。英数字のみのパスへのインストールを推奨します。"
-        }
-      },
-      {
-        title: { sc: "跟随引导", tc: "跟隨引導", en: "Follow the setup", ja: "初回セットアップ" },
-        body: {
-          sc: "首次启动会自动识别硬件、补全运行时并安装虚拟声卡。",
-          tc: "首次啟動會自動識別硬體、補齊執行環境並安裝虛擬音效卡。",
-          en: "On first launch it detects your hardware, fetches the runtime and installs the virtual audio cable.",
-          ja: "初回起動時にハードウェアを判別し、ランタイムと仮想オーディオケーブルを自動で導入します。"
-        }
-      },
-      {
-        title: { sc: "接入游戏 / 语音", tc: "接入遊戲 / 語音", en: "Route your audio", ja: "ゲーム・通話につなぐ" },
-        body: {
-          sc: "软件输出选 CABLE Input，游戏、QQ 或 Discord 的麦克风选 CABLE Output。 支持一键配置 VB-Cable 虚拟声卡与实时音频滑块，免去繁琐的音频路由设置",
-          tc: "軟體輸出選 CABLE Input，遊戲、QQ 或 Discord 的麥克風選 CABLE Output。 支援一鍵配置 VB-Cable 虛擬音效卡與即時音訊滑桿，免去繁瑣的音訊路由設定",
-          en: "Set RVC Fabric's output to CABLE Input, and the microphone in your game, QQ or Discord to CABLE Output. One-click VB-Cable virtual audio routing and live audio sliders for straightforward routing setup",
-          ja: "RVC Fabric の出力を CABLE Input に、ゲームや QQ・Discord のマイクを CABLE Output に設定します。 VB-Cable 仮想オーディオデバイスの一括設定とリアルタイム音量スライダーを備え、煩雑なルーティング設定を簡略化"
-        }
-      }
-    ],
-    faq: [
-      {
-        q: { sc: "RVC Fabric 免费吗？", tc: "RVC Fabric 免費嗎？", en: "Is RVC Fabric free?", ja: "RVC Fabric は無料ですか？" },
-        a: {
-          sc: "免费。源码以 MIT 协议在 GitHub 开源；模型权重、音色包与第三方资源遵循各自的原始许可。",
-          tc: "免費。原始碼以 MIT 授權於 GitHub 開源；模型權重、音色包與第三方資源遵循各自的原始授權。",
-          en: "Yes. The source code is MIT-licensed on GitHub; model weights, voice packs and third-party resources follow their own licenses.",
-          ja: "無料です。ソースコードは MIT ライセンスで GitHub に公開しています。モデルやボイスパック、サードパーティ素材はそれぞれのライセンスに従います。"
-        }
-      },
-      {
-        q: {
-          sc: "没有 NVIDIA 显卡能用吗？",
-          tc: "沒有 NVIDIA 顯示卡能用嗎？",
-          en: "Does it work without an NVIDIA GPU?",
-          ja: "NVIDIA 以外の GPU でも使えますか？"
-        },
-        a: {
-          sc: "可以。AMD 与 Intel 显卡通过 DirectML 加速实时变声；只有「音色训练」需要 NVIDIA 显卡。",
-          tc: "可以。AMD 與 Intel 顯示卡透過 DirectML 加速即時變聲；只有「音色訓練」需要 NVIDIA 顯示卡。",
-          en: "Yes. AMD and Intel GPUs run real-time conversion through DirectML. Only voice training requires an NVIDIA GPU.",
-          ja: "使えます。AMD と Intel の GPU は DirectML でリアルタイム変換を行います。ボイスの学習のみ NVIDIA GPU が必要です。"
-        }
-      },
-      {
-        q: {
-          sc: "怎么让游戏、QQ、Discord 里的人听到变声？",
-          tc: "怎麼讓遊戲、QQ、Discord 裡的人聽到變聲？",
-          en: "How do people in my game, QQ or Discord hear the changed voice?",
-          ja: "ゲームや QQ・Discord の相手に変換後の声を届けるには？"
-        },
-        a: {
-          sc: "通过 VB-Cable 虚拟声卡转发：RVC Fabric 输出选 CABLE Input，对方软件的麦克风选 CABLE Output；Windows 默认播放设备保持为你的耳机。",
-          tc: "透過 VB-Cable 虛擬音效卡轉發：RVC Fabric 輸出選 CABLE Input，對方軟體的麥克風選 CABLE Output；Windows 預設播放裝置保持為你的耳機。",
-          en: "Through the VB-Cable virtual audio device: set RVC Fabric's output to CABLE Input and the other app's microphone to CABLE Output. Keep your headphones as the Windows default playback device.",
-          ja: "仮想オーディオデバイス VB-Cable を経由します。RVC Fabric の出力を CABLE Input、相手側アプリのマイクを CABLE Output に設定し、Windows の既定の再生デバイスはヘッドホンのままにします。"
-        }
-      },
-      {
-        q: {
-          sc: "和 RVC WebUI 有什么关系？",
-          tc: "和 RVC WebUI 有什麼關係？",
-          en: "How is it related to RVC WebUI?",
-          ja: "RVC WebUI との関係は？"
-        },
-        a: {
-          sc: "RVC Fabric 基于 RVC WebUI 深度定制，用 Tauri + Rust + React 桌面外壳把实时变声做成开箱即用的客户端；上游训练与推理 WebUI 作为高级功能随包保留。",
-          tc: "RVC Fabric 基於 RVC WebUI 深度客製，以 Tauri + Rust + React 桌面外殼把即時變聲做成開箱即用的客戶端；上游訓練與推論 WebUI 作為進階功能隨附保留。",
-          en: "RVC Fabric is a deep customization of RVC WebUI. A Tauri + Rust + React desktop shell turns real-time conversion into a ready-to-use client, and the upstream training and inference WebUI still ships as an advanced feature.",
-          ja: "RVC WebUI をベースに大幅にカスタマイズしたもので、Tauri + Rust + React のデスクトップシェルでリアルタイム変換をすぐ使えるクライアントにしています。上流の学習・推論 WebUI も上級機能として同梱しています。"
-        }
-      }
-    ],
-    notice: {
-      sc: "请勿将本软件用于伪造身份、欺诈或其他违法用途。使用他人声音进行训练或转换前，请取得原权利人授权，并遵守当地法律法规。",
-      tc: "請勿將本軟體用於偽造身分、詐騙或其他違法用途。使用他人聲音進行訓練或轉換前，請取得原權利人授權，並遵守當地法律法規。",
-      en: "Do not use this software to impersonate others, commit fraud or for any other unlawful purpose. Get permission from the rights holder before training on or converting someone else's voice, and follow local laws.",
-      ja: "なりすまし、詐欺、その他の違法な目的に使用しないでください。他人の声で学習・変換する場合は権利者の許諾を得て、現地の法令を遵守してください。"
-    }
-  },
+  rvcFabricProduct,
   {
     slug: "moetext",
     name: { sc: "喵言喵", tc: "喵言喵", en: "MoeText", ja: "MoeText" },
     altName: { sc: "MoeText", tc: "MoeText", en: "喵言喵", ja: "喵言喵" },
     meta: { sc: "Android", tc: "Android", en: "Android", ja: "Android" },
     pageMeta: {
-      sc: "Android 应用 · MIT 开源",
-      tc: "Android 應用 · MIT 開源",
-      en: "Android app · MIT licensed",
-      ja: "Android アプリ · MIT ライセンス"
+      sc: "以 MIT 协议开放源代码。",
+      tc: "原始碼以 MIT 授權公開。",
+      en: "Source code is available under the MIT license.",
+      ja: "ソースコードは MIT ライセンスで公開しています。"
     },
     summary: {
       sc: "聊天文本自动美化工具，按你定义的规则改写 QQ 与 Discord 输入框中的文字。",
@@ -569,10 +351,10 @@ export const PRODUCTS = [
     altName: { sc: "Mirror-Test", tc: "Mirror-Test", en: "", ja: "" },
     meta: { sc: "Web", tc: "Web", en: "Web", ja: "Web" },
     pageMeta: {
-      sc: "网页 · 打开即玩",
-      tc: "網頁 · 打開即玩",
-      en: "Web · Play in your browser",
-      ja: "Web · ブラウザですぐ遊べる"
+      sc: "通过浏览器使用。",
+      tc: "透過瀏覽器使用。",
+      en: "Available in your browser.",
+      ja: "ブラウザで利用できます。"
     },
     summary: {
       sc: "Meme 趣味测试合集：夏季番性格测试、GalGame 命定路线、Band-TI 乐队角色测试。",

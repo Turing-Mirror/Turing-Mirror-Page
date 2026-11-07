@@ -1,0 +1,20 @@
+[
+  {
+    "file": "home.png",
+    "site_sha256": "ce9ef402538020ea5a26eb7b4775aaf326764eb7cb19bac22f02e0402ee8f2f3",
+    "repository_sha256": "ce9ef402538020ea5a26eb7b4775aaf326764eb7cb19bac22f02e0402ee8f2f3",
+    "identical": true
+  },
+  {
+    "file": "settings.png",
+    "site_sha256": "84d7e8522094be92c39e3e831d156f574bc249bb65aa2b432aedb6caa2648721",
+    "repository_sha256": "84d7e8522094be92c39e3e831d156f574bc249bb65aa2b432aedb6caa2648721",
+    "identical": true
+  },
+  {
+    "file": "misc.png",
+    "site_sha256": "48712b103b26d7947ffac6c570db1a2c6baf5261f2e32b5101a16759f3e8815c",
+    "repository_sha256": "48712b103b26d7947ffac6c570db1a2c6baf5261f2e32b5101a16759f3e8815c",
+    "identical": true
+  }
+]

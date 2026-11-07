@@ -4,8 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>RVC Fabric: Real-time AI voice conversion and model training workbench for Windows | Turing Mirror</title>
-    <meta name="description" content="High-performance real-time AI voice changer for Windows. Works out of the box for gaming, voice chat and streaming. Windows 10 / 11 · Automatically adapts to NVIDIA (incl. RTX 50 series), AMD and Intel GPUs">
+    <meta name="description" content="RVC-based real-time voice conversion software for Windows, with voice management, audio processing and model training. Supports Windows 10 and Windows 11. Download the required runtime and models before first use.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Turing Mirror">
+    <meta property="og:title" content="RVC Fabric: Real-time AI voice conversion and model training workbench for Windows | Turing Mirror">
+    <meta property="og:description" content="RVC-based real-time voice conversion software for Windows, with voice management, audio processing and model training. Supports Windows 10 and Windows 11. Download the required runtime and models before first use.">
+    <meta property="og:url" content="https://www.turingmirror.com/en/products/rvc-fabric/">
+    <meta property="og:image" content="https://www.turingmirror.com/assets/products/rvc-fabric/home.png">
+    <meta property="og:image:alt" content="RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.">
+    <meta property="og:image:width" content="1180">
+    <meta property="og:image:height" content="780">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.turingmirror.com/assets/products/rvc-fabric/home.png">
+    <meta name="twitter:image:alt" content="RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1c1b18" media="(prefers-color-scheme: dark)">
@@ -18,7 +30,7 @@
     <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
     <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="512x512">
     <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any">
-    <link rel="stylesheet" href="/site.css?v=8958e4296d">
+    <link rel="stylesheet" href="/site.css?v=560f052c8f">
     <link rel="stylesheet" href="/trm-motion.css?v=0a84a929b9">
     <script src="/boot.js?v=95a2ee6377"></script>
     <script src="/site.js?v=6496917b35" defer></script>
@@ -50,7 +62,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://www.turingmirror.com/en/products/rvc-fabric/#software",
       "name": "RVC Fabric",
-      "description": "Consolidates RVC's command-line tools and web scripts into a streamlined native desktop application. Real-time voice conversion, offline processing, vocal separation, dataset slicing, pitch extraction, model training, index building, and model merging are unified in a 9 MB installer that automatically configures the matching runtime for your GPU on first launch.",
+      "description": "RVC Fabric is a free, open-source desktop application developed by Turing Mirror for voice calls, live streaming and audio production. It supports real-time voice changing, audio file conversion, vocal separation and voice model training, with runtime setup and model management.",
       "url": "https://www.turingmirror.com/en/products/rvc-fabric/",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Windows 10, Windows 11",
@@ -78,10 +90,51 @@
         "https://github.com/Turing-Mirror/RVC-Fabric"
       ],
       "screenshot": [
-        "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
-        "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png",
-        "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png"
-      ]
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png#image",
+          "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+          "url": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+          "name": "RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.",
+          "caption": "RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.",
+          "width": 1180,
+          "height": 780,
+          "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png#image",
+          "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png",
+          "url": "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png",
+          "name": "RVC Fabric settings screen.",
+          "caption": "RVC Fabric settings screen.",
+          "width": 1180,
+          "height": 780,
+          "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/settings.png"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png#image",
+          "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png",
+          "url": "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png",
+          "name": "RVC Fabric additional tools screen.",
+          "caption": "RVC Fabric additional tools screen.",
+          "width": 1180,
+          "height": 780,
+          "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/misc.png"
+        }
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png#image",
+        "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "url": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "name": "RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.",
+        "caption": "RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.",
+        "width": 1180,
+        "height": 780,
+        "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png"
+      }
     },
     {
       "@type": "WebPage",
@@ -94,6 +147,17 @@
       },
       "mainEntity": {
         "@id": "https://www.turingmirror.com/en/products/rvc-fabric/#software"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png#image",
+        "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "url": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "name": "RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.",
+        "caption": "RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.",
+        "width": 1180,
+        "height": 780,
+        "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png"
       }
     },
     {
@@ -131,7 +195,7 @@
           "name": "Does it work without an NVIDIA GPU?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. AMD and Intel GPUs run real-time conversion through DirectML. Only voice training requires an NVIDIA GPU."
+            "text": "AMD and Intel GPUs can use DirectML for real-time conversion. The current voice training interface requires an NVIDIA GPU."
           }
         },
         {
@@ -147,7 +211,7 @@
           "name": "How is it related to RVC WebUI?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "RVC Fabric is a deep customization of RVC WebUI. A Tauri + Rust + React desktop shell turns real-time conversion into a ready-to-use client, and the upstream training and inference WebUI still ships as an advanced feature."
+            "text": "RVC Fabric is based on RVC WebUI and adds a desktop interface, runtime setup, model management and audio tools. RVC WebUI is the upstream project for its voice conversion technology."
           }
         }
       ]
@@ -178,46 +242,46 @@
 
       <main class="pd" id="main">
         <header class="pd-head">
-          <p class="pd-meta reveal">Windows desktop · MIT licensed</p>
+          <p class="pd-meta reveal">Source code is available under the MIT license.</p>
           <h1 class="pd-title"><span class="pd-title-main" style="view-transition-name: product-rvc-fabric">RVC Fabric</span></h1>
           <p class="pd-lead reveal" style="--reveal-delay: 38ms">Real-time AI voice conversion and model training workbench for Windows</p>
-          <p class="pd-intro reveal" style="--reveal-delay: 76ms">Consolidates RVC&#39;s command-line tools and web scripts into a streamlined native desktop application. Real-time voice conversion, offline processing, vocal separation, dataset slicing, pitch extraction, model training, index building, and model merging are unified in a 9 MB installer that automatically configures the matching runtime for your GPU on first launch.</p>
+          <p class="pd-intro reveal" style="--reveal-delay: 76ms">RVC Fabric is a free, open-source desktop application developed by Turing Mirror for voice calls, live streaming and audio production. It supports real-time voice changing, audio file conversion, vocal separation and voice model training, with runtime setup and model management.</p>
           <div class="pd-actions reveal" style="--reveal-delay: 114ms">
             <a class="btn btn-primary" href="https://cdn.turingmirror.com/d/rvc-fabric-setup">Download for Windows <small>.exe</small></a>
             <a class="btn" href="https://github.com/Turing-Mirror/RVC-Fabric" target="_blank" rel="noopener noreferrer">GitHub <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（Opens in a new tab）</span></a>
             <a class="btn" href="https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases" target="_blank" rel="noopener noreferrer">CNB mirror (China) <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（Opens in a new tab）</span></a>
           </div>
-          <p class="pd-note reveal" style="--reveal-delay: 152ms">Windows 10 / 11 · Automatically adapts to NVIDIA (incl. RTX 50 series), AMD and Intel GPUs</p>
+          <p class="pd-note reveal" style="--reveal-delay: 152ms">Supports Windows 10 and Windows 11. Download the required runtime and models before first use.</p>
         </header>
 
         <section class="shots" aria-label="Screenshots" data-close-label="Close">
-          <a class="shot reveal" style="--reveal-delay: 0ms" href="/assets/products/rvc-fabric/home.png" data-lightbox aria-label="RVC Fabric home screen - View larger">
-            <img src="/assets/products/rvc-fabric/home.png" alt="RVC Fabric home screen" width="1180" height="780" decoding="async">
+          <a class="shot reveal" style="--reveal-delay: 0ms" href="/assets/products/rvc-fabric/home.png" data-lightbox aria-label="RVC Fabric home screen with voice selection, audio tools and real-time conversion controls. - View larger">
+            <img src="/assets/products/rvc-fabric/home.png" alt="RVC Fabric home screen with voice selection, audio tools and real-time conversion controls." width="1180" height="780" decoding="async">
           </a>
-          <a class="shot reveal" style="--reveal-delay: 38ms" href="/assets/products/rvc-fabric/settings.png" data-lightbox aria-label="RVC Fabric settings - View larger">
-            <img src="/assets/products/rvc-fabric/settings.png" alt="RVC Fabric settings" width="1180" height="780" loading="lazy" decoding="async">
+          <a class="shot reveal" style="--reveal-delay: 38ms" href="/assets/products/rvc-fabric/settings.png" data-lightbox aria-label="RVC Fabric settings screen. - View larger">
+            <img src="/assets/products/rvc-fabric/settings.png" alt="RVC Fabric settings screen." width="1180" height="780" loading="lazy" decoding="async">
           </a>
-          <a class="shot reveal" style="--reveal-delay: 76ms" href="/assets/products/rvc-fabric/misc.png" data-lightbox aria-label="RVC Fabric misc page - View larger">
-            <img src="/assets/products/rvc-fabric/misc.png" alt="RVC Fabric misc page" width="1180" height="780" loading="lazy" decoding="async">
+          <a class="shot reveal" style="--reveal-delay: 76ms" href="/assets/products/rvc-fabric/misc.png" data-lightbox aria-label="RVC Fabric additional tools screen. - View larger">
+            <img src="/assets/products/rvc-fabric/misc.png" alt="RVC Fabric additional tools screen." width="1180" height="780" loading="lazy" decoding="async">
           </a>
-        </section>
+        </section><p class="pd-note">These archived interface screenshots were recorded in the repository in August 2026. The current interface may differ.</p><p class="pd-note"><a href="/en/guides/rvc-fabric/">RVC Fabric User guide</a></p>
         <section aria-labelledby="features-label">
           <h2 class="pd-h2 reveal" id="features-label">Features</h2>
           <ul class="features">
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>Real-time conversion</h3><p>Low-latency inference, seamless voice switching mid-session, and one-click bypass to your original voice. End-to-end latency under 80 ms, with ASIO channel selection and independent monitoring routing</p></li>
-            <li class="reveal" style="--reveal-delay: 38ms"><h3>DSP effect chain</h3><p>Built-in noise gate, compressor and 5-band parametric EQ, with presets and fine-tuning.</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>Voices &amp; presets</h3><p>A grid voice library with .index bindings; save, import and share parameter presets.</p></li>
-            <li class="reveal" style="--reveal-delay: 38ms"><h3>Community voice store</h3><p>Official and third-party sources, with multi-threaded, resumable downloads.</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>Audio toolbox</h3><p>Separate vocals from accompaniment, turn text into speech in any voice, and train your own voice in one click. Guided visual workflow covering audio slicing, RMVPE pitch extraction, model training, and index export, with checkpoint resume support</p></li>
-            <li class="reveal" style="--reveal-delay: 38ms"><h3>Automatic acceleration</h3><p>Detects NVIDIA CUDA or AMD / Intel DirectML and downloads the matching runtime for you.</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>Real-time conversion</h3><p>Converts microphone input to the selected voice, with original-voice bypass, ASIO channel selection and independent monitoring. Latency depends on hardware, the model and audio settings.</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>DSP effect chain</h3><p>Includes a noise gate, compressor and 5-band parametric EQ, with presets and individual adjustments.</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>Voices &amp; presets</h3><p>The voice library supports associated .index files and lets you save, import and export parameter presets.</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>Community voice store</h3><p>Download voice models from Turing Mirror and third-party sources, track progress and resume interrupted downloads.</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>Audio toolbox</h3><p>Provides vocal separation, text-to-speech and voice training tools. The training workflow covers audio slicing, pitch and feature extraction, model training and index export.</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>Automatic acceleration</h3><p>Supports NVIDIA CUDA and DirectML acceleration for AMD and Intel GPUs. Setup detects hardware and configures the corresponding runtime.</p></li>
           </ul>
         </section>
         <section aria-labelledby="steps-label">
           <h2 class="pd-h2 reveal" id="steps-label">Getting started</h2>
           <ol class="steps">
             <li class="reveal" style="--reveal-delay: 0ms"><h3>Install</h3><p>Run RVC_Fabric_Setup.exe. An install path with only English characters is recommended.</p></li>
-            <li class="reveal" style="--reveal-delay: 38ms"><h3>Follow the setup</h3><p>On first launch it detects your hardware, fetches the runtime and installs the virtual audio cable.</p></li>
-            <li class="reveal" style="--reveal-delay: 76ms"><h3>Route your audio</h3><p>Set RVC Fabric&#39;s output to CABLE Input, and the microphone in your game, QQ or Discord to CABLE Output. One-click VB-Cable virtual audio routing and live audio sliders for straightforward routing setup</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>Follow the setup</h3><p>Follow setup to configure the runtime and download or import a voice model. Install VB-Cable to send audio to another application. Restart the computer after installation.</p></li>
+            <li class="reveal" style="--reveal-delay: 76ms"><h3>Connect a voice application</h3><p>Set the application output to CABLE Input and the input in QQ, Discord or your streaming application to CABLE Output.</p></li>
           </ol>
         </section>
         <section aria-labelledby="faq-label">
@@ -229,7 +293,7 @@
             </details>
             <details class="faq-item">
               <summary>Does it work without an NVIDIA GPU?</summary>
-              <div class="faq-answer"><p>Yes. AMD and Intel GPUs run real-time conversion through DirectML. Only voice training requires an NVIDIA GPU.</p></div>
+              <div class="faq-answer"><p>AMD and Intel GPUs can use DirectML for real-time conversion. The current voice training interface requires an NVIDIA GPU.</p></div>
             </details>
             <details class="faq-item">
               <summary>How do people in my game, QQ or Discord hear the changed voice?</summary>
@@ -237,7 +301,7 @@
             </details>
             <details class="faq-item">
               <summary>How is it related to RVC WebUI?</summary>
-              <div class="faq-answer"><p>RVC Fabric is a deep customization of RVC WebUI. A Tauri + Rust + React desktop shell turns real-time conversion into a ready-to-use client, and the upstream training and inference WebUI still ships as an advanced feature.</p></div>
+              <div class="faq-answer"><p>RVC Fabric is based on RVC WebUI and adds a desktop interface, runtime setup, model management and audio tools. RVC WebUI is the upstream project for its voice conversion technology.</p></div>
             </details>
           </div>
         </section>

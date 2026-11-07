@@ -60,7 +60,9 @@ function organization() {
 
 // ---------- shared chrome ----------
 
-function head({ loc, path, title, description, alternatesFor, assets, graph }) {
+const uiSiteName = (loc) => UI[loc.code].siteTitle;
+
+function head({ loc, path, title, description, alternatesFor, assets, graph, image }) {
   const alternates = LOCALES.map(
     (other) => `    <link rel="alternate" hreflang="${other.htmlLang}" href="${absolute(alternatesFor(other))}">`
   ).join("\n");
@@ -74,6 +76,18 @@ function head({ loc, path, title, description, alternatesFor, assets, graph }) {
     <title>${esc(title)}</title>
     <meta name="description" content="${esc(description)}">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="${esc(uiSiteName(loc))}">
+    <meta property="og:title" content="${esc(title)}">
+    <meta property="og:description" content="${esc(description)}">
+    <meta property="og:url" content="${esc(absolute(path))}">
+${image ? `    <meta property="og:image" content="${esc(absolute(image.src))}">
+    <meta property="og:image:alt" content="${esc(t(image.alt, loc))}">
+    <meta property="og:image:width" content="${image.width}">
+    <meta property="og:image:height" content="${image.height}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="${esc(absolute(image.src))}">
+    <meta name="twitter:image:alt" content="${esc(t(image.alt, loc))}">` : '    <meta name="twitter:card" content="summary">'}
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1c1b18" media="(prefers-color-scheme: dark)">
@@ -341,7 +355,7 @@ function screenshots(loc, product) {
   return `
         <section class="shots${product.screenshots.length === 1 ? " is-single" : ""}" aria-label="${esc(ui.screenshotsLabel)}" data-close-label="${esc(ui.close)}">
 ${shots}
-        </section>`;
+        </section>${product.screenshotsNote ? `<p class="pd-note">${esc(t(product.screenshotsNote, loc))}</p>` : ""}`;
 }
 
 function interactiveDemo(loc, product) {
@@ -465,7 +479,13 @@ function productSchema(loc, product) {
   if (product.schema.downloadUrl) app.downloadUrl = product.schema.downloadUrl;
   if (product.schema.url) app.sameAs = [product.schema.url];
   if (github) app.sameAs = [...(app.sameAs || []), github.href];
-  if (product.screenshots.length) app.screenshot = product.screenshots.map((shot) => absolute(shot.src));
+  const images = product.screenshots.map((shot) => ({
+    "@type": "ImageObject", "@id": `${absolute(shot.src)}#image`,
+    contentUrl: absolute(shot.src), url: absolute(shot.src),
+    name: t(shot.alt, loc), caption: t(shot.alt, loc), width: shot.width, height: shot.height,
+    ...(shot.source ? { isBasedOn: shot.source } : {})
+  }));
+  if (images.length) { app.screenshot = images; app.image = images[0]; }
   if (!app.alternateName.length) delete app.alternateName;
 
   const ui = UI[loc.code];
@@ -479,7 +499,8 @@ function productSchema(loc, product) {
       name: t(product.name, loc),
       inLanguage: loc.htmlLang,
       isPartOf: { "@id": `${SITE_URL}/#website` },
-      mainEntity: { "@id": `${url}#software` }
+      mainEntity: { "@id": `${url}#software` },
+      ...(images.length ? { primaryImageOfPage: images[0] } : {})
     },
     {
       "@type": "BreadcrumbList",
@@ -518,7 +539,8 @@ export function renderProduct(loc, product, assets) {
     description: `${t(product.summary, loc)} ${t(product.note, loc)}`.trim(),
     alternatesFor,
     assets,
-    graph: productSchema(loc, product)
+    graph: productSchema(loc, product),
+    image: product.screenshots[0]
   });
 
   const back = `<a class="back" href="${homePath(loc)}"><span class="back-arrow" aria-hidden="true">←</span> <span class="back-label">${esc(ui.backHome)}</span></a>`;
@@ -534,8 +556,39 @@ ${product.actions.map((action) => actionButton(loc, action)).join("\n")}
           </div>
           <p class="pd-note reveal" style="${delay(4)}">${esc(t(product.note, loc))}</p>
         </header>
-${screenshots(loc, product)}${interactiveDemo(loc, product)}${features(loc, product)}${steps(loc, product)}${faq(loc, product)}${notice(loc, product)}${others(loc, product)}
+${screenshots(loc, product)}${product.guide ? guideLink(loc, product) : ""}${interactiveDemo(loc, product)}${features(loc, product)}${steps(loc, product)}${faq(loc, product)}${notice(loc, product)}${others(loc, product)}
       </main>`;
 
+  return page({ loc, headHtml, alternatesFor, topStart: back, main, bodyClass: "page-product" });
+}
+
+export const guidePath = (loc, guide) => `${loc.path}guides/${guide.slug}/`;
+const guideLabel = { sc: "使用指南", tc: "使用指南", en: "User guide", ja: "利用ガイド" };
+function guideLink(loc, product) {
+  return `<p class="pd-note"><a href="${guidePath(loc, { slug: product.guide })}">${esc(t(product.name, loc))} ${esc(t(guideLabel, loc))}</a></p>`;
+}
+export function renderGuide(loc, guide, assets) {
+  const product = PRODUCTS.find((p) => p.slug === guide.product);
+  const path = guidePath(loc, guide);
+  const alternatesFor = (other) => guidePath(other, guide);
+  const title = t(guide.title, loc);
+  const graph = [organization(), {
+    "@type": "TechArticle", "@id": `${absolute(path)}#article`, url: absolute(path),
+    headline: title, description: t(guide.summary, loc), inLanguage: loc.htmlLang,
+    dateModified: guide.date, author: { "@id": `${SITE_URL}/#organization` },
+    about: { "@id": `${absolute(productPath(loc, product))}#software` }
+  }];
+  const headHtml = head({ loc, path, title: `${title} | ${UI[loc.code].siteTitle}`,
+    description: t(guide.summary, loc), alternatesFor, assets, graph, image: product.screenshots[0] });
+  const sections = guide.sections.map((section) => `<section id="${esc(section.id)}">
+    <h2 class="pd-h2">${esc(t(section.title, loc))}</h2>
+    ${section.paragraphs.map((p) => `<p>${esc(t(p, loc))}</p>`).join("\n")}
+    ${section.links.length ? `<ul>${section.links.map((link) => `<li><a href="${esc(link.href)}">${esc(t(link.label, loc))}</a></li>`).join("")}</ul>` : ""}
+  </section>`).join("\n");
+  const back = `<a class="back" href="${productPath(loc, product)}">← ${esc(t(product.name, loc))}</a>`;
+  const main = `<main class="pd guide" id="main"><header class="pd-head">
+    <h1 class="pd-h2">${esc(title)}</h1><p class="pd-intro">${esc(t(guide.summary, loc))}</p>
+    <p class="pd-note"><time datetime="${guide.date}">${guide.date}</time></p></header>
+    ${sections}</main>`;
   return page({ loc, headHtml, alternatesFor, topStart: back, main, bodyClass: "page-product" });
 }

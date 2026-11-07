@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja" data-locale="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>RVC Fabric 利用ガイド | チューリングミラー Turing Mirror</title>
+    <meta name="description" content="RVC リアルタイム音声変換の導入条件、対応ハードウェア、音声接続、Neptune ブランチの機能を説明します。">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="チューリングミラー Turing Mirror">
+    <meta property="og:title" content="RVC Fabric 利用ガイド | チューリングミラー Turing Mirror">
+    <meta property="og:description" content="RVC リアルタイム音声変換の導入条件、対応ハードウェア、音声接続、Neptune ブランチの機能を説明します。">
+    <meta property="og:url" content="https://www.turingmirror.com/ja/guides/rvc-fabric/">
+    <meta property="og:image" content="https://www.turingmirror.com/assets/products/rvc-fabric/home.png">
+    <meta property="og:image:alt" content="RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。">
+    <meta property="og:image:width" content="1180">
+    <meta property="og:image:height" content="780">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.turingmirror.com/assets/products/rvc-fabric/home.png">
+    <meta name="twitter:image:alt" content="RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1c1b18" media="(prefers-color-scheme: dark)">
+    <link rel="canonical" href="https://www.turingmirror.com/ja/guides/rvc-fabric/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/guides/rvc-fabric/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/guides/rvc-fabric/">
+    <link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/guides/rvc-fabric/">
+    <link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/guides/rvc-fabric/">
+    <link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/guides/rvc-fabric/">
+    <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
+    <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="512x512">
+    <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any">
+    <link rel="stylesheet" href="/site.css?v=560f052c8f">
+    <link rel="stylesheet" href="/trm-motion.css?v=0a84a929b9">
+    <script src="/boot.js?v=95a2ee6377"></script>
+    <script src="/site.js?v=6496917b35" defer></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.turingmirror.com/#organization",
+      "name": "Turing Mirror",
+      "alternateName": [
+        "图灵镜",
+        "圖靈鏡",
+        "チューリングミラー"
+      ],
+      "url": "https://www.turingmirror.com/",
+      "logo": "https://www.turingmirror.com/favicon.svg",
+      "slogan": "Touching the setsuna, reaching the future.",
+      "sameAs": [
+        "https://space.bilibili.com/3546871148579062",
+        "https://v.douyin.com/6NxXcrKK9cc",
+        "https://www.xiaohongshu.com/user/profile/65f56bf1000000000b00e094",
+        "https://www.youtube.com/@TuringMirror",
+        "https://github.com/Turing-Mirror"
+      ]
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://www.turingmirror.com/ja/guides/rvc-fabric/#article",
+      "url": "https://www.turingmirror.com/ja/guides/rvc-fabric/",
+      "headline": "RVC Fabric 利用ガイド",
+      "description": "RVC リアルタイム音声変換の導入条件、対応ハードウェア、音声接続、Neptune ブランチの機能を説明します。",
+      "inLanguage": "ja",
+      "dateModified": "2026-11-07",
+      "author": {
+        "@id": "https://www.turingmirror.com/#organization"
+      },
+      "about": {
+        "@id": "https://www.turingmirror.com/ja/products/rvc-fabric/#software"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body class="page-product">
+    <a class="skip-link" href="#main">本文へスキップ</a>
+    <div class="shell">
+      <header class="topbar">
+        <a class="back" href="/ja/products/rvc-fabric/">← RVC Fabric</a>
+        <div class="topbar-end">
+        <details class="lang-menu">
+          <summary aria-label="言語: 日本語">
+            <span>日本語</span>
+          </summary>
+          <ul class="lang-list">
+            <li><a href="/guides/rvc-fabric/" hreflang="zh-Hans" lang="zh-Hans" data-locale="sc">简体中文</a></li>
+            <li><a href="/zh-hant/guides/rvc-fabric/" hreflang="zh-Hant" lang="zh-Hant" data-locale="tc">繁體中文</a></li>
+            <li><a href="/en/guides/rvc-fabric/" hreflang="en" lang="en" data-locale="en">English</a></li>
+            <li><a href="/ja/guides/rvc-fabric/" hreflang="ja" lang="ja" data-locale="ja" aria-current="true">日本語</a></li>
+          </ul>
+        </details>
+        </div>
+      </header>
+
+<main class="pd guide" id="main"><header class="pd-head">
+    <h1 class="pd-h2">RVC Fabric 利用ガイド</h1><p class="pd-intro">RVC リアルタイム音声変換の導入条件、対応ハードウェア、音声接続、Neptune ブランチの機能を説明します。</p>
+    <p class="pd-note"><time datetime="2026-11-07">2026-11-07</time></p></header>
+    <section id="install">
+    <h2 class="pd-h2">インストールと初回利用</h2>
+    <p>公式サイトからインストーラーをダウンロードします。インストール後、GPU に対応する実行環境を設定し、ボイスモデルをダウンロードまたはインポートします。インストーラーの容量は、設定完了後のディスク使用量とは異なります。</p>
+<p>実行環境、モデル、更新のダウンロードにはインターネット接続が必要です。必要なファイルを用意した後の音声変換はローカルで実行します。サードパーティのボイスモデルを使う前に利用許諾を確認してください。</p>
+    
+  </section>
+<section id="hardware">
+    <h2 class="pd-h2">システムとハードウェア</h2>
+    <p>デスクトップ版は Windows 10 と Windows 11 を対象としています。NVIDIA GPU では CUDA、AMD と Intel GPU では DirectML を利用できます。動作性能は GPU、ドライバー、モデルによって異なります。</p>
+<p>ボイス学習とリアルタイム変換では必要なハードウェアが異なります。現在の学習画面は NVIDIA GPU を必要とします。DirectML での変換対応は、同じ学習手順への対応を意味しません。</p>
+<p>リアルタイムの遅延にはモデル推論、音声バッファー、オーディオドライバー、受信側アプリが影響します。設定を変更したら、録音と実際の通話で音質と安定性を確認してください。</p>
+    
+  </section>
+<section id="routing">
+    <h2 class="pd-h2">QQ、Discord、OBS に接続する</h2>
+    <p>VB-Cable をインストールしてコンピューターを再起動したら、RVC Fabric の入力に実際のマイク、出力に CABLE Input を指定します。ボイスモデルを選択して変換を開始します。</p>
+<p>QQ または Discord の音声設定で、マイクまたは入力デバイスに CABLE Output を指定します。OBS では音声入力キャプチャのソースを追加し、CABLE Output を選択します。</p>
+<p>Windows の既定の再生デバイスはヘッドホンのままにします。モニタリングにもヘッドホンを指定し、音声が入力へ戻らないようにします。音量メーターを確認してから短い音声を録音してください。</p>
+    <ul><li><a href="https://vb-audio.com/Cable/">VB-Cable 公式説明</a></li><li><a href="https://obsproject.com/kb/sources-guide">OBS ソースガイド</a></li></ul>
+  </section>
+<section id="selection">
+    <h2 class="pd-h2">RVC ツールの選び方</h2>
+    <p>RVC は複数のアプリが利用する音声変換技術です。RVC Fabric は Windows のデスクトップ画面、実行環境の設定、モデル管理、音声ツールをまとめて利用したい方に向けたソフトウェアです。</p>
+<p>RVC Fabric、RVC WebUI、w-okada voice-changer を比較する際は、対象 OS、リアルタイム変換とファイル変換の用途、モデル形式、必要なハードウェアを確認し、同じ音声とモデルでテストしてください。各機能は該当バージョンの文書で確認できます。</p>
+    <ul><li><a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI">RVC WebUI 公式リポジトリ</a></li><li><a href="https://github.com/w-okada/voice-changer">w-okada voice-changer 公式リポジトリ</a></li></ul>
+  </section>
+<section id="neptune">
+    <h2 class="pd-h2">Neptune ブランチ</h2>
+    <p>2026 年 11 月 7 日時点で、Neptune ブランチにはスマートフォンのペアリング、ローカル API、MCP インターフェースがあります。スマートフォンで音声を収録し、デスクトップで変換します。ダウンロードしたビルドに含まれる機能は、そのバージョンのリリースノートで確認してください。</p>
+    <ul><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/mobile-v1.md">スマートフォンのペアリング説明</a></li><li><a href="https://github.com/Turing-Mirror/RVC-Fabric/blob/Neptune/docs/api-v1.md">ローカル API と MCP の説明</a></li></ul>
+  </section></main>
+
+      <footer class="site-footer">
+        <span>© 2026 Turing Mirror</span>
+        <nav aria-label="チャンネル">
+          <a href="https://github.com/Turing-Mirror" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only">（新しいタブで開く）</span></a>
+          <a href="https://space.bilibili.com/3546871148579062" target="_blank" rel="noopener noreferrer">ビリビリ<span class="sr-only">（新しいタブで開く）</span></a>
+          <a href="https://v.douyin.com/6NxXcrKK9cc" target="_blank" rel="noopener noreferrer">抖音（Douyin）<span class="sr-only">（新しいタブで開く）</span></a>
+          <a href="https://www.xiaohongshu.com/user/profile/65f56bf1000000000b00e094" target="_blank" rel="noopener noreferrer">小紅書（RED）<span class="sr-only">（新しいタブで開く）</span></a>
+          <a href="https://www.youtube.com/@TuringMirror" target="_blank" rel="noopener noreferrer">YouTube<span class="sr-only">（新しいタブで開く）</span></a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

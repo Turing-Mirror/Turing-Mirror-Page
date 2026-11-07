@@ -5,11 +5,12 @@
 ```
 src/
   content.mjs   唯一数据源：语言、界面文案、产品、频道、推广
+  rvc-fabric.mjs RVC Fabric 产品资料、截图与文案
   render.mjs    页面模板（首页、产品页、结构化数据）
 scripts/
   build.mjs     生成 dist/：复制 public/，渲染所有页面，生成 sitemap.xml 与 llms.txt
 public/         原样复制到 dist/ 的静态资源
-  site.css      设计令牌、样式与动画（warm paper / ink 配色）
+  site.css      设计规范、样式与动画（warm paper / ink 配色）
   site.js       交互：滚动入场、语言菜单、复制与二维码、截图大图、指针光效
   boot.js       首屏前执行：裸域跳转、语言偏好跳转、动画开关
   404.html      错误页
@@ -22,7 +23,7 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 
 ## 内容维护
 
-所有文案和链接都在 `src/content.mjs`。改完运行 `npm run build`，并把 `dist/` 的变化一起提交（改 `public/` 下的样式、脚本、图片也一样）：
+通用文案和链接位于 `src/content.mjs`，RVC Fabric 产品资料位于 `src/rvc-fabric.mjs`。改完运行 `npm run build`，并把 `dist/` 的变化一起提交（改 `public/` 下的样式、脚本、图片也一样）：
 
 - `UI`：四种语言的界面文案。
 - `PRODUCTS`：每个产品一项，`slug` 决定网址 `/products/<slug>/`。字段包括卡片简介 `summary`、详情页的 `lead` / `intro` / `actions`（下载、仓库等按钮）/ `features` / `steps` / `faq` / `notice` / `screenshots`，以及结构化数据用的 `schema`。`steps`、`faq`、`screenshots` 可以留空数组，对应板块不会出现。
@@ -55,7 +56,7 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 
 - 所有内容都直接写在 HTML 中，不依赖 JS。
 - 结构化数据（JSON-LD）：首页为 Organization / WebSite / 产品列表；产品页为 SoftwareApplication、BreadcrumbList，有问答时附 FAQPage。
-- `sitemap.xml` 包含全部语言版本及其互链；`/llms.txt` 是给 AI 搜索与大模型读的站点摘要。
+- `sitemap.xml` 包含全部语言版本及其互链；`/llms.txt` 提供站点摘要，不保证搜索收录或 AI 引用。
 - 推广链接带 `rel="sponsored"`。
 
 ## 动画
@@ -93,3 +94,11 @@ npm run check
 ```
 
 同步脚本读取 TRM UI 的规则数据及共享实现，不维护另一套规范。正常构建只读取已提交的参考数据和已安装的固定版本依赖，不需要相邻仓库或远端服务。`dist/` 包含生成的四语言示例、固定版本的组件包许可与官网动效参数。
+
+## 产品使用文档与图片
+
+`docs/guides/rvc-fabric-v1.json` 是四语言使用指南的数据源。构建时生成 `/guides/rvc-fabric/` 及对应语言路径，产品页和 sitemap 提供入口。文案按 TRM UI 最新 `src/pages/textRules.ts` 审阅；历史对照表需结合当前功能核对。
+
+产品截图由 `screenshots` 字段统一维护。第一张作为 Open Graph、Twitter 和软件结构化数据的代表图片；图片地址同时写入 sitemap。截图说明必须与画面相符；不能将旧图标为最新版本。现有 RVC Fabric 截图保留原地址，并注明历史来源。
+
+`docs/seo/v1/` 保存功能证据、检索基线、验证记录和 Gemini 文案审计交接书。公开下载版与 Neptune 分支功能分别说明，不因分支代码存在而宣称已发布。

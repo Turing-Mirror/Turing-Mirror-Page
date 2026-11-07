@@ -4,8 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>RVC Fabric：Windows 实时 AI 语音转换与模型训练工作台 | 图灵镜 Turing Mirror</title>
-    <meta name="description" content="高性能实时 AI 变声桌面客户端。开箱即用，游戏开黑、连麦、直播一个软件搞定。 支持 Windows 10 / 11 · NVIDIA（含 RTX 50 系列）/ AMD / Intel 显卡自动适配">
+    <meta name="description" content="基于 RVC 的 Windows 实时语音转换软件，支持音色管理、音频处理与模型训练。 支持 Windows 10 和 Windows 11。首次使用需要下载对应的运行环境与模型。">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="图灵镜 Turing Mirror">
+    <meta property="og:title" content="RVC Fabric：Windows 实时 AI 语音转换与模型训练工作台 | 图灵镜 Turing Mirror">
+    <meta property="og:description" content="基于 RVC 的 Windows 实时语音转换软件，支持音色管理、音频处理与模型训练。 支持 Windows 10 和 Windows 11。首次使用需要下载对应的运行环境与模型。">
+    <meta property="og:url" content="https://www.turingmirror.com/products/rvc-fabric/">
+    <meta property="og:image" content="https://www.turingmirror.com/assets/products/rvc-fabric/home.png">
+    <meta property="og:image:alt" content="RVC Fabric 首页，显示音色选择、音频工具和实时变声控制。">
+    <meta property="og:image:width" content="1180">
+    <meta property="og:image:height" content="780">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.turingmirror.com/assets/products/rvc-fabric/home.png">
+    <meta name="twitter:image:alt" content="RVC Fabric 首页，显示音色选择、音频工具和实时变声控制。">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1c1b18" media="(prefers-color-scheme: dark)">
@@ -18,7 +30,7 @@
     <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
     <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="512x512">
     <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any">
-    <link rel="stylesheet" href="/site.css?v=8958e4296d">
+    <link rel="stylesheet" href="/site.css?v=560f052c8f">
     <link rel="stylesheet" href="/trm-motion.css?v=0a84a929b9">
     <script src="/boot.js?v=95a2ee6377"></script>
     <script src="/site.js?v=6496917b35" defer></script>
@@ -50,7 +62,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://www.turingmirror.com/products/rvc-fabric/#software",
       "name": "RVC Fabric",
-      "description": "将 RVC 繁琐的命令行与网页脚本整合为开箱即用的原生桌面软件。涵盖实时变声、离线转换、人声分离、音频切分、特征提取、模型训练与模型融合等完整功能；安装包仅约 9 MB，首次启动时将根据本机显卡自动配置匹配的运行环境。",
+      "description": "RVC Fabric 是图灵镜开发的免费开源桌面软件，面向实时通话、直播互动与音频制作。支持实时变声、文件语音转换、人声分离与音色模型训练，并提供运行环境配置和模型管理。",
       "url": "https://www.turingmirror.com/products/rvc-fabric/",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Windows 10, Windows 11",
@@ -78,10 +90,51 @@
         "https://github.com/Turing-Mirror/RVC-Fabric"
       ],
       "screenshot": [
-        "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
-        "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png",
-        "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png"
-      ]
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png#image",
+          "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+          "url": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+          "name": "RVC Fabric 首页，显示音色选择、音频工具和实时变声控制。",
+          "caption": "RVC Fabric 首页，显示音色选择、音频工具和实时变声控制。",
+          "width": 1180,
+          "height": 780,
+          "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png#image",
+          "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png",
+          "url": "https://www.turingmirror.com/assets/products/rvc-fabric/settings.png",
+          "name": "RVC Fabric 设置页面。",
+          "caption": "RVC Fabric 设置页面。",
+          "width": 1180,
+          "height": 780,
+          "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/settings.png"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png#image",
+          "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png",
+          "url": "https://www.turingmirror.com/assets/products/rvc-fabric/misc.png",
+          "name": "RVC Fabric 其他页面。",
+          "caption": "RVC Fabric 其他页面。",
+          "width": 1180,
+          "height": 780,
+          "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/misc.png"
+        }
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png#image",
+        "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "url": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "name": "RVC Fabric 首页，显示音色选择、音频工具和实时变声控制。",
+        "caption": "RVC Fabric 首页，显示音色选择、音频工具和实时变声控制。",
+        "width": 1180,
+        "height": 780,
+        "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png"
+      }
     },
     {
       "@type": "WebPage",
@@ -94,6 +147,17 @@
       },
       "mainEntity": {
         "@id": "https://www.turingmirror.com/products/rvc-fabric/#software"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "@id": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png#image",
+        "contentUrl": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "url": "https://www.turingmirror.com/assets/products/rvc-fabric/home.png",
+        "name": "RVC Fabric 首页，显示音色选择、音频工具和实时变声控制。",
+        "caption": "RVC Fabric 首页，显示音色选择、音频工具和实时变声控制。",
+        "width": 1180,
+        "height": 780,
+        "isBasedOn": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png"
       }
     },
     {
@@ -131,7 +195,7 @@
           "name": "没有 NVIDIA 显卡能用吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "可以。AMD 与 Intel 显卡通过 DirectML 加速实时变声；只有「音色训练」需要 NVIDIA 显卡。"
+            "text": "AMD 和 Intel 显卡可通过 DirectML 加速实时变声。当前音色训练界面要求使用 NVIDIA 显卡。"
           }
         },
         {
@@ -147,7 +211,7 @@
           "name": "和 RVC WebUI 有什么关系？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "RVC Fabric 基于 RVC WebUI 深度定制，用 Tauri + Rust + React 桌面外壳把实时变声做成开箱即用的客户端；上游训练与推理 WebUI 作为高级功能随包保留。"
+            "text": "RVC Fabric 基于 RVC WebUI 开发，提供桌面操作界面、运行环境配置、模型管理与音频工具。RVC WebUI 是其语音转换技术的上游项目。"
           }
         }
       ]
@@ -178,46 +242,46 @@
 
       <main class="pd" id="main">
         <header class="pd-head">
-          <p class="pd-meta reveal">Windows 桌面端 · MIT 开源</p>
+          <p class="pd-meta reveal">以 MIT 协议开放源代码。</p>
           <h1 class="pd-title"><span class="pd-title-main" style="view-transition-name: product-rvc-fabric">RVC Fabric</span></h1>
           <p class="pd-lead reveal" style="--reveal-delay: 38ms">Windows 实时 AI 语音转换与模型训练工作台</p>
-          <p class="pd-intro reveal" style="--reveal-delay: 76ms">将 RVC 繁琐的命令行与网页脚本整合为开箱即用的原生桌面软件。涵盖实时变声、离线转换、人声分离、音频切分、特征提取、模型训练与模型融合等完整功能；安装包仅约 9 MB，首次启动时将根据本机显卡自动配置匹配的运行环境。</p>
+          <p class="pd-intro reveal" style="--reveal-delay: 76ms">RVC Fabric 是图灵镜开发的免费开源桌面软件，面向实时通话、直播互动与音频制作。支持实时变声、文件语音转换、人声分离与音色模型训练，并提供运行环境配置和模型管理。</p>
           <div class="pd-actions reveal" style="--reveal-delay: 114ms">
             <a class="btn btn-primary" href="https://cdn.turingmirror.com/d/rvc-fabric-setup">下载 Windows 版 <small>.exe</small></a>
             <a class="btn" href="https://github.com/Turing-Mirror/RVC-Fabric" target="_blank" rel="noopener noreferrer">GitHub 仓库 <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（在新标签页打开）</span></a>
             <a class="btn" href="https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases" target="_blank" rel="noopener noreferrer">CNB 国内镜像 <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">（在新标签页打开）</span></a>
           </div>
-          <p class="pd-note reveal" style="--reveal-delay: 152ms">支持 Windows 10 / 11 · NVIDIA（含 RTX 50 系列）/ AMD / Intel 显卡自动适配</p>
+          <p class="pd-note reveal" style="--reveal-delay: 152ms">支持 Windows 10 和 Windows 11。首次使用需要下载对应的运行环境与模型。</p>
         </header>
 
         <section class="shots" aria-label="截图" data-close-label="关闭">
-          <a class="shot reveal" style="--reveal-delay: 0ms" href="/assets/products/rvc-fabric/home.png" data-lightbox aria-label="RVC Fabric 主界面 - 查看大图">
-            <img src="/assets/products/rvc-fabric/home.png" alt="RVC Fabric 主界面" width="1180" height="780" decoding="async">
+          <a class="shot reveal" style="--reveal-delay: 0ms" href="/assets/products/rvc-fabric/home.png" data-lightbox aria-label="RVC Fabric 首页，显示音色选择、音频工具和实时变声控制。 - 查看大图">
+            <img src="/assets/products/rvc-fabric/home.png" alt="RVC Fabric 首页，显示音色选择、音频工具和实时变声控制。" width="1180" height="780" decoding="async">
           </a>
-          <a class="shot reveal" style="--reveal-delay: 38ms" href="/assets/products/rvc-fabric/settings.png" data-lightbox aria-label="RVC Fabric 设置 - 查看大图">
-            <img src="/assets/products/rvc-fabric/settings.png" alt="RVC Fabric 设置" width="1180" height="780" loading="lazy" decoding="async">
+          <a class="shot reveal" style="--reveal-delay: 38ms" href="/assets/products/rvc-fabric/settings.png" data-lightbox aria-label="RVC Fabric 设置页面。 - 查看大图">
+            <img src="/assets/products/rvc-fabric/settings.png" alt="RVC Fabric 设置页面。" width="1180" height="780" loading="lazy" decoding="async">
           </a>
-          <a class="shot reveal" style="--reveal-delay: 76ms" href="/assets/products/rvc-fabric/misc.png" data-lightbox aria-label="RVC Fabric 其他页 - 查看大图">
-            <img src="/assets/products/rvc-fabric/misc.png" alt="RVC Fabric 其他页" width="1180" height="780" loading="lazy" decoding="async">
+          <a class="shot reveal" style="--reveal-delay: 76ms" href="/assets/products/rvc-fabric/misc.png" data-lightbox aria-label="RVC Fabric 其他页面。 - 查看大图">
+            <img src="/assets/products/rvc-fabric/misc.png" alt="RVC Fabric 其他页面。" width="1180" height="780" loading="lazy" decoding="async">
           </a>
-        </section>
+        </section><p class="pd-note">以下为仓库保存的历史界面截图，记录于 2026 年 8 月。当前版本的界面可能有所不同。</p><p class="pd-note"><a href="/guides/rvc-fabric/">RVC Fabric 使用指南</a></p>
         <section aria-labelledby="features-label">
           <h2 class="pd-h2 reveal" id="features-label">核心特性</h2>
           <ul class="features">
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>实时变声</h3><p>低延迟推理，变声中可无缝切换音色，一键切换变声与原声。 端到端延迟低至 80 ms 以内，支持 ASIO 专业声卡通道选择与独立监听路由</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>实时变声</h3><p>将麦克风输入转换为所选音色，支持切换原声、ASIO 通道选择和独立监听。实际延迟取决于硬件、模型与音频设置。</p></li>
             <li class="reveal" style="--reveal-delay: 38ms"><h3>DSP 效果链</h3><p>内置噪声门、压缩器与 5 段参数均衡器，支持预设套用与精细调音。</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>音色与预设管理</h3><p>网格化音色库，绑定 .index 特征库；参数预设可保存、导入、导出分享。</p></li>
-            <li class="reveal" style="--reveal-delay: 38ms"><h3>社区音色广场</h3><p>图灵镜官方源 + 第三方开放源，多线程并发下载、断点续传。</p></li>
-            <li class="reveal" style="--reveal-delay: 0ms"><h3>音频工具箱</h3><p>人声分离提取干声与伴奏，文本转语音并换成目标音色，一键训练专属音色。 提供从音频切分、RMVPE 音高提取到模型训练与索引导出的可视化向导，支持训练中断后恢复进度</p></li>
-            <li class="reveal" style="--reveal-delay: 38ms"><h3>自动硬件加速</h3><p>自动识别 NVIDIA CUDA 与 AMD / Intel DirectML，并下载对应的计算运行时。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>音色与预设管理</h3><p>音色库支持关联 .index 特征文件，并可保存、导入和导出参数预设。</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>社区音色广场</h3><p>可从图灵镜和第三方来源获取音色模型，支持下载进度管理与中断后继续下载。</p></li>
+            <li class="reveal" style="--reveal-delay: 0ms"><h3>音频工具箱</h3><p>提供人声分离、文本转语音和音色训练工具。训练向导包含音频切分、音高与特征提取、模型训练和索引导出。</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>自动硬件加速</h3><p>支持 NVIDIA CUDA，以及 AMD 和 Intel 显卡的 DirectML 加速。安装引导可识别硬件并配置对应的运行环境。</p></li>
           </ul>
         </section>
         <section aria-labelledby="steps-label">
           <h2 class="pd-h2 reveal" id="steps-label">快速开始</h2>
           <ol class="steps">
             <li class="reveal" style="--reveal-delay: 0ms"><h3>下载安装</h3><p>运行 RVC_Fabric_Setup.exe，建议安装到纯英文路径。</p></li>
-            <li class="reveal" style="--reveal-delay: 38ms"><h3>跟随引导</h3><p>首次启动会自动识别硬件、补全运行时并安装虚拟声卡。</p></li>
-            <li class="reveal" style="--reveal-delay: 76ms"><h3>接入游戏 / 语音</h3><p>软件输出选 CABLE Input，游戏、QQ 或 Discord 的麦克风选 CABLE Output。 支持一键配置 VB-Cable 虚拟声卡与实时音频滑块，免去繁琐的音频路由设置</p></li>
+            <li class="reveal" style="--reveal-delay: 38ms"><h3>跟随引导</h3><p>按照引导配置运行环境，下载或导入音色模型。需要向其他软件传输声音时，安装 VB-Cable 虚拟声卡。安装后需重启电脑。</p></li>
+            <li class="reveal" style="--reveal-delay: 76ms"><h3>连接语音软件</h3><p>将软件输出设为 CABLE Input，并将 QQ、Discord 或直播软件的输入设为 CABLE Output。</p></li>
           </ol>
         </section>
         <section aria-labelledby="faq-label">
@@ -229,7 +293,7 @@
             </details>
             <details class="faq-item">
               <summary>没有 NVIDIA 显卡能用吗？</summary>
-              <div class="faq-answer"><p>可以。AMD 与 Intel 显卡通过 DirectML 加速实时变声；只有「音色训练」需要 NVIDIA 显卡。</p></div>
+              <div class="faq-answer"><p>AMD 和 Intel 显卡可通过 DirectML 加速实时变声。当前音色训练界面要求使用 NVIDIA 显卡。</p></div>
             </details>
             <details class="faq-item">
               <summary>怎么让游戏、QQ、Discord 里的人听到变声？</summary>
@@ -237,7 +301,7 @@
             </details>
             <details class="faq-item">
               <summary>和 RVC WebUI 有什么关系？</summary>
-              <div class="faq-answer"><p>RVC Fabric 基于 RVC WebUI 深度定制，用 Tauri + Rust + React 桌面外壳把实时变声做成开箱即用的客户端；上游训练与推理 WebUI 作为高级功能随包保留。</p></div>
+              <div class="faq-answer"><p>RVC Fabric 基于 RVC WebUI 开发，提供桌面操作界面、运行环境配置、模型管理与音频工具。RVC WebUI 是其语音转换技术的上游项目。</p></div>
             </details>
           </div>
         </section>
