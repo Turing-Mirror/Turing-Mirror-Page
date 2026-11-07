@@ -556,7 +556,7 @@ ${product.actions.map((action) => actionButton(loc, action)).join("\n")}
           </div>
           <p class="pd-note reveal" style="${delay(4)}">${esc(t(product.note, loc))}</p>
         </header>
-${screenshots(loc, product)}${product.guide ? guideLink(loc, product) : ""}${interactiveDemo(loc, product)}${features(loc, product)}${steps(loc, product)}${faq(loc, product)}${notice(loc, product)}${others(loc, product)}
+${screenshots(loc, product)}${product.screenshotGallery ? `<p class="pd-note"><a href="${screenshotPath(loc, product)}">${esc(t(product.screenshotGallery.title, loc))}</a></p>` : ""}${product.guide ? guideLink(loc, product) : ""}${interactiveDemo(loc, product)}${features(loc, product)}${steps(loc, product)}${faq(loc, product)}${notice(loc, product)}${others(loc, product)}
       </main>`;
 
   return page({ loc, headHtml, alternatesFor, topStart: back, main, bodyClass: "page-product" });
@@ -591,4 +591,45 @@ export function renderGuide(loc, guide, assets) {
     <p class="pd-note"><time datetime="${guide.date}">${guide.date}</time></p></header>
     ${sections}</main>`;
   return page({ loc, headHtml, alternatesFor, topStart: back, main, bodyClass: "page-product" });
+}
+
+export const screenshotPath = (loc, product) => productPath(loc, product) + "screenshots/";
+const imageLinks = {
+ original: { sc: "查看原图", tc: "查看原圖", en: "View original image", ja: "元の画像を表示" },
+ source: { sc: "仓库来源", tc: "儲存庫來源", en: "Repository source", ja: "リポジトリの出典" }
+};
+export function renderScreenshots(loc, product, assets) {
+  const path = screenshotPath(loc, product);
+  const alternatesFor = other => screenshotPath(other, product);
+  const title = t(product.screenshotGallery.title, loc);
+  const description = t(product.screenshotGallery.description, loc);
+  const images = product.screenshots.map(shot => ({
+    "@type": "ImageObject", "@id": absolute(shot.src) + "#image",
+    name: t(shot.alt, loc), caption: t(shot.caption, loc),
+    description: t(product.screenshotsNote, loc),
+    contentUrl: absolute(shot.src), url: absolute(path) + "#" + shot.id,
+    width: shot.width, height: shot.height, encodingFormat: "image/png",
+    isBasedOn: shot.source, creator: { "@id": SITE_URL + "/#organization" },
+    about: { "@id": absolute(productPath(loc, product)) + "#software" }
+  }));
+  const graph = [organization(), ...images, {
+    "@type": "CollectionPage", "@id": absolute(path) + "#webpage", url: absolute(path),
+    name: title, description, inLanguage: loc.htmlLang,
+    about: { "@id": absolute(productPath(loc, product)) + "#software" },
+    primaryImageOfPage: { "@id": images[0]["@id"] },
+    mainEntity: { "@type": "ItemList", itemListElement: images.map((img, i) => ({
+      "@type": "ListItem", position: i + 1, item: { "@id": img["@id"] }
+    })) }
+  }];
+  const headHtml = head({ loc, path, title, description, alternatesFor, assets, graph, image: product.screenshots[0] });
+  const figures = product.screenshots.map((shot, i) => `<section id="${shot.id}">
+    <h2 class="pd-h2">${esc(t(shot.alt, loc))}</h2>
+    <figure class="screenshot-record">
+      <a href="${shot.src}"><img src="${shot.src}" alt="${esc(t(shot.alt, loc))}" width="${shot.width}" height="${shot.height}"${i ? ' loading="lazy"' : ''}></a>
+      <figcaption>${esc(t(shot.caption, loc))}</figcaption>
+    </figure>
+    <ul><li><a href="${shot.src}">${esc(t(imageLinks.original, loc))}</a></li><li><a href="${shot.source}">${esc(t(imageLinks.source, loc))}</a></li></ul>
+  </section>`).join("\n");
+  const main = `<main class="pd guide" id="main"><header class="pd-head"><h1 class="pd-h2">${esc(title)}</h1><p class="pd-intro">${esc(description)}</p><p class="pd-note">${esc(t(product.screenshotsNote, loc))}</p></header>${figures}</main>`;
+  return page({ loc, headHtml, alternatesFor, topStart: `<a class="back" href="${productPath(loc, product)}">← ${esc(t(product.name, loc))}</a>`, main, bodyClass: "page-product" });
 }

@@ -91,7 +91,14 @@ export const rvcFabricProduct = {
         "en": "RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.",
         "ja": "RVC Fabric のホーム画面。ボイス選択、音声ツール、リアルタイム変換の操作を表示しています。"
       },
-      "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png"
+      "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/home.png",
+      "caption": {
+        "sc": "主界面展示最近使用的音色和音频工具入口，底部提供变声开关、音高和共鸣调节。",
+        "tc": "主介面顯示最近使用的音色和音訊工具入口，底部提供變聲開關、音高和共鳴調整。",
+        "en": "The home screen shows recent voices and audio tools. The bottom controls provide voice conversion, pitch and resonance settings.",
+        "ja": "ホーム画面には最近使用したボイスと音声ツールが表示されます。下部では音声変換の切り替え、ピッチ、共鳴を調整できます。"
+      },
+      "id": "home"
     },
     {
       "src": "/assets/products/rvc-fabric/settings.png",
@@ -103,7 +110,14 @@ export const rvcFabricProduct = {
         "en": "RVC Fabric settings screen.",
         "ja": "RVC Fabric の設定画面です。"
       },
-      "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/settings.png"
+      "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/settings.png",
+      "caption": {
+        "sc": "设备与音频设置页展示设备类型、麦克风输入、输入增益、输出设备和监听选项。",
+        "tc": "裝置與音訊設定頁顯示裝置類型、麥克風輸入、輸入增益、輸出裝置和監聽選項。",
+        "en": "The audio settings screen shows the device type, microphone input, input gain, output device and monitoring option.",
+        "ja": "音声設定画面にはデバイスの種類、マイク入力、入力ゲイン、出力デバイス、モニタリング設定が表示されます。"
+      },
+      "id": "settings"
     },
     {
       "src": "/assets/products/rvc-fabric/misc.png",
@@ -115,7 +129,14 @@ export const rvcFabricProduct = {
         "en": "RVC Fabric additional tools screen.",
         "ja": "RVC Fabric のその他の機能の画面です。"
       },
-      "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/misc.png"
+      "source": "https://github.com/Turing-Mirror/RVC-Fabric/blob/dd0de24/assets/screenshots/misc.png",
+      "caption": {
+        "sc": "其他功能页展示软件版本、目录、运行环境、显卡与引擎状态。该截图中的版本号为 1.4.2。",
+        "tc": "其他功能頁顯示軟體版本、目錄、執行環境、顯示卡與引擎狀態。此截圖中的版本號為 1.4.2。",
+        "en": "The other features screen shows the application version, directories, runtime, GPU and engine status. The version displayed in this screenshot is 1.4.2.",
+        "ja": "その他の機能画面にはアプリのバージョン、ディレクトリ、実行環境、GPU、エンジンの状態が表示されます。この画像に表示されたバージョンは 1.4.2 です。"
+      },
+      "id": "misc"
     }
   ],
   "features": [
@@ -318,5 +339,19 @@ export const rvcFabricProduct = {
     "tc": "以下為儲存庫保存的歷史介面截圖，記錄於 2026 年 8 月。目前版本的介面可能有所不同。",
     "en": "These archived interface screenshots were recorded in the repository in August 2026. The current interface may differ.",
     "ja": "以下は 2026 年 8 月にリポジトリに記録された過去の画面です。現在のバージョンとは表示が異なる場合があります。"
+  },
+  "screenshotGallery": {
+    "title": {
+      "sc": "RVC Fabric 官方截图",
+      "tc": "RVC Fabric 官方截圖",
+      "en": "RVC Fabric official screenshots",
+      "ja": "RVC Fabric 公式スクリーンショット"
+    },
+    "description": {
+      "sc": "图灵镜提供的 RVC Fabric 桌面软件截图，展示主界面、设备与音频设置及运行状态。",
+      "tc": "圖靈鏡提供的 RVC Fabric 桌面軟體截圖，展示主介面、裝置與音訊設定及執行狀態。",
+      "en": "Screenshots of the RVC Fabric desktop application provided by Turing Mirror, showing the home screen, audio device settings and runtime status.",
+      "ja": "Turing Mirror が公開する RVC Fabric デスクトップアプリのスクリーンショットです。ホーム画面、音声デバイスの設定、動作状態を紹介します。"
+    }
   }
 };

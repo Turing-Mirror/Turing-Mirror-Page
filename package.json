@@ -10,7 +10,8 @@
     "check": "node --check public/site.js && node --check public/boot.js && node scripts/build.mjs",
     "deploy": "npm run build && wrangler pages deploy dist --project-name turing-mirror-page",
     "sync:trm-ui": "node scripts/sync-trm-ui.mjs",
-    "check:seo": "node scripts/check-seo.mjs"
+    "check:seo": "node scripts/check-seo.mjs",
+    "submit:indexnow": "node scripts/submit-indexnow.mjs"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.3",

@@ -224,4 +224,48 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/guides/rvc-fabric/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/guides/rvc-fabric/"/>
   </url>
+  <url>
+    <loc>https://www.turingmirror.com/products/rvc-fabric/screenshots/</loc>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/home.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/settings.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/misc.png</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/products/rvc-fabric/screenshots/"/>
+  </url>
+  <url>
+    <loc>https://www.turingmirror.com/zh-hant/products/rvc-fabric/screenshots/</loc>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/home.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/settings.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/misc.png</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/products/rvc-fabric/screenshots/"/>
+  </url>
+  <url>
+    <loc>https://www.turingmirror.com/en/products/rvc-fabric/screenshots/</loc>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/home.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/settings.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/misc.png</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/products/rvc-fabric/screenshots/"/>
+  </url>
+  <url>
+    <loc>https://www.turingmirror.com/ja/products/rvc-fabric/screenshots/</loc>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/home.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/settings.png</image:loc></image:image>
+    <image:image><image:loc>https://www.turingmirror.com/assets/products/rvc-fabric/misc.png</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.turingmirror.com/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.turingmirror.com/zh-hant/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.turingmirror.com/en/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.turingmirror.com/ja/products/rvc-fabric/screenshots/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.turingmirror.com/products/rvc-fabric/screenshots/"/>
+  </url>
 </urlset>

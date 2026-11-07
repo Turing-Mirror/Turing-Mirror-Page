@@ -14,6 +14,7 @@ RVC Fabric is a free, open-source desktop application developed by Turing Mirror
 - Supports Windows 10 and Windows 11. Download the required runtime and models before first use.
 - Page: https://www.turingmirror.com/en/products/rvc-fabric/ (简体中文: https://www.turingmirror.com/products/rvc-fabric/)
 - Links: Download for Windows: https://cdn.turingmirror.com/d/rvc-fabric-setup; GitHub: https://github.com/Turing-Mirror/RVC-Fabric; CNB mirror (China): https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases
+- Official screenshot page: https://www.turingmirror.com/en/products/rvc-fabric/screenshots/
 - Screenshot record: These archived interface screenshots were recorded in the repository in August 2026. The current interface may differ.
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/home.png (RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.)
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/settings.png (RVC Fabric settings screen.)
@@ -35,6 +36,7 @@ Built on Android's accessibility service, MoeText rewrites what you type in QQ a
 - Links: Download APK: https://cdn.turingmirror.com/d/moetype; GitHub: https://github.com/Turing-Mirror/MoeText
 
 
+
 - Style packs: Four built-in styles (catgirl, classical Chinese, emoji riddles and oracle) switch in one tap. Import and export your own as JSON.
 - Rule-chain engine: Combine quick swaps, custom replacements, sentence endings, fixed suffixes and random kaomoji.
 - Two modes: Rewrite after a pause or as you type, and send messages the way you always do.
@@ -52,6 +54,7 @@ Interactive quizzes that run right in your browser. From anime and GalGames to g
 - Links: Start a quiz: https://test.turingmirror.com/; GitHub: https://github.com/Turing-Mirror/Mirror-Test
 
 
+
 - Summer 2026 anime personality test: Find the summer 2026 anime that matches you best.
 - GalGame destined-route test: Which destined route would you end up on?
 - Band-TI girls' band character test: 20 questions drawn from a pool of 100, covering 67 characters, 8 series and 14 bands.
@@ -64,6 +67,7 @@ TRM UI provides consistent components, colors and interaction rules for Turing M
 - The gallery runs in a browser. Running the Tauri desktop shell requires Rust.
 - Page: https://www.turingmirror.com/en/products/trm-ui/ (简体中文: https://www.turingmirror.com/products/trm-ui/)
 - Links: View project: https://github.com/Turing-Mirror/TRM-UI; Read integration guide: https://github.com/Turing-Mirror/TRM-UI/blob/5eaf13a5feb8d03002731b3b6874165aa03b9939/docs/components-v1.md
+
 
 
 - Shared components: Buttons, forms, menus, tooltips and dialogs are maintained in one package. Products receive improvements by updating their dependency.

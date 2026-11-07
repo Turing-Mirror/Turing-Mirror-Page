@@ -6,6 +6,8 @@
 
 分享对话已核实：回答链接到 RVC Fabric 官方仓库，但配图为 TechnoEdge 2023 年报道中的 Voice Changer Client 界面。请将此项记为已确认的图片归属错误，不仅归因为索引更新延迟。具体图片检索词和选择原因仍不可见。
 
+后续已新增四语言官方截图页，并接入 IndexNow 主动通知。新增文案位于 `src/rvc-fabric.mjs` 的 `screenshotGallery`、各截图的 `caption`，以及 `src/render.mjs` 的 `imageLinks`。本轮另行核对最新 TRM UI `c17c7c3`，文案规则文件未变。详细执行记录见 `evidence/image-followup.md`。
+
 ## 阅读顺序
 
 1. 阅读材料包中的 `rules/textRules.ts`。它来自 TRM UI `8161ac1`，是此次首要文案依据。
