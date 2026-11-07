@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-11-07T10:02:01Z",
+  "property": "sc-domain:turingmirror.com",
+  "siteCommit": "24c5109",
+  "sitemap": {
+    "url": "https://www.turingmirror.com/sitemap.xml",
+    "submissionStatus": "Success",
+    "previousDiscoveredPages": 28,
+    "discoveredPages": 20,
+    "lastReadDateDisplayed": "2026-11-07"
+  },
+  "productRecrawlRequests": {
+    "status": "Added to priority crawl queue",
+    "urls": [
+      "https://www.turingmirror.com/products/rvc-fabric/",
+      "https://www.turingmirror.com/en/products/rvc-fabric/",
+      "https://www.turingmirror.com/zh-hant/products/rvc-fabric/",
+      "https://www.turingmirror.com/ja/products/rvc-fabric/"
+    ]
+  },
+  "retiredUrlInspections": [
+    {
+      "url": "https://www.turingmirror.com/guides/rvc-fabric/",
+      "indexedStatus": "URL unknown to Google; not indexed"
+    },
+    {
+      "url": "https://www.turingmirror.com/products/rvc-fabric/screenshots/",
+      "indexedStatus": "Crawled - currently not indexed"
+    },
+    {
+      "url": "https://www.turingmirror.com/en/products/rvc-fabric/screenshots/",
+      "indexedStatus": "Indexed",
+      "liveTest": {
+        "timeDisplayed": "2026-11-07 18:01:28",
+        "agent": "Google Inspection Tool smartphone",
+        "fetchStatus": "Successful",
+        "userDeclaredCanonical": "https://www.turingmirror.com/en/products/rvc-fabric/",
+        "googleSelectedCanonical": "Determined after indexing"
+      },
+      "requestStatus": "Added to priority crawl queue"
+    }
+  ],
+  "retiredUrlHandling": {
+    "redirectStatus": 301,
+    "destination": "Corresponding language product page",
+    "removedFromSitemap": true,
+    "temporaryRemovalRequested": false,
+    "reference": "https://support.google.com/webmasters/answer/9689846?hl=en"
+  },
+  "indexNow": {
+    "checkedAt": "2026-11-07T09:47:59.403Z",
+    "endpoint": "https://www.bing.com/indexnow",
+    "status": 200,
+    "result": "received",
+    "submittedUrlCount": 12,
+    "scope": "Four product pages and eight retired guide or screenshot URLs"
+  },
+  "pending": "Google must process the queued requests and replace its indexed copies."
+}
