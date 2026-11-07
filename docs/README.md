@@ -4,12 +4,15 @@
 
 ```
 src/
-  content.mjs   唯一数据源：语言、界面文案、产品、频道、推广
+  content.mjs   通用文案、产品汇总、频道与推广
   rvc-fabric.mjs RVC Fabric 产品资料、截图与文案
-  render.mjs    页面模板（首页、产品页、结构化数据）
+  trm-ui.mjs    TRM UI 产品与交互示例文案
+  demo/         TRM UI 交互示例
+  render.mjs    首页、产品页、指南、截图页与结构化数据模板
 scripts/
   build.mjs     生成 dist/：复制 public/，渲染所有页面，生成 sitemap.xml 与 llms.txt
-public/         原样复制到 dist/ 的静态资源
+docs/guides/    四语言使用指南的数据源
+public/         复制到 dist/ 的静态资源
   site.css      设计规范、样式与动画（warm paper / ink 配色）
   site.js       交互：滚动入场、语言菜单、复制与二维码、截图大图、指针光效
   boot.js       首屏前执行：裸域跳转、语言偏好跳转、动画开关
@@ -23,7 +26,7 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 
 ## 内容维护
 
-通用文案和链接位于 `src/content.mjs`，RVC Fabric 产品资料位于 `src/rvc-fabric.mjs`。改完运行 `npm run build`，并把 `dist/` 的变化一起提交（改 `public/` 下的样式、脚本、图片也一样）：
+通用文案和链接位于 `src/content.mjs`，RVC Fabric 产品资料位于 `src/rvc-fabric.mjs`。修改这些文件或 `public/` 中的资源后，运行 `npm run build`，将生成的 `dist/` 文件一同提交。主要字段如下：
 
 - `UI`：四种语言的界面文案。
 - `PRODUCTS`：每个产品一项，`slug` 决定网址 `/products/<slug>/`。字段包括卡片简介 `summary`、详情页的 `lead` / `intro` / `actions`（下载、仓库等按钮）/ `features` / `steps` / `faq` / `notice` / `screenshots`，以及结构化数据用的 `schema`。`steps`、`faq`、`screenshots` 可以留空数组，对应板块不会出现。
@@ -52,17 +55,17 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 - 语言菜单是普通链接；选择后写入 `localStorage`（键名 `turingmirror:locale`），之后访问简体中文页会跳到所选语言。直接访问其他语言的网址不会被跳转。
 - 首次访问且浏览器语言不同时，只在右上角显示提示链接，不自动跳转（避免搜索引擎被重定向）。
 
-## SEO / GEO
+## 搜索入口与元数据
 
-- 所有内容都直接写在 HTML 中，不依赖 JS。
+- 产品介绍、指南和截图直接输出到 HTML。TRM UI 交互示例使用 React，页面交互通过 JavaScript 执行。
 - 结构化数据（JSON-LD）：首页为 Organization / WebSite / 产品列表；产品页为 SoftwareApplication、BreadcrumbList，有问答时附 FAQPage。
-- `sitemap.xml` 包含全部语言版本及其互链；`/llms.txt` 提供站点摘要，不保证搜索收录或 AI 引用。
+- `sitemap.xml` 包含各语言页面、语言互链和产品截图地址。`/llms.txt` 提供产品、指南与截图入口。
 - 推广链接带 `rel="sponsored"`。
 
 ## 动画
 
 - 页面切换：跨页 View Transitions（Chrome / Edge / Safari 18.2+），首页卡片上的产品名会形变为详情页标题。不支持的浏览器正常跳转。
-- 首页 LOGO 按上方曲线、下方折线、右侧竖线的顺序逐线绘制，只播放一次，完成后保持静止。倒影随后「浮出水面」，并随鼠标轻微倾斜。
+- 首页 LOGO 按上方曲线、下方折线、右侧竖线的顺序逐线绘制，只播放一次，完成后保持静止。倒影随后显示，并随鼠标轻微倾斜。
 - 内容滚动入场、卡片跟随指针的柔光、二维码展开、问答折叠、截图大图。
 - 系统开启「减少动态效果」时关闭所有动画与页面过渡。
 
@@ -76,9 +79,7 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 npm run deploy
 ```
 
-Cloudflare Pages 项目 `turing-mirror-page` 连接 `main` 分支自动部署，发布目录由 `wrangler.jsonc` 的 `pages_build_output_dir`（`./dist`）决定。`dist/` 已入库，所以不设构建命令也能发布；建议在 Cloudflare 后台把构建命令设为 `npm run build`，这样即使忘记提交 `dist/` 也会在部署时重新生成。
-
-手动部署：`npm run deploy`。
+Cloudflare Pages 项目 `turing-mirror-page` 连接 `main` 分支自动部署。发布目录由 `wrangler.jsonc` 的 `pages_build_output_dir` 指定为 `./dist`，生成文件随源代码提交。上方命令用于手动构建和部署。
 
 ## TRM UI 产品页与示例
 
@@ -86,23 +87,24 @@ TRM UI 的介绍、接入步骤与示例文案位于 `src/trm-ui.mjs`。四种�
 
 交互示例使用 `package.json` 中固定提交的 `trm-ui`，由 `src/demo/main.jsx` 引用真实组件。构建时生成独立页面与脚本、样式，只在 TRM UI 产品页通过 iframe 加载。首页及其他产品页继续使用静态 HTML。示例样式在 iframe 内生效。
 
-`src/trm-ui-reference.json` 与 `src/demo/trm-motion.css` 是从 TRM UI 生成的参考数据，包含来源提交、四语言动效名称、文案规则与动效参数。不要直接编辑这些生成文件。更新组件版本时，在干净的 TRM UI 检出中选定提交，更新官网依赖，然后运行：
+`src/trm-ui-reference.json` 与 `src/demo/trm-motion.css` 是从 TRM UI 生成的参考数据，包含来源提交、四语言动效名称、文案规则与动效参数。更新组件版本时，在干净的 TRM UI 检出中选定提交，更新官网依赖，再通过同步脚本生成这些文件：
 
 ```sh
 npm run sync:trm-ui -- ../TRM-UI
 npm run check
+npm run check:seo
 ```
 
-同步脚本读取 TRM UI 的规则数据及共享实现，不维护另一套规范。正常构建只读取已提交的参考数据和已安装的固定版本依赖，不需要相邻仓库或远端服务。`dist/` 包含生成的四语言示例、固定版本的组件包许可与官网动效参数。
+同步脚本读取 TRM UI 的规则数据及共享实现。日常构建使用已提交的参考数据和已安装的固定版本依赖。`dist/` 包含生成的四语言示例、固定版本的组件包许可与官网动效参数。
 
 ## 产品使用文档与图片
 
 `docs/guides/rvc-fabric-v1.json` 是四语言使用指南的数据源。构建时生成 `/guides/rvc-fabric/` 及对应语言路径，产品页和 sitemap 提供入口。文案按 TRM UI 最新 `src/pages/textRules.ts` 审阅；历史对照表需结合当前功能核对。
 
-产品截图由 `screenshots` 字段统一维护。第一张作为 Open Graph、Twitter 和软件结构化数据的代表图片；图片地址同时写入 sitemap。截图说明必须与画面相符；不能将旧图标为最新版本。现有 RVC Fabric 截图保留原地址，并注明历史来源。
+产品截图由 `screenshots` 字段统一维护。第一张作为 Open Graph、Twitter 和软件结构化数据的代表图片；图片地址同时写入 sitemap。图注说明画面内容、记录日期与来源。现有 RVC Fabric 截图记录于 2026 年 8 月。
 
 设置 `screenshotGallery` 后，构建器生成产品的四语言 `/products/{slug}/screenshots/` 页面。截图的 `id`、`caption` 与 `source` 分别提供页内地址、可见说明和仓库来源。
 
-发布完成后，可以用 `npm run submit:indexnow -- /更新的页面/` 通知 Bing 等参与搜索引擎。验证文件位于 `public/indexnow-key.txt`。仅提交新增或修改的地址；回执不代表已收录。Google Search Console 的提交和索引检查需单独完成。
+发布完成后，可以用 `npm run submit:indexnow -- /更新的页面/` 通知 Bing 等参与搜索引擎。验证文件位于 `public/indexnow-key.txt`。提交新增或修改的地址后，将回执记入发布记录。页面收录状态在搜索平台查看。Google Search Console 单独提交 sitemap 并查看索引状态。
 
-`docs/seo/v1/` 保存功能证据、检索基线、验证记录和 Gemini 文案审计交接书。公开下载版与 Neptune 分支功能分别说明，不因分支代码存在而宣称已发布。
+`docs/seo/v1/` 保存功能证据、检索基线、验证记录和 Gemini 文案审计交接书。开发功能依据 Neptune 分支，已发布功能依据对应版本的发布说明。
