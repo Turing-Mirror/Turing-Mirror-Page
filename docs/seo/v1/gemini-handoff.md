@@ -4,6 +4,8 @@
 
 后续图片检索复查见 `evidence/image-recheck.md`（仓库内为同目录的 `image-recheck.md`）。用户仍遇到 GPT 配图错误，本次独立图片查询也没有返回官方截图。请勿将网站改动完成写成问题已经解决。
 
+分享对话已核实：回答链接到 RVC Fabric 官方仓库，但配图为 TechnoEdge 2023 年报道中的 Voice Changer Client 界面。请将此项记为已确认的图片归属错误，不仅归因为索引更新延迟。具体图片检索词和选择原因仍不可见。
+
 ## 阅读顺序
 
 1. 阅读材料包中的 `rules/textRules.ts`。它来自 TRM UI `8161ac1`，是此次首要文案依据。
