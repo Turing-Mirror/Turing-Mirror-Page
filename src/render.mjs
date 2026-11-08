@@ -479,10 +479,18 @@ function productSchema(loc, product) {
   if (product.schema.downloadUrl) app.downloadUrl = product.schema.downloadUrl;
   if (product.schema.url) app.sameAs = [product.schema.url];
   if (github) app.sameAs = [...(app.sameAs || []), github.href];
+  const rights = product.schema.screenshotRights;
   const images = product.screenshots.map((shot) => ({
     "@type": "ImageObject", "@id": `${absolute(shot.src)}#image`,
     contentUrl: absolute(shot.src), url: absolute(shot.src),
     name: t(shot.alt, loc), caption: t(shot.alt, loc), width: shot.width, height: shot.height,
+    ...(rights ? {
+      creator: { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: rights.creditText },
+      creditText: rights.creditText,
+      copyrightNotice: rights.copyrightNotice,
+      license: rights.license,
+      acquireLicensePage: absolute(rights.acquireLicensePath)
+    } : {}),
     ...(shot.source ? { isBasedOn: shot.source } : {})
   }));
   if (images.length) { app.screenshot = images; app.image = images[0]; }

@@ -39,7 +39,13 @@ export const rvcFabricProduct = {
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "Windows 10, Windows 11",
     "license": "https://opensource.org/licenses/MIT",
-    "downloadUrl": "https://cdn.turingmirror.com/d/rvc-fabric-setup"
+    "downloadUrl": "https://cdn.turingmirror.com/d/rvc-fabric-setup",
+    "screenshotRights": {
+      "creditText": "Turing Mirror",
+      "copyrightNotice": "© Turing Mirror",
+      "license": "https://github.com/Turing-Mirror/Turing-Mirror-Page/blob/main/docs/brand-assets.md",
+      "acquireLicensePath": "/en/#reach-label"
+    }
   },
   "actions": [
     {
