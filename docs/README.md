@@ -106,3 +106,5 @@ npm run check:seo
 发布完成后，可以用 `npm run submit:indexnow -- /更新的页面/` 通知 Bing 等参与搜索引擎。验证文件位于 `public/indexnow-key.txt`。提交新增或修改的地址后，将回执记入发布记录。页面收录状态在搜索平台查看。Google Search Console 单独提交 sitemap 并查看索引状态。
 
 `docs/seo/v1/` 保存功能证据、检索基线、验证记录和 Gemini 文案审计交接书。用户介绍依据发布版本；Beta 分支的实现记录用于维护核对。
+
+两款 Fabric 的更新清单、日志和公告图通过官网发布。操作步骤见 [Fabric 发版流程](fabric-release-v1.md)。

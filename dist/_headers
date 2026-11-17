@@ -23,3 +23,15 @@
 
 /llms.txt
   Content-Type: text/plain; charset=utf-8
+
+/releases/:product/updater.json
+  Cache-Control: public, max-age=0, must-revalidate
+
+/releases/:product/changelog.json
+  Cache-Control: public, max-age=0, must-revalidate
+
+/releases/:product/plaza.json
+  Cache-Control: public, max-age=0, must-revalidate
+
+/releases/:product/images/*
+  Cache-Control: public, max-age=86400, immutable

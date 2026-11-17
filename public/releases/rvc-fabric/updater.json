@@ -1,0 +1,11 @@
+{
+  "version": "1.7.2",
+  "notes": "RVC Fabric 1.7.2：改进界面交互和工具窗口最大化，支持录音目录管理及安装位置迁移，完善说明搜索、多语言文案与训练封面读取。",
+  "pub_date": "2026-11-01T07:57:36Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRc0RWbTU5UHd6MVFuL0tsZUtFbjYyTkZPcnI2YmxHd25EZHJpOUVYWFIyZmVMemtHTG1nOXczMkRiSXdNY0FmK09qZEduR1RHOHM3WGFwSnpBb0dZa3NEejRTMjFTS1FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTE5ODU2CWZpbGU6UlZDIEZhYnJpY18xLjcuMl94NjQtc2V0dXAuZXhlCk1vdWo0YWZNb2dseDF5UGlvUXRsZzhDRWxqVGt4b2hkMHNIWjd5R3A2akl6cGxkSFRoZ1YyNzY4bzBIOHB6MWp0K3cyd2JJaUh5VVFHTFNVcnFmZ0FnPT0K",
+      "url": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/setup/RVC%20Fabric_1.7.2_x64-setup.exe"
+    }
+  }
+}
