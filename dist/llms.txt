@@ -25,6 +25,20 @@ RVC Fabric is a free, open-source Windows application developed by Turing Mirror
 - Audio toolbox: Provides vocal separation, text-to-speech and voice training tools. The training workflow covers audio slicing, pitch and feature extraction, model training and index export.
 - Automatic acceleration: Supports NVIDIA CUDA and DirectML acceleration for AMD and Intel GPUs. Setup detects hardware and configures the corresponding runtime.
 
+### GPT-SoVITS Fabric
+
+GPT-SoVITS Fabric is an open-source desktop application from Turing Mirror based on GPT-SoVITS. It brings text-to-speech, character audio, annotation review, vocal separation and model training into one workspace.
+
+- Platform: Windows desktop application
+- The Windows installer is being prepared.
+- Page: https://www.turingmirror.com/en/products/gpt-sovits-fabric/ (简体中文: https://www.turingmirror.com/products/gpt-sovits-fabric/)
+- Links: GitHub: https://github.com/Turing-Mirror/GPT-SoVITS-Fabric
+- Official screenshot: https://www.turingmirror.com/assets/products/gpt-sovits-fabric/home.png (GPT-SoVITS Fabric home screen with character cards and access to synthesis.)
+- Official screenshot: https://www.turingmirror.com/assets/products/gpt-sovits-fabric/synthesis.png (GPT-SoVITS Fabric synthesis screen with character selection, reference audio and text input.)
+- Speech synthesis: Choose a character and reference audio, synthesize one or more texts, and export WAV or FLAC files.
+- Character library: Keep model weights, reference audio and annotations together in character packs you can import, edit and export.
+- Dataset preparation and training: Separate vocals, split audio and review transcript annotations, then fine-tune SoVITS and GPT models with the training queue.
+
 ### MoeText / 喵言喵
 
 Built on Android's accessibility service, MoeText rewrites what you type in QQ and Discord using rules you define: swap words, add sentence endings and kaomoji, and switch between styles like catgirl or classical Chinese in one tap.

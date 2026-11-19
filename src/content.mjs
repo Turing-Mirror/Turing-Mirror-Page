@@ -1,4 +1,5 @@
 import { rvcFabricProduct } from "./rvc-fabric.mjs";
+import { gsvFabricProduct } from "./gpt-sovits-fabric.mjs";
 import { trmUiProduct } from "./trm-ui.mjs";
 
 // 站点内容的唯一数据源。scripts/build.mjs 读取这里，为每种语言生成静态页面。
@@ -173,6 +174,7 @@ const GITHUB_LABEL = { sc: "GitHub 仓库", tc: "GitHub 儲存庫", en: "GitHub"
 
 export const PRODUCTS = [
   rvcFabricProduct,
+  gsvFabricProduct,
   {
     slug: "moetext",
     name: { sc: "喵言喵", tc: "喵言喵", en: "MoeText", ja: "MoeText" },

@@ -8,6 +8,8 @@
 2. 在产品仓库点 **Publish release**，再到官网仓库运行 [Update RVC Fabric](https://github.com/Turing-Mirror/Turing-Mirror-Page/actions/workflows/rvc-release.yml)。输入刚发布的版本号，例如 `1.8.0`。官网会一起更新下载、版本清单和更新日志。
 3. 1.8.0 首次发布时，在产品仓库运行 `python scripts/legacy_update.py --publish`，给旧版保留一次 CNB 更新。此后的客户端版本只需前两步。运行环境仍由原资源仓分发。
 
+官网固定下载地址先经 `cdn.turingmirror.com/d/rvc-fabric-setup` 计数，再跳转至 `https://turingmirror.com/releases/rvc-fabric/installer.exe`。发版流程只更新后者所指向的安装包。
+
 [RVC Fabric 发版和旧版升级说明](https://github.com/Turing-Mirror/RVC-Fabric/blob/tm-release/docs/release.md)
 
 ## GPT-SoVITS Fabric
@@ -70,4 +72,6 @@ npm run sync:releases -- gpt-sovits-fabric X.Y.Z
 npm run build
 ```
 
-检查并提交 `public/_redirects`、`dist/_redirects` 以及 `public/releases/`、`dist/releases/` 下的本版变更。上线后核对固定下载地址与[软件更新清单](https://www.turingmirror.com/releases/gpt-sovits-fabric/updater.json)是否指向同一份 Setup。运行环境、底模沿用各自的 CNB 清单。
+首发时，在遥测库 `trm-telemetry` 的 `links` 表添加 `gpt-sovits-fabric-setup`，目标为 `https://turingmirror.com/releases/gpt-sovits-fabric/installer.exe`。官网固定地址经此短链计数，发版同步更新安装包重定向。
+
+检查并提交 `public/_redirects`、`dist/_redirects` 以及 `public/releases/`、`dist/releases/` 下的本版变更。安装包上线后，再在产品页启用下载按钮，并核对固定下载地址与[软件更新清单](https://www.turingmirror.com/releases/gpt-sovits-fabric/updater.json)是否指向同一份 Setup。运行环境、底模沿用各自的 CNB 清单。

@@ -47,7 +47,7 @@ for (const digest of ['sha256:' + hash, null]) {
     assert.equal(f.calls.includes(base + setup), !digest);
     assert.deepEqual(JSON.parse(await f.read('changelog.json')).entries.map(e => e.version), ['1.8.0', '1.7.2']);
     assert.equal(JSON.parse(await f.read('updater.json')).platforms['windows-x86_64'].url, gui.url);
-    assert.equal(await readFile(join(f.root, '_redirects'), 'utf8'), '/other /other-target 302\n/releases/rvc-fabric/setup.exe ' + gui.url + ' 302\n');
+    assert.equal(await readFile(join(f.root, '_redirects'), 'utf8'), '/other /other-target 302\n/releases/rvc-fabric/setup.exe https://cdn.turingmirror.com/d/rvc-fabric-setup 302\n/releases/rvc-fabric/installer.exe ' + gui.url + ' 302\n');
     await syncRvcRelease('1.8.0', f.root, f.request);
     assert.equal(await f.read('app.json'), app);
   });
