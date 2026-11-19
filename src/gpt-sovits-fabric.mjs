@@ -36,10 +36,11 @@ export const gsvFabricProduct = {
   schema: {
     applicationCategory: "MultimediaApplication",
     operatingSystem: "Windows 10, Windows 11",
-    license: "https://opensource.org/licenses/MIT"
+    license: "https://opensource.org/licenses/MIT",
+    downloadUrl: "https://cdn.turingmirror.com/d/gpt-sovits-fabric-setup"
   },
   actions: [{
-    href: "https://www.turingmirror.com/releases/gpt-sovits-fabric/setup.exe",
+    href: "https://cdn.turingmirror.com/d/gpt-sovits-fabric-setup",
     primary: true,
     label: { sc: "下载 Windows x64", tc: "下載 Windows x64", en: "Download for Windows x64", ja: "Windows x64 版をダウンロード" }
   }, {

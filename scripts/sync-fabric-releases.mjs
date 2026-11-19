@@ -1,11 +1,15 @@
-import { syncRvcRelease } from './sync-rvc-release.mjs';
-import { updateSetupRedirect } from './setup-redirect.mjs';
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
+import { mkdir, stat, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const PRODUCTS = {
+  'rvc-fabric': {
+    repository: 'RVC-Fabric-Releases',
+    setupTag: 'setup',
+    setupName: version => `RVC-Fabric-Setup-${version}.exe`,
+    syncAppJson: true,
+  },
   'gpt-sovits-fabric': {
     repository: 'GPT-SoVITS-Fabric-Releases',
     setupTag: 'GSV-setup',
@@ -61,6 +65,15 @@ async function readUpdater(rawBase, output, product, changelog, expectedVersion)
   return updater;
 }
 
+async function readAppManifest(rawBase, updater) {
+  const { data } = await readJson(await get(new URL('index.json', rawBase)));
+  const app = data?.app;
+  if (!app || app.version !== updater.data.version || app.gui?.url !== updater.data.platforms?.['windows-x86_64']?.url) {
+    throw new Error('The CNB index.json app entry does not match updater.json.');
+  }
+  return JSON.stringify({ app }, null, 2) + '\n';
+}
+
 async function copyAnnouncementImages(plaza, rawBase, publicBase) {
   const files = new Map();
   const sources = new Map();
@@ -102,10 +115,7 @@ async function sync(slug, product, expectedVersion) {
     readUpdater(rawBase, output, product, changelog.data, expectedVersion),
     copyAnnouncementImages(plaza.data, rawBase, publicBase),
   ]);
-  const redirectsPath = fileURLToPath(new URL('../public/_redirects', import.meta.url));
-  const redirects = updater && updateSetupRedirect(
-    await readFile(redirectsPath, 'utf8'), slug, updater.data.platforms['windows-x86_64'].url,
-  );
+  const appText = updater && product.syncAppJson ? await readAppManifest(rawBase, updater) : null;
 
   await mkdir(output, { recursive: true });
   if (images.size) {
@@ -115,21 +125,18 @@ async function sync(slug, product, expectedVersion) {
   }
   await writeFile(join(output, 'changelog.json'), changelog.text);
   await writeFile(join(output, 'plaza.json'), images.size ? JSON.stringify(plaza.data, null, 2) + '\n' : plaza.text);
-  if (updater) {
-    await writeFile(join(output, 'updater.json'), updater.text);
-    await writeFile(redirectsPath, redirects);
-  }
+  if (updater) await writeFile(join(output, 'updater.json'), updater.text);
+  if (appText) await writeFile(join(output, 'app.json'), appText);
   console.log(`${slug}: ${updater ? updater.data.version : 'awaiting first release'}, ${images.size} announcement images`);
 }
 
 const [slug, expectedVersion, ...extra] = process.argv.slice(2);
-if ((slug !== 'rvc-fabric' && !Object.hasOwn(PRODUCTS, slug)) || extra.length || (slug === 'rvc-fabric' && !expectedVersion)) {
-  console.error(`Usage: npm run sync:releases -- ${['rvc-fabric', ...Object.keys(PRODUCTS)].join('|')} [version]`);
+if (!Object.hasOwn(PRODUCTS, slug) || extra.length) {
+  console.error(`Usage: npm run sync:releases -- ${Object.keys(PRODUCTS).join('|')} [version]`);
   process.exitCode = 1;
 } else {
   try {
-    if (slug === 'rvc-fabric') await syncRvcRelease(expectedVersion);
-    else await sync(slug, PRODUCTS[slug], expectedVersion);
+    await sync(slug, PRODUCTS[slug], expectedVersion);
   } catch (error) {
     console.error(error.message);
     process.exitCode = 1;

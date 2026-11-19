@@ -13,7 +13,7 @@ RVC Fabric is a free, open-source Windows application developed by Turing Mirror
 - Platform: Windows desktop application
 - Supports Windows 10 and Windows 11. Download the required runtime and models before first use.
 - Page: https://www.turingmirror.com/en/products/rvc-fabric/ (简体中文: https://www.turingmirror.com/products/rvc-fabric/)
-- Links: Download for Windows: https://www.turingmirror.com/releases/rvc-fabric/setup.exe; GitHub: https://github.com/Turing-Mirror/RVC-Fabric; Download from CNB: https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases
+- Links: Download for Windows: https://cdn.turingmirror.com/d/rvc-fabric-setup; GitHub: https://github.com/Turing-Mirror/RVC-Fabric; Download from CNB: https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/home.png (RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.)
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/settings.png (RVC Fabric settings screen.)
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/misc.png (RVC Fabric additional tools screen.)
@@ -30,9 +30,9 @@ RVC Fabric is a free, open-source Windows application developed by Turing Mirror
 GPT-SoVITS Fabric is an open-source desktop application from Turing Mirror based on GPT-SoVITS. It brings text-to-speech, character audio, annotation review, vocal separation and model training into one workspace.
 
 - Platform: Windows desktop application
-- The Windows installer is being prepared.
+- 
 - Page: https://www.turingmirror.com/en/products/gpt-sovits-fabric/ (简体中文: https://www.turingmirror.com/products/gpt-sovits-fabric/)
-- Links: GitHub: https://github.com/Turing-Mirror/GPT-SoVITS-Fabric
+- Links: Download for Windows x64: https://cdn.turingmirror.com/d/gpt-sovits-fabric-setup; GitHub Releases: https://github.com/Turing-Mirror/GPT-SoVITS-Fabric/releases
 - Official screenshot: https://www.turingmirror.com/assets/products/gpt-sovits-fabric/home-zh-cn-v2.png (GPT-SoVITS Fabric home screen with character cards and access to synthesis.)
 - Official screenshot: https://www.turingmirror.com/assets/products/gpt-sovits-fabric/synthesis-zh-cn-v2.png (GPT-SoVITS Fabric synthesis screen with character selection, reference audio and text input.)
 - Speech synthesis: Choose a character and reference audio, synthesize one or more texts, and export WAV or FLAC files.

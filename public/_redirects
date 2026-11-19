@@ -15,6 +15,4 @@
 /ja/products/rvc-fabric/screenshots /ja/products/rvc-fabric/ 301
 /ja/products/rvc-fabric/screenshots/ /ja/products/rvc-fabric/ 301
 /releases/rvc-fabric/setup.exe https://cdn.turingmirror.com/d/rvc-fabric-setup 302
-/releases/rvc-fabric/installer.exe https://github.com/Turing-Mirror/RVC-Fabric/releases/download/v1.8.0/RVC-Fabric-Setup-1.8.0.exe 302
-/releases/gpt-sovits-fabric/setup.exe https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-setup/GPT-SoVITS-Fabric-Setup-1.0.0.exe 302
-/releases/gpt-sovits-fabric/installer.exe https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-setup/GPT-SoVITS-Fabric-Setup-1.0.0.exe 302
+/releases/gpt-sovits-fabric/setup.exe https://cdn.turingmirror.com/d/gpt-sovits-fabric-setup 302

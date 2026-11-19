@@ -1,77 +1,39 @@
 # Fabric 发版流程
 
-两个项目都由维护者手动构建并公开 Release。
+GitHub 保存源码和正式 Release，CNB 分发安装包（Setup）、运行环境与底模，图灵镜官网提供产品下载入口与软件内更新清单。
 
-## RVC Fabric
+| 软件 | 发版分支 | CNB 发布仓 | Setup 标签 | 固定名安装包 | 对外分发短链 |
+| --- | --- | --- | --- | --- | --- |
+| RVC Fabric | `tm-release` | `Turing-Mirror/RVC-Fabric-Releases` | `setup` | `RVC_Fabric_Setup.exe` | `https://cdn.turingmirror.com/d/rvc-fabric-setup` |
+| GPT-SoVITS Fabric | `main` | `Turing-Mirror/GPT-SoVITS-Fabric-Releases` | `GSV-setup` | `GPT-SoVITS-Fabric-Setup.exe` | `https://cdn.turingmirror.com/d/gpt-sovits-fabric-setup` |
 
-1. 在 RVC Fabric 的 [Build RVC Fabric](https://github.com/Turing-Mirror/RVC-Fabric/actions/workflows/windows-release.yml) 选发版分支 `tm-release`，勾选 **Prepare release**。下载草稿中的 Setup 试装。
-2. 在产品仓库点 **Publish release**，再到官网仓库运行 [Update RVC Fabric](https://github.com/Turing-Mirror/Turing-Mirror-Page/actions/workflows/rvc-release.yml)。输入刚发布的版本号，例如 `1.8.0`。官网会一起更新下载、版本清单和更新日志。
-3. 1.8.0 首次发布时，在产品仓库运行 `python scripts/legacy_update.py --publish`，给旧版保留一次 CNB 更新。此后的客户端版本只需前两步。运行环境仍由原资源仓分发。
+## 1. 对外下载与计数体系
 
-官网固定下载地址先经 `cdn.turingmirror.com/d/rvc-fabric-setup` 计数，再跳转至 `https://turingmirror.com/releases/rvc-fabric/installer.exe`。发版流程只更新后者所指向的安装包。
+- 官网产品页及对外宣发统一使用 `https://cdn.turingmirror.com/d/<产品>-setup`。
+- `trm-telemetry` Cloudflare Worker 收到请求后，在 D1 `link_hits` 表记录一次下载，并 302 跳转至 D1 `links` 表（及 Worker 内置 `FALLBACK_LINKS`）中配置的 CNB 固定文件名安装包直链。
+- 每次发版用新版安装包原地覆盖 CNB 上的固定文件名安装包，不更改短链地址；旧版自动更新只保留当前最新一个版本化安装包（如 `RVC-Fabric-Setup-<版本>.exe`、`GPT-SoVITS-Fabric-Setup-<版本>.exe`）。
 
-[RVC Fabric 发版和旧版升级说明](https://github.com/Turing-Mirror/RVC-Fabric/blob/tm-release/docs/release.md)
+## 2. 准备版本、构建和验收
 
-## GPT-SoVITS Fabric
+- **RVC Fabric**：在 `tm-release` 分支同步版本号并通过版本校验后，运行 [Build RVC Fabric](https://github.com/Turing-Mirror/RVC-Fabric/actions/workflows/windows-release.yml) 生成已签名的版本化安装包、`updater.json` 与 `.sha256` 边车。
+- **GPT-SoVITS Fabric**：在 `main` 分支运行 `python scripts/shell_version.py --set X.Y.Z` 同步版本号并更新 CNB 发布仓 `changelog.json`，运行 **Build GPT-SoVITS Fabric** 生成安装包与签名。
+- 本地使用待发布的同一份 Setup 完成安装与核心功能验收。
 
-### 准备和试装
+## 3. 上传 CNB 与更新清单
 
-在 `main` 运行 `python scripts/shell_version.py --set X.Y.Z`，提交版本号，在 CNB 发布仓的 `changelog.json` 顶部写入本版变更。用同一版本运行 **Build GPT-SoVITS Fabric → Run workflow**，勾选 **Prepare release**。下载草稿中的 `GPT-SoVITS-Fabric-Setup-X.Y.Z.exe`、`.sig` 和 `.sha256`。首发时测试全新安装和运行环境下载。
+1. 在 CNB 对应的 Setup 标签下上传本次版本化安装包与固定名安装包（同份文件改名覆盖），使该标签下仅保留固定名与当前版本化两个安装包。
+2. 在 GitHub Releases 公开 `vX.Y.Z` 正式 Release。
+3. 更新 CNB 发布仓的清单源文件、`setup` / `assets/setup` 下的 `.sha256` 边车、`changelog.json` 与 `updater.json`（`url` 指向本次 CNB 版本化安装包），编译生成 `index.json` 并推送到 CNB `main`。
 
-### 分发和发布
+## 4. 同步到图灵镜官网
 
-1. 在 RVC Fabric 源码根目录，用已有的 CNB 上传脚本上传同一份安装包。CNB_TOKEN 需要个人访问令牌的 `repo-release:rw` 权限。
-
-```powershell
-python scripts/publish_asset.py --repo Turing-Mirror/GPT-SoVITS-Fabric-Releases --tag GSV-setup --file '<GSVF 的版本号 Setup 路径>'
-```
-
-2. 在 GSVF 的 CNB 发布仓按下方命令验证文件、生成 `updater.json`。把下载地址固定到本次版本的 Setup。
-3. 在 GitHub 草稿中核对版本、安装包与说明，点 **Publish release**。提交并推送 CNB 的更新清单和日志。
-4. 在官网仓库运行同步命令，提交源码和构建产物，推送 `main` 后确认 Cloudflare 部署完成。
-
-### 生成 updater.json
-
-在对应的 CNB 发布仓根目录运行。替换前三项即可。
+在官网仓库根目录运行同步命令并重新构建：
 
 ```powershell
-$version = '<本次版本号，如 1.2.3>'
-$setup = '<本机签过名的版本号 Setup 完整路径>'
-$download = '<CNB 版本化 Setup 下载地址>'
-
-$remoteSetup = Join-Path $env:TEMP ([guid]::NewGuid().ToString('N') + '.exe')
-try {
-    Invoke-WebRequest -Uri $download -OutFile $remoteSetup
-    if ((Get-FileHash -LiteralPath $remoteSetup).Hash -ne (Get-FileHash -LiteralPath $setup).Hash) {
-        throw 'CNB 的 Setup 和本机的 Setup 不一致。'
-    }
-} finally {
-    if (Test-Path -LiteralPath $remoteSetup) { Remove-Item -LiteralPath $remoteSetup }
-}
-$signature = (Get-Content -LiteralPath "$setup.sig" -Raw).Trim()
-$decoded = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($signature))
-$stamp = [regex]::Match($decoded, '(?m)^trusted comment: timestamp:(\d+)').Groups[1].Value
-if (!$stamp) { throw '签名中没有时间。' }
-$entry = (Get-Content -LiteralPath 'changelog.json' -Raw -Encoding UTF8 | ConvertFrom-Json).entries[0]
-if ($entry.version -notin @($version, "v$version")) { throw '更新日志的第一条与本次版本不一致。' }
-$json = [ordered]@{
-    version = $version
-    notes = (@($entry.highlights) -join [Environment]::NewLine)
-    pub_date = [DateTimeOffset]::FromUnixTimeSeconds([long]$stamp).ToString("yyyy-MM-dd'T'HH:mm:ss'Z'")
-    platforms = @{ 'windows-x86_64' = @{ url = $download; signature = $signature } }
-} | ConvertTo-Json -Depth 5
-[IO.File]::WriteAllText((Join-Path (Get-Location).Path 'updater.json'), $json + [Environment]::NewLine)
+npm run sync:releases -- rvc-fabric <版本>
+npm run sync:releases -- gpt-sovits-fabric <版本>
+npm run check
+npm run check:seo
 ```
 
-### 同步 GSVF 到官网
-
-对外使用[GPT-SoVITS Fabric 固定下载地址](https://www.turingmirror.com/releases/gpt-sovits-fabric/setup.exe)。首版上线前，此地址打开 GitHub 发布页。同步成功后，同一地址会直接下载对应版本的 Setup。
-
-```powershell
-npm run sync:releases -- gpt-sovits-fabric X.Y.Z
-npm run build
-```
-
-首发时，在遥测库 `trm-telemetry` 的 `links` 表添加 `gpt-sovits-fabric-setup`，目标为 `https://turingmirror.com/releases/gpt-sovits-fabric/installer.exe`。官网固定地址经此短链计数，发版同步更新安装包重定向。
-
-检查并提交 `public/_redirects`、`dist/_redirects` 以及 `public/releases/`、`dist/releases/` 下的本版变更。安装包上线后，再在产品页启用下载按钮，并核对固定下载地址与[软件更新清单](https://www.turingmirror.com/releases/gpt-sovits-fabric/updater.json)是否指向同一份 Setup。运行环境、底模沿用各自的 CNB 清单。
+核对 `public/releases/` 与 `dist/releases/` 中的 `updater.json`、`changelog.json`、`plaza.json`（以及 RVC Fabric 的 `app.json`），提交并推送 `main`，等待 Cloudflare Pages 部署完成后验证官网下载按钮与短链跳转。
