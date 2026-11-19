@@ -33,8 +33,8 @@ GPT-SoVITS Fabric is an open-source desktop application from Turing Mirror based
 - The Windows installer is being prepared.
 - Page: https://www.turingmirror.com/en/products/gpt-sovits-fabric/ (简体中文: https://www.turingmirror.com/products/gpt-sovits-fabric/)
 - Links: GitHub: https://github.com/Turing-Mirror/GPT-SoVITS-Fabric
-- Official screenshot: https://www.turingmirror.com/assets/products/gpt-sovits-fabric/home-zh-cn.png (GPT-SoVITS Fabric home screen with character cards and access to synthesis.)
-- Official screenshot: https://www.turingmirror.com/assets/products/gpt-sovits-fabric/synthesis-zh-cn.png (GPT-SoVITS Fabric synthesis screen with character selection, reference audio and text input.)
+- Official screenshot: https://www.turingmirror.com/assets/products/gpt-sovits-fabric/home-zh-cn-v2.png (GPT-SoVITS Fabric home screen with character cards and access to synthesis.)
+- Official screenshot: https://www.turingmirror.com/assets/products/gpt-sovits-fabric/synthesis-zh-cn-v2.png (GPT-SoVITS Fabric synthesis screen with character selection, reference audio and text input.)
 - Speech synthesis: Choose a character and reference audio, synthesize one or more texts, and export WAV or FLAC files.
 - Character library: Keep model weights, reference audio and annotations together in character packs you can import, edit and export.
 - Dataset preparation and training: Separate vocals, split audio and review transcript annotations, then fine-tune SoVITS and GPT models with the training queue.
