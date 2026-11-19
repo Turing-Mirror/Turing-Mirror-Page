@@ -24,6 +24,9 @@
 /llms.txt
   Content-Type: text/plain; charset=utf-8
 
+/releases/:product/app.json
+  Cache-Control: public, max-age=0, must-revalidate
+
 /releases/:product/updater.json
   Cache-Control: public, max-age=0, must-revalidate
 

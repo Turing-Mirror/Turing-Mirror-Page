@@ -1,14 +1,10 @@
+import { syncRvcRelease } from './sync-rvc-release.mjs';
 import { createHash } from 'node:crypto';
 import { mkdir, stat, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const PRODUCTS = {
-  'rvc-fabric': {
-    repository: 'RVC-Fabric-Releases',
-    setupTag: 'setup',
-    setupName: version => `RVC Fabric_${version}_x64-setup.exe`,
-  },
   'gpt-sovits-fabric': {
     repository: 'GPT-SoVITS-Fabric-Releases',
     setupTag: 'GSV-setup',
@@ -118,12 +114,13 @@ async function sync(slug, product, expectedVersion) {
 }
 
 const [slug, expectedVersion, ...extra] = process.argv.slice(2);
-if (!Object.hasOwn(PRODUCTS, slug) || extra.length) {
-  console.error(`Usage: npm run sync:releases -- ${Object.keys(PRODUCTS).join('|')} [version]`);
+if ((slug !== 'rvc-fabric' && !Object.hasOwn(PRODUCTS, slug)) || extra.length || (slug === 'rvc-fabric' && !expectedVersion)) {
+  console.error(`Usage: npm run sync:releases -- ${['rvc-fabric', ...Object.keys(PRODUCTS)].join('|')} [version]`);
   process.exitCode = 1;
 } else {
   try {
-    await sync(slug, PRODUCTS[slug], expectedVersion);
+    if (slug === 'rvc-fabric') await syncRvcRelease(expectedVersion);
+    else await sync(slug, PRODUCTS[slug], expectedVersion);
   } catch (error) {
     console.error(error.message);
     process.exitCode = 1;

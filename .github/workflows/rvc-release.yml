@@ -1,0 +1,56 @@
+name: Update RVC Fabric
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Published version (for example 1.8.0)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rvc-release-feed
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Update website downloads
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ inputs.version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "24"
+      - name: Check the update feed
+        run: node --test scripts/sync-rvc-release.test.mjs
+      - name: Update release files
+        run: |
+          npm run sync:releases -- rvc-fabric "$VERSION"
+          cp public/_redirects dist/_redirects
+          for name in app.json updater.json changelog.json; do
+            cp "public/releases/rvc-fabric/$name" "dist/releases/rvc-fabric/$name"
+          done
+          git add -- public/_redirects dist/_redirects {public,dist}/releases/rvc-fabric/{app,updater,changelog}.json
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m "Update RVC Fabric to $VERSION"
+            git push origin HEAD:main
+          fi
+      - name: Verify the public update
+        run: |
+          for attempt in {1..30}; do
+            result=$(curl --silent --fail --max-time 8 "https://www.turingmirror.com/releases/rvc-fabric/app.json?version=$VERSION" | jq -r '.app.version' || true)
+            if [[ "$result" == "$VERSION" ]] && curl --silent --fail --max-time 8 "https://www.turingmirror.com/releases/rvc-fabric/updater.json?version=$VERSION" | jq --exit-status --arg version "$VERSION" '.version == $version' >/dev/null; then
+              echo "RVC Fabric $VERSION is available."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::The website commit is ready. Check the Cloudflare Pages deployment for main."
+          exit 1

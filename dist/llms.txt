@@ -13,7 +13,7 @@ RVC Fabric is a free, open-source Windows application developed by Turing Mirror
 - Platform: Windows desktop application
 - Supports Windows 10 and Windows 11. Download the required runtime and models before first use.
 - Page: https://www.turingmirror.com/en/products/rvc-fabric/ (简体中文: https://www.turingmirror.com/products/rvc-fabric/)
-- Links: Download for Windows: https://cdn.turingmirror.com/d/rvc-fabric-setup; GitHub: https://github.com/Turing-Mirror/RVC-Fabric; Download from CNB: https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases
+- Links: Download for Windows: https://www.turingmirror.com/releases/rvc-fabric/setup.exe; GitHub: https://github.com/Turing-Mirror/RVC-Fabric; Download from CNB: https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/home.png (RVC Fabric home screen with voice selection, audio tools and real-time conversion controls.)
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/settings.png (RVC Fabric settings screen.)
 - Official screenshot: https://www.turingmirror.com/assets/products/rvc-fabric/misc.png (RVC Fabric additional tools screen.)
