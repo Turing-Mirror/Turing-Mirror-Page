@@ -39,16 +39,14 @@ export const gsvFabricProduct = {
     license: "https://opensource.org/licenses/MIT"
   },
   actions: [{
-    href: "https://github.com/Turing-Mirror/GPT-SoVITS-Fabric",
-    label: { sc: "GitHub 仓库", tc: "GitHub 儲存庫", en: "GitHub", ja: "GitHub" },
+    href: "https://www.turingmirror.com/releases/gpt-sovits-fabric/setup.exe",
+    primary: true,
+    label: { sc: "下载 Windows x64", tc: "下載 Windows x64", en: "Download for Windows x64", ja: "Windows x64 版をダウンロード" }
+  }, {
+    href: "https://github.com/Turing-Mirror/GPT-SoVITS-Fabric/releases",
+    label: { sc: "GitHub 发布页", tc: "GitHub 發布頁", en: "GitHub Releases", ja: "GitHub Releases" },
     external: true
   }],
-  note: {
-    sc: "Windows 安装包准备中。",
-    tc: "Windows 安裝程式準備中。",
-    en: "The Windows installer is being prepared.",
-    ja: "Windows 用インストーラーを準備中です。"
-  },
   screenshots: [
     {
       id: "home",
