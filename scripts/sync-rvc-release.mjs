@@ -2,11 +2,11 @@ import { createHash } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { updateSetupRedirect } from './setup-redirect.mjs';
 
 const product = 'Turing-Mirror/RVC-Fabric';
 const publicRoot = fileURLToPath(new URL('../public/', import.meta.url));
 const stableVersion = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/;
-const redirectPath = '/releases/rvc-fabric/setup.exe ';
 
 async function get(url, accept) {
   const response = await fetch(url, { headers: { Accept: accept }, signal: AbortSignal.timeout(90_000) });
@@ -61,13 +61,10 @@ export async function syncRvcRelease(version, root = publicRoot, request = get) 
   changelog.entries = [entry, ...changelog.entries.filter(old => old.version.replace(/^v/, '') !== version)];
   const app = { app: { ...previous.app, version, gui: { ...previous.app.gui, version, url: platform.url, sha256: digest, size_bytes: installer.size, notes: highlights.join('\n') } } };
   const redirectsPath = join(root, '_redirects');
-  const lines = (await readFile(redirectsPath, 'utf8')).trimEnd().split(/\r?\n/);
-  const matches = lines.filter(line => line.startsWith(redirectPath));
-  if (matches.length !== 1) throw new Error('Expected one RVC Setup redirect.');
-  lines[lines.indexOf(matches[0])] = redirectPath + platform.url + ' 302';
+  const redirects = updateSetupRedirect(await readFile(redirectsPath, 'utf8'), 'rvc-fabric', platform.url);
   for (const [name, data] of Object.entries({ 'app.json': app, 'updater.json': manifest, 'changelog.json': changelog })) {
     await writeFile(join(folder, name), JSON.stringify(data, null, 2) + '\n');
   }
-  await writeFile(redirectsPath, lines.join('\n') + '\n');
+  await writeFile(redirectsPath, redirects);
   console.log('Prepared RVC Fabric ' + version + ' from its published GitHub release.');
 }

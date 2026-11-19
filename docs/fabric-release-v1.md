@@ -63,9 +63,11 @@ $json = [ordered]@{
 
 ### 同步 GSVF 到官网
 
+对外使用[GPT-SoVITS Fabric 固定下载地址](https://www.turingmirror.com/releases/gpt-sovits-fabric/setup.exe)。首版上线前，此地址打开 GitHub 发布页。同步成功后，同一地址会直接下载对应版本的 Setup。
+
 ```powershell
 npm run sync:releases -- gpt-sovits-fabric X.Y.Z
 npm run build
 ```
 
-检查 `public/releases/` 和 `dist/releases/` 的差异并一起提交。同步后核对[软件更新清单](https://www.turingmirror.com/releases/gpt-sovits-fabric/updater.json)中的版本、签名和 Setup 下载地址。运行环境、底模沿用各自的 CNB 清单。
+检查并提交 `public/_redirects`、`dist/_redirects` 以及 `public/releases/`、`dist/releases/` 下的本版变更。上线后核对固定下载地址与[软件更新清单](https://www.turingmirror.com/releases/gpt-sovits-fabric/updater.json)是否指向同一份 Setup。运行环境、底模沿用各自的 CNB 清单。

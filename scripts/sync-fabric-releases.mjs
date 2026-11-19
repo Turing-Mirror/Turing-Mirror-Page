@@ -1,6 +1,7 @@
 import { syncRvcRelease } from './sync-rvc-release.mjs';
+import { updateSetupRedirect } from './setup-redirect.mjs';
 import { createHash } from 'node:crypto';
-import { mkdir, stat, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -53,7 +54,8 @@ async function readUpdater(rawBase, output, product, changelog, expectedVersion)
     throw new Error('The updater, changelog and versioned CNB Setup must describe the same release.');
   }
   const setup = await get(windows.url, 'HEAD');
-  if (!setup.ok || Number(setup.headers.get('content-length')) <= 0) {
+  const size = Number(setup.headers.get('content-length'));
+  if (!setup.ok || !Number.isSafeInteger(size) || size <= 0 || /text\/html/i.test(setup.headers.get('content-type') ?? '')) {
     throw new Error(`CNB Setup is unavailable: ${windows.url}`);
   }
   return updater;
@@ -100,6 +102,10 @@ async function sync(slug, product, expectedVersion) {
     readUpdater(rawBase, output, product, changelog.data, expectedVersion),
     copyAnnouncementImages(plaza.data, rawBase, publicBase),
   ]);
+  const redirectsPath = fileURLToPath(new URL('../public/_redirects', import.meta.url));
+  const redirects = updater && updateSetupRedirect(
+    await readFile(redirectsPath, 'utf8'), slug, updater.data.platforms['windows-x86_64'].url,
+  );
 
   await mkdir(output, { recursive: true });
   if (images.size) {
@@ -109,7 +115,10 @@ async function sync(slug, product, expectedVersion) {
   }
   await writeFile(join(output, 'changelog.json'), changelog.text);
   await writeFile(join(output, 'plaza.json'), images.size ? JSON.stringify(plaza.data, null, 2) + '\n' : plaza.text);
-  if (updater) await writeFile(join(output, 'updater.json'), updater.text);
+  if (updater) {
+    await writeFile(join(output, 'updater.json'), updater.text);
+    await writeFile(redirectsPath, redirects);
+  }
   console.log(`${slug}: ${updater ? updater.data.version : 'awaiting first release'}, ${images.size} announcement images`);
 }
 
