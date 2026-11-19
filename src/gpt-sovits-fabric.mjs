@@ -52,7 +52,7 @@ export const gsvFabricProduct = {
   screenshots: [
     {
       id: "home",
-      src: "/assets/products/gpt-sovits-fabric/home.png",
+      src: "/assets/products/gpt-sovits-fabric/home-zh-cn.png",
       width: 1180,
       height: 780,
       alt: {
@@ -65,7 +65,7 @@ export const gsvFabricProduct = {
     },
     {
       id: "synthesis",
-      src: "/assets/products/gpt-sovits-fabric/synthesis.png",
+      src: "/assets/products/gpt-sovits-fabric/synthesis-zh-cn.png",
       width: 1180,
       height: 780,
       alt: {
