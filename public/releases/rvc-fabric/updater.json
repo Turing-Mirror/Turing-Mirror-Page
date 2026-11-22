@@ -1,11 +1,11 @@
 {
-  "version": "1.8.0",
-  "notes": "- 广场升级为图灵镜社区。可以按系列和部门查找音色，从模型卡片进入作者主页。\n- 支持从公开仓库批量发布 RVC 音色包，在「我的发布」管理草稿、查看审核进度和发布新版本。\n- 软件更新和更新日志改由图灵镜官网提供。运行环境继续按需下载。",
-  "pub_date": "2026-11-19T09:15:52Z",
+  "version": "1.8.1",
+  "notes": "- 运行环境、音频工具和社区资源包下载支持收起到左下角后台进行，不阻塞页面切换。\n- 社区资源下载失败时显示具体原因，并通知服务器尽快重新检查该资源。\n- 社区公告和更新日志改为压缩传输，网络较慢时更容易加载完成。\n- 修复独立窗口与部分文案问题，统一窗口操作配色。",
+  "pub_date": "2026-11-22T16:01:51Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/setup/RVC-Fabric-Setup-1.8.0.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRc0RWbTU5UHd6MWROd2NqNTdtSFR3Z0o5eWVIZnpsaHR0OFgvdUIyb0sxanRka0hSZzZ5RFRqSmFHK3cvcVZyRVpUWFZLcUI4YkdURXg5VUZsdGorZGFOVzY4bmREMlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDc5NzUyCWZpbGU6UlZDLUZhYnJpYy1TZXR1cC0xLjguMC5leGUKSW9jTERrc3dUempoNkVrUDNNSnN3Mm1neWRQckNKdU9XSGZmVytINjhhRU9iUHZpUWVEbHo1NUpFa1RrQnhOejZKL0JnRGUyMklhbWwweXg2Z2l2REE9PQo="
+      "url": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/setup/RVC-Fabric-Setup-1.8.1.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRc0RWbTU5UHd6MVVOVTJsSlRrM3ZudWdxOGRWNTArbHZDT3hTOVR5a0xweTJrVi9PSy80a3hNaDRyVjl3aS9MNEV1K2tBR2llYXlHUW5xSGVlWTRnMkxGNDhiRFZ5Nnc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MzYzMzExCWZpbGU6UlZDLUZhYnJpYy1TZXR1cC0xLjguMS5leGUKVUVvL2NwNTZYdU83aXpTd0IwMTVteEtibVRpa0d0VHlZbWFoQ25ybU5mODlmdEdtejRBdk11VEx6Qk93MlJtSStXVnUwS3BHUXBJWEFzRkYwTWVQQVE9PQo="
     }
   }
 }
