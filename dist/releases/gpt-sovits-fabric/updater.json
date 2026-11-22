@@ -1,11 +1,11 @@
 {
-  "version": "1.0.1",
-  "notes": "读取或管理 .list 标注时，自动按文件名找回同目录或子目录中的音频文件，也可手动选择音频目录重新定位。\n统一界面与发布提示中的“社区”名称，并修正引擎资源卡片说明的连接标点。",
-  "pub_date": "2026-11-20T04:00:07Z",
+  "version": "1.0.3",
+  "notes": "修复标注页标题、按钮和提示显示为英文代码的问题。",
+  "pub_date": "2026-11-22T16:47:21Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/Turing-Mirror/GPT-SoVITS-Fabric/releases/download/v1.0.1/GPT-SoVITS-Fabric-Setup-1.0.1.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTNHJLSTh0ZXRjREhuNzBFR2I4RXNySUY1K1h0eUc1SWdxemFkVmZ4dFcrMlJRMnRoM09JWlE0aGtwN2drWlZIS1UzZVhMNFo2TE9wR0F4WDRGU29SckZOUmhCVmdlMFFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTQ3MTk5CWZpbGU6R1BULVNvVklUUy1GYWJyaWMtU2V0dXAtMS4wLjEuZXhlCllCQ0cvdVZzSFJ3U1hVWDJzQUMzNmVQWkRob1dCakVvbnlwNmFQZElZNXB3ZzBPWDdBQVV4bE5NY2ExMlBjb2lkZWVwRDMyODBEeEIvUHRYVWQ2QUJBPT0K"
+      "url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-setup/GPT-SoVITS-Fabric-Setup-1.0.3.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTNHJLSTh0ZXRjREZMUWFuYlBDS25oTElUY2hpZXpxNGQ5QzVFQzI3NDRuNFhvQVNsZHRsa05YMC9JYUJtSVl1QmdnVzZaVzVkNEc2bEtMbzlkWDU4ZFRpMnRxZ2RGWkFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MzY1OTkxCWZpbGU6R1BULVNvVklUUy1GYWJyaWMtU2V0dXAtMS4wLjMuZXhlCnVWV2ovZnM1TlQ0UllQRnE4bm1WRGh3ZGI5andyZEg1TWs3ZktzWmF0QW5rL0NkaDFWS2JSdnhWQzlDRW9RdVlPdEFUSnI0akRnQzNOS0VEK0F4SUFRPT0K"
     }
   }
 }
