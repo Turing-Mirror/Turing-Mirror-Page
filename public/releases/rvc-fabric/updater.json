@@ -4,7 +4,7 @@
   "pub_date": "2026-11-22T16:01:51Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/setup/RVC-Fabric-Setup-1.8.1.exe",
+      "url": "https://cdn.turingmirror.com/f/rvc-fabric/RVC-Fabric-Setup-1.8.1.exe",
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRc0RWbTU5UHd6MVVOVTJsSlRrM3ZudWdxOGRWNTArbHZDT3hTOVR5a0xweTJrVi9PSy80a3hNaDRyVjl3aS9MNEV1K2tBR2llYXlHUW5xSGVlWTRnMkxGNDhiRFZ5Nnc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MzYzMzExCWZpbGU6UlZDLUZhYnJpYy1TZXR1cC0xLjguMS5leGUKVUVvL2NwNTZYdU83aXpTd0IwMTVteEtibVRpa0d0VHlZbWFoQ25ybU5mODlmdEdtejRBdk11VEx6Qk93MlJtSStXVnUwS3BHUXBJWEFzRkYwTWVQQVE9PQo="
     }
   }

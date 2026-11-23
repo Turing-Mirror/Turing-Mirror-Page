@@ -6,7 +6,7 @@
       "package_type": "full_package",
       "version": "1.8.1",
       "kind": "exe",
-      "url": "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/setup/RVC-Fabric-Setup-1.8.1.exe",
+      "url": "https://cdn.turingmirror.com/f/rvc-fabric/RVC-Fabric-Setup-1.8.1.exe",
       "sha256": "83534c86053783eb7e2c9544c7b4aef545b7a93dd86d8bea48a94cc2915e6351",
       "size_bytes": 25085336,
       "min_app_version": "1.3.0",
