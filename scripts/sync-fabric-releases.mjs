@@ -1,20 +1,19 @@
 import { createHash } from 'node:crypto';
-import { mkdir, stat, writeFile } from 'node:fs/promises';
-import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { extname, join, relative, resolve, sep } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
-const PRODUCTS = {
+export const PRODUCTS = {
   'rvc-fabric': {
-    repository: 'RVC-Fabric-Releases',
-    setupTag: 'setup',
+    source: { url: 'https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/git/raw/main/' },
+    legacySetupBase: 'https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/setup/',
     setupName: version => `RVC-Fabric-Setup-${version}.exe`,
     syncAppJson: true,
   },
   'gpt-sovits-fabric': {
-    repository: 'GPT-SoVITS-Fabric-Releases',
-    setupTag: 'GSV-setup',
+    source: { directory: fileURLToPath(new URL('../../GPT-SoVITS-Fabric-Releases/', import.meta.url)) },
     setupName: version => `GPT-SoVITS-Fabric-Setup-${version}.exe`,
-    firstReleasePending: true,
+    syncIndexJson: true,
   },
 };
 const IMAGE_EXTENSIONS = new Map([
@@ -30,93 +29,114 @@ async function get(url, method = 'GET') {
   });
 }
 
-async function readJson(response) {
+function localPath(directory, name) {
+  const path = resolve(directory, name);
+  const rel = relative(directory, path);
+  if (rel === '..' || rel.startsWith('..' + sep) || resolve(path) === resolve(directory)) {
+    throw new Error(`Invalid local release file: ${name}`);
+  }
+  return path;
+}
+
+async function readSource(source, name) {
+  if (source.directory) return readFile(localPath(source.directory, name));
+  const response = await get(new URL(name, source.url));
   if (!response.ok) throw new Error(`HTTP ${response.status} ${response.url}`);
-  const text = await response.text();
+  return Buffer.from(await response.arrayBuffer());
+}
+
+async function readJson(source, name) {
+  const text = (await readSource(source, name)).toString('utf8').replace(/^\uFEFF/, '');
   return { text, data: JSON.parse(text) };
 }
 
-async function readUpdater(rawBase, output, product, changelog, expectedVersion) {
-  const response = await get(new URL('updater.json', rawBase));
-  if (response.status === 404 && product.firstReleasePending && !expectedVersion && changelog.entries.length === 0) {
-    const existing = await stat(join(output, 'updater.json')).catch(error => {
-      if (error.code !== 'ENOENT') throw error;
-    });
-    if (!existing) return null;
+function setupUrl(slug, product, version, actual) {
+  const filename = encodeURIComponent(product.setupName(version));
+  const target = `https://cdn.turingmirror.com/f/${slug}/${filename}`;
+  // The remote RVC catalog can still contain the pre-migration address.
+  // Only its exact product/version URL is migrated; arbitrary URLs are rejected.
+  if (actual !== target && (!product.legacySetupBase || actual !== product.legacySetupBase + filename)) {
+    throw new Error('The installer URL does not match the versioned Cloudflare Setup.');
   }
-  const updater = await readJson(response);
+  return target;
+}
+
+async function readRelease(slug, product, changelog, expectedVersion) {
+  const [updater, index] = await Promise.all([
+    readJson(product.source, 'updater.json'), readJson(product.source, 'index.json'),
+  ]);
   const { version, platforms } = updater.data;
   const windows = platforms?.['windows-x86_64'];
-  const target = `https://cnb.cool/Turing-Mirror/${product.repository}/-/releases/download/${product.setupTag}/${encodeURIComponent(product.setupName(version))}`;
+  const app = index.data?.app;
   if (
     !/^\d+\.\d+\.\d+$/.test(version) ||
     (expectedVersion && version !== expectedVersion) ||
     changelog.entries[0]?.version?.replace(/^v/i, '') !== version ||
     !windows?.signature?.trim() ||
-    windows.url !== target
+    app?.version !== version || app?.gui?.version !== version ||
+    !/^[a-f0-9]{64}$/i.test(app.gui.sha256) ||
+    !Number.isSafeInteger(app.gui.size_bytes) || app.gui.size_bytes <= 0
   ) {
-    throw new Error('The updater, changelog and versioned CNB Setup must describe the same release.');
+    throw new Error('The updater, index and changelog must describe the same signed release.');
   }
+  windows.url = setupUrl(slug, product, version, windows.url);
+  app.gui.url = setupUrl(slug, product, version, app.gui.url);
   const setup = await get(windows.url, 'HEAD');
   const size = Number(setup.headers.get('content-length'));
-  if (!setup.ok || !Number.isSafeInteger(size) || size <= 0 || /text\/html/i.test(setup.headers.get('content-type') ?? '')) {
-    throw new Error(`CNB Setup is unavailable: ${windows.url}`);
+  if (!setup.ok || size !== app.gui.size_bytes || /text\/html/i.test(setup.headers.get('content-type') ?? '')) {
+    throw new Error(`Cloudflare Setup is unavailable or has the wrong size: ${windows.url}`);
   }
-  return updater;
+  updater.text = JSON.stringify(updater.data, null, 2) + '\n';
+  index.text = JSON.stringify(index.data, null, 2) + '\n';
+  return { updater, index };
 }
 
-async function readAppManifest(rawBase, updater) {
-  const { data } = await readJson(await get(new URL('index.json', rawBase)));
-  const app = data?.app;
-  if (!app || app.version !== updater.data.version || app.gui?.url !== updater.data.platforms?.['windows-x86_64']?.url) {
-    throw new Error('The CNB index.json app entry does not match updater.json.');
-  }
-  return JSON.stringify({ app }, null, 2) + '\n';
-}
-
-async function copyAnnouncementImages(plaza, rawBase, publicBase) {
+async function copyAnnouncementImages(plaza, source, publicBase) {
   const files = new Map();
   const sources = new Map();
   for (const item of plaza.items) {
     const field = ['image', 'image_url', 'cover'].find(key => typeof item[key] === 'string' && item[key].trim());
     if (!field) continue;
-
     const value = item[field].trim().replaceAll('\\', '/');
-    const source = new URL(value.replace(/^\/+/, ''), rawBase);
-    if (source.protocol !== 'https:' || !(source.hostname === 'cnb.cool' || source.hostname.endsWith('.cnb.cool'))) {
-      throw new Error(`Announcement image must have a CNB URL: ${value}`);
-    }
-    let filename = sources.get(source.href);
+    let filename = sources.get(value);
     if (!filename) {
-      const response = await get(source);
-      const type = response.headers.get('content-type')?.split(';')[0];
-      const extension = IMAGE_EXTENSIONS.get(type);
-      if (!response.ok || !extension) throw new Error(`Cannot read announcement image ${source.href}`);
-      const bytes = Buffer.from(await response.arrayBuffer());
+      let bytes, extension;
+      if (source.directory) {
+        bytes = await readFile(localPath(source.directory, value));
+        extension = extname(value).toLowerCase().replace('.jpeg', '.jpg');
+        if (!new Set(IMAGE_EXTENSIONS.values()).has(extension)) {
+          throw new Error(`Unsupported local announcement image: ${value}`);
+        }
+      } else {
+        const url = new URL(value.replace(/^\/+/, ''), source.url);
+        if (url.protocol !== 'https:' || !(url.hostname === 'cnb.cool' || url.hostname.endsWith('.cnb.cool'))) {
+          throw new Error(`Announcement image must have a CNB URL: ${value}`);
+        }
+        const response = await get(url);
+        extension = IMAGE_EXTENSIONS.get(response.headers.get('content-type')?.split(';')[0]);
+        if (!response.ok || !extension) throw new Error(`Cannot read announcement image ${url.href}`);
+        bytes = Buffer.from(await response.arrayBuffer());
+      }
       filename = `${createHash('sha256').update(bytes).digest('hex')}${extension}`;
       files.set(filename, bytes);
-      sources.set(source.href, filename);
+      sources.set(value, filename);
     }
     item[field] = new URL(`images/${filename}`, publicBase).href;
   }
   return files;
 }
 
-async function sync(slug, product, expectedVersion) {
-  const rawBase = `https://cnb.cool/Turing-Mirror/${product.repository}/-/git/raw/main/`;
+export async function sync(slug, product, expectedVersion, output = fileURLToPath(new URL(`../public/releases/${slug}/`, import.meta.url))) {
   const publicBase = `https://www.turingmirror.com/releases/${slug}/`;
-  const output = fileURLToPath(new URL(`../public/releases/${slug}/`, import.meta.url));
-  const [changelog, plaza] = await Promise.all(['changelog.json', 'plaza.json'].map(async file =>
-    readJson(await get(new URL(file, rawBase)))));
+  const [changelog, plaza] = await Promise.all(
+    ['changelog.json', 'plaza.json'].map(file => readJson(product.source, file)));
   if (!Array.isArray(changelog.data.entries) || !Array.isArray(plaza.data.items)) {
-    throw new Error('The CNB changelog or announcements have an unexpected format.');
+    throw new Error('The changelog or announcements have an unexpected format.');
   }
-  const [updater, images] = await Promise.all([
-    readUpdater(rawBase, output, product, changelog.data, expectedVersion),
-    copyAnnouncementImages(plaza.data, rawBase, publicBase),
+  const [{ updater, index }, images] = await Promise.all([
+    readRelease(slug, product, changelog.data, expectedVersion),
+    copyAnnouncementImages(plaza.data, product.source, publicBase),
   ]);
-  const appText = updater && product.syncAppJson ? await readAppManifest(rawBase, updater) : null;
-
   await mkdir(output, { recursive: true });
   if (images.size) {
     const imageDirectory = join(output, 'images');
@@ -125,20 +145,23 @@ async function sync(slug, product, expectedVersion) {
   }
   await writeFile(join(output, 'changelog.json'), changelog.text);
   await writeFile(join(output, 'plaza.json'), images.size ? JSON.stringify(plaza.data, null, 2) + '\n' : plaza.text);
-  if (updater) await writeFile(join(output, 'updater.json'), updater.text);
-  if (appText) await writeFile(join(output, 'app.json'), appText);
-  console.log(`${slug}: ${updater ? updater.data.version : 'awaiting first release'}, ${images.size} announcement images`);
+  await writeFile(join(output, 'updater.json'), updater.text);
+  if (product.syncAppJson) await writeFile(join(output, 'app.json'), JSON.stringify({ app: index.data.app }, null, 2) + '\n');
+  if (product.syncIndexJson) await writeFile(join(output, 'index.json'), index.text);
+  console.log(`${slug}: ${updater.data.version}, ${images.size} announcement images`);
 }
 
-const [slug, expectedVersion, ...extra] = process.argv.slice(2);
-if (!Object.hasOwn(PRODUCTS, slug) || extra.length) {
-  console.error(`Usage: npm run sync:releases -- ${Object.keys(PRODUCTS).join('|')} [version]`);
-  process.exitCode = 1;
-} else {
-  try {
-    await sync(slug, PRODUCTS[slug], expectedVersion);
-  } catch (error) {
-    console.error(error.message);
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  const [slug, expectedVersion, ...extra] = process.argv.slice(2);
+  if (!Object.hasOwn(PRODUCTS, slug) || extra.length) {
+    console.error(`Usage: npm run sync:releases -- ${Object.keys(PRODUCTS).join('|')} [version]`);
     process.exitCode = 1;
+  } else {
+    try {
+      await sync(slug, PRODUCTS[slug], expectedVersion);
+    } catch (error) {
+      console.error(error.message);
+      process.exitCode = 1;
+    }
   }
 }

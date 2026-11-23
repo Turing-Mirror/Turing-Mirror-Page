@@ -1,39 +1,64 @@
 # Fabric 发版流程
 
-GitHub 保存源码和正式 Release，CNB 分发安装包（Setup）、运行环境与底模，图灵镜官网提供产品下载入口与软件内更新清单。
+GitHub 保存源码和已签名的正式 Release。安装包存放在 Cloudflare R2 的 `trm-releases` 桶，由 `https://cdn.turingmirror.com/f/<key>` 分发。运行环境与底模使用 ModelScope 镜像映射；官网提供下载入口和软件内更新清单。
 
-| 软件 | 发版分支 | CNB 发布仓 | Setup 标签 | 固定名安装包 | 对外分发短链 |
-| --- | --- | --- | --- | --- | --- |
-| RVC Fabric | `tm-release` | `Turing-Mirror/RVC-Fabric-Releases` | `setup` | `RVC_Fabric_Setup.exe` | `https://cdn.turingmirror.com/d/rvc-fabric-setup` |
-| GPT-SoVITS Fabric | `main` | `Turing-Mirror/GPT-SoVITS-Fabric-Releases` | `GSV-setup` | `GPT-SoVITS-Fabric-Setup.exe` | `https://cdn.turingmirror.com/d/gpt-sovits-fabric-setup` |
+| 软件 | 发版分支 | 清单来源 | R2 前缀 | 固定名安装包 |
+| --- | --- | --- | --- | --- |
+| RVC Fabric | `tm-release` | CNB `Turing-Mirror/RVC-Fabric-Releases` 的 `main` | `rvc-fabric/` | `RVC_Fabric_Setup.exe` |
+| GPT-SoVITS Fabric | `main` | 官网旁的本地 `../GPT-SoVITS-Fabric-Releases/` | `gpt-sovits-fabric/` | `GPT-SoVITS-Fabric-Setup.exe` |
 
-## 1. 对外下载与计数体系
+GSV 的 CNB 发布仓已不可读写。该清单仓仅在本地维护和提交，不 clone 或 push CNB。
 
-- 官网产品页及对外宣发统一使用 `https://cdn.turingmirror.com/d/<产品>-setup`。
-- `trm-telemetry` Cloudflare Worker 收到请求后，在 D1 `link_hits` 表记录一次下载，并 302 跳转至 D1 `links` 表（及 Worker 内置 `FALLBACK_LINKS`）中配置的 CNB 固定文件名安装包直链。
-- 每次发版用新版安装包原地覆盖 CNB 上的固定文件名安装包，不更改短链地址；旧版自动更新只保留当前最新一个版本化安装包（如 `RVC-Fabric-Setup-<版本>.exe`、`GPT-SoVITS-Fabric-Setup-<版本>.exe`）。
+## 1. 下载地址
 
-## 2. 准备版本、构建和验收
+安装包同时保存固定名与当前版本化名，例如：
 
-- **RVC Fabric**：在 `tm-release` 分支同步版本号并通过版本校验后，运行 [Build RVC Fabric](https://github.com/Turing-Mirror/RVC-Fabric/actions/workflows/windows-release.yml) 生成已签名的版本化安装包、`updater.json` 与 `.sha256` 边车。
-- **GPT-SoVITS Fabric**：在 `main` 分支运行 `python scripts/shell_version.py --set X.Y.Z` 同步版本号并更新 CNB 发布仓 `changelog.json`，运行 **Build GPT-SoVITS Fabric** 生成安装包与签名。
-- 本地使用待发布的同一份 Setup 完成安装与核心功能验收。
+- `https://cdn.turingmirror.com/f/rvc-fabric/RVC-Fabric-Setup-1.8.1.exe`
+- `https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.3.exe`
 
-## 3. 上传 CNB 与更新清单
+`updater.json` 和 `index.json` 的安装包条目使用版本化地址。对外下载入口继续使用 `https://cdn.turingmirror.com/d/<产品>-setup`，计数和跳转由既有统计服务负责；发布脚本不修改统计服务、D1 或下载 Worker。
 
-1. 在 CNB 对应的 Setup 标签下上传本次版本化安装包与固定名安装包（同份文件改名覆盖），使该标签下仅保留固定名与当前版本化两个安装包。
-2. 在 GitHub Releases 公开 `vX.Y.Z` 正式 Release。
-3. 更新 CNB 发布仓的清单源文件、`setup` / `assets/setup` 下的 `.sha256` 边车、`changelog.json` 与 `updater.json`（`url` 指向本次 CNB 版本化安装包），编译生成 `index.json` 并推送到 CNB `main`。
+## 2. 准备与构建
 
-## 4. 同步到图灵镜官网
+1. 在对应产品仓同步版本号，在 `docs/releases/X.Y.Z.md` 写更新说明。
+2. 通过版本检查后，运行对应的 Windows Release 工作流，生成安装包、签名和 SHA-256 校验文件。
+3. 使用同一份安装包完成安装和核心功能验收，公开 GitHub 的 `vX.Y.Z` 正式 Release。
 
-在官网仓库根目录运行同步命令并重新构建：
+## 3. 发布安装包与清单
+
+在产品源码仓运行：
 
 ```powershell
-npm run sync:releases -- rvc-fabric <版本>
-npm run sync:releases -- gpt-sovits-fabric <版本>
+python scripts/cnb_release.py --version X.Y.Z
+python scripts/cnb_release.py --version X.Y.Z --publish
+```
+
+第一条只验证已公开的 GitHub Release 并在临时目录准备清单。第二条执行：
+
+1. 核对 GitHub 安装包签名、SHA-256 和大小。
+2. 通过 Wrangler 上传 R2 的版本化名与固定名；逐个从 CDN 下载完整内容，核对 SHA-256 和大小。
+3. 两份文件都通过后，列出同一产品前缀内的对象，删除其他旧版本的版本化安装包。其他产品和非安装包对象不受影响；遇到更新版本会停止。
+4. 更新源清单、校验文件、更新日志、`updater.json` 和编译后的 `index.json`。同版本重跑会迁移旧地址，不重复添加更新日志。
+5. RVC 提交并推送 CNB 清单仓；GSV 在本地清单仓提交，不推送。GSV 可用 `--catalog <目录>` 指定本地检出，执行前工作区须干净。
+
+Wrangler 默认从 PATH 或工作区的 `TRM-Nexus/services/community/node_modules/wrangler/bin/wrangler.js` 查找，也可用 `TRM_WRANGLER` 指定。复用 Wrangler 登录或 Cloudflare 环境变量；多个账户时设置 `CLOUDFLARE_ACCOUNT_ID`。对象列表通过 [Cloudflare R2 List Objects API](https://developers.cloudflare.com/api/resources/r2/subresources/buckets/subresources/objects/methods/list/) 分页读取，认证通过 [Wrangler auth token](https://developers.cloudflare.com/workers/wrangler/commands/general/#auth-token) 在内存中取得。
+
+运行环境与底模的地址由发布仓 `catalog/modelscope.json` 按 SHA-256 映射。GSV 编译运行环境、底模等下载项，RVC 编译运行环境分片，保留已有 CNB 备用地址；缺少映射的条目不会生成未经验证的 ModelScope 地址。安装包不参与该映射，始终走 Cloudflare。
+
+## 4. 同步官网
+
+在官网仓运行：
+
+```powershell
+npm run sync:releases -- gpt-sovits-fabric X.Y.Z
+npm run sync:releases -- rvc-fabric X.Y.Z
+node --test scripts/sync-fabric-releases.test.mjs
 npm run check
 npm run check:seo
 ```
 
-核对 `public/releases/` 与 `dist/releases/` 中的 `updater.json`、`changelog.json`、`plaza.json`（以及 RVC Fabric 的 `app.json`），提交并推送 `main`，等待 Cloudflare Pages 部署完成后验证官网下载按钮与短链跳转。
+RVC 从 CNB raw 读取清单和公告图片。迁移期间，脚本只接受与产品及版本完全匹配的旧 CNB 安装包地址，将其转换为 CDN 地址；HEAD 和大小检查都访问 CDN。其他安装包地址会报错。
+
+GSV 从本地发布仓读取清单，公告图片使用相对该仓的路径；同步过程不访问 GSV CNB。脚本校验 updater、index、更新日志版本一致，以及 CDN HEAD 返回的大小与清单一致，再写入官网。
+
+核对 `public/releases/` 和 `dist/releases/` 中的 updater、changelog、plaza、公告图片，以及 RVC 的 `app.json`、GSV 的完整 `index.json`。正常发版时提交并推送官网，等待 Pages 部署，再验证线上清单和下载。本任务卡的验证阶段只在本地提交，不推送、不部署、不上传或清理远端文件。
