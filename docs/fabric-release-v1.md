@@ -16,7 +16,7 @@ GSV 的 CNB 发布仓已不可读写。该清单仓仅在本地维护和提交�
 - `https://cdn.turingmirror.com/f/rvc-fabric/RVC-Fabric-Setup-1.8.1.exe`
 - `https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.3.exe`
 
-`updater.json` 和 `index.json` 的安装包条目使用版本化地址。对外下载入口继续使用 `https://cdn.turingmirror.com/d/<产品>-setup`，计数和跳转由既有统计服务负责；发布脚本不修改统计服务、D1 或下载 Worker。
+`updater.json` 和 `index.json` 的安装包条目使用版本化地址。对外下载入口继续使用 `https://cdn.turingmirror.com/d/<产品>-setup`，计数和跳转由既有统计服务负责。短链地址记录在 D1 数据库 trm-telemetry 的 links 表中，旧数据库 rvc-fabric-telemetry 不再使用。发布脚本不修改统计服务、D1 或下载 Worker。
 
 ## 2. 准备与构建
 
