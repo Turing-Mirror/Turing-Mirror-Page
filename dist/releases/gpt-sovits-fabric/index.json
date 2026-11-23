@@ -11,22 +11,22 @@
   ],
   "note": "由 scripts/build_catalog.py 从 catalog/sources.json 编译，勿手改",
   "app": {
-    "name": "GPT-SoVITS-Fabric-Setup-1.0.3.exe",
-    "version": "1.0.3",
+    "name": "GPT-SoVITS-Fabric-Setup-1.0.4.exe",
+    "version": "1.0.4",
     "channel": "release",
-    "size_bytes": 26181925,
-    "sha256": "dbc7ffa0c6c29b558191ea0df82a98d228d879301b3a7765b368b79c314897f3",
+    "size_bytes": 26196311,
+    "sha256": "771f164d3db31009b4f86908629f74ffc389366eb24b73bb1ee74d8908b06e43",
     "urls": [
-      "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.3.exe"
+      "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.4.exe"
     ],
     "gui": {
       "package_type": "full_package",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "kind": "exe",
-      "url": "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.3.exe",
-      "sha256": "dbc7ffa0c6c29b558191ea0df82a98d228d879301b3a7765b368b79c314897f3",
-      "size_bytes": 26181925,
-      "notes": "修复标注页标题、按钮和提示显示为英文代码的问题。"
+      "url": "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.4.exe",
+      "sha256": "771f164d3db31009b4f86908629f74ffc389366eb24b73bb1ee74d8908b06e43",
+      "size_bytes": 26196311,
+      "notes": "运行环境和底模改用新的下载地址，无法访问时自动切换至备用地址。\n安装包和更新改在图灵镜官网提供下载。"
     }
   },
   "engine_core": {
