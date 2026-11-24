@@ -1,16 +1,16 @@
 {
   "app": {
-    "version": "1.8.2",
+    "version": "1.8.3",
     "channel": "stable",
     "gui": {
       "package_type": "full_package",
-      "version": "1.8.2",
+      "version": "1.8.3",
       "kind": "exe",
-      "url": "https://cdn.turingmirror.com/f/rvc-fabric/RVC-Fabric-Setup-1.8.2.exe",
-      "sha256": "6a20f255d11c56d1882e9c74931ac52e51fe2cbc6282688f4b65056fda675c16",
-      "size_bytes": 25122935,
+      "url": "https://cdn.turingmirror.com/f/rvc-fabric/RVC-Fabric-Setup-1.8.3.exe",
+      "sha256": "4add559fc92424711eac4063aaa8c2a79bc32b3867e9b6c030985df76a35cb7b",
+      "size_bytes": 25137547,
       "min_app_version": "1.3.0",
-      "notes": "修复社区「全部」列表未按收录日期排序的问题。\n运行环境新增下载地址，无法访问时自动切换至备用地址。\n安装包和更新改在图灵镜官网提供下载。"
+      "notes": "音色支持在「训练轮次」切换训练中途保存的各轮模型。\n训练时默认开启「保存中途模型」。\n引擎组件、VB-Cable 等所需文件改用新的下载地址，无法访问时自动切换至备用地址。\n无法访问官网时，检查更新与下载安装包会自动切换至备用地址。"
     }
   }
 }
