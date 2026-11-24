@@ -160,126 +160,6 @@
       "group": "研讨会",
       "cover": "ch-banner/tp-yuuka.jpg",
       "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/tp-yuuka.jpg"
-    },
-    {
-      "id": "hayase_yuuka_zh",
-      "name": "早濑优香（中配）",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/hayase_yuuka_zh_voice-v2.zip",
-      "sha256": "e9d8a45859e00e29d3faa5ffd4d13807c8e301dc6808db039f91163d9d8c67d9",
-      "size_bytes": 222206465,
-      "dest": "characters",
-      "name_en": "Hayase Yuuka (ZH)",
-      "name_ja": "早瀬ユウカ（中国語）",
-      "series": "蔚蓝档案",
-      "group": "研讨会",
-      "cover": "ch-banner/tp-yuuka.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/tp-yuuka.jpg"
-    },
-    {
-      "id": "sunaookami_shiroko_jp",
-      "name": "砂狼白子（日配）",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/sunaookami_shiroko_jp_voice-v2.zip",
-      "sha256": "20357988db89a952a4b0c41c585f8155e03f52a4873f107c95ac5f349edf6aec",
-      "size_bytes": 222209072,
-      "dest": "characters",
-      "name_en": "Sunaookami Shiroko (JP)",
-      "name_ja": "砂狼シロコ（日本語）",
-      "series": "蔚蓝档案",
-      "group": "对策委员会",
-      "cover": "ch-banner/tp-shiroko.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/tp-shiroko.jpg"
-    },
-    {
-      "id": "sunaookami_shiroko_zh",
-      "name": "砂狼白子（中配）",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/sunaookami_shiroko_zh_voice-v2.zip",
-      "sha256": "cc21dbd4799f1e6a844bd8895a4941139546ffce1d8b85779d86f3ccb6378c18",
-      "size_bytes": 222237551,
-      "dest": "characters",
-      "name_en": "Sunaookami Shiroko (ZH)",
-      "name_ja": "砂狼シロコ（中国語）",
-      "series": "蔚蓝档案",
-      "group": "对策委员会",
-      "cover": "ch-banner/tp-shiroko.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/tp-shiroko.jpg"
-    },
-    {
-      "id": "tendou_alice_jp",
-      "name": "天童爱丽丝（日配）",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/tendou_alice_jp_voice-v2.zip",
-      "sha256": "7a9618144dfb582192a8818a67e83162c675831224917cc0c3f34901991922ad",
-      "size_bytes": 222093834,
-      "dest": "characters",
-      "name_en": "Tendou Alice (JP)",
-      "name_ja": "天童アリス（日本語）",
-      "series": "蔚蓝档案",
-      "group": "游戏开发部",
-      "cover": "ch-banner/Alice-JP.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/Alice-JP.jpg"
-    },
-    {
-      "id": "tendou_alice_zh",
-      "name": "天童爱丽丝（中配）",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/tendou_alice_zh_voice-v2.zip",
-      "sha256": "ce44fa902d03ab7d2711363a3ee0d92142a41a3a28441bc765b194f53ec04bcc",
-      "size_bytes": 222104773,
-      "dest": "characters",
-      "name_en": "Tendou Alice (ZH)",
-      "name_ja": "天童アリス（中国語）",
-      "series": "蔚蓝档案",
-      "group": "游戏开发部",
-      "cover": "ch-banner/Alice-ZH.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/Alice-ZH.jpg"
-    },
-    {
-      "id": "tendou_kei",
-      "name": "凯伊",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/tendou_kei_voice-v2.zip",
-      "sha256": "9fd9aeb0c720b3aeb3c6b6fa37a888aabea2e5e3f2710f195a753cc3deab6e3c",
-      "size_bytes": 222032528,
-      "dest": "characters",
-      "name_en": "Kei",
-      "name_ja": "ケイ",
-      "series": "蔚蓝档案",
-      "group": "游戏开发部",
-      "cover": "ch-banner/Kei.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/Kei.jpg"
     }
   ],
   "voices": [
@@ -302,126 +182,6 @@
       "group": "研讨会",
       "cover": "ch-banner/tp-yuuka.jpg",
       "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/tp-yuuka.jpg"
-    },
-    {
-      "id": "hayase_yuuka_zh",
-      "name": "早濑优香（中配）",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/hayase_yuuka_zh_voice-v2.zip",
-      "sha256": "e9d8a45859e00e29d3faa5ffd4d13807c8e301dc6808db039f91163d9d8c67d9",
-      "size_bytes": 222206465,
-      "dest": "characters",
-      "name_en": "Hayase Yuuka (ZH)",
-      "name_ja": "早瀬ユウカ（中国語）",
-      "series": "蔚蓝档案",
-      "group": "研讨会",
-      "cover": "ch-banner/tp-yuuka.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/tp-yuuka.jpg"
-    },
-    {
-      "id": "sunaookami_shiroko_jp",
-      "name": "砂狼白子（日配）",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/sunaookami_shiroko_jp_voice-v2.zip",
-      "sha256": "20357988db89a952a4b0c41c585f8155e03f52a4873f107c95ac5f349edf6aec",
-      "size_bytes": 222209072,
-      "dest": "characters",
-      "name_en": "Sunaookami Shiroko (JP)",
-      "name_ja": "砂狼シロコ（日本語）",
-      "series": "蔚蓝档案",
-      "group": "对策委员会",
-      "cover": "ch-banner/tp-shiroko.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/tp-shiroko.jpg"
-    },
-    {
-      "id": "sunaookami_shiroko_zh",
-      "name": "砂狼白子（中配）",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/sunaookami_shiroko_zh_voice-v2.zip",
-      "sha256": "cc21dbd4799f1e6a844bd8895a4941139546ffce1d8b85779d86f3ccb6378c18",
-      "size_bytes": 222237551,
-      "dest": "characters",
-      "name_en": "Sunaookami Shiroko (ZH)",
-      "name_ja": "砂狼シロコ（中国語）",
-      "series": "蔚蓝档案",
-      "group": "对策委员会",
-      "cover": "ch-banner/tp-shiroko.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/tp-shiroko.jpg"
-    },
-    {
-      "id": "tendou_alice_jp",
-      "name": "天童爱丽丝（日配）",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/tendou_alice_jp_voice-v2.zip",
-      "sha256": "7a9618144dfb582192a8818a67e83162c675831224917cc0c3f34901991922ad",
-      "size_bytes": 222093834,
-      "dest": "characters",
-      "name_en": "Tendou Alice (JP)",
-      "name_ja": "天童アリス（日本語）",
-      "series": "蔚蓝档案",
-      "group": "游戏开发部",
-      "cover": "ch-banner/Alice-JP.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/Alice-JP.jpg"
-    },
-    {
-      "id": "tendou_alice_zh",
-      "name": "天童爱丽丝（中配）",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/tendou_alice_zh_voice-v2.zip",
-      "sha256": "ce44fa902d03ab7d2711363a3ee0d92142a41a3a28441bc765b194f53ec04bcc",
-      "size_bytes": 222104773,
-      "dest": "characters",
-      "name_en": "Tendou Alice (ZH)",
-      "name_ja": "天童アリス（中国語）",
-      "series": "蔚蓝档案",
-      "group": "游戏开发部",
-      "cover": "ch-banner/Alice-ZH.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/Alice-ZH.jpg"
-    },
-    {
-      "id": "tendou_kei",
-      "name": "凯伊",
-      "author": "Kara251",
-      "author_url": "https://space.bilibili.com/6652330",
-      "source_url": "",
-      "released": "2026-11-08",
-      "version": "v2",
-      "package_type": "role_pack",
-      "pack_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-roles/tendou_kei_voice-v2.zip",
-      "sha256": "9fd9aeb0c720b3aeb3c6b6fa37a888aabea2e5e3f2710f195a753cc3deab6e3c",
-      "size_bytes": 222032528,
-      "dest": "characters",
-      "name_en": "Kei",
-      "name_ja": "ケイ",
-      "series": "蔚蓝档案",
-      "group": "游戏开发部",
-      "cover": "ch-banner/Kei.jpg",
-      "cover_url": "https://cnb.cool/Turing-Mirror/GPT-SoVITS-Fabric-Releases/-/releases/download/GSV-covers/Kei.jpg"
     }
   ],
   "extras": {
@@ -485,6 +245,7 @@
           "size_bytes": 223650277,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-bve/UVR-BVE-4B_SN-44100-1.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-BVE-4B_SN-44100-1.pth"
           ]
         }
@@ -507,6 +268,7 @@
           "size_bytes": 127139365,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-deecho/UVR-De-Echo-Normal.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-De-Echo-Normal.pth"
           ]
         },
@@ -516,6 +278,7 @@
           "size_bytes": 127139365,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-deecho/UVR-De-Echo-Aggressive.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-De-Echo-Aggressive.pth"
           ]
         },
@@ -525,6 +288,7 @@
           "size_bytes": 223650277,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-deecho/UVR-DeEcho-DeReverb.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-DeEcho-DeReverb.pth"
           ]
         }
@@ -547,6 +311,7 @@
           "size_bytes": 127139365,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-denoise/UVR-DeNoise.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-DeNoise.pth"
           ]
         },
@@ -556,6 +321,7 @@
           "size_bytes": 17922277,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-denoise/UVR-DeNoise-Lite.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-DeNoise-Lite.pth"
           ]
         }
@@ -578,6 +344,7 @@
           "size_bytes": 58928133,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-dereverb/UVR-DeReverb-aufr33-jarredou_4band_v4_ms_fullband.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-DeReverb-aufr33-jarredou_4band_v4_ms_fullband.pth"
           ]
         }
@@ -600,6 +367,7 @@
           "size_bytes": 59320122,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-harmonic/Harmonic_Noise_Separation_yxlllc.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/Harmonic_Noise_Separation_yxlllc.pth"
           ]
         }
@@ -622,6 +390,7 @@
           "size_bytes": 550120123,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-hp2/7_HP2-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/7_HP2-UVR.pth"
           ]
         },
@@ -631,6 +400,7 @@
           "size_bytes": 550131079,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-hp2/8_HP2-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/8_HP2-UVR.pth"
           ]
         },
@@ -640,6 +410,7 @@
           "size_bytes": 550131079,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-hp2/9_HP2-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/9_HP2-UVR.pth"
           ]
         }
@@ -662,6 +433,7 @@
           "size_bytes": 126792647,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-inst/1_HP-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/1_HP-UVR.pth"
           ]
         },
@@ -671,6 +443,7 @@
           "size_bytes": 126782699,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-inst/2_HP-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/2_HP-UVR.pth"
           ]
         }
@@ -693,6 +466,7 @@
           "size_bytes": 126782699,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-karaoke/5_HP-Karaoke-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/5_HP-Karaoke-UVR.pth"
           ]
         },
@@ -702,6 +476,7 @@
           "size_bytes": 126782699,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-karaoke/6_HP-Karaoke-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/6_HP-Karaoke-UVR.pth"
           ]
         }
@@ -724,6 +499,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-mgm/MGM_MAIN_v4.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/MGM_MAIN_v4.pth"
           ]
         },
@@ -733,6 +509,7 @@
           "size_bytes": 31861529,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-mgm/MGM_HIGHEND_v4.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/MGM_HIGHEND_v4.pth"
           ]
         },
@@ -742,6 +519,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-mgm/MGM_LOWEND_A_v4.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/MGM_LOWEND_A_v4.pth"
           ]
         },
@@ -751,6 +529,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-mgm/MGM_LOWEND_B_v4.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/MGM_LOWEND_B_v4.pth"
           ]
         }
@@ -773,6 +552,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/10_SP-UVR-2B-32000-1.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/10_SP-UVR-2B-32000-1.pth"
           ]
         },
@@ -782,6 +562,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/11_SP-UVR-2B-32000-2.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/11_SP-UVR-2B-32000-2.pth"
           ]
         },
@@ -791,6 +572,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/12_SP-UVR-3B-44100.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/12_SP-UVR-3B-44100.pth"
           ]
         },
@@ -800,6 +582,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/13_SP-UVR-4B-44100-1.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/13_SP-UVR-4B-44100-1.pth"
           ]
         },
@@ -809,6 +592,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/14_SP-UVR-4B-44100-2.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/14_SP-UVR-4B-44100-2.pth"
           ]
         },
@@ -818,6 +602,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/15_SP-UVR-MID-44100-1.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/15_SP-UVR-MID-44100-1.pth"
           ]
         },
@@ -827,6 +612,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/16_SP-UVR-MID-44100-2.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/16_SP-UVR-MID-44100-2.pth"
           ]
         }
@@ -849,6 +635,7 @@
           "size_bytes": 126792647,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-vocal/3_HP-Vocal-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/3_HP-Vocal-UVR.pth"
           ]
         },
@@ -858,6 +645,7 @@
           "size_bytes": 126792647,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-vocal/4_HP-Vocal-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/4_HP-Vocal-UVR.pth"
           ]
         }
@@ -880,6 +668,7 @@
           "size_bytes": 223661285,
           "channel": "release",
           "urls": [
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-wind/17_HP-Wind_Inst-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/17_HP-Wind_Inst-UVR.pth"
           ]
         }
