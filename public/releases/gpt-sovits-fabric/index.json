@@ -11,22 +11,22 @@
   ],
   "note": "由 scripts/build_catalog.py 从 catalog/sources.json 编译，勿手改",
   "app": {
-    "name": "GPT-SoVITS-Fabric-Setup-1.0.4.exe",
-    "version": "1.0.4",
+    "name": "GPT-SoVITS-Fabric-Setup-1.0.5.exe",
+    "version": "1.0.5",
     "channel": "release",
-    "size_bytes": 26196311,
-    "sha256": "771f164d3db31009b4f86908629f74ffc389366eb24b73bb1ee74d8908b06e43",
+    "size_bytes": 26258011,
+    "sha256": "7467467b1f58478f0d89e09337a9e3984821b9485d2d53364f1234ee835683bd",
     "urls": [
-      "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.4.exe"
+      "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.5.exe"
     ],
     "gui": {
       "package_type": "full_package",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "kind": "exe",
-      "url": "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.4.exe",
-      "sha256": "771f164d3db31009b4f86908629f74ffc389366eb24b73bb1ee74d8908b06e43",
-      "size_bytes": 26196311,
-      "notes": "运行环境和底模改用新的下载地址，无法访问时自动切换至备用地址。\n安装包和更新改在图灵镜官网提供下载。"
+      "url": "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.5.exe",
+      "sha256": "7467467b1f58478f0d89e09337a9e3984821b9485d2d53364f1234ee835683bd",
+      "size_bytes": 26258011,
+      "notes": "角色的「模型文件」支持切换训练中途保存的各轮模型。\n训练新增「保存中途模型」选项，默认开启；关闭后仍保留最终模型。\n「清理训练残留」支持删除按轮次另存的推理模型。\n导出的角色包不再包含本机训练路径。"
     }
   },
   "engine_core": {

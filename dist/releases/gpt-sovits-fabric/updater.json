@@ -1,11 +1,11 @@
 {
-  "version": "1.0.4",
-  "notes": "运行环境和底模改用新的下载地址，无法访问时自动切换至备用地址。\n安装包和更新改在图灵镜官网提供下载。",
-  "pub_date": "2026-11-23T17:41:38Z",
+  "version": "1.0.5",
+  "notes": "角色的「模型文件」支持切换训练中途保存的各轮模型。\n训练新增「保存中途模型」选项，默认开启；关闭后仍保留最终模型。\n「清理训练残留」支持删除按轮次另存的推理模型。\n导出的角色包不再包含本机训练路径。",
+  "pub_date": "2026-11-24T20:03:58Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.4.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTNHJLSTh0ZXRjREIrcEJvcXNKMGJRUWdKY0dmbWthRkV0VDNmRWRRazhSaWlGNU90K0RITmlwWU9yTGJ1TzlsSGxkZldiclRDNHpWZ2ZpVXNzV05WQkpudVE0WnEzd3djPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NDU1NjE0CWZpbGU6R1BULVNvVklUUy1GYWJyaWMtU2V0dXAtMS4wLjQuZXhlCjk1WFRGWXBldjRPeWxrU0tBQVlBNzJrcXpjV1d1WlBNbE5pakNCRVIxeURaZStTd2tBM1hvSnBrNWl3R2RqNVA2V3M5UXgvMEkvK0s0Q1Y3MWpXcUJ3PT0K"
+      "url": "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.5.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTNHJLSTh0ZXRjREZ2cFlUcDQrQlBwZnhHQkp3VkRkZ0I2Wk5Ma1dpUmZIcEtEd1hRajUrMU81R1BVY05pRUVCRzBuQ0gvL09SVURXYVp3VGtraTJMWTA2NjVONUpjbWc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTUwNDE1CWZpbGU6R1BULVNvVklUUy1GYWJyaWMtU2V0dXAtMS4wLjUuZXhlCmVXUUJDUDgzZ0ZDUkU3L2NNNmNmdERRN3Q5c3pSMzBOTzgreWlEcUNMWnRPRmR0YUo0YWpwekp0a3BJRmdOQ0Y3bXJEenpyV05qYmxMS0RmbENaRER3PT0K"
     }
   }
 }
