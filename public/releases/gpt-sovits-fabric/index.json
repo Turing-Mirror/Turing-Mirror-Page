@@ -245,7 +245,7 @@
           "size_bytes": 223650277,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-bve/UVR-BVE-4B_SN-44100-1.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-bve/UVR-BVE-4B_SN-44100-1.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-BVE-4B_SN-44100-1.pth"
           ]
         }
@@ -268,7 +268,7 @@
           "size_bytes": 127139365,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-deecho/UVR-De-Echo-Normal.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-deecho/UVR-De-Echo-Normal.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-De-Echo-Normal.pth"
           ]
         },
@@ -278,7 +278,7 @@
           "size_bytes": 127139365,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-deecho/UVR-De-Echo-Aggressive.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-deecho/UVR-De-Echo-Aggressive.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-De-Echo-Aggressive.pth"
           ]
         },
@@ -288,7 +288,7 @@
           "size_bytes": 223650277,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-deecho/UVR-DeEcho-DeReverb.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-deecho/UVR-DeEcho-DeReverb.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-DeEcho-DeReverb.pth"
           ]
         }
@@ -311,7 +311,7 @@
           "size_bytes": 127139365,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-denoise/UVR-DeNoise.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-denoise/UVR-DeNoise.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-DeNoise.pth"
           ]
         },
@@ -321,7 +321,7 @@
           "size_bytes": 17922277,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-denoise/UVR-DeNoise-Lite.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-denoise/UVR-DeNoise-Lite.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-DeNoise-Lite.pth"
           ]
         }
@@ -344,7 +344,7 @@
           "size_bytes": 58928133,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-dereverb/UVR-DeReverb-aufr33-jarredou_4band_v4_ms_fullband.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-dereverb/UVR-DeReverb-aufr33-jarredou_4band_v4_ms_fullband.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/UVR-DeReverb-aufr33-jarredou_4band_v4_ms_fullband.pth"
           ]
         }
@@ -367,7 +367,7 @@
           "size_bytes": 59320122,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-harmonic/Harmonic_Noise_Separation_yxlllc.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-harmonic/Harmonic_Noise_Separation_yxlllc.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/Harmonic_Noise_Separation_yxlllc.pth"
           ]
         }
@@ -390,7 +390,7 @@
           "size_bytes": 550120123,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-hp2/7_HP2-UVR.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-hp2/7_HP2-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/7_HP2-UVR.pth"
           ]
         },
@@ -400,7 +400,7 @@
           "size_bytes": 550131079,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-hp2/8_HP2-UVR.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-hp2/8_HP2-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/8_HP2-UVR.pth"
           ]
         },
@@ -410,7 +410,7 @@
           "size_bytes": 550131079,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-hp2/9_HP2-UVR.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-hp2/9_HP2-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/9_HP2-UVR.pth"
           ]
         }
@@ -433,7 +433,7 @@
           "size_bytes": 126792647,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-inst/1_HP-UVR.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-inst/1_HP-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/1_HP-UVR.pth"
           ]
         },
@@ -443,7 +443,7 @@
           "size_bytes": 126782699,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-inst/2_HP-UVR.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-inst/2_HP-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/2_HP-UVR.pth"
           ]
         }
@@ -466,7 +466,7 @@
           "size_bytes": 126782699,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-karaoke/5_HP-Karaoke-UVR.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-karaoke/5_HP-Karaoke-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/5_HP-Karaoke-UVR.pth"
           ]
         },
@@ -476,7 +476,7 @@
           "size_bytes": 126782699,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-karaoke/6_HP-Karaoke-UVR.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-karaoke/6_HP-Karaoke-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/6_HP-Karaoke-UVR.pth"
           ]
         }
@@ -499,7 +499,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-mgm/MGM_MAIN_v4.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-mgm/MGM_MAIN_v4.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/MGM_MAIN_v4.pth"
           ]
         },
@@ -509,7 +509,7 @@
           "size_bytes": 31861529,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-mgm/MGM_HIGHEND_v4.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-mgm/MGM_HIGHEND_v4.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/MGM_HIGHEND_v4.pth"
           ]
         },
@@ -519,7 +519,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-mgm/MGM_LOWEND_A_v4.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-mgm/MGM_LOWEND_A_v4.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/MGM_LOWEND_A_v4.pth"
           ]
         },
@@ -529,7 +529,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-mgm/MGM_LOWEND_B_v4.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-mgm/MGM_LOWEND_B_v4.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/MGM_LOWEND_B_v4.pth"
           ]
         }
@@ -552,7 +552,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/10_SP-UVR-2B-32000-1.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-sp/10_SP-UVR-2B-32000-1.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/10_SP-UVR-2B-32000-1.pth"
           ]
         },
@@ -562,7 +562,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/11_SP-UVR-2B-32000-2.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-sp/11_SP-UVR-2B-32000-2.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/11_SP-UVR-2B-32000-2.pth"
           ]
         },
@@ -572,7 +572,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/12_SP-UVR-3B-44100.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-sp/12_SP-UVR-3B-44100.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/12_SP-UVR-3B-44100.pth"
           ]
         },
@@ -582,7 +582,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/13_SP-UVR-4B-44100-1.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-sp/13_SP-UVR-4B-44100-1.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/13_SP-UVR-4B-44100-1.pth"
           ]
         },
@@ -592,7 +592,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/14_SP-UVR-4B-44100-2.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-sp/14_SP-UVR-4B-44100-2.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/14_SP-UVR-4B-44100-2.pth"
           ]
         },
@@ -602,7 +602,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/15_SP-UVR-MID-44100-1.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-sp/15_SP-UVR-MID-44100-1.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/15_SP-UVR-MID-44100-1.pth"
           ]
         },
@@ -612,7 +612,7 @@
           "size_bytes": 31938951,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-sp/16_SP-UVR-MID-44100-2.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-sp/16_SP-UVR-MID-44100-2.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/16_SP-UVR-MID-44100-2.pth"
           ]
         }
@@ -635,7 +635,7 @@
           "size_bytes": 126792647,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-vocal/3_HP-Vocal-UVR.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-vocal/3_HP-Vocal-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/3_HP-Vocal-UVR.pth"
           ]
         },
@@ -645,7 +645,7 @@
           "size_bytes": 126792647,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-vocal/4_HP-Vocal-UVR.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-vocal/4_HP-Vocal-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/4_HP-Vocal-UVR.pth"
           ]
         }
@@ -668,7 +668,7 @@
           "size_bytes": 223661285,
           "channel": "release",
           "urls": [
-            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve//fabric/extras/pymss-wind/17_HP-Wind_Inst-UVR.pth",
+            "https://modelscope.cn/models/Kara251/kara-gsv-model/resolve/8a94ba4caec8574cda883886d4ddcba68dbf01ee/fabric/extras/pymss-wind/17_HP-Wind_Inst-UVR.pth",
             "https://cnb.cool/Turing-Mirror/RVC-Fabric-Releases/-/releases/download/pymss/17_HP-Wind_Inst-UVR.pth"
           ]
         }
