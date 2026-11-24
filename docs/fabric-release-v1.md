@@ -7,7 +7,7 @@ GitHub 保存源码和已签名的正式 Release。安装包存放在 Cloudflare
 | RVC Fabric | `tm-release` | CNB `Turing-Mirror/RVC-Fabric-Releases` 的 `main` | `rvc-fabric/` | `RVC_Fabric_Setup.exe` |
 | GPT-SoVITS Fabric | `main` | 官网旁的本地 `../GPT-SoVITS-Fabric-Releases/` | `gpt-sovits-fabric/` | `GPT-SoVITS-Fabric-Setup.exe` |
 
-GSV 的 CNB 发布仓已不可读写。该清单仓仅在本地维护和提交，不 clone 或 push CNB。
+GSV 发布脚本仅在本地清单仓库提交，之后再推送至 CNB 仓库 `Turing-Mirror/GPT-SoVITS-Fabric-Releases`。
 
 ## 1. 下载地址
 
@@ -39,11 +39,11 @@ python scripts/cnb_release.py --version X.Y.Z --publish
 2. 通过 Wrangler 上传 R2 的版本化名与固定名；逐个从 CDN 下载完整内容，核对 SHA-256 和大小。
 3. 两份文件都通过后，列出同一产品前缀内的对象，删除其他旧版本的版本化安装包。其他产品和非安装包对象不受影响；遇到更新版本会停止。
 4. 更新源清单、校验文件、更新日志、`updater.json` 和编译后的 `index.json`。同版本重跑会迁移旧地址，不重复添加更新日志。
-5. RVC 提交并推送 CNB 清单仓；GSV 在本地清单仓提交，不推送。GSV 可用 `--catalog <目录>` 指定本地检出，执行前工作区须干净。
+5. RVC 提交并推送至 CNB 清单仓库；GSV 在本地清单仓库提交后再推送至 CNB。GSV 可通过 `--catalog <目录>` 指定本地检出目录，执行前工作区须保持干净。
 
 Wrangler 默认从 PATH 或工作区的 `TRM-Nexus/services/community/node_modules/wrangler/bin/wrangler.js` 查找，也可用 `TRM_WRANGLER` 指定。复用 Wrangler 登录或 Cloudflare 环境变量；多个账户时设置 `CLOUDFLARE_ACCOUNT_ID`。对象列表通过 [Cloudflare R2 List Objects API](https://developers.cloudflare.com/api/resources/r2/subresources/buckets/subresources/objects/methods/list/) 分页读取，认证通过 [Wrangler auth token](https://developers.cloudflare.com/workers/wrangler/commands/general/#auth-token) 在内存中取得。
 
-运行环境与底模的地址由发布仓 `catalog/modelscope.json` 按 SHA-256 映射。GSV 编译运行环境、底模等下载项，RVC 编译运行环境分片，保留已有 CNB 备用地址；缺少映射的条目不会生成未经验证的 ModelScope 地址。安装包不参与该映射，始终走 Cloudflare。
+除安装包外，下载项根据发布仓库 `catalog/modelscope.json` 中的 SHA-256 映射生成 ModelScope 地址并排在首位，同时保留 CNB 备用地址；缺少映射的条目不会生成未经验证的 ModelScope 地址。RVC 发布时另将带版本号的安装包上传至 ModelScope，并将其地址写入 `updater.json` 的 `urls` 字段，排在 CDN 地址之后。
 
 ## 4. 同步官网
 
