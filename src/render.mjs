@@ -10,8 +10,7 @@ import {
   LOCALES,
   UI,
   PRODUCTS,
-  CHANNELS,
-  PROMOTIONS
+  CHANNELS
 } from "./content.mjs";
 
 const ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
@@ -217,16 +216,6 @@ function channelCard(loc, channel, i) {
           </li>`;
 }
 
-function promo(loc, promotion) {
-  const ui = UI[loc.code];
-  const ext = externalAttrs(ui);
-  return `        <a class="promo reveal" href="${promotion.href}" target="_blank" rel="sponsored noopener noreferrer">
-          <span class="promo-tag">${esc(ui.promoTag)}</span>
-          <span class="promo-body"><strong>${esc(t(promotion.name, loc))}</strong><span class="promo-sep" aria-hidden="true">·</span>${esc(t(promotion.description, loc))}</span>
-          <span class="promo-go" aria-hidden="true">↗</span>${ext.hint}
-        </a>`;
-}
-
 export function renderHome(loc, assets) {
   const ui = UI[loc.code];
   const alternatesFor = (other) => homePath(other);
@@ -322,8 +311,6 @@ ${CHANNELS.map((channel, i) => channelCard(loc, channel, i)).join("\n")}
             </dd>
           </dl>
         </section>
-
-${PROMOTIONS.map((promotion) => promo(loc, promotion)).join("\n")}
       </main>`;
 
   return page({ loc, headHtml, alternatesFor, main, bodyClass: "page-home" });
