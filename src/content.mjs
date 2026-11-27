@@ -44,7 +44,6 @@ export const UI = {
     communityQrHelp: "使用 QQ 扫码加入社区",
     openNewTab: "在新标签页打开",
     learnMore: "了解详情",
-    promoTag: "推广",
     backHome: "图灵镜",
     productCrumb: "产品",
     featuresLabel: "核心特性",
@@ -81,7 +80,6 @@ export const UI = {
     communityQrHelp: "使用 QQ 掃描加入社群",
     openNewTab: "於新分頁開啟",
     learnMore: "了解詳情",
-    promoTag: "推廣",
     backHome: "圖靈鏡",
     productCrumb: "產品",
     featuresLabel: "核心特色",
@@ -118,7 +116,6 @@ export const UI = {
     communityQrHelp: "Scan with QQ to join the community",
     openNewTab: "Opens in a new tab",
     learnMore: "Learn more",
-    promoTag: "Sponsored",
     backHome: "Turing Mirror",
     productCrumb: "Products",
     featuresLabel: "Features",
@@ -155,7 +152,6 @@ export const UI = {
     communityQrHelp: "QQ でスキャンしてコミュニティに参加",
     openNewTab: "新しいタブで開く",
     learnMore: "詳しく見る",
-    promoTag: "PR",
     backHome: "チューリングミラー",
     productCrumb: "プロダクト",
     featuresLabel: "主な機能",
@@ -500,18 +496,5 @@ export const CHANNELS = [
     href: "https://www.youtube.com/@TuringMirror",
     name: { sc: "YouTube", tc: "YouTube", en: "YouTube", ja: "YouTube" },
     id: "@TuringMirror"
-  }
-];
-
-export const PROMOTIONS = [
-  {
-    href: "https://www.rainyun.com/m1rror_?s=trm-site",
-    name: { sc: "雨云", tc: "雨雲", en: "Rainyun", ja: "Rainyun" },
-    description: {
-      sc: "提供云服务器、游戏云与面板服，首月五折。",
-      tc: "提供雲端伺服器、遊戲雲與面板服，首月五折。",
-      en: "Cloud servers, game hosting and panel servers with 50% off the first month.",
-      ja: "クラウドサーバー、ゲームホスティング、管理パネル付きサーバーを初月半額で提供します。"
-    }
   }
 ];

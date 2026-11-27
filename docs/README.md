@@ -30,7 +30,7 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 
 - `UI`：四种语言的界面文案。
 - `PRODUCTS`：每个产品一项，`slug` 决定网址 `/products/<slug>/`。字段包括卡片简介 `summary`、详情页的 `lead` / `intro` / `actions`（下载、仓库等按钮）/ `features` / `steps` / `faq` / `notice` / `screenshots`，以及结构化数据用的 `schema`。`steps`、`faq`、`screenshots` 可以留空数组，对应板块不会出现。
-- `CHANNELS`、`PROMOTIONS`、`WECHAT_ID`、`QQ_GROUP_ID`、`TAGLINE`（标语，不翻译）。
+- `CHANNELS`、`WECHAT_ID`、`QQ_GROUP_ID`、`TAGLINE`（标语，不翻译）。
 
 新增产品：在 `PRODUCTS` 追加一项，截图放到 `public/assets/products/<slug>/`。首页卡片、详情页、sitemap 与 llms.txt 会自动生成。
 
@@ -62,7 +62,6 @@ wrangler.jsonc  Cloudflare Pages 配置（输出目录 dist）
 - 产品介绍、操作步骤和截图直接输出到 HTML。TRM UI 交互示例使用 React，页面交互通过 JavaScript 执行。
 - 结构化数据（JSON-LD）：首页为 Organization / WebSite / 产品列表；产品页为 SoftwareApplication、BreadcrumbList，有问答时附 FAQPage。
 - `sitemap.xml` 包含各语言页面、语言互链和产品截图地址。`/llms.txt` 提供产品页与截图原图地址。
-- 推广链接带 `rel="sponsored"`。
 
 ## 动画
 
