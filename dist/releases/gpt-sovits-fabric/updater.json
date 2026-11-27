@@ -1,11 +1,11 @@
 {
-  "version": "1.0.5",
-  "notes": "角色的「模型文件」支持切换训练中途保存的各轮模型。\n训练新增「保存中途模型」选项，默认开启；关闭后仍保留最终模型。\n「清理训练残留」支持删除按轮次另存的推理模型。\n导出的角色包不再包含本机训练路径。",
-  "pub_date": "2026-11-24T20:03:58Z",
+  "version": "1.0.6",
+  "notes": "训练、合成、标注、下载、更新和社区出错时，提示改为说明原因和处理步骤，并按具体问题提供对应的操作按钮。\n修复继续训练时 GPT 阶段失败的问题。\n模型页新增「导入模型」，可使用原版 GPT-SoVITS 训练的 GPT 模型、SoVITS 模型，配合参考音频或 .list 标注创建角色。\n手动点击「检查更新」发现新版本后，改为先询问是否下载并安装，不再直接安装。\n延长社区目录和封面的加载等待时间，网络较慢时更容易加载完成。\n社区发布角色时，支持在「各语言名称」中为每种语言填写多个名称，并为系列和部门添加「其他名称」，搜索任一名称均可找到。\n模型页的错误提示不再自动消失。\n移除标注页重复的「打开 .list」和「创建 .list」按钮。",
+  "pub_date": "2026-11-27T17:48:40Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.5.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTNHJLSTh0ZXRjREZ2cFlUcDQrQlBwZnhHQkp3VkRkZ0I2Wk5Ma1dpUmZIcEtEd1hRajUrMU81R1BVY05pRUVCRzBuQ0gvL09SVURXYVp3VGtraTJMWTA2NjVONUpjbWc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTUwNDE1CWZpbGU6R1BULVNvVklUUy1GYWJyaWMtU2V0dXAtMS4wLjUuZXhlCmVXUUJDUDgzZ0ZDUkU3L2NNNmNmdERRN3Q5c3pSMzBOTzgreWlEcUNMWnRPRmR0YUo0YWpwekp0a3BJRmdOQ0Y3bXJEenpyV05qYmxMS0RmbENaRER3PT0K"
+      "url": "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.6.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTNHJLSTh0ZXRjREkwZ2t4b2pqamRHWWQ0ZkVLQ2toZTBSKzBaY1AwNGUrMVBrVi9XaHFzU0Z4R3FOZzJXdTNtNWdncXQ5RnpBYnYrM0xaeUVrMDN0b3ZRemFxRkZwZUFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1ODAxNjI0CWZpbGU6R1BULVNvVklUUy1GYWJyaWMtU2V0dXAtMS4wLjYuZXhlCnFBYkF4bGU3akEyMTBJZVFwNkluWThKeHdwWDRLWmdvanFYRGYydUlJV3ZSWkdJVHdnY1BBUmgwdjc1ZHJDNENBekxYOERVYmJnNVpBU2t1WWZUYkN3PT0K"
     }
   }
 }

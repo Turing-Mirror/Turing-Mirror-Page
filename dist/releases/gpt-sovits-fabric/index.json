@@ -11,22 +11,22 @@
   ],
   "note": "由 scripts/build_catalog.py 从 catalog/sources.json 编译，勿手改",
   "app": {
-    "name": "GPT-SoVITS-Fabric-Setup-1.0.5.exe",
-    "version": "1.0.5",
+    "name": "GPT-SoVITS-Fabric-Setup-1.0.6.exe",
+    "version": "1.0.6",
     "channel": "release",
-    "size_bytes": 26258011,
-    "sha256": "7467467b1f58478f0d89e09337a9e3984821b9485d2d53364f1234ee835683bd",
+    "size_bytes": 26572243,
+    "sha256": "54500a6a74abd3f83268b0a13af67e24706a13c047b2b80eb6317c6616fb872b",
     "urls": [
-      "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.5.exe"
+      "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.6.exe"
     ],
     "gui": {
       "package_type": "full_package",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "kind": "exe",
-      "url": "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.5.exe",
-      "sha256": "7467467b1f58478f0d89e09337a9e3984821b9485d2d53364f1234ee835683bd",
-      "size_bytes": 26258011,
-      "notes": "角色的「模型文件」支持切换训练中途保存的各轮模型。\n训练新增「保存中途模型」选项，默认开启；关闭后仍保留最终模型。\n「清理训练残留」支持删除按轮次另存的推理模型。\n导出的角色包不再包含本机训练路径。"
+      "url": "https://cdn.turingmirror.com/f/gpt-sovits-fabric/GPT-SoVITS-Fabric-Setup-1.0.6.exe",
+      "sha256": "54500a6a74abd3f83268b0a13af67e24706a13c047b2b80eb6317c6616fb872b",
+      "size_bytes": 26572243,
+      "notes": "训练、合成、标注、下载、更新和社区出错时，提示改为说明原因和处理步骤，并按具体问题提供对应的操作按钮。\n修复继续训练时 GPT 阶段失败的问题。\n模型页新增「导入模型」，可使用原版 GPT-SoVITS 训练的 GPT 模型、SoVITS 模型，配合参考音频或 .list 标注创建角色。\n手动点击「检查更新」发现新版本后，改为先询问是否下载并安装，不再直接安装。\n延长社区目录和封面的加载等待时间，网络较慢时更容易加载完成。\n社区发布角色时，支持在「各语言名称」中为每种语言填写多个名称，并为系列和部门添加「其他名称」，搜索任一名称均可找到。\n模型页的错误提示不再自动消失。\n移除标注页重复的「打开 .list」和「创建 .list」按钮。"
     }
   },
   "engine_core": {
